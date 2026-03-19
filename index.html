@@ -5,88 +5,149 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Legal – SurveyTools by EXSports Oy</title>
   <style>
+    /* Oletus: Tumma teema (kuten alkuperäinen) */
+    :root {
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+      --card-bg: #1e1e1e;
+      --card-border: #2a2a2a;
+      --card-shadow: rgba(0,0,0,0.5);
+      --logo-color: #64a8f0;
+      --tagline-color: #555;
+      --heading-color: #777;
+      --link-bg: #252525;
+      --link-border: #333;
+      --link-text: #90bdf7;
+      --link-hover-bg: #2a2a3a;
+      --link-hover-border: #64a8f0;
+      --link-hover-text: #64a8f0;
+      --link-desc: #666;
+      --footer-color: #444;
+      --footer-link: #444;
+      --footer-link-hover: #64a8f0;
+    }
+
+    /* Automaattinen vaalea teema, jos laite on vaaleassa tilassa */
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg-color: #f5f5f5;
+        --text-color: #333333;
+        --card-bg: #ffffff;
+        --card-border: #e0e0e0;
+        --card-shadow: rgba(0,0,0,0.1);
+        --logo-color: #2c3e50;
+        --tagline-color: #666;
+        --heading-color: #555;
+        --link-bg: #f0f0f0;
+        --link-border: #ddd;
+        --link-text: #2c3e50;
+        --link-hover-bg: #e8f4f8;
+        --link-hover-border: #3498db;
+        --link-hover-text: #3498db;
+        --link-desc: #555;
+        --footer-color: #777;
+        --footer-link: #777;
+        --footer-link-hover: #3498db;
+      }
+    }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    
     body {
       font-family: Arial, sans-serif;
-      background: #121212;
-      color: #e0e0e0;
+      background: var(--bg-color);
+      color: var(--text-color);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       padding: 40px 20px;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
+
     .card {
-      background: #1e1e1e;
-      border: 1px solid #2a2a2a;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
       border-radius: 12px;
-      box-shadow: 0 4px 32px rgba(0,0,0,0.5);
+      box-shadow: 0 4px 32px var(--card-shadow);
       max-width: 440px;
       width: 100%;
       padding: 40px 36px 32px;
       text-align: center;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
     }
+
     .logo {
       font-size: 28px;
       font-weight: bold;
-      color: #64a8f0;
+      color: var(--logo-color);
       letter-spacing: 1px;
       margin-bottom: 4px;
     }
+
     .tagline {
       font-size: 14px;
-      color: #555;
+      color: var(--tagline-color);
       margin-bottom: 32px;
     }
+
     h1 {
       font-size: 16px;
-      color: #777;
+      color: var(--heading-color);
       margin-bottom: 24px;
       font-weight: normal;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
+
     .links {
       display: flex;
       flex-direction: column;
       gap: 12px;
     }
+
     .link-btn {
       display: flex;
       align-items: center;
       gap: 14px;
-      background: #252525;
-      border: 1px solid #333;
+      background: var(--link-bg);
+      border: 1px solid var(--link-border);
       border-radius: 8px;
       padding: 16px 20px;
       text-decoration: none;
-      color: #90bdf7;
+      color: var(--link-text);
       font-size: 15px;
       font-weight: bold;
-      transition: background 0.15s, border-color 0.15s;
+      transition: background 0.15s, border-color 0.15s, color 0.15s;
     }
+
     .link-btn:hover {
-      background: #2a2a3a;
-      border-color: #64a8f0;
-      color: #64a8f0;
+      background: var(--link-hover-bg);
+      border-color: var(--link-hover-border);
+      color: var(--link-hover-text);
     }
+
     .link-btn .icon { font-size: 22px; flex-shrink: 0; }
+    
     .link-btn .desc {
       font-size: 12px;
       font-weight: normal;
-      color: #666;
+      color: var(--link-desc);
       margin-top: 2px;
     }
+
     .link-btn .text { text-align: left; }
+
     footer {
       margin-top: 32px;
       font-size: 12px;
-      color: #444;
+      color: var(--footer-color);
       text-align: center;
     }
-    footer a { color: #444; text-decoration: none; }
-    footer a:hover { color: #64a8f0; }
+
+    footer a { color: var(--footer-link); text-decoration: none; }
+    footer a:hover { color: var(--footer-link-hover); }
   </style>
 </head>
 <body>
@@ -122,4 +183,8 @@
 
   <footer>
     &copy; 2026 EXSports Oy &nbsp;|&nbsp;
-    <a href="mailto:info@exsports.fi"><span class
+    <a href="mailto:info@exsports.fi">Contact Us</a>
+  </footer>
+
+</body>
+</html>
