@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Heda — Full Brand Pack</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+  html, body { margin: 0; padding: 0; background: #f0eee9; font-family: 'Inter Tight', system-ui, sans-serif; }
+  * { box-sizing: border-box; }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel" src="design-canvas.jsx"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="brand-tokens.jsx"></script>
+<script type="text/babel" src="heda-logos.jsx"></script>
+<script type="text/babel" src="heda-head.jsx"></script>
+<script type="text/babel" src="heda-brand-card.jsx"></script>
+<script type="text/babel" src="heda-screens.jsx"></script>
+<script type="text/babel" src="heda-marketing.jsx"></script>
+
+<script type="text/babel" data-presets="react">
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "previewMode": "light"
+}/*EDITMODE-END*/;
+
+function App() {
+  const [tw, setTweak] = window.useTweaks(TWEAK_DEFAULTS);
+  const dark = window.makeSage('dark');
+  const light = window.makeSage('light');
+  // The "live preview" brand for sections that show one mode at a time
+  const live = tw.previewMode === 'light' ? light : dark;
+
+  return (
+    <>
+      <window.DesignCanvas>
+
+        {/* ─── 01 · Cover / identity ──────────────────────────── */}
+        <window.DCSection id="cover" title="Heda · Brand Pack" subtitle="Sage Calm · Topo Aura · Dark + Light">
+          <window.DCArtboard id="cover-card" label="Cover" width={1280} height={720}>
+            <CoverArtboard dark={dark}/>
+          </window.DCArtboard>
+        </window.DCSection>
+
+        {/* ─── 02 · Logo system ───────────────────────────────── */}
+        <window.DCSection id="logo" title="Logo system" subtitle="The mark, the wordmark, the lockup, and how they behave at every size">
+          <window.DCArtboard id="logo-anatomy" label="Anatomy" width={760} height={520}>
+            <LogoAnatomy b={dark}/>
+          </window.DCArtboard>
+          <window.DCArtboard id="logo-sizes" label="Size scale · 16→128px" width={760} height={300}>
+            <SizeScale b={dark}/>
+          </window.DCArtboard>
+          <window.DCArtboard id="logo-bgs-dark" label="On dark" width={760} height={260}>
+            <BackgroundsRow b={dark}/>
+          </window.DCArtboard>
+          <window.DCArtboard id="logo-bgs-light" label="On light" width={760} height={260}>
+            <BackgroundsRow b={light}/>
+          </window.DCArtboard>
+          <window.DCArtboard id="logo-donts" label="Don'ts" width={760} height={300}>
+            <Donts b={dark}/>
+          </window.DCArtboard>
+        </window.DCSection>
+
+        {/* ─── 03 · Color · dark and light ─────────────────────── */}
+        <window.DCSection id="palette" title="Palette" subtitle="One palette, two modes. Light mode for the brave.">
+          <window.DCArtboard id="palette-dark" label="Dark mode tokens" width={760} height={520}>
+            <PaletteCard b={dark}/>
+          </window.DCArtboard>
+          <window.DCArtboard id="palette-light" label="Light mode tokens" width={760} height={520}>
+            <PaletteCard b={light}/>
+          </window.DCArtboard>
+        </window.DCSection>
+
+        {/* ─── 04 · Type ────────────────────────────────────────── */}
+        <window.DCSection id="type" title="Type system" subtitle="Newsreader (display) · Inter Tight (UI) · JetBrains Mono (meta)">
+          <window.DCArtboard id="type-card" label="Type pairing" width={1280} height={680}>
+            <TypeCard b={dark}/>
+          </window.DCArtboard>
+        </window.DCSection>
+
+        {/* ─── 05 · App icon ────────────────────────────────────── */}
+        <window.DCSection id="appicon" title="App icon" subtitle="Adaptive icon. Foreground 78% of canvas — readable from the launcher.">
+          <window.DCArtboard id="appicon-grid" label="Sizes · 36→192px" width={760} height={420}>
+            <AppIconGrid b={dark}/>
+          </window.DCArtboard>
+          <window.DCArtboard id="launcher-dark" label="Launcher · dark" width={420} height={520}>
+            <LauncherPreview b={dark} dark/>
+          </window.DCArtboard>
+          <window.DCArtboard id="launcher-light" label="Launcher · light" width={420} height={520}>
+            <LauncherPreview b={light}/>
+          </window.DCArtboard>
+        </window.DCSection>
+
+        {/* ─── 06 · App screens — dark ─────────────────────────── */}
+        <window.DCSection id="screens-dark" title="App screens · dark" subtitle="The default for migraine sufferers — low-light, low-stimulation">
+          <window.DCArtboard id="sd-today"   label="Today / Calendar"      width={420} height={880}><Phone><window.ScreenToday b={dark}/></Phone></window.DCArtboard>
+          <window.DCArtboard id="sd-log"     label="Log event · 3D head"  width={420} height={880}><Phone><window.ScreenLogEvent b={dark}/></Phone></window.DCArtboard>
+          <window.DCArtboard id="sd-stats"   label="Analysis · stats"     width={420} height={880}><Phone><window.ScreenAnalysis b={dark}/></Phone></window.DCArtboard>
+          <window.DCArtboard id="sd-corr"    label="Analysis · patterns"  width={420} height={880}><Phone><window.ScreenCorrelations b={dark}/></Phone></window.DCArtboard>
+          <window.DCArtboard id="sd-rep"     label="Reports"              width={420} height={880}><Phone><window.ScreenReports b={dark}/></Phone></window.DCArtboard>
+          <window.DCArtboard id="sd-set"     label="Settings"             width={420} height={880}><Phone><window.ScreenSettings b={dark}/></Phone></window.DCArtboard>
+          <window.DCArtboard id="sd-splash"  label="Splash"               width={420} height={880}><Phone><window.ScreenSplash b={dark}/></Phone></window.DCArtboard>
+        </window.DCSection>
+
+        {/* ─── 07 · App screens — light ────────────────────────── */}
+        <window.DCSection id="screens-light" title="App screens · light" subtitle="For the brave — same screens, paper palette">
+          <window.DCArtboard id="sl-today"   label="Today / Calendar"      width={420} height={880}><Phone light><window.ScreenToday b={light}/></Phone></window.DCArtboard>
+          <window.DCArtboard id="sl-log"     label="Log event · 3D head"  width={420} height={880}><Phone light><window.ScreenLogEvent b={light}/></Phone></window.DCArtboard>
+          <window.DCArtboard id="sl-stats"   label="Analysis · stats"     width={420} height={880}><Phone light><window.ScreenAnalysis b={light}/></Phone></window.DCArtboard>
+          <window.DCArtboard id="sl-corr"    label="Analysis · patterns"  width={420} height={880}><Phone light><window.ScreenCorrelations b={light}/></Phone></window.DCArtboard>
+          <window.DCArtboard id="sl-rep"     label="Reports"              width={420} height={880}><Phone light><window.ScreenReports b={light}/></Phone></window.DCArtboard>
+          <window.DCArtboard id="sl-set"     label="Settings"             width={420} height={880}><Phone light><window.ScreenSettings b={light}/></Phone></window.DCArtboard>
+          <window.DCArtboard id="sl-splash"  label="Splash"               width={420} height={880}><Phone light><window.ScreenSplash b={light}/></Phone></window.DCArtboard>
+        </window.DCSection>
+
+        {/* ─── 08 · Marketing ──────────────────────────────────── */}
+        <window.DCSection id="marketing" title="Marketing" subtitle="Play Store, website, social — toggle dark/light via Tweaks">
+          <window.DCArtboard id="m-feature" label="Play Store · feature graphic 1024×500" width={1024} height={500}>
+            <window.FeatureGraphic brand={live}/>
+          </window.DCArtboard>
+          <window.DCArtboard id="m-play1" label="Play screenshot · Today" width={360} height={720}>
+            <window.PlayShot brand={live} headline="Track quietly." sub="A single tap logs how today felt.">
+              <Phone light={live.mode === 'light'}><window.ScreenToday b={live}/></Phone>
+            </window.PlayShot>
+          </window.DCArtboard>
+          <window.DCArtboard id="m-play2" label="Play screenshot · 3D head" width={360} height={720}>
+            <window.PlayShot brand={live} headline="Map the pain." sub="Paint where it hurts on a 3D head. Two fingers to rotate.">
+              <Phone light={live.mode === 'light'}><window.ScreenLogEvent b={live}/></Phone>
+            </window.PlayShot>
+          </window.DCArtboard>
+          <window.DCArtboard id="m-play3" label="Play screenshot · Analysis" width={360} height={720}>
+            <window.PlayShot brand={live} headline="See the week." sub="Intensity, hours in pain, attack count — at a glance.">
+              <Phone light={live.mode === 'light'}><window.ScreenAnalysis b={live}/></Phone>
+            </window.PlayShot>
+          </window.DCArtboard>
+          <window.DCArtboard id="m-play4" label="Play screenshot · Patterns" width={360} height={720}>
+            <window.PlayShot brand={live} headline="Notice patterns." sub="Heda links your data with sleep and steps from Health Connect.">
+              <Phone light={live.mode === 'light'}><window.ScreenCorrelations b={live}/></Phone>
+            </window.PlayShot>
+          </window.DCArtboard>
+          <window.DCArtboard id="m-play5" label="Play screenshot · Reports" width={360} height={720}>
+            <window.PlayShot brand={live} headline="Bring it to your doctor." sub="Export PDF or CSV. Share only what you choose.">
+              <Phone light={live.mode === 'light'}><window.ScreenReports b={live}/></Phone>
+            </window.PlayShot>
+          </window.DCArtboard>
+          <window.DCArtboard id="m-web" label="Website hero" width={1280} height={800}>
+            <window.WebsiteHero brand={live}/>
+          </window.DCArtboard>
+          <window.DCArtboard id="m-soc1" label="Social · quote 1080" width={600} height={600}>
+            <window.SocialSquare brand={live} kind="quote" size={600}/>
+          </window.DCArtboard>
+          <window.DCArtboard id="m-soc2" label="Social · mark 1080" width={600} height={600}>
+            <window.SocialSquare brand={live} kind="mark" size={600}/>
+          </window.DCArtboard>
+        </window.DCSection>
+
+        {/* ─── 09 · Brand guidelines ───────────────────────────── */}
+        <window.DCSection id="bg" title="Brand guidelines" subtitle="A short reference">
+          <window.DCArtboard id="bg-page" label="Guidelines · v1" width={900} height={1280}>
+            <window.BrandGuidelines brand={dark}/>
+          </window.DCArtboard>
+        </window.DCSection>
+
+      </window.DesignCanvas>
+
+      <window.TweaksPanel>
+        <window.TweakSection title="Marketing preview mode">
+          <window.TweakRadio
+            value={tw.previewMode}
+            onChange={(v) => setTweak('previewMode', v)}
+            options={[
+              { value: 'dark',  label: 'Dark' },
+              { value: 'light', label: 'Light' },
+            ]}
+          />
+        </window.TweakSection>
+      </window.TweaksPanel>
+    </>
+  );
+}
+
+// ─── Cover ────────────────────────────────────────────────
+function CoverArtboard({ dark }) {
+  const b = dark;
+  return (
+    <div style={{ width: '100%', height: '100%', background: b.bg, color: b.text, fontFamily: b.sans, padding: 80, position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+      <div style={{ position: 'absolute', right: -120, top: -80, opacity: 0.07 }}>
+        <window.HedaHeadTopo size={760} color={b.accent}/>
+      </div>
+      <div style={{ position: 'relative' }}>
+        <div style={{ fontFamily: b.mono, fontSize: 11, letterSpacing: 2, color: b.accent, marginBottom: 24 }}>HEDA · BRAND PACK · v1</div>
+        <window.HedaLockup size={64} color={b.text} font={b.sans}/>
+      </div>
+      <div style={{ position: 'relative' }}>
+        <div style={{ fontFamily: b.serif, fontSize: 96, lineHeight: 1, letterSpacing: '-0.025em', maxWidth: 920, fontWeight: 400, marginBottom: 18 }}>
+          A quiet record<br/>of a long week.
+        </div>
+        <div style={{ fontSize: 18, color: b.textMute, maxWidth: 520, lineHeight: 1.5 }}>
+          Headache and migraine diary. 3D pain mapping, Health Connect correlations, private by default.
+        </div>
+      </div>
+      <div style={{ position: 'relative', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
+        <div style={{ fontFamily: b.mono, fontSize: 10, color: b.textDim, letterSpacing: 1.4 }}>
+          SAGE CALM · TOPO AURA · DARK + LIGHT
+        </div>
+        <div style={{ display: 'flex', gap: 12 }}>
+          <Pill b={b}>Logo</Pill>
+          <Pill b={b}>Palette</Pill>
+          <Pill b={b}>Type</Pill>
+          <Pill b={b}>App icon</Pill>
+          <Pill b={b}>Screens</Pill>
+          <Pill b={b}>Marketing</Pill>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Pill({ b, children }) {
+  return (
+    <span style={{ padding: '6px 12px', borderRadius: 999, border: `1px solid ${b.line}`, fontSize: 11, color: b.textMute, fontFamily: b.mono, letterSpacing: 0.5 }}>{children}</span>
+  );
+}
+
+// ─── Logo anatomy ─────────────────────────────────────────
+function LogoAnatomy({ b }) {
+  return (
+    <div style={{ width: '100%', height: '100%', background: b.bg, color: b.text, fontFamily: b.sans, padding: 36, display: 'flex', flexDirection: 'column', gap: 22 }}>
+      <window.SectionLabel brand={b}>Anatomy</window.SectionLabel>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20, flex: 1 }}>
+        <div style={{ background: b.bgCard, borderRadius: 12, border: `1px solid ${b.line}`, padding: 24, position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <window.MarkAura size={180} color={b.accent}/>
+          <Tag b={b} style={{ top: 16, left: 16 }}>Outer ring · 18% opacity</Tag>
+          <Tag b={b} style={{ top: 50, right: 16 }}>Mid ring · 30%</Tag>
+          <Tag b={b} style={{ bottom: 90, left: 16 }}>Inner ring · 50%</Tag>
+          <Tag b={b} style={{ bottom: 28, right: 16 }}>Head + shoulders · solid</Tag>
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 16, justifyContent: 'space-between' }}>
+          <div>
+            <div style={{ fontFamily: b.mono, fontSize: 9, color: b.textDim, letterSpacing: 1 }}>WORDMARK</div>
+            <window.HedaWordmark size={72} color={b.text} font={b.sans} weight={500} tracking={-0.04}/>
+            <div style={{ fontSize: 12, color: b.textMute, marginTop: 6 }}>Inter Tight · 500 · −0.04em tracking · all lowercase</div>
+          </div>
+          <div>
+            <div style={{ fontFamily: b.mono, fontSize: 9, color: b.textDim, letterSpacing: 1 }}>LOCKUP</div>
+            <div style={{ marginTop: 8 }}>
+              <window.HedaLockup size={48} color={b.text} font={b.sans}/>
+            </div>
+            <div style={{ fontSize: 12, color: b.textMute, marginTop: 6 }}>Mark height = wordmark cap height. 0.21× gap.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Tag({ b, children, style }) {
+  return (
+    <span style={{ position: 'absolute', fontFamily: b.mono, fontSize: 9, color: b.textMute, letterSpacing: 0.5, padding: '3px 7px', background: 'rgba(0,0,0,0.3)', borderRadius: 4, ...style }}>{children}</span>
+  );
+}
+
+// ─── Size scale ───────────────────────────────────────────
+function SizeScale({ b }) {
+  return (
+    <div style={{ width: '100%', height: '100%', background: b.bg, color: b.text, fontFamily: b.sans, padding: 36, display: 'flex', flexDirection: 'column', gap: 18 }}>
+      <window.SectionLabel brand={b}>Size scale</window.SectionLabel>
+      <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: 16, flex: 1 }}>
+        {[16, 24, 32, 48, 64, 96, 128].map(s => (
+          <div key={s} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>
+            <window.MarkAura size={s} color={b.text}/>
+            <span style={{ fontFamily: b.mono, fontSize: 9, color: b.textDim }}>{s}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ─── Backgrounds ──────────────────────────────────────────
+function BackgroundsRow({ b }) {
+  return (
+    <div style={{ width: '100%', height: '100%', background: b.bg, color: b.text, fontFamily: b.sans, padding: 36, display: 'flex', flexDirection: 'column', gap: 14 }}>
+      <window.SectionLabel brand={b}>{b.mode === 'dark' ? 'On dark' : 'On light'}</window.SectionLabel>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12, flex: 1 }}>
+        <BgTile b={b} bg={b.bg}     fg={b.accent}    label="Surface"/>
+        <BgTile b={b} bg={b.bgCard} fg={b.text}      label="Raised"/>
+        <BgTile b={b} bg={b.accent} fg={b.accentInk} label="Accent"/>
+        <BgTile b={b} bg={b.text}   fg={b.bg}        label="Reversed"/>
+      </div>
+    </div>
+  );
+}
+
+function BgTile({ b, bg, fg, label }) {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+      <div style={{ background: bg, borderRadius: 8, padding: 18, height: 110, display: 'flex', alignItems: 'center', justifyContent: 'center', border: `1px solid ${b.line}` }}>
+        <window.HedaLockup size={28} color={fg} font={b.sans}/>
+      </div>
+      <span style={{ fontFamily: b.mono, fontSize: 9, color: b.textMute, letterSpacing: 0.6 }}>{label}</span>
+    </div>
+  );
+}
+
+// ─── Don'ts ───────────────────────────────────────────────
+function Donts({ b }) {
+  const Mark = window.MarkAura;
+  return (
+    <div style={{ width: '100%', height: '100%', background: b.bg, color: b.text, fontFamily: b.sans, padding: 36, display: 'flex', flexDirection: 'column', gap: 14 }}>
+      <window.SectionLabel brand={b}>Don'ts</window.SectionLabel>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12, flex: 1 }}>
+        {[
+          { label: 'No gradients', render: () => (
+            <div style={{ width: 56, height: 56, borderRadius: 28, background: `linear-gradient(135deg, ${b.accent}, ${b.danger})`, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <Mark size={36} color="#fff"/>
+            </div>
+          )},
+          { label: 'No rotation', render: () => (<div style={{ transform: 'rotate(20deg)' }}><Mark size={56} color={b.accent}/></div>)},
+          { label: 'No outline-only head', render: () => (
+            <svg width="56" height="56" viewBox="0 0 64 64" fill="none">
+              <ellipse cx="32" cy="30" rx="9" ry="11" stroke={b.text} strokeWidth="1.4" fill="none"/>
+            </svg>
+          )},
+          { label: 'No stretching', render: () => (<div style={{ transform: 'scale(1.6, 0.8)' }}><Mark size={56} color={b.accent}/></div>)},
+        ].map((d, i) => (
+          <div key={i} style={{ background: b.bgCard, borderRadius: 10, padding: 12, border: `1px solid ${b.line}`, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, justifyContent: 'center' }}>
+            <div style={{ height: 70, display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
+              {d.render()}
+              <div style={{ position: 'absolute', top: -2, right: -2, width: 18, height: 18, borderRadius: 9, background: b.danger, color: b.bg, fontSize: 12, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>×</div>
+            </div>
+            <span style={{ fontSize: 11, color: b.textMute, textAlign: 'center' }}>{d.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ─── Palette card ─────────────────────────────────────────
+function PaletteCard({ b }) {
+  const swatches = [
+    { color: b.bg,        label: 'Surface',   hex: b.bg },
+    { color: b.bgRaised,  label: 'Raised',    hex: b.bgRaised },
+    { color: b.bgCard,    label: 'Card',      hex: b.bgCard },
+    { color: b.text,      label: 'Ink',       hex: b.text },
+    { color: b.textMute,  label: 'Mute',      hex: b.textMute },
+    { color: b.textDim,   label: 'Dim',       hex: b.textDim },
+    { color: b.accent,    label: 'Accent',    hex: b.accent },
+    { color: b.accentSoft,label: 'Soft',      hex: b.accentSoft },
+    { color: b.warm,      label: 'Warm',      hex: b.warm },
+    { color: b.danger,    label: 'Migraine',  hex: b.danger },
+  ];
+  return (
+    <div style={{ width: '100%', height: '100%', background: b.bg, color: b.text, fontFamily: b.sans, padding: 36, display: 'flex', flexDirection: 'column', gap: 22 }}>
+      <div>
+        <div style={{ fontFamily: b.mono, fontSize: 10, letterSpacing: 1.3, color: b.accent, marginBottom: 10 }}>SAGE · {b.mode.toUpperCase()}</div>
+        <div style={{ fontFamily: b.serif, fontSize: 32, fontWeight: 400, lineHeight: 1.1 }}>
+          {b.mode === 'dark' ? 'Off-black, sage, sand.' : 'Paper, deeper sage, walnut.'}
+        </div>
+      </div>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 14, flex: 1 }}>
+        {swatches.map((s, i) => (
+          <div key={i} style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+            <div style={{ aspectRatio: '1', background: s.color, borderRadius: 10, border: `1px solid ${b.line}` }}/>
+            <div style={{ fontSize: 11, color: b.text, fontWeight: 500 }}>{s.label}</div>
+            <div style={{ fontFamily: b.mono, fontSize: 9, color: b.textMute }}>{s.hex}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ─── Type card ────────────────────────────────────────────
+function TypeCard({ b }) {
+  return (
+    <div style={{ width: '100%', height: '100%', background: b.bg, color: b.text, fontFamily: b.sans, padding: 56, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48 }}>
+      <div>
+        <div style={{ fontFamily: b.mono, fontSize: 10, color: b.accent, letterSpacing: 1.4, marginBottom: 14 }}>DISPLAY · NEWSREADER</div>
+        <div style={{ fontFamily: b.serif, fontSize: 140, lineHeight: 0.95, fontWeight: 400, letterSpacing: '-0.02em', marginBottom: 18 }}>Aa</div>
+        <div style={{ fontFamily: b.serif, fontSize: 48, lineHeight: 1.1, fontWeight: 400, letterSpacing: '-0.015em' }}>
+          A quiet record of a long week.
+        </div>
+        <div style={{ fontFamily: b.serif, fontStyle: 'italic', fontSize: 22, color: b.textMute, marginTop: 14 }}>
+          Possible patterns from the last 90 days.
+        </div>
+      </div>
+      <div>
+        <div style={{ fontFamily: b.mono, fontSize: 10, color: b.accent, letterSpacing: 1.4, marginBottom: 14 }}>UI · INTER TIGHT</div>
+        <div style={{ fontFamily: b.sans, fontSize: 140, lineHeight: 0.95, fontWeight: 500, letterSpacing: '-0.04em', marginBottom: 18 }}>Aa</div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+          <Row b={b} k="Display 32" v="Sunday, 26 April"        s={{ fontSize: 32, fontWeight: 500, letterSpacing: '-0.02em' }}/>
+          <Row b={b} k="Heading 20" v="Detected patterns"        s={{ fontSize: 20, fontWeight: 500, letterSpacing: '-0.01em' }}/>
+          <Row b={b} k="Body 15"    v="Headache · 13:17–15:17 · intensity 4/10" s={{ fontSize: 15 }}/>
+          <Row b={b} k="Caption 12" v="Daily weighted · 7-day window"  s={{ fontSize: 12, color: b.textMute }}/>
+          <Row b={b} k="Mono 10"    v="ANALYSIS · STATISTICS"     s={{ fontFamily: b.mono, fontSize: 10, letterSpacing: 1.4, color: b.textDim }}/>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Row({ b, k, v, s }) {
+  return (
+    <div style={{ display: 'flex', alignItems: 'baseline', gap: 14, paddingBottom: 8, borderBottom: `1px solid ${b.line}` }}>
+      <span style={{ width: 90, fontFamily: b.mono, fontSize: 9, color: b.textDim, letterSpacing: 0.5 }}>{k.toUpperCase()}</span>
+      <span style={{ flex: 1, ...s }}>{v}</span>
+    </div>
+  );
+}
+
+// ─── App icon grid ────────────────────────────────────────
+function AppIconGrid({ b }) {
+  const sizes = [192, 128, 96, 72, 48, 36];
+  return (
+    <div style={{ width: '100%', height: '100%', background: b.bg, color: b.text, fontFamily: b.sans, padding: 36, display: 'flex', flexDirection: 'column', gap: 18 }}>
+      <window.SectionLabel brand={b}>App icon · sizes</window.SectionLabel>
+      <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: 20, flex: 1 }}>
+        {sizes.map(s => (
+          <div key={s} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10 }}>
+            <BigIcon b={b} size={s}/>
+            <span style={{ fontFamily: b.mono, fontSize: 9, color: b.textDim }}>{s}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function BigIcon({ b, size = 96 }) {
+  const radius = size * 0.24;
+  return (
+    <div style={{
+      width: size, height: size, borderRadius: radius,
+      background: b.bgCard,
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      boxShadow: `0 ${size*0.05}px ${size*0.18}px rgba(0,0,0,0.35)`,
+      border: `1px solid ${b.line}`,
+    }}>
+      <window.MarkAura size={size * 0.78} color={b.accent}/>
+    </div>
+  );
+}
+
+// ─── Launcher preview ─────────────────────────────────────
+function LauncherPreview({ b, dark }) {
+  const otherApps = dark
+    ? [{ name: 'Photos', color: '#3a4a8a' }, { name: 'Maps', color: '#3a8a5a' }, { name: 'Health', color: '#a83a3a' },
+       { name: 'Calendar', color: '#7a3a8a' }, { name: 'Notes', color: '#c9a64a' }, { name: 'Messages', color: '#3a8a8a' },
+       { name: 'Browser', color: '#4a4a4a' }]
+    : [{ name: 'Photos', color: '#5a6fa6' }, { name: 'Maps', color: '#5aa67a' }, { name: 'Health', color: '#c46a6a' },
+       { name: 'Calendar', color: '#9a6aa6' }, { name: 'Notes', color: '#d4b35a' }, { name: 'Messages', color: '#5aa6a6' },
+       { name: 'Browser', color: '#6a6a6a' }];
+  const wallpaper = dark ? 'radial-gradient(ellipse at top, #2a2a30, #0a0a10)' : 'radial-gradient(ellipse at top, #d8d4c8, #b8b4a8)';
+  const fg = dark ? '#fff' : '#1a1a1a';
+  return (
+    <div style={{ width: '100%', height: '100%', background: wallpaper, padding: 26, display: 'flex', flexDirection: 'column', gap: 20, fontFamily: b.sans, color: fg }}>
+      <div style={{ fontFamily: b.mono, fontSize: 9, letterSpacing: 1.3, opacity: 0.6 }}>LAUNCHER · {dark ? 'DARK' : 'LIGHT'}</div>
+      <div style={{ fontFamily: b.serif, fontSize: 32, lineHeight: 1, opacity: 0.92 }}>9:30</div>
+      <div style={{ fontSize: 13, opacity: 0.7 }}>Sun, 26 April</div>
+      <div style={{ flex: 1 }}/>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 18, alignItems: 'end' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6 }}>
+          <BigIcon b={b} size={68}/>
+          <span style={{ fontSize: 11, color: fg, textShadow: dark ? '0 1px 2px rgba(0,0,0,0.6)' : 'none' }}>Heda</span>
+        </div>
+        {otherApps.slice(0, 7).map((a, i) => (
+          <div key={i} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6 }}>
+            <div style={{ width: 68, height: 68, borderRadius: 16, background: a.color, opacity: 0.92, boxShadow: '0 4px 12px rgba(0,0,0,0.3)' }}/>
+            <span style={{ fontSize: 11, color: fg, opacity: 0.85, textShadow: dark ? '0 1px 2px rgba(0,0,0,0.6)' : 'none' }}>{a.name}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ─── Phone bezel — matches mode ───────────────────────────
+function Phone({ children, light }) {
+  const bezel = light ? '#888' : '#0a0a0a';
+  return (
+    <div style={{ width: 410, height: 860, padding: 10, background: bezel, borderRadius: 44, boxShadow: '0 20px 60px rgba(0,0,0,0.35), inset 0 0 0 1px rgba(255,255,255,0.05)' }}>
+      <div style={{ width: '100%', height: '100%', borderRadius: 36, overflow: 'hidden', position: 'relative' }}>
+        {children}
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+
+</body>
+</html>
