@@ -1,68 +1,133 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>User Guide – Heda</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="shared.css" />
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <div class="brand">
-        <div class="logo">Heda</div>
-        <div class="tagline">User Guide</div>
-      </div>
-      <div class="nav">
-        <a href="../index.html">Main</a>
-      </div>
+
+  <!-- ── Site header ── -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand-lockup" href="../index.html">
+        <svg width="26" height="26" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <circle cx="32" cy="32" r="29" stroke="currentColor" stroke-width="1" opacity="0.18" fill="none"/>
+          <circle cx="32" cy="32" r="23" stroke="currentColor" stroke-width="1" opacity="0.30" fill="none"/>
+          <circle cx="32" cy="32" r="17.5" stroke="currentColor" stroke-width="1" opacity="0.50" fill="none"/>
+          <ellipse cx="32" cy="30" rx="9" ry="11" fill="currentColor"/>
+          <path d="M27 41 Q32 44 37 41 L39 47 Q32 49 25 47 Z" fill="currentColor"/>
+        </svg>
+        <div class="header-meta">
+          <span class="wordmark">heda</span>
+          <span class="header-subtitle">User Guide</span>
+        </div>
+      </a>
+      <nav class="header-nav">
+        <a href="../index.html">← Documents</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── Language picker ── -->
+  <main class="lang-page">
+    <div class="lang-hero">
+      <svg width="52" height="52" viewBox="0 0 64 64" fill="none" aria-hidden="true" style="color:var(--accent)">
+        <circle cx="32" cy="32" r="29" stroke="currentColor" stroke-width="1" opacity="0.18" fill="none"/>
+        <circle cx="32" cy="32" r="23" stroke="currentColor" stroke-width="1" opacity="0.30" fill="none"/>
+        <circle cx="32" cy="32" r="17.5" stroke="currentColor" stroke-width="1" opacity="0.50" fill="none"/>
+        <ellipse cx="32" cy="30" rx="9" ry="11" fill="currentColor"/>
+        <path d="M27 41 Q32 44 37 41 L39 47 Q32 49 25 47 Z" fill="currentColor"/>
+      </svg>
+      <h1 class="lang-hero-title">User Guide</h1>
+      <p class="lang-hero-sub">Choose your language to continue.</p>
     </div>
 
-    <div class="card">
-      <h1>Overview</h1>
-      <p>
-        Heda is a versatile migraine diary that helps you track your migraine episodes, symptoms, triggers, and medications. It integrates with <strong>Google Health Connect</strong> to let you read and write health data directly from your Android device.
-      </p>
+    <div class="lang-grid">
 
-      <h2>How to use the app (general)</h2>
-      <ul>
-        <li><strong>Log an episode</strong> – record a migraine episode with onset time, pain level, location, symptoms, and any medications taken.</li>
-        <li><strong>Track triggers</strong> – add potential triggers (sleep, stress, weather, diet, etc.) to help identify patterns over time.</li>
-        <li><strong>View history</strong> – browse your diary entries by day, week, or month to see trends in your migraine frequency and severity.</li>
-        <li><strong>Health Connect</strong> – enable the Google Health Connect integration in Settings to sync migraine data with other health apps on your device.</li>
-        <li><strong>Settings</strong> – configure notifications, reminders, Health Connect permissions, and privacy options.</li>
-      </ul>
+      <!-- Available languages -->
+      <a class="lang-option available" href="en/index.html">
+        <span class="lang-name">English</span>
+        <span class="lang-native">English (UK)</span>
+        <span class="lang-badge">Available</span>
+      </a>
 
-      <h2>Features</h2>
-      <div class="grid">
-        <div class="tile">
-          <div class="title">Migraine Diary</div>
-          <div class="desc">Log episodes with pain level, duration, symptoms, aura, and notes.</div>
-        </div>
-        <div class="tile">
-          <div class="title">Trigger Tracking</div>
-          <div class="desc">Record and review potential triggers to identify personal patterns.</div>
-        </div>
-        <div class="tile">
-          <div class="title">Medication Log</div>
-          <div class="desc">Track acute and preventive medications and their effectiveness.</div>
-        </div>
-        <div class="tile">
-          <div class="title">Statistics &amp; History</div>
-          <div class="desc">View charts and summaries of your migraine frequency and severity over time.</div>
-        </div>
-        <div class="tile">
-          <div class="title">Google Health Connect</div>
-          <div class="desc">Read and write health data on your device via the Android Health Connect platform.</div>
-        </div>
-      </div>
+      <a class="lang-option available" href="fi/index.html">
+        <span class="lang-name">Finnish</span>
+        <span class="lang-native">Suomi</span>
+        <span class="lang-badge">Available</span>
+      </a>
 
-      <hr />
+      <!-- Planned languages — add href and change class to "available" when ready -->
+      <span class="lang-option coming-soon">
+        <span class="lang-name">Swedish</span>
+        <span class="lang-native">Svenska</span>
+        <span class="lang-badge">Coming soon</span>
+      </span>
 
-      <div class="footer">
-        &copy; 2026 EXSports Oy. This documentation may be updated as the app evolves.
-      </div>
+      <span class="lang-option coming-soon">
+        <span class="lang-name">Norwegian</span>
+        <span class="lang-native">Norsk (bokmål)</span>
+        <span class="lang-badge">Coming soon</span>
+      </span>
+
+      <span class="lang-option coming-soon">
+        <span class="lang-name">Danish</span>
+        <span class="lang-native">Dansk</span>
+        <span class="lang-badge">Coming soon</span>
+      </span>
+
+      <span class="lang-option coming-soon">
+        <span class="lang-name">German</span>
+        <span class="lang-native">Deutsch</span>
+        <span class="lang-badge">Coming soon</span>
+      </span>
+
+      <span class="lang-option coming-soon">
+        <span class="lang-name">Dutch</span>
+        <span class="lang-native">Nederlands</span>
+        <span class="lang-badge">Coming soon</span>
+      </span>
+
+      <span class="lang-option coming-soon">
+        <span class="lang-name">French</span>
+        <span class="lang-native">Français</span>
+        <span class="lang-badge">Coming soon</span>
+      </span>
+
+      <span class="lang-option coming-soon">
+        <span class="lang-name">Spanish</span>
+        <span class="lang-native">Español</span>
+        <span class="lang-badge">Coming soon</span>
+      </span>
+
+      <span class="lang-option coming-soon">
+        <span class="lang-name">Italian</span>
+        <span class="lang-native">Italiano</span>
+        <span class="lang-badge">Coming soon</span>
+      </span>
+
+      <span class="lang-option coming-soon">
+        <span class="lang-name">Polish</span>
+        <span class="lang-native">Polski</span>
+        <span class="lang-badge">Coming soon</span>
+      </span>
+
+      <span class="lang-option coming-soon">
+        <span class="lang-name">Portuguese</span>
+        <span class="lang-native">Português</span>
+        <span class="lang-badge">Coming soon</span>
+      </span>
+
     </div>
-  </div>
+  </main>
+
+  <footer class="site-footer">
+    &copy; 2026 EXSports Oy &nbsp;·&nbsp;
+    <a href="../index.html">← Documents</a> &nbsp;·&nbsp;
+    <a href="mailto:info@exsports.fi">Contact</a>
+  </footer>
+
 </body>
 </html>

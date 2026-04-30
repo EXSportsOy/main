@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Guide – Heda</title>
+  <link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+
+  <!-- ── Site header ── -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand-lockup" href="../../index.html">
+        <svg width="26" height="26" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <circle cx="32" cy="32" r="29" stroke="currentColor" stroke-width="1" opacity="0.18" fill="none"/>
+          <circle cx="32" cy="32" r="23" stroke="currentColor" stroke-width="1" opacity="0.30" fill="none"/>
+          <circle cx="32" cy="32" r="17.5" stroke="currentColor" stroke-width="1" opacity="0.50" fill="none"/>
+          <ellipse cx="32" cy="30" rx="9" ry="11" fill="currentColor"/>
+          <path d="M27 41 Q32 44 37 41 L39 47 Q32 49 25 47 Z" fill="currentColor"/>
+        </svg>
+        <div class="header-meta">
+          <span class="wordmark">heda</span>
+          <span class="header-subtitle">User Guide</span>
+        </div>
+      </a>
+      <nav class="header-nav">
+        <a href="../../index.html">← Documents</a>
+        <a href="../index.html">← All languages</a>
+      </nav>
+      <a class="lang-btn" href="../fi/index.html">Suomi</a>
+    </div>
+  </header>
+
+  <div class="doc-layout">
+
+    <!-- ── Sidebar TOC ── -->
+    <aside>
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc-label">Contents</p>
+        <ul class="toc-list">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#getting-started">Getting started</a></li>
+          <li><a href="#calendar">Calendar</a></li>
+          <li class="toc-sub"><ul class="toc-list">
+            <li><a href="#month-strip">Month view</a></li>
+            <li><a href="#event-cards">Event cards</a></li>
+            <li><a href="#quick-add">Quick Add</a></li>
+          </ul></li>
+          <li><a href="#logging">Logging an event</a></li>
+          <li class="toc-sub"><ul class="toc-list">
+            <li><a href="#type-intensity">Type &amp; intensity</a></li>
+            <li><a href="#date-time">Date &amp; time</a></li>
+            <li><a href="#pain-area">Pain area</a></li>
+            <li><a href="#triggers">Triggers</a></li>
+            <li><a href="#aura-med">Aura &amp; medication</a></li>
+            <li><a href="#notes">Notes</a></li>
+          </ul></li>
+          <li><a href="#editing">Editing &amp; deleting</a></li>
+          <li><a href="#analysis">Analysis</a></li>
+          <li><a href="#statistics">Statistics</a></li>
+          <li><a href="#reports">Reports</a></li>
+          <li><a href="#settings">Settings</a></li>
+          <li><a href="#privacy">Privacy &amp; Data</a></li>
+          <li><a href="#health-connect">Health Connect</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- ── Main content ── -->
+    <main class="doc-content">
+
+      <span class="section-label">Heda · User Guide</span>
+      <h1 class="doc-title">How to use Heda</h1>
+      <p class="doc-intro">A quiet diary for headache and migraine. Map your pain, find patterns, and understand your triggers — all stored privately on your device.</p>
+
+      <!-- ─ Overview ─ -->
+      <section class="doc-section" id="overview">
+        <h2 class="section-heading">Overview</h2>
+
+        <p>Heda is an offline-first headache and migraine diary for Android. All health data is encrypted and stored only on your device. Nothing is uploaded to any server — your data is yours alone.</p>
+
+        <p>The app has four main areas, accessible from the bottom navigation bar:</p>
+
+        <div class="nav-bar-demo" aria-hidden="true">
+          <div class="nav-tab active">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9h17M8 3v3M16 3v3"/></svg>
+            Calendar
+          </div>
+          <div class="nav-tab">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l4-6 3 3 5-8 4 6"/></svg>
+            Analysis
+          </div>
+          <div class="nav-tab">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7h14M5 12h14M5 17h9"/></svg>
+            Reports
+          </div>
+          <div class="nav-tab">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.5 5.5l1.5 1.5M17 17l1.5 1.5M5.5 18.5L7 17M17 7l1.5-1.5"/></svg>
+            Settings
+          </div>
+        </div>
+
+        <div class="card-grid">
+          <div class="info-card">
+            <div class="card-title">Calendar</div>
+            <div class="card-body">Browse and manage your headache events by date. Add new events from here.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Analysis</div>
+            <div class="card-body">Detected patterns and personalised recommendations powered by your Health Connect data.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Reports</div>
+            <div class="card-body">Monthly and daily summaries with charts. Export your data as CSV or PDF.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Settings</div>
+            <div class="card-body">Theme, language, Health Connect, notifications, privacy, and advanced options.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─ Getting started ─ -->
+      <section class="doc-section" id="getting-started">
+        <h2 class="section-heading">Getting started</h2>
+
+        <h3 class="sub-heading">Sign in</h3>
+        <p>Heda requires a Google account to protect your data. Signing in creates an encrypted, device-bound key linked to your account — no data is stored in the cloud.</p>
+        <ol class="steps">
+          <li>Open Heda after installing it from Google Play.</li>
+          <li>Tap <strong>Sign in with Google</strong> and choose your Google account.</li>
+          <li>Your account is now bound to this installation. The same Google account must be used if you reinstall the app.</li>
+        </ol>
+        <div class="note">
+          <strong>Privacy first.</strong> Heda does not upload any health data to external servers. Your Google account is used only for identity — to tie encryption keys to a single user on this device.
+        </div>
+
+        <h3 class="sub-heading">First-run consent</h3>
+        <p>On first launch, Heda asks whether you want to share anonymous usage statistics and crash reports. Neither option sends any health data. You can change your choice later in <strong>Settings → Privacy &amp; Data</strong>.</p>
+
+        <ul>
+          <li><strong>Anonymous usage statistics</strong> — helps the team understand which features are most used (Firebase Analytics).</li>
+          <li><strong>Anonymous crash reports</strong> — automatically reports crashes so bugs can be fixed quickly (Firebase Crashlytics).</li>
+        </ul>
+      </section>
+
+      <!-- ─ Calendar ─ -->
+      <section class="doc-section" id="calendar">
+        <h2 class="section-heading">Calendar</h2>
+        <p>The Calendar is your daily view. It shows the current month at a glance, with coloured dots indicating headache intensity on each day.</p>
+
+        <h3 class="sub-heading" id="month-strip">Month view</h3>
+        <p>The month strip at the top shows the current month in an ISO-week grid (weeks run Monday–Sunday). Each day that has at least one logged event shows a small intensity dot:</p>
+
+        <ul>
+          <li><span style="color:var(--accent)">●</span> <strong>Blue/green</strong> — intensity 1–3 (mild)</li>
+          <li><span style="color:var(--warm)">●</span> <strong>Amber</strong> — intensity 4–6 (moderate)</li>
+          <li><span style="color:var(--danger)">●</span> <strong>Red</strong> — intensity 7–10 (severe)</li>
+        </ul>
+
+        <p>Use the <strong>‹</strong> and <strong>›</strong> buttons to navigate between months. Tap any date to select it and see that day's events below.</p>
+        <p>The current date is highlighted. Tapping the <strong>Today</strong> label or today's date scrolls back to the current day.</p>
+
+        <h3 class="sub-heading" id="event-cards">Event cards</h3>
+        <p>Events for the selected date are shown as cards below the month strip. Each card displays:</p>
+        <ul>
+          <li>The <strong>headache type</strong> (Headache or Migraine)</li>
+          <li><strong>Time range</strong> — start and end time, and the duration</li>
+          <li>An <strong>intensity bar</strong> (1–10 scale)</li>
+          <li>Aura and rescue medication indicators, if logged</li>
+        </ul>
+        <p>Tap a card to open it in <strong>edit mode</strong> where all fields can be changed.</p>
+
+        <h3 class="sub-heading" id="quick-add">Quick Add</h3>
+        <p>For fast logging, tap <strong>Quick Add</strong> at the bottom of the Calendar screen. A sheet slides up with the most essential fields:</p>
+        <ul>
+          <li><strong>Type</strong> — Headache or Migraine</li>
+          <li><strong>Intensity</strong> — slider 1–10</li>
+          <li><strong>Aura</strong> — checkbox</li>
+          <li><strong>Rescue medication</strong> — checkbox</li>
+        </ul>
+        <p>Tap <strong>Save</strong> to log immediately using the current time, or tap <strong>Add details…</strong> to open the full event form pre-filled with these values.</p>
+      </section>
+
+      <!-- ─ Logging ─ -->
+      <section class="doc-section" id="logging">
+        <h2 class="section-heading">Logging an event</h2>
+        <p>To log a new event with full details, tap the <strong>+ Add event</strong> button in the Calendar. If you tapped a specific date first, that date will be pre-selected in the form.</p>
+
+        <h3 class="sub-heading" id="type-intensity">Type &amp; intensity</h3>
+        <p>Choose between <strong>Headache</strong> and <strong>Migraine</strong> using the selector at the top. Then set the intensity on a scale of 1 (barely noticeable) to 10 (incapacitating) using the slider.</p>
+
+        <h3 class="sub-heading" id="date-time">Date &amp; time</h3>
+        <p>Three fields control the timing of the event:</p>
+        <ul>
+          <li><strong>Date</strong> — tap to open a date picker. Defaults to today.</li>
+          <li><strong>Start time</strong> — when the attack began. Tap to open a 24-hour time picker.</li>
+          <li><strong>End time</strong> — when the attack ended. Defaults to 2 hours after the start time. If you move the start time past the end time, the end time advances automatically to maintain the 2-hour gap.</li>
+        </ul>
+
+        <h3 class="sub-heading" id="pain-area">Pain area</h3>
+        <p>The <strong>3D head model</strong> lets you mark exactly where the pain is located. It supports two gestures:</p>
+        <ul>
+          <li><strong>One finger</strong> — paint pain areas by dragging across the surface of the head.</li>
+          <li><strong>Two fingers</strong> — rotate the head to reach areas at the back, sides, or neck.</li>
+        </ul>
+
+        <p>Eight anatomical regions are supported:</p>
+        <div class="tag-group">
+          <span class="tag">Frontal</span>
+          <span class="tag">Around eye — left</span>
+          <span class="tag">Around eye — right</span>
+          <span class="tag">Temple — left</span>
+          <span class="tag">Temple — right</span>
+          <span class="tag">Occipital — left</span>
+          <span class="tag">Occipital — right</span>
+          <span class="tag">Neck</span>
+        </div>
+
+        <p>Two additional chip options are available below the head model:</p>
+        <div class="tag-group">
+          <span class="tag accent">Whole head</span>
+          <span class="tag accent">Other</span>
+        </div>
+
+        <p>Enable the <strong>Colour-code by intensity</strong> toggle to tint the painted regions with the intensity colour (blue for mild, amber for moderate, red for severe). This is off by default.</p>
+
+        <div class="note">
+          <strong>Tip.</strong> You can remove painted regions by dragging over them again — the gesture toggles between adding and erasing.
+        </div>
+
+        <h3 class="sub-heading" id="triggers">Possible triggers</h3>
+        <p>Record potential triggers that may have contributed to this attack. They are grouped into seven categories:</p>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Category</th><th>Triggers</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Stress &amp; mood</strong></td>
+              <td>Stress, Stress let-down, Anxiety</td>
+            </tr>
+            <tr>
+              <td><strong>Sleep</strong></td>
+              <td>Too little sleep, Too much sleep, Irregular sleep</td>
+            </tr>
+            <tr>
+              <td><strong>Food &amp; drink</strong></td>
+              <td>Skipped meal, Long fast, Dehydration, Alcohol, Caffeine, Caffeine withdrawal, Chocolate, Aged cheese, Food additives, Processed meat</td>
+            </tr>
+            <tr>
+              <td><strong>Hormonal</strong></td>
+              <td>Menstruation, Ovulation, Hormonal birth control</td>
+            </tr>
+            <tr>
+              <td><strong>Environment</strong></td>
+              <td>Weather change, Extreme temperature, Humidity</td>
+            </tr>
+            <tr>
+              <td><strong>Sensory</strong></td>
+              <td>Bright light, Strong smell, Loud noise, Screen flicker</td>
+            </tr>
+            <tr>
+              <td><strong>Physical</strong></td>
+              <td>Intense exercise, Neck tension, Travel, Medication overuse</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 class="sub-heading" id="aura-med">Aura &amp; rescue medication</h3>
+        <ul>
+          <li><strong>Aura</strong> — tick if this event was preceded by an aura (visual disturbances, tingling, speech changes, etc.).</li>
+          <li><strong>Rescue medication</strong> — tick if you took acute medication (e.g. a triptan, NSAID, or paracetamol) during this attack.</li>
+        </ul>
+
+        <h3 class="sub-heading" id="notes">Notes</h3>
+        <p>The free-text notes field captures anything not covered by the structured fields — context, observations, what helped, or any other detail you want to remember.</p>
+
+        <p>Tap <strong>Save</strong> when done. The event appears on the Calendar immediately.</p>
+      </section>
+
+      <!-- ─ Editing & deleting ─ -->
+      <section class="doc-section" id="editing">
+        <h2 class="section-heading">Editing &amp; deleting events</h2>
+
+        <h3 class="sub-heading">Editing an event</h3>
+        <ol class="steps">
+          <li>Navigate to the date in the Calendar.</li>
+          <li>Tap the event card you want to change.</li>
+          <li>The event form opens in edit mode — all fields are editable.</li>
+          <li>Make your changes, then tap <strong>Update</strong> to save.</li>
+        </ol>
+
+        <h3 class="sub-heading">Deleting an event</h3>
+        <ol class="steps">
+          <li>Open the event in edit mode (tap its card in the Calendar).</li>
+          <li>Scroll to the bottom and tap <strong>Delete entry</strong>.</li>
+          <li>A confirmation dialog appears. Tap <strong>Delete</strong> to permanently remove the event.</li>
+        </ol>
+
+        <div class="warning">
+          <strong>Permanent action.</strong> Deletion cannot be undone. The event is removed immediately from the encrypted database on your device.
+        </div>
+      </section>
+
+      <!-- ─ Analysis ─ -->
+      <section class="doc-section" id="analysis">
+        <h2 class="section-heading">Analysis</h2>
+        <p>The Analysis tab shows possible correlations between your headache events and your daily health metrics from Health Connect. It looks back over the last 90 days.</p>
+
+        <div class="note">
+          <strong>Requires Health Connect.</strong> Connect Heda to Google Health Connect in <strong>Settings → Health Connect</strong> to enable this screen. See the <a href="#health-connect">Health Connect</a> section for setup steps.
+        </div>
+
+        <h3 class="sub-heading">Your baseline</h3>
+        <p>A baseline card at the top shows your average values for the last 14 days:</p>
+        <ul>
+          <li><strong>Sleep</strong> — average nightly sleep duration</li>
+          <li><strong>HRV</strong> — average heart rate variability (ms)</li>
+          <li><strong>Steps</strong> — average daily step count</li>
+        </ul>
+
+        <h3 class="sub-heading">Detected patterns</h3>
+        <p>Heda looks for four evidence-based patterns that commonly precede headache and migraine attacks:</p>
+
+        <ul class="feature-list">
+          <li><strong>Short sleep</strong> — you slept less than your configured minimum before this attack.</li>
+          <li><strong>Irregular sleep schedule</strong> — your sleep timing varied significantly over the preceding week.</li>
+          <li><strong>Low activity</strong> — your step count the day before was below the minimum threshold.</li>
+          <li><strong>Low HRV</strong> — your HRV dropped below baseline the day before, suggesting elevated stress or poor recovery.</li>
+        </ul>
+
+        <p>Each finding shows the specific evidence: the measured value and the threshold it crossed. For example: <em>"Slept 5 h 30 min before this event (threshold: 7 h)"</em>.</p>
+
+        <h3 class="sub-heading">Recommendations</h3>
+        <p>Based on the detected patterns, Heda generates personalised recommendations ranked by priority (High / Medium / Low):</p>
+
+        <ul>
+          <li><strong>Increase sleep duration</strong> — aim for at least 7 hours per night.</li>
+          <li><strong>Maintain a regular sleep schedule</strong> — go to bed within ±30 minutes of the same time each night.</li>
+          <li><strong>Increase daily activity</strong> — light exercise (e.g. a 30-minute walk) may reduce migraine risk.</li>
+          <li><strong>Manage stress and recovery</strong> — lower HRV indicates elevated stress; consider breathing exercises or meditation.</li>
+        </ul>
+
+        <div class="warning">
+          <strong>Not medical advice.</strong> Detected patterns are correlations, not diagnoses. Always consult a healthcare professional for medical guidance about your headaches.
+        </div>
+      </section>
+
+      <!-- ─ Statistics ─ -->
+      <section class="doc-section" id="statistics">
+        <h2 class="section-heading">Statistics</h2>
+        <p>The Statistics section is part of the Analysis tab. It gives you an overview of your headache frequency and severity across a selected time period.</p>
+
+        <h3 class="sub-heading">Period selector</h3>
+        <p>Choose between five time periods:</p>
+        <div class="tag-group">
+          <span class="tag accent">7 days</span>
+          <span class="tag">30 days</span>
+          <span class="tag">90 days</span>
+          <span class="tag">1 year</span>
+          <span class="tag">All time</span>
+        </div>
+
+        <h3 class="sub-heading">Summary cards</h3>
+        <div class="card-grid">
+          <div class="info-card">
+            <div class="card-title">Total events</div>
+            <div class="card-body">Count of all headache and migraine events in the period.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Average intensity</div>
+            <div class="card-body">Mean intensity (1–10) across all events in the period.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Events with aura</div>
+            <div class="card-body">How many events were accompanied by an aura.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Events with rescue medication</div>
+            <div class="card-body">How many events required acute medication.</div>
+          </div>
+        </div>
+
+        <h3 class="sub-heading">Charts</h3>
+        <ul>
+          <li><strong>Intensity</strong> — daily weighted average with a 7-day rolling window.</li>
+          <li><strong>Hours</strong> — 7-day rolling total of attack duration in hours.</li>
+          <li><strong>Attack count</strong> — 30-day rolling total of events.</li>
+        </ul>
+
+        <h3 class="sub-heading">Event type &amp; trigger breakdown</h3>
+        <p>A breakdown of events by type (Headache vs. Migraine) and a list of your most common triggers for the selected period are shown below the charts.</p>
+      </section>
+
+      <!-- ─ Reports ─ -->
+      <section class="doc-section" id="reports">
+        <h2 class="section-heading">Reports</h2>
+        <p>The Reports tab lets you view structured summaries of your data and export it for sharing with a healthcare professional.</p>
+
+        <h3 class="sub-heading">Monthly report</h3>
+        <p>The monthly report shows a calendar view for each selected month, with each day colour-coded by status:</p>
+        <ul>
+          <li><strong>No events</strong> — no attack recorded</li>
+          <li><strong>Headache</strong> — at least one headache event</li>
+          <li><strong>Migraine</strong> — at least one migraine event</li>
+        </ul>
+        <p>A pie chart shows the proportion of days in each category. Select one or more months using the month chips. Tap <strong>Select all</strong> or <strong>Clear</strong> to quickly select or deselect all months.</p>
+
+        <h3 class="sub-heading">Daily report</h3>
+        <p>The daily report focuses on individual events within a selected period. Choose from:</p>
+        <div class="tag-group">
+          <span class="tag">7 days</span>
+          <span class="tag accent">30 days</span>
+          <span class="tag">90 days</span>
+          <span class="tag">All time</span>
+        </div>
+        <p>A summary row at the top shows total events, average intensity, and the date range. Below it, each event is listed with its type, time, and intensity.</p>
+
+        <h3 class="sub-heading">Exporting data</h3>
+        <p>Use the export buttons to save your data:</p>
+        <ul>
+          <li><strong>Export as CSV</strong> — saves a comma-separated file with all events in the current period. Columns: Date, Time, Type, Intensity, Aura, Rescue medication, Triggers, Notes. The Android system file picker lets you choose the save location.</li>
+          <li><strong>Export as PDF</strong> — generates a formatted PDF document with the summary and event table, suitable for printing or sending to a doctor.</li>
+          <li><strong>Export Health Connect data as CSV</strong> — optionally export the cached sleep, HRV, and step count data alongside your headache events.</li>
+        </ul>
+
+        <div class="note">
+          <strong>File location.</strong> Heda uses the Android Storage Access Framework, so you choose where the exported file is saved. No files are uploaded to any server.
+        </div>
+      </section>
+
+      <!-- ─ Settings ─ -->
+      <section class="doc-section" id="settings">
+        <h2 class="section-heading">Settings</h2>
+        <p>Access Settings from the bottom navigation bar. Changes take effect immediately.</p>
+
+        <h3 class="sub-heading">Theme</h3>
+        <p>Choose between three options:</p>
+        <ul>
+          <li><strong>Light</strong> — warm paper-toned light mode.</li>
+          <li><strong>Dark</strong> — deep forest dark mode (default).</li>
+          <li><strong>System</strong> — follows your device's dark/light mode setting automatically.</li>
+        </ul>
+
+        <h3 class="sub-heading">Language</h3>
+        <p>Choose from 30+ languages grouped by region (Nordic, Germanic, Romance, Slavic, Baltic, and Other). The selected language applies to all text in the app. Choose <strong>System</strong> to follow your device's language setting.</p>
+
+        <h3 class="sub-heading">Health Connect</h3>
+        <p>Links to the Health Connect settings screen where you can grant or revoke permissions for sleep, HRV, and step count data. See the <a href="#health-connect">Health Connect</a> section for details.</p>
+
+        <h3 class="sub-heading">Privacy &amp; Data</h3>
+        <p>Opens the Privacy &amp; Data screen where you can manage your account, review what data is stored, exercise your GDPR rights, and delete your data. See the <a href="#privacy">Privacy &amp; Data</a> section for details.</p>
+
+        <h3 class="sub-heading">Automatic Health Connect sync</h3>
+        <p>When enabled, Heda fetches your latest health data from Health Connect once per day in the background, even when the app is closed. This is <strong>off by default</strong>. Enabling it requires Health Connect permissions to be granted.</p>
+
+        <h3 class="sub-heading">Daily health recommendations</h3>
+        <p>When enabled, Heda sends a daily notification if a high-priority correlation is detected. Tapping the notification opens the Analysis screen. This is <strong>off by default</strong> and requires the device's notification permission.</p>
+
+        <h3 class="sub-heading">Advanced</h3>
+        <p>Expand the Advanced section to fine-tune the thresholds used by the correlation engine. The defaults match established clinical guidelines for migraine prevention:</p>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Setting</th><th>Default</th><th>Description</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Minimum sleep</strong></td><td>7 h 0 min</td><td>Sleep below this duration is flagged as a possible trigger.</td></tr>
+            <tr><td><strong>Max sleep variability</strong></td><td>60 min</td><td>Standard deviation of sleep timing above this triggers the irregular-sleep pattern.</td></tr>
+            <tr><td><strong>Minimum steps</strong></td><td>3 000</td><td>Step count below this is flagged as low activity.</td></tr>
+            <tr><td><strong>Minimum HRV</strong></td><td>30 ms</td><td>HRV below this absolute threshold is flagged.</td></tr>
+            <tr><td><strong>HRV baseline fraction</strong></td><td>0.80</td><td>HRV below this fraction of your 14-day baseline is also flagged.</td></tr>
+          </tbody>
+        </table>
+
+        <p>Tap <strong>Reset to defaults</strong> to restore all thresholds to their original values.</p>
+      </section>
+
+      <!-- ─ Privacy & Data ─ -->
+      <section class="doc-section" id="privacy">
+        <h2 class="section-heading">Privacy &amp; Data</h2>
+        <p>Open <strong>Settings → Privacy &amp; Data</strong> to manage all data and account settings.</p>
+
+        <h3 class="sub-heading">Your account</h3>
+        <p>The top of the screen shows the Google account currently signed in. Tap <strong>Sign out</strong> to sign out of the app. Your data remains on the device; you can sign back in at any time.</p>
+
+        <h3 class="sub-heading">What data is stored</h3>
+        <p>All data is stored locally on your device in two encrypted databases:</p>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Data type</th><th>Contents</th><th>Encryption</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Headache events</strong></td>
+              <td>Timestamps, pain areas, intensity, aura, rescue medication, triggers, notes</td>
+              <td>AES-256 (SQLCipher)</td>
+            </tr>
+            <tr>
+              <td><strong>Health Connect cache</strong></td>
+              <td>Daily sleep duration, HRV, and step count</td>
+              <td>AES-256 (SQLCipher)</td>
+            </tr>
+            <tr>
+              <td><strong>Authentication token</strong></td>
+              <td>Firebase UID, email, sign-in timestamp, account binding</td>
+              <td>AES-256-GCM (Tink)</td>
+            </tr>
+            <tr>
+              <td><strong>App settings</strong></td>
+              <td>Theme and language preference only — no health data</td>
+              <td>Unencrypted</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>Encryption keys are stored in the Android Keystore, hardware-backed where available, and never leave the device.</p>
+
+        <h3 class="sub-heading">Biometric lock</h3>
+        <p>Enable biometric lock to require a fingerprint, face unlock, or PIN to open the app. Requires a screen lock to be configured in device Settings.</p>
+
+        <h3 class="sub-heading">Diagnostics</h3>
+        <p>Optionally share anonymous usage statistics (Firebase Analytics) and crash reports (Firebase Crashlytics). <strong>No health data is ever included.</strong> These can be toggled independently and changed at any time.</p>
+
+        <h3 class="sub-heading">Your GDPR rights</h3>
+        <p>Heda complies with EU GDPR Article 9 (special categories of personal data). Your rights:</p>
+
+        <ul>
+          <li><strong>Right of access (Art. 15)</strong> — all your data is visible in Calendar and Statistics.</li>
+          <li><strong>Right to rectification (Art. 16)</strong> — edit any event by tapping it in the Calendar.</li>
+          <li><strong>Right to erasure (Art. 17)</strong> — delete all data via the Danger zone (see below).</li>
+          <li><strong>Right to restriction (Art. 18)</strong> — sign out to stop all processing.</li>
+          <li><strong>Right to data portability (Art. 20)</strong> — export all events as CSV from the Reports screen.</li>
+          <li><strong>Right to object (Art. 21)</strong> — sign out; processing stops immediately.</li>
+        </ul>
+
+        <h3 class="sub-heading">Danger zone</h3>
+        <div class="warning">
+          <strong>These actions are permanent and cannot be undone.</strong>
+        </div>
+        <ul>
+          <li><strong>Delete local data (keep account)</strong> — permanently deletes all headache records, health data, settings, and encryption keys from this device. Your Google account link is kept, so you can sign in again on any device.</li>
+          <li><strong>Delete account and all data</strong> — permanently deletes everything above plus your Firebase account. There is no recovery. A two-step confirmation is required.</li>
+        </ul>
+      </section>
+
+      <!-- ─ Health Connect ─ -->
+      <section class="doc-section" id="health-connect">
+        <h2 class="section-heading">Health Connect</h2>
+        <p>Health Connect is Google's unified health data platform for Android. Heda reads three data types from it to power the Analysis screen:</p>
+
+        <div class="card-grid">
+          <div class="info-card">
+            <div class="card-title">Sleep sessions</div>
+            <div class="card-body">Nightly sleep duration from your wearable or sleep-tracking app.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Heart rate variability (HRV)</div>
+            <div class="card-body">Morning HRV measurements indicating stress and recovery status.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Step count</div>
+            <div class="card-body">Daily step count from your phone or wearable.</div>
+          </div>
+        </div>
+
+        <div class="note">
+          <strong>Read-only.</strong> Heda only reads data from Health Connect — it never writes to it. Only the specific record types required for correlation analysis are requested.
+        </div>
+
+        <h3 class="sub-heading">Setting up Health Connect</h3>
+        <ol class="steps">
+          <li>Go to <strong>Settings → Health Connect</strong> in Heda.</li>
+          <li>If the Health Connect app is not installed, tap <strong>Install Health Connect</strong> to get it from Google Play. (Android 9 and later. On Android 14+, Health Connect is built in.)</li>
+          <li>Tap <strong>Connect Health Connect</strong>.</li>
+          <li>In the Health Connect permission screen, grant Heda access to <strong>Sleep</strong>, <strong>Heart rate variability</strong>, and <strong>Steps</strong>.</li>
+          <li>Return to Heda. Your recent health data will be displayed.</li>
+        </ol>
+
+        <h3 class="sub-heading">Background sync</h3>
+        <p>By default, health data is only fetched when you open the Health Connect screen or tap <strong>Refresh</strong>. Enable <strong>Automatic Health Connect sync</strong> in Settings to fetch data once per day in the background.</p>
+
+        <h3 class="sub-heading">Revoking access</h3>
+        <p>You can revoke Heda's Health Connect permissions at any time in the Health Connect app (<strong>Manage apps &amp; devices → Heda → Permissions</strong>) or in <strong>Settings → Health Connect</strong> inside Heda. Previously cached data remains on your device until you delete it via <strong>Privacy &amp; Data → Delete local data</strong>.</p>
+
+        <div class="note">
+          <strong>Data stays on device.</strong> Health Connect data is cached in the encrypted on-device database and is never sent to any server.
+        </div>
+      </section>
+
+      <hr class="section-sep" />
+      <p style="font-size:13px; color:var(--text-dim)">© 2026 EXSports Oy. This documentation is updated as the app evolves. Last revised April 2026.</p>
+
+    </main>
+  </div><!-- /.doc-layout -->
+
+  <footer class="site-footer">
+    &copy; 2026 EXSports Oy &nbsp;·&nbsp;
+    <a href="../index.html">← All languages</a> &nbsp;·&nbsp;
+    <a href="../../index.html">← Documents</a> &nbsp;·&nbsp;
+    <a href="../../legal/privacy_policy.html">Privacy Policy</a> &nbsp;·&nbsp;
+    <a href="mailto:info@exsports.fi">Contact</a>
+  </footer>
+
+</body>
+</html>
