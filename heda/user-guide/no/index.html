@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Brukerveiledning – Heda</title>
+  <link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+
+  <!-- ── Site header ── -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand-lockup" href="../../index.html">
+        <svg width="26" height="26" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <circle cx="32" cy="32" r="29" stroke="currentColor" stroke-width="1" opacity="0.18" fill="none"/>
+          <circle cx="32" cy="32" r="23" stroke="currentColor" stroke-width="1" opacity="0.30" fill="none"/>
+          <circle cx="32" cy="32" r="17.5" stroke="currentColor" stroke-width="1" opacity="0.50" fill="none"/>
+          <ellipse cx="32" cy="30" rx="9" ry="11" fill="currentColor"/>
+          <path d="M27 41 Q32 44 37 41 L39 47 Q32 49 25 47 Z" fill="currentColor"/>
+        </svg>
+        <div class="header-meta">
+          <span class="wordmark">heda</span>
+          <span class="header-subtitle">Brukerveiledning</span>
+        </div>
+      </a>
+      <nav class="header-nav">
+        <a href="../../index.html">← Dokumenter</a>
+        <a href="../index.html">← Alle språk</a>
+      </nav>
+      <a class="lang-btn" href="../index.html">🌐</a>
+    </div>
+  </header>
+
+  <div class="doc-layout">
+
+    <!-- ── Sidebar TOC ── -->
+    <aside>
+      <nav class="toc" aria-label="Innholdsfortegnelse">
+        <p class="toc-label">Innhold</p>
+        <ul class="toc-list">
+          <li><a href="#oversikt">Oversikt</a></li>
+          <li><a href="#kom-i-gang">Kom i gang</a></li>
+          <li><a href="#kalender">Kalender</a></li>
+          <li class="toc-sub"><ul class="toc-list">
+            <li><a href="#manedsvisning">Månadsvisning</a></li>
+            <li><a href="#hendelseskort">Hendelseskort</a></li>
+            <li><a href="#hurtig-legg-til">Hurtig legg til</a></li>
+          </ul></li>
+          <li><a href="#registrering">Registrere en hendelse</a></li>
+          <li class="toc-sub"><ul class="toc-list">
+            <li><a href="#type-intensitet">Type &amp; intensitet</a></li>
+            <li><a href="#dato-tid">Dato &amp; tid</a></li>
+            <li><a href="#smerteomrade">Smerteområde</a></li>
+            <li><a href="#utlosere">Utløsere</a></li>
+            <li><a href="#aura-medisin">Aura &amp; medisin</a></li>
+            <li><a href="#notater">Notater</a></li>
+          </ul></li>
+          <li><a href="#redigering">Redigere &amp; slette</a></li>
+          <li><a href="#analyse">Analyse</a></li>
+          <li><a href="#statistikk">Statistikk</a></li>
+          <li><a href="#rapporter">Rapporter</a></li>
+          <li><a href="#innstillinger">Innstillinger</a></li>
+          <li><a href="#personvern">Personvern &amp; Data</a></li>
+          <li><a href="#health-connect">Health Connect</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- ── Main content ── -->
+    <main class="doc-content">
+
+      <span class="section-label">Heda · Brukerveiledning</span>
+      <h1 class="doc-title">Slik bruker du Heda</h1>
+      <p class="doc-intro">En diskret dagbok for hodepine og migrene. Kartlegg smerten din, finn mønstre og forstå utløserne dine — alt lagret privat på enheten din.</p>
+
+      <!-- ─ Oversikt ─ -->
+      <section class="doc-section" id="oversikt">
+        <h2 class="section-heading">Oversikt</h2>
+
+        <p>Heda er en offline-first dagbok for hodepine og migrene for Android. All helsedata er kryptert og lagret kun på enheten din. Ingenting lastes opp til noen server — dataene dine tilhører deg alene.</p>
+
+        <p>Appen har fire hovedområder, tilgjengelige fra navigasjonslinjen nederst:</p>
+
+        <div class="nav-bar-demo" aria-hidden="true">
+          <div class="nav-tab active">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9h17M8 3v3M16 3v3"/></svg>
+            Kalender
+          </div>
+          <div class="nav-tab">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l4-6 3 3 5-8 4 6"/></svg>
+            Analyse
+          </div>
+          <div class="nav-tab">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7h14M5 12h14M5 17h9"/></svg>
+            Rapporter
+          </div>
+          <div class="nav-tab">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.5 5.5l1.5 1.5M17 17l1.5 1.5M5.5 18.5L7 17M17 7l1.5-1.5"/></svg>
+            Innstillinger
+          </div>
+        </div>
+
+        <div class="card-grid">
+          <div class="info-card">
+            <div class="card-title">Kalender</div>
+            <div class="card-body">Bla gjennom og administrer hodepinehendelsene dine etter dato. Legg til nye hendelser herfra.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Analyse</div>
+            <div class="card-body">Oppdagede mønstre og personlige anbefalinger basert på Health Connect-dataene dine.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Rapporter</div>
+            <div class="card-body">Månedlige og daglige oppsummeringer med diagrammer. Eksporter dataene dine som CSV eller PDF.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Innstillinger</div>
+            <div class="card-body">Tema, språk, Health Connect, varsler, personvern og avanserte alternativer.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─ Kom i gang ─ -->
+      <section class="doc-section" id="kom-i-gang">
+        <h2 class="section-heading">Kom i gang</h2>
+
+        <h3 class="sub-heading">Logg inn</h3>
+        <p>Heda krever en Google-konto for å beskytte dataene dine. Innlogging oppretter en kryptert, enhetsbundet nøkkel knyttet til kontoen din — ingen data lagres i skyen.</p>
+        <ol class="steps">
+          <li>Åpne Heda etter at du har installert den fra Google Play.</li>
+          <li>Trykk på <strong>Logg inn med Google</strong> og velg Google-kontoen din.</li>
+          <li>Kontoen din er nå knyttet til denne installasjonen. Den samme Google-kontoen må brukes hvis du installerer appen på nytt.</li>
+        </ol>
+        <div class="note">
+          <strong>Personvern først.</strong> Heda laster ikke opp helsedata til eksterne servere. Google-kontoen din brukes kun til identifikasjon — for å knytte krypteringsnøkler til én enkelt bruker på denne enheten.
+        </div>
+
+        <h3 class="sub-heading">Samtykke ved første oppstart</h3>
+        <p>Ved første oppstart spør Heda om du ønsker å dele anonym bruksstatistikk og krasj-rapporter. Ingen av valgene sender helsedata. Du kan endre valget ditt senere under <strong>Innstillinger → Personvern &amp; Data</strong>.</p>
+
+        <ul>
+          <li><strong>Anonym bruksstatistikk</strong> — hjelper teamet å forstå hvilke funksjoner som brukes mest (Firebase Analytics).</li>
+          <li><strong>Anonyme krasj-rapporter</strong> — rapporterer krasjer automatisk slik at feil kan fikses raskt (Firebase Crashlytics).</li>
+        </ul>
+      </section>
+
+      <!-- ─ Kalender ─ -->
+      <section class="doc-section" id="kalender">
+        <h2 class="section-heading">Kalender</h2>
+        <p>Kalenderen er din daglige visning. Den viser gjeldende måned i oversikt, med fargede prikker som indikerer hodepineintensitet på hver dag.</p>
+
+        <h3 class="sub-heading" id="manedsvisning">Månadsvisning</h3>
+        <p>Månadsremsen øverst viser gjeldende måned i et ISO-ukenett (uker løper mandag–søndag). Hver dag med minst én registrert hendelse viser en liten intensitetsprikk:</p>
+
+        <ul>
+          <li><span style="color:var(--accent)">●</span> <strong>Blå/grønn</strong> — intensitet 1–3 (mild)</li>
+          <li><span style="color:var(--warm)">●</span> <strong>Gul</strong> — intensitet 4–6 (moderat)</li>
+          <li><span style="color:var(--danger)">●</span> <strong>Rød</strong> — intensitet 7–10 (alvorlig)</li>
+        </ul>
+
+        <p>Bruk knappene <strong>‹</strong> og <strong>›</strong> for å navigere mellom måneder. Trykk på en dato for å velge den og se dagens hendelser nedenfor.</p>
+        <p>Dagens dato er fremhevet. Trykk på etiketten <strong>I dag</strong> eller dagens dato for å rulle tilbake til i dag.</p>
+
+        <h3 class="sub-heading" id="hendelseskort">Hendelseskort</h3>
+        <p>Hendelser for den valgte datoen vises som kort under månadsremsen. Hvert kort viser:</p>
+        <ul>
+          <li><strong>Hodepinetypen</strong> (Hodepine eller Migrene)</li>
+          <li><strong>Tidsintervall</strong> — start- og sluttid, og varighet</li>
+          <li>En <strong>intensitetsstolpe</strong> (1–10-skala)</li>
+          <li>Aura- og akuttmedisinindikatorer hvis registrert</li>
+        </ul>
+        <p>Trykk på et kort for å åpne det i <strong>redigeringsmodus</strong> der alle felt kan endres.</p>
+
+        <h3 class="sub-heading" id="hurtig-legg-til">Hurtig legg til</h3>
+        <p>For rask registrering, trykk på <strong>Hurtig legg til</strong> nederst på kalenderskjermen. Et ark glir opp med de viktigste feltene:</p>
+        <ul>
+          <li><strong>Type</strong> — Hodepine eller Migrene</li>
+          <li><strong>Intensitet</strong> — glidebryter 1–10</li>
+          <li><strong>Aura</strong> — avkrysningsboks</li>
+          <li><strong>Akuttmedisin</strong> — avkrysningsboks</li>
+        </ul>
+        <p>Trykk på <strong>Lagre</strong> for å registrere umiddelbart med gjeldende tid, eller trykk på <strong>Legg til detaljer…</strong> for å åpne det fullstendige hendelseskjemaet forhåndsutfylt med disse verdiene.</p>
+      </section>
+
+      <!-- ─ Registrering ─ -->
+      <section class="doc-section" id="registrering">
+        <h2 class="section-heading">Registrere en hendelse</h2>
+        <p>For å registrere en ny hendelse med alle detaljer, trykk på knappen <strong>+ Legg til hendelse</strong> i Kalenderen. Hvis du trykket på en bestemt dato først, vil den datoen være forhåndsvalgt i skjemaet.</p>
+
+        <h3 class="sub-heading" id="type-intensitet">Type &amp; intensitet</h3>
+        <p>Velg mellom <strong>Hodepine</strong> og <strong>Migrene</strong> med velgeren øverst. Sett deretter intensiteten på en skala fra 1 (knapt merkbar) til 10 (handlingslammende) med glidebryteren.</p>
+
+        <h3 class="sub-heading" id="dato-tid">Dato &amp; tid</h3>
+        <p>Tre felt styrer tidsinformasjonen for hendelsen:</p>
+        <ul>
+          <li><strong>Dato</strong> — trykk for å åpne en datovelger. Standard er i dag.</li>
+          <li><strong>Starttid</strong> — når anfallet begynte. Trykk for å åpne en 24-timers tidsvelger.</li>
+          <li><strong>Sluttid</strong> — når anfallet sluttet. Standard er 2 timer etter starttiden. Hvis du flytter starttiden forbi sluttiden, fremskyndes sluttiden automatisk for å opprettholde 2-timers intervallet.</li>
+        </ul>
+
+        <h3 class="sub-heading" id="smerteomrade">Smerteområde</h3>
+        <p><strong>3D-hodemodellen</strong> lar deg markere nøyaktig hvor smerten befinner seg. Den støtter to bevegelser:</p>
+        <ul>
+          <li><strong>Én finger</strong> — mal smerteområder ved å dra over hodets overflate.</li>
+          <li><strong>To fingre</strong> — roter hodet for å nå områder bak, på sidene eller i nakken.</li>
+        </ul>
+
+        <p>Åtte anatomiske regioner støttes:</p>
+        <div class="tag-group">
+          <span class="tag">Panne</span>
+          <span class="tag">Rundt øyet — venstre</span>
+          <span class="tag">Rundt øyet — høyre</span>
+          <span class="tag">Tinning — venstre</span>
+          <span class="tag">Tinning — høyre</span>
+          <span class="tag">Bakhodet — venstre</span>
+          <span class="tag">Bakhodet — høyre</span>
+          <span class="tag">Nakke</span>
+        </div>
+
+        <p>Aktiver bryteren <strong>Fargekod etter intensitet</strong> for å tinte de malte regionene med intensitetsfargen (blå for mild, gul for moderat, rød for alvorlig). Dette er av som standard.</p>
+
+        <div class="note">
+          <strong>Tips.</strong> Du kan fjerne malte regioner ved å dra over dem igjen — bevegelsen veksler mellom å legge til og slette.
+        </div>
+
+        <h3 class="sub-heading" id="utlosere">Mulige utløsere</h3>
+        <p>Registrer mulige utløsere som kan ha bidratt til dette anfallet. De er gruppert i syv kategorier:</p>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Kategori</th><th>Utløsere</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Stress &amp; humør</strong></td>
+              <td>Stress, Stressavlastning, Angst</td>
+            </tr>
+            <tr>
+              <td><strong>Søvn</strong></td>
+              <td>For lite søvn, For mye søvn, Uregelmessig søvn</td>
+            </tr>
+            <tr>
+              <td><strong>Mat &amp; drikke</strong></td>
+              <td>Hoppet over måltid, Langt faste, Dehydrering, Alkohol, Koffein, Koffeinavvenning, Sjokolade, Modnet ost, Mattilsetningsstoffer, Bearbeidet kjøtt</td>
+            </tr>
+            <tr>
+              <td><strong>Hormonell</strong></td>
+              <td>Menstruasjon, Eggløsning, Hormonell prevensjon</td>
+            </tr>
+            <tr>
+              <td><strong>Miljø</strong></td>
+              <td>Værendring, Ekstrem temperatur, Luftfuktighet</td>
+            </tr>
+            <tr>
+              <td><strong>Sanselig</strong></td>
+              <td>Sterkt lys, Sterk lukt, Høy lyd, Skjermflimmer</td>
+            </tr>
+            <tr>
+              <td><strong>Fysisk</strong></td>
+              <td>Intens trening, Nakkespenning, Reise, Medikamentoverbruk</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 class="sub-heading" id="aura-medisin">Aura &amp; akuttmedisin</h3>
+        <ul>
+          <li><strong>Aura</strong> — kryss av hvis denne hendelsen ble innledet av en aura (synsforstyrrelser, prikking, taleendringer osv.).</li>
+          <li><strong>Akuttmedisin</strong> — kryss av hvis du tok akutt medisin (f.eks. triptan, NSAID eller paracetamol) under dette anfallet.</li>
+        </ul>
+
+        <h3 class="sub-heading" id="notater">Notater</h3>
+        <p>Fritekstnotisfeltet fanger opp alt som ikke dekkes av de strukturerte feltene — kontekst, observasjoner, hva som hjalp, eller andre detaljer du ønsker å huske.</p>
+
+        <p>Trykk på <strong>Lagre</strong> når du er ferdig. Hendelsen vises umiddelbart i Kalenderen.</p>
+      </section>
+
+      <!-- ─ Redigering & sletting ─ -->
+      <section class="doc-section" id="redigering">
+        <h2 class="section-heading">Redigere &amp; slette hendelser</h2>
+
+        <h3 class="sub-heading">Redigere en hendelse</h3>
+        <ol class="steps">
+          <li>Naviger til datoen i Kalenderen.</li>
+          <li>Trykk på hendelseskortet du vil endre.</li>
+          <li>Hendelseskjemaet åpnes i redigeringsmodus — alle felt er redigerbare.</li>
+          <li>Gjør endringene dine, og trykk deretter på <strong>Oppdater</strong> for å lagre.</li>
+        </ol>
+
+        <h3 class="sub-heading">Slette en hendelse</h3>
+        <ol class="steps">
+          <li>Åpne hendelsen i redigeringsmodus (trykk på kortet i Kalenderen).</li>
+          <li>Rull ned og trykk på <strong>Slett oppføring</strong>.</li>
+          <li>En bekreftelsesdialog vises. Trykk på <strong>Slett</strong> for å fjerne hendelsen permanent.</li>
+        </ol>
+
+        <div class="warning">
+          <strong>Permanent handling.</strong> Sletting kan ikke angres. Hendelsen fjernes umiddelbart fra den krypterte databasen på enheten din.
+        </div>
+      </section>
+
+      <!-- ─ Analyse ─ -->
+      <section class="doc-section" id="analyse">
+        <h2 class="section-heading">Analyse</h2>
+        <p>Analyse-fanen viser mulige korrelasjoner mellom hodepinehendelsene dine og de daglige helsemålingene dine fra Health Connect. Den ser tilbake over de siste 90 dagene.</p>
+
+        <div class="note">
+          <strong>Krever Health Connect.</strong> Koble Heda til Google Health Connect under <strong>Innstillinger → Health Connect</strong> for å aktivere denne skjermen. Se avsnittet <a href="#health-connect">Health Connect</a> for oppsettstrinn.
+        </div>
+
+        <h3 class="sub-heading">Din grunnlinje</h3>
+        <p>Et grunnlinjekort øverst viser gjennomsnittsverdiene dine for de siste 14 dagene:</p>
+        <ul>
+          <li><strong>Søvn</strong> — gjennomsnittlig nattlig søvnvarighet</li>
+          <li><strong>HRV</strong> — gjennomsnittlig hjertefrekvensvariabilitet (ms)</li>
+          <li><strong>Skritt</strong> — gjennomsnittlig daglig skritttelling</li>
+        </ul>
+
+        <h3 class="sub-heading">Oppdagede mønstre</h3>
+        <p>Heda ser etter fire evidensbaserte mønstre som ofte forekommer før hodepine- og migrene-anfall:</p>
+
+        <ul class="feature-list">
+          <li><strong>Kort søvn</strong> — du sov mindre enn din konfigurerte minimumsnattsøvn før dette anfallet.</li>
+          <li><strong>Uregelmessig søvnplan</strong> — søvntimingen din varierte betydelig i løpet av den foregående uken.</li>
+          <li><strong>Lav aktivitet</strong> — skritttellingen din dagen før var under minimumsgrensen.</li>
+          <li><strong>Lavt HRV</strong> — HRV-en din falt under grunnlinjen dagen før, noe som tyder på forhøyet stress eller dårlig restitusjonen.</li>
+        </ul>
+
+        <p>Hvert funn viser de spesifikke bevisene: den målte verdien og terskelen den krysset. For eksempel: <em>"Sov 5 t 30 min før denne hendelsen (terskel: 7 t)"</em>.</p>
+
+        <h3 class="sub-heading">Anbefalinger</h3>
+        <p>Basert på oppdagede mønstre genererer Heda personlige anbefalinger rangert etter prioritet (Høy / Middels / Lav):</p>
+
+        <ul>
+          <li><strong>Øk søvnvarigheten</strong> — sikt mot minst 7 timer per natt.</li>
+          <li><strong>Oppretthold en regelmessig søvnplan</strong> — legg deg innenfor ±30 minutter av samme tid hver kveld.</li>
+          <li><strong>Øk daglig aktivitet</strong> — lett trening (f.eks. en 30-minutters spasertur) kan redusere migrenerisikoen.</li>
+          <li><strong>Håndter stress og restitusjon</strong> — lavt HRV indikerer forhøyet stress; vurder pusteøvelser eller meditasjon.</li>
+        </ul>
+
+        <div class="warning">
+          <strong>Ikke medisinsk råd.</strong> Oppdagede mønstre er korrelasjoner, ikke diagnoser. Konsulter alltid en helsepersonell for medisinsk veiledning om hodepinen din.
+        </div>
+      </section>
+
+      <!-- ─ Statistikk ─ -->
+      <section class="doc-section" id="statistikk">
+        <h2 class="section-heading">Statistikk</h2>
+        <p>Statistikk-seksjonen er en del av Analyse-fanen. Den gir deg en oversikt over hodepinefrekvensen og alvorlighetsgraden over en valgt tidsperiode.</p>
+
+        <h3 class="sub-heading">Periodevalger</h3>
+        <p>Velg mellom fem tidsperioder:</p>
+        <div class="tag-group">
+          <span class="tag accent">7 dager</span>
+          <span class="tag">30 dager</span>
+          <span class="tag">90 dager</span>
+          <span class="tag">1 år</span>
+          <span class="tag">All tid</span>
+        </div>
+
+        <h3 class="sub-heading">Oppsummeringskort</h3>
+        <div class="card-grid">
+          <div class="info-card">
+            <div class="card-title">Totalt antall hendelser</div>
+            <div class="card-body">Antall alle hodepine- og migrene-hendelser i perioden.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Gjennomsnittlig intensitet</div>
+            <div class="card-body">Gjennomsnittlig intensitet (1–10) på tvers av alle hendelser i perioden.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Hendelser med aura</div>
+            <div class="card-body">Hvor mange hendelser ble ledsaget av aura.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Hendelser med akuttmedisin</div>
+            <div class="card-body">Hvor mange hendelser krevde akutt medisin.</div>
+          </div>
+        </div>
+
+        <h3 class="sub-heading">Diagrammer</h3>
+        <ul>
+          <li><strong>Intensitet</strong> — daglig vektet gjennomsnitt med et rullende 7-dagers vindu.</li>
+          <li><strong>Timer</strong> — rullende 7-dagers total av anfallsvarighet i timer.</li>
+          <li><strong>Anfallsantall</strong> — rullende 30-dagers total av hendelser.</li>
+        </ul>
+
+        <h3 class="sub-heading">Hendelsestype &amp; utløserfordeling</h3>
+        <p>En fordeling av hendelser etter type (Hodepine vs. Migrene) og en liste over dine vanligste utløsere for den valgte perioden vises under diagrammene.</p>
+      </section>
+
+      <!-- ─ Rapporter ─ -->
+      <section class="doc-section" id="rapporter">
+        <h2 class="section-heading">Rapporter</h2>
+        <p>Rapporter-fanen lar deg se strukturerte oppsummeringer av dataene dine og eksportere dem for deling med helsepersonell.</p>
+
+        <h3 class="sub-heading">Månedlig rapport</h3>
+        <p>Den månedlige rapporten viser en kalendervisning for hver valgt måned, med hver dag fargekodede etter status:</p>
+        <ul>
+          <li><strong>Ingen hendelser</strong> — ingen anfall registrert</li>
+          <li><strong>Hodepine</strong> — minst én hodepinehendelse</li>
+          <li><strong>Migrene</strong> — minst én migrene-hendelse</li>
+        </ul>
+        <p>Et sektordiagram viser andelen dager i hver kategori. Velg én eller flere måneder ved hjelp av månedsbrikker. Trykk på <strong>Velg alle</strong> eller <strong>Fjern</strong> for raskt å velge eller fjerne alle måneder.</p>
+
+        <h3 class="sub-heading">Daglig rapport</h3>
+        <p>Den daglige rapporten fokuserer på individuelle hendelser innenfor en valgt periode. Velg blant:</p>
+        <div class="tag-group">
+          <span class="tag">7 dager</span>
+          <span class="tag accent">30 dager</span>
+          <span class="tag">90 dager</span>
+          <span class="tag">All tid</span>
+        </div>
+        <p>En oppsummeringsrad øverst viser totalt antall hendelser, gjennomsnittlig intensitet og datoområdet. Nedenfor er hver hendelse oppført med type, tid og intensitet.</p>
+
+        <h3 class="sub-heading">Eksportere data</h3>
+        <p>Bruk eksportknappene for å lagre dataene dine:</p>
+        <ul>
+          <li><strong>Eksporter som CSV</strong> — lagrer en kommaseparert fil med alle hendelser i gjeldende periode. Kolonner: Dato, Tid, Type, Intensitet, Aura, Akuttmedisin, Utløsere, Notater. Androids systemfilvelger lar deg velge lagringssted.</li>
+          <li><strong>Eksporter som PDF</strong> — genererer et formatert PDF-dokument med oppsummeringen og hendelsestabellen, egnet for utskrift eller sending til en lege.</li>
+          <li><strong>Eksporter Health Connect-data som CSV</strong> — eksporter eventuelt de bufrede søvn-, HRV- og skritt-dataene sammen med hodepinehendelsene dine.</li>
+        </ul>
+
+        <div class="note">
+          <strong>Filplassering.</strong> Heda bruker Androids Storage Access Framework, så du velger hvor den eksporterte filen lagres. Ingen filer lastes opp til noen server.
+        </div>
+      </section>
+
+      <!-- ─ Innstillinger ─ -->
+      <section class="doc-section" id="innstillinger">
+        <h2 class="section-heading">Innstillinger</h2>
+        <p>Åpne Innstillinger fra navigasjonslinjen nederst. Endringer trer i kraft umiddelbart.</p>
+
+        <h3 class="sub-heading">Tema</h3>
+        <p>Velg mellom tre alternativer:</p>
+        <ul>
+          <li><strong>Lys</strong> — varm papirfarget lys modus.</li>
+          <li><strong>Mørk</strong> — dyp skogsmørk modus (standard).</li>
+          <li><strong>System</strong> — følger enhetens mørk/lys-innstilling automatisk.</li>
+        </ul>
+
+        <h3 class="sub-heading">Språk</h3>
+        <p>Velg blant 30+ språk gruppert etter region (Nordisk, Germansk, Romansk, Slavisk, Baltisk og Annet). Det valgte språket gjelder all tekst i appen. Velg <strong>System</strong> for å følge enhetens språkinnstilling.</p>
+
+        <h3 class="sub-heading">Health Connect</h3>
+        <p>Kobler til Health Connect-innstillingsskjermen der du kan gi eller tilbakekalle tillatelser for søvn-, HRV- og skrittelledata. Se avsnittet <a href="#health-connect">Health Connect</a> for detaljer.</p>
+
+        <h3 class="sub-heading">Personvern &amp; Data</h3>
+        <p>Åpner skjermen Personvern &amp; Data der du kan administrere kontoen din, se gjennom hvilke data som er lagret, utøve GDPR-rettighetene dine og slette dataene dine. Se avsnittet <a href="#personvern">Personvern &amp; Data</a> for detaljer.</p>
+
+        <h3 class="sub-heading">Automatisk Health Connect-synkronisering</h3>
+        <p>Når aktivert henter Heda de nyeste helsedataene dine fra Health Connect én gang per dag i bakgrunnen, selv når appen er lukket. Dette er <strong>av som standard</strong>. Aktivering krever at Health Connect-tillatelser er gitt.</p>
+
+        <h3 class="sub-heading">Daglige helseanbefalinger</h3>
+        <p>Når aktivert sender Heda et daglig varsel hvis en høyt prioritert korrelasjon oppdages. Å trykke på varselet åpner Analyse-skjermen. Dette er <strong>av som standard</strong> og krever enhetens varslingstillatelse.</p>
+
+        <h3 class="sub-heading">Avansert</h3>
+        <p>Utvid seksjonen Avansert for å finjustere tersklene som brukes av korrelasjonsmotor. Standardverdiene samsvarer med etablerte kliniske retningslinjer for migrene-forebygging:</p>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Innstilling</th><th>Standard</th><th>Beskrivelse</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Minimum søvn</strong></td><td>7 t 0 min</td><td>Søvn under denne varigheten flagges som mulig utløser.</td></tr>
+            <tr><td><strong>Maks søvnvariabilitet</strong></td><td>60 min</td><td>Standardavvik for søvntiming over dette utløser mønsteret for uregelmessig søvn.</td></tr>
+            <tr><td><strong>Minimum skritt</strong></td><td>3 000</td><td>Skritttelling under dette flagges som lav aktivitet.</td></tr>
+            <tr><td><strong>Minimum HRV</strong></td><td>30 ms</td><td>HRV under denne absolutte terskelen flagges.</td></tr>
+            <tr><td><strong>HRV-grunnlinjefraksjon</strong></td><td>0,80</td><td>HRV under denne andelen av 14-dagers grunnlinjen din flagges også.</td></tr>
+          </tbody>
+        </table>
+
+        <p>Trykk på <strong>Tilbakestill til standard</strong> for å gjenopprette alle terskler til de opprinnelige verdiene.</p>
+      </section>
+
+      <!-- ─ Personvern & Data ─ -->
+      <section class="doc-section" id="personvern">
+        <h2 class="section-heading">Personvern &amp; Data</h2>
+        <p>Åpne <strong>Innstillinger → Personvern &amp; Data</strong> for å administrere alle data- og kontoinnstillinger.</p>
+
+        <h3 class="sub-heading">Din konto</h3>
+        <p>Øverst på skjermen vises Google-kontoen som er logget inn. Trykk på <strong>Logg ut</strong> for å logge ut av appen. Dataene dine forblir på enheten; du kan logge inn igjen når som helst.</p>
+
+        <h3 class="sub-heading">Hvilke data lagres</h3>
+        <p>Alle data er lagret lokalt på enheten din i to krypterte databaser:</p>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Datatype</th><th>Innhold</th><th>Kryptering</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Hodepinehendelser</strong></td>
+              <td>Tidsstempler, smerteområder, intensitet, aura, akuttmedisin, utløsere, notater</td>
+              <td>AES-256 (SQLCipher)</td>
+            </tr>
+            <tr>
+              <td><strong>Health Connect-buffer</strong></td>
+              <td>Daglig søvnvarighet, HRV og skritttelling</td>
+              <td>AES-256 (SQLCipher)</td>
+            </tr>
+            <tr>
+              <td><strong>Autentiseringstoken</strong></td>
+              <td>Firebase UID, e-post, innloggingstidsstempel, kontobinding</td>
+              <td>AES-256-GCM (Tink)</td>
+            </tr>
+            <tr>
+              <td><strong>Appinnstillinger</strong></td>
+              <td>Kun tema- og språkpreferanse — ingen helsedata</td>
+              <td>Ukryptert</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>Krypteringsnøkler er lagret i Android Keystore, maskinvarestøttet der det er tilgjengelig, og forlater aldri enheten.</p>
+
+        <h3 class="sub-heading">Biometrisk lås</h3>
+        <p>Aktiver biometrisk lås for å kreve fingeravtrykk, ansiktsopplåsing eller PIN for å åpne appen. Krever at skjermlås er konfigurert i enhetens innstillinger.</p>
+
+        <h3 class="sub-heading">Diagnostikk</h3>
+        <p>Del eventuelt anonym bruksstatistikk (Firebase Analytics) og krasj-rapporter (Firebase Crashlytics). <strong>Ingen helsedata inkluderes noen gang.</strong> Disse kan slås av og på uavhengig og endres når som helst.</p>
+
+        <h3 class="sub-heading">Dine GDPR-rettigheter</h3>
+        <p>Heda overholder EU GDPR artikkel 9 (særlige kategorier av personopplysninger). Dine rettigheter:</p>
+
+        <ul>
+          <li><strong>Rett til innsyn (art. 15)</strong> — alle dataene dine er synlige i Kalender og Statistikk.</li>
+          <li><strong>Rett til retting (art. 16)</strong> — rediger enhver hendelse ved å trykke på den i Kalenderen.</li>
+          <li><strong>Rett til sletting (art. 17)</strong> — slett alle data via Faresonen (se nedenfor).</li>
+          <li><strong>Rett til begrensning (art. 18)</strong> — logg ut for å stoppe all behandling.</li>
+          <li><strong>Rett til dataportabilitet (art. 20)</strong> — eksporter alle hendelser som CSV fra Rapporter-skjermen.</li>
+          <li><strong>Rett til å protestere (art. 21)</strong> — logg ut; behandlingen stopper umiddelbart.</li>
+        </ul>
+
+        <h3 class="sub-heading">Faresonen</h3>
+        <div class="warning">
+          <strong>Disse handlingene er permanente og kan ikke angres.</strong>
+        </div>
+        <ul>
+          <li><strong>Slett lokal data (behold konto)</strong> — sletter permanent alle hodepineoppføringer, helsedata, innstillinger og krypteringsnøkler fra denne enheten. Google-kontolinken din beholdes, slik at du kan logge inn igjen på enhver enhet.</li>
+          <li><strong>Slett konto og all data</strong> — sletter permanent alt ovenfor pluss Firebase-kontoen din. Det finnes ingen gjenoppretting. En totrinnbekreftelse er nødvendig.</li>
+        </ul>
+      </section>
+
+      <!-- ─ Health Connect ─ -->
+      <section class="doc-section" id="health-connect">
+        <h2 class="section-heading">Health Connect</h2>
+        <p>Health Connect er Googles enhetlige helsedataplattform for Android. Heda leser tre datatyper fra den for å drive Analyse-skjermen:</p>
+
+        <div class="card-grid">
+          <div class="info-card">
+            <div class="card-title">Søvnøkter</div>
+            <div class="card-body">Nattlig søvnvarighet fra din wearable eller søvnsporingsapp.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Hjertefrekvensvariabilitet (HRV)</div>
+            <div class="card-body">Morgen-HRV-målinger som indikerer stress- og restitusjonstatus.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Skritttelling</div>
+            <div class="card-body">Daglig skritttelling fra telefonen eller wearable-en din.</div>
+          </div>
+        </div>
+
+        <div class="note">
+          <strong>Kun lesing.</strong> Heda leser kun data fra Health Connect — den skriver aldri til den. Bare de spesifikke posttypene som kreves for korrelasjonsanalyse er forespurt.
+        </div>
+
+        <h3 class="sub-heading">Sette opp Health Connect</h3>
+        <ol class="steps">
+          <li>Gå til <strong>Innstillinger → Health Connect</strong> i Heda.</li>
+          <li>Hvis Health Connect-appen ikke er installert, trykk på <strong>Installer Health Connect</strong> for å hente den fra Google Play. (Android 9 og nyere. På Android 14+ er Health Connect innebygd.)</li>
+          <li>Trykk på <strong>Koble til Health Connect</strong>.</li>
+          <li>På Health Connect-tillatelseskjermen, gi Heda tilgang til <strong>Søvn</strong>, <strong>Hjertefrekvensvariabilitet</strong> og <strong>Skritt</strong>.</li>
+          <li>Gå tilbake til Heda. De nyeste helsedataene dine vil vises.</li>
+        </ol>
+
+        <h3 class="sub-heading">Bakgrunnssynkronisering</h3>
+        <p>Som standard hentes helsedata bare når du åpner Health Connect-skjermen eller trykker på <strong>Oppdater</strong>. Aktiver <strong>Automatisk Health Connect-synkronisering</strong> i Innstillinger for å hente data én gang per dag i bakgrunnen.</p>
+
+        <h3 class="sub-heading">Tilbakekalle tilgang</h3>
+        <p>Du kan tilbakekalle Hedas Health Connect-tillatelser når som helst i Health Connect-appen (<strong>Administrer apper &amp; enheter → Heda → Tillatelser</strong>) eller under <strong>Innstillinger → Health Connect</strong> i Heda. Tidligere bufrede data forblir på enheten din til du sletter dem via <strong>Personvern &amp; Data → Slett lokal data</strong>.</p>
+
+        <div class="note">
+          <strong>Data forblir på enheten.</strong> Health Connect-data bufres i den krypterte lokale databasen og sendes aldri til noen server.
+        </div>
+      </section>
+
+      <hr class="section-sep" />
+      <p style="font-size:13px; color:var(--text-dim)">© 2026 EXSports Oy. Denne dokumentasjonen oppdateres etter hvert som appen utvikler seg. Sist revidert april 2026.</p>
+
+    </main>
+  </div><!-- /.doc-layout -->
+
+  <footer class="site-footer">
+    &copy; 2026 EXSports Oy &nbsp;·&nbsp;
+    <a href="../index.html">← Alle språk</a> &nbsp;·&nbsp;
+    <a href="../../index.html">← Dokumenter</a> &nbsp;·&nbsp;
+    <a href="../../legal/privacy_policy.html">Personvernerklæring</a> &nbsp;·&nbsp;
+    <a href="mailto:info@exsports.fi">Kontakt</a>
+  </footer>
+
+</body>
+</html>
