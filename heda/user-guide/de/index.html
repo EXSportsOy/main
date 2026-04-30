@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Benutzerhandbuch – Heda</title>
+  <link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+
+  <!-- ── Site header ── -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand-lockup" href="../../index.html">
+        <svg width="26" height="26" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <circle cx="32" cy="32" r="29" stroke="currentColor" stroke-width="1" opacity="0.18" fill="none"/>
+          <circle cx="32" cy="32" r="23" stroke="currentColor" stroke-width="1" opacity="0.30" fill="none"/>
+          <circle cx="32" cy="32" r="17.5" stroke="currentColor" stroke-width="1" opacity="0.50" fill="none"/>
+          <ellipse cx="32" cy="30" rx="9" ry="11" fill="currentColor"/>
+          <path d="M27 41 Q32 44 37 41 L39 47 Q32 49 25 47 Z" fill="currentColor"/>
+        </svg>
+        <div class="header-meta">
+          <span class="wordmark">heda</span>
+          <span class="header-subtitle">Benutzerhandbuch</span>
+        </div>
+      </a>
+      <nav class="header-nav">
+        <a href="../../index.html">← Dokumente</a>
+        <a href="../index.html">← Alle Sprachen</a>
+      </nav>
+      <a class="lang-btn" href="../index.html">🌐</a>
+    </div>
+  </header>
+
+  <div class="doc-layout">
+
+    <!-- ── Sidebar TOC ── -->
+    <aside>
+      <nav class="toc" aria-label="Inhaltsverzeichnis">
+        <p class="toc-label">Inhalt</p>
+        <ul class="toc-list">
+          <li><a href="#uebersicht">Übersicht</a></li>
+          <li><a href="#erste-schritte">Erste Schritte</a></li>
+          <li><a href="#kalender">Kalender</a></li>
+          <li class="toc-sub"><ul class="toc-list">
+            <li><a href="#monatsansicht">Monatsansicht</a></li>
+            <li><a href="#ereigniskarten">Ereigniskarten</a></li>
+            <li><a href="#schnell-hinzufuegen">Schnell hinzufügen</a></li>
+          </ul></li>
+          <li><a href="#eintragen">Ereignis eintragen</a></li>
+          <li class="toc-sub"><ul class="toc-list">
+            <li><a href="#typ-intensitaet">Typ &amp; Intensität</a></li>
+            <li><a href="#datum-uhrzeit">Datum &amp; Uhrzeit</a></li>
+            <li><a href="#schmerzbereich">Schmerzbereich</a></li>
+            <li><a href="#ausloser">Auslöser</a></li>
+            <li><a href="#aura-medikament">Aura &amp; Medikament</a></li>
+            <li><a href="#notizen">Notizen</a></li>
+          </ul></li>
+          <li><a href="#bearbeitung">Bearbeiten &amp; Löschen</a></li>
+          <li><a href="#analyse">Analyse</a></li>
+          <li><a href="#statistik">Statistik</a></li>
+          <li><a href="#berichte">Berichte</a></li>
+          <li><a href="#einstellungen">Einstellungen</a></li>
+          <li><a href="#datenschutz">Datenschutz &amp; Daten</a></li>
+          <li><a href="#health-connect">Health Connect</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- ── Main content ── -->
+    <main class="doc-content">
+
+      <span class="section-label">Heda · Benutzerhandbuch</span>
+      <h1 class="doc-title">So verwendest du Heda</h1>
+      <p class="doc-intro">Ein diskretes Tagebuch für Kopfschmerzen und Migräne. Kartiere deinen Schmerz, erkenne Muster und verstehe deine Auslöser — alles privat auf deinem Gerät gespeichert.</p>
+
+      <!-- ─ Übersicht ─ -->
+      <section class="doc-section" id="uebersicht">
+        <h2 class="section-heading">Übersicht</h2>
+
+        <p>Heda ist ein Offline-first Kopfschmerz- und Migränetagebuch für Android. Alle Gesundheitsdaten werden verschlüsselt und ausschließlich auf deinem Gerät gespeichert. Es werden keine Daten auf einen Server hochgeladen — deine Daten gehören allein dir.</p>
+
+        <p>Die App hat vier Hauptbereiche, die über die untere Navigationsleiste zugänglich sind:</p>
+
+        <div class="nav-bar-demo" aria-hidden="true">
+          <div class="nav-tab active">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9h17M8 3v3M16 3v3"/></svg>
+            Kalender
+          </div>
+          <div class="nav-tab">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l4-6 3 3 5-8 4 6"/></svg>
+            Analyse
+          </div>
+          <div class="nav-tab">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7h14M5 12h14M5 17h9"/></svg>
+            Berichte
+          </div>
+          <div class="nav-tab">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.5 5.5l1.5 1.5M17 17l1.5 1.5M5.5 18.5L7 17M17 7l1.5-1.5"/></svg>
+            Einstellungen
+          </div>
+        </div>
+
+        <div class="card-grid">
+          <div class="info-card">
+            <div class="card-title">Kalender</div>
+            <div class="card-body">Durchsuche und verwalte deine Kopfschmerzereignisse nach Datum. Füge neue Ereignisse von hier hinzu.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Analyse</div>
+            <div class="card-body">Erkannte Muster und personalisierte Empfehlungen auf Basis deiner Health Connect-Daten.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Berichte</div>
+            <div class="card-body">Monatliche und tägliche Zusammenfassungen mit Diagrammen. Exportiere deine Daten als CSV oder PDF.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Einstellungen</div>
+            <div class="card-body">Design, Sprache, Health Connect, Benachrichtigungen, Datenschutz und erweiterte Optionen.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─ Erste Schritte ─ -->
+      <section class="doc-section" id="erste-schritte">
+        <h2 class="section-heading">Erste Schritte</h2>
+
+        <h3 class="sub-heading">Anmelden</h3>
+        <p>Heda erfordert ein Google-Konto zum Schutz deiner Daten. Bei der Anmeldung wird ein verschlüsselter, gerätebundener Schlüssel erstellt, der mit deinem Konto verknüpft ist — keine Daten werden in der Cloud gespeichert.</p>
+        <ol class="steps">
+          <li>Öffne Heda nach der Installation aus dem Google Play Store.</li>
+          <li>Tippe auf <strong>Mit Google anmelden</strong> und wähle dein Google-Konto.</li>
+          <li>Dein Konto ist jetzt an diese Installation gebunden. Dasselbe Google-Konto muss verwendet werden, wenn du die App neu installierst.</li>
+        </ol>
+        <div class="note">
+          <strong>Datenschutz an erster Stelle.</strong> Heda lädt keine Gesundheitsdaten auf externe Server hoch. Dein Google-Konto wird ausschließlich zur Identifizierung verwendet — um Verschlüsselungsschlüssel an einen einzelnen Nutzer auf diesem Gerät zu binden.
+        </div>
+
+        <h3 class="sub-heading">Einwilligung beim ersten Start</h3>
+        <p>Beim ersten Start fragt Heda, ob du anonyme Nutzungsstatistiken und Absturzberichte teilen möchtest. Keine der Optionen sendet Gesundheitsdaten. Du kannst deine Wahl später unter <strong>Einstellungen → Datenschutz &amp; Daten</strong> ändern.</p>
+
+        <ul>
+          <li><strong>Anonyme Nutzungsstatistiken</strong> — hilft dem Team zu verstehen, welche Funktionen am häufigsten genutzt werden (Firebase Analytics).</li>
+          <li><strong>Anonyme Absturzberichte</strong> — meldet Abstürze automatisch, damit Fehler schnell behoben werden können (Firebase Crashlytics).</li>
+        </ul>
+      </section>
+
+      <!-- ─ Kalender ─ -->
+      <section class="doc-section" id="kalender">
+        <h2 class="section-heading">Kalender</h2>
+        <p>Der Kalender ist deine tägliche Übersicht. Er zeigt den aktuellen Monat auf einen Blick, mit farbigen Punkten, die die Kopfschmerzintensität für jeden Tag anzeigen.</p>
+
+        <h3 class="sub-heading" id="monatsansicht">Monatsansicht</h3>
+        <p>Der Monatsstreifen oben zeigt den aktuellen Monat in einem ISO-Wochenraster (Wochen laufen von Montag bis Sonntag). Jeder Tag mit mindestens einem protokollierten Ereignis zeigt einen kleinen Intensitätspunkt:</p>
+
+        <ul>
+          <li><span style="color:var(--accent)">●</span> <strong>Blau/Grün</strong> — Intensität 1–3 (leicht)</li>
+          <li><span style="color:var(--warm)">●</span> <strong>Gelb</strong> — Intensität 4–6 (mäßig)</li>
+          <li><span style="color:var(--danger)">●</span> <strong>Rot</strong> — Intensität 7–10 (schwer)</li>
+        </ul>
+
+        <p>Nutze die Schaltflächen <strong>‹</strong> und <strong>›</strong>, um zwischen Monaten zu navigieren. Tippe auf ein Datum, um es auszuwählen und die Ereignisse dieses Tages darunter zu sehen.</p>
+        <p>Das aktuelle Datum ist hervorgehoben. Tippe auf die Schaltfläche <strong>Heute</strong> oder das heutige Datum, um zurück zum aktuellen Tag zu scrollen.</p>
+
+        <h3 class="sub-heading" id="ereigniskarten">Ereigniskarten</h3>
+        <p>Ereignisse für das ausgewählte Datum werden als Karten unterhalb des Monatsstreifens angezeigt. Jede Karte zeigt:</p>
+        <ul>
+          <li>Den <strong>Kopfschmerztyp</strong> (Kopfschmerz oder Migräne)</li>
+          <li>Den <strong>Zeitraum</strong> — Start- und Endzeit sowie die Dauer</li>
+          <li>Einen <strong>Intensitätsbalken</strong> (Skala 1–10)</li>
+          <li>Aura- und Notfallmedikamentenindikatoren, falls protokolliert</li>
+        </ul>
+        <p>Tippe auf eine Karte, um sie im <strong>Bearbeitungsmodus</strong> zu öffnen, in dem alle Felder geändert werden können.</p>
+
+        <h3 class="sub-heading" id="schnell-hinzufuegen">Schnell hinzufügen</h3>
+        <p>Für schnelles Protokollieren tippe unten auf dem Kalenderbildschirm auf <strong>Schnell hinzufügen</strong>. Ein Blatt gleitet mit den wichtigsten Feldern nach oben:</p>
+        <ul>
+          <li><strong>Typ</strong> — Kopfschmerz oder Migräne</li>
+          <li><strong>Intensität</strong> — Schieberegler 1–10</li>
+          <li><strong>Aura</strong> — Kontrollkästchen</li>
+          <li><strong>Notfallmedikament</strong> — Kontrollkästchen</li>
+        </ul>
+        <p>Tippe auf <strong>Speichern</strong>, um sofort mit der aktuellen Uhrzeit zu protokollieren, oder tippe auf <strong>Details hinzufügen…</strong>, um das vollständige Ereignisformular mit diesen Werten vorausgefüllt zu öffnen.</p>
+      </section>
+
+      <!-- ─ Eintragen ─ -->
+      <section class="doc-section" id="eintragen">
+        <h2 class="section-heading">Ereignis eintragen</h2>
+        <p>Um ein neues Ereignis mit allen Details einzutragen, tippe im Kalender auf die Schaltfläche <strong>+ Ereignis hinzufügen</strong>. Wenn du zuerst auf ein bestimmtes Datum getippt hast, wird dieses Datum im Formular vorausgewählt.</p>
+
+        <h3 class="sub-heading" id="typ-intensitaet">Typ &amp; Intensität</h3>
+        <p>Wähle mit dem Selektor oben zwischen <strong>Kopfschmerz</strong> und <strong>Migräne</strong>. Stelle dann die Intensität auf einer Skala von 1 (kaum spürbar) bis 10 (handlungsunfähig) mit dem Schieberegler ein.</p>
+
+        <h3 class="sub-heading" id="datum-uhrzeit">Datum &amp; Uhrzeit</h3>
+        <p>Drei Felder steuern die Zeitinformationen des Ereignisses:</p>
+        <ul>
+          <li><strong>Datum</strong> — tippe, um einen Datumsauswähler zu öffnen. Standard ist heute.</li>
+          <li><strong>Startzeit</strong> — wann der Anfall begann. Tippe, um einen 24-Stunden-Zeitauswähler zu öffnen.</li>
+          <li><strong>Endzeit</strong> — wann der Anfall endete. Standard ist 2 Stunden nach der Startzeit. Wenn du die Startzeit über die Endzeit hinaus verschiebst, rückt die Endzeit automatisch vor, um den 2-Stunden-Abstand zu erhalten.</li>
+        </ul>
+
+        <h3 class="sub-heading" id="schmerzbereich">Schmerzbereich</h3>
+        <p>Das <strong>3D-Kopfmodell</strong> lässt dich genau markieren, wo der Schmerz sitzt. Es unterstützt zwei Gesten:</p>
+        <ul>
+          <li><strong>Ein Finger</strong> — male Schmerzbereiche, indem du über die Kopfoberfläche ziehst.</li>
+          <li><strong>Zwei Finger</strong> — drehe den Kopf, um Bereiche hinten, seitlich oder am Nacken zu erreichen.</li>
+        </ul>
+
+        <p>Acht anatomische Regionen werden unterstützt:</p>
+        <div class="tag-group">
+          <span class="tag">Stirn</span>
+          <span class="tag">Ums Auge — links</span>
+          <span class="tag">Ums Auge — rechts</span>
+          <span class="tag">Schläfe — links</span>
+          <span class="tag">Schläfe — rechts</span>
+          <span class="tag">Hinterkopf — links</span>
+          <span class="tag">Hinterkopf — rechts</span>
+          <span class="tag">Nacken</span>
+        </div>
+
+        <p>Aktiviere den Schalter <strong>Nach Intensität einfärben</strong>, um die gemalten Bereiche mit der Intensitätsfarbe zu tönen (blau für leicht, gelb für mäßig, rot für schwer). Standardmäßig ist dies deaktiviert.</p>
+
+        <div class="note">
+          <strong>Tipp.</strong> Du kannst gemalte Bereiche entfernen, indem du erneut darüber ziehst — die Geste wechselt zwischen Hinzufügen und Löschen.
+        </div>
+
+        <h3 class="sub-heading" id="ausloser">Mögliche Auslöser</h3>
+        <p>Erfasse mögliche Auslöser, die zu diesem Anfall beigetragen haben könnten. Sie sind in sieben Kategorien eingeteilt:</p>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Kategorie</th><th>Auslöser</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Stress &amp; Stimmung</strong></td>
+              <td>Stress, Stressnachlassen, Angst</td>
+            </tr>
+            <tr>
+              <td><strong>Schlaf</strong></td>
+              <td>Zu wenig Schlaf, Zu viel Schlaf, Unregelmäßiger Schlaf</td>
+            </tr>
+            <tr>
+              <td><strong>Essen &amp; Trinken</strong></td>
+              <td>Mahlzeit ausgelassen, Langes Fasten, Dehydrierung, Alkohol, Koffein, Koffeinkonsumentenz, Schokolade, Gereifter Käse, Lebensmittelzusatzstoffe, Verarbeitetes Fleisch</td>
+            </tr>
+            <tr>
+              <td><strong>Hormonal</strong></td>
+              <td>Menstruation, Eisprung, Hormonelle Verhütung</td>
+            </tr>
+            <tr>
+              <td><strong>Umwelt</strong></td>
+              <td>Wetteränderung, Extreme Temperatur, Luftfeuchtigkeit</td>
+            </tr>
+            <tr>
+              <td><strong>Sensorisch</strong></td>
+              <td>Grelles Licht, Starker Geruch, Lauter Lärm, Bildschirmflimmern</td>
+            </tr>
+            <tr>
+              <td><strong>Körperlich</strong></td>
+              <td>Intensives Training, Nackenverspannung, Reisen, Medikamentenmissbrauch</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 class="sub-heading" id="aura-medikament">Aura &amp; Notfallmedikament</h3>
+        <ul>
+          <li><strong>Aura</strong> — ankreuzen, wenn diesem Ereignis eine Aura vorangegangen ist (Sehstörungen, Kribbeln, Sprachveränderungen usw.).</li>
+          <li><strong>Notfallmedikament</strong> — ankreuzen, wenn du während dieses Anfalls ein Akutmedikament genommen hast (z. B. Triptan, NSAID oder Paracetamol).</li>
+        </ul>
+
+        <h3 class="sub-heading" id="notizen">Notizen</h3>
+        <p>Das Freitext-Notizfeld erfasst alles, was nicht von den strukturierten Feldern abgedeckt wird — Kontext, Beobachtungen, was geholfen hat oder andere Details, die du dir merken möchtest.</p>
+
+        <p>Tippe auf <strong>Speichern</strong>, wenn du fertig bist. Das Ereignis erscheint sofort im Kalender.</p>
+      </section>
+
+      <!-- ─ Bearbeitung & Löschen ─ -->
+      <section class="doc-section" id="bearbeitung">
+        <h2 class="section-heading">Ereignisse bearbeiten &amp; löschen</h2>
+
+        <h3 class="sub-heading">Ein Ereignis bearbeiten</h3>
+        <ol class="steps">
+          <li>Navigiere im Kalender zum Datum.</li>
+          <li>Tippe auf die Ereigniskarte, die du ändern möchtest.</li>
+          <li>Das Ereignisformular öffnet sich im Bearbeitungsmodus — alle Felder sind bearbeitbar.</li>
+          <li>Nimm deine Änderungen vor und tippe dann auf <strong>Aktualisieren</strong>, um zu speichern.</li>
+        </ol>
+
+        <h3 class="sub-heading">Ein Ereignis löschen</h3>
+        <ol class="steps">
+          <li>Öffne das Ereignis im Bearbeitungsmodus (tippe auf seine Karte im Kalender).</li>
+          <li>Scrolle nach unten und tippe auf <strong>Eintrag löschen</strong>.</li>
+          <li>Ein Bestätigungsdialog erscheint. Tippe auf <strong>Löschen</strong>, um das Ereignis dauerhaft zu entfernen.</li>
+        </ol>
+
+        <div class="warning">
+          <strong>Dauerhafte Aktion.</strong> Das Löschen kann nicht rückgängig gemacht werden. Das Ereignis wird sofort aus der verschlüsselten Datenbank auf deinem Gerät entfernt.
+        </div>
+      </section>
+
+      <!-- ─ Analyse ─ -->
+      <section class="doc-section" id="analyse">
+        <h2 class="section-heading">Analyse</h2>
+        <p>Die Registerkarte „Analyse" zeigt mögliche Zusammenhänge zwischen deinen Kopfschmerzereignissen und deinen täglichen Gesundheitsmessungen aus Health Connect. Sie blickt auf die letzten 90 Tage zurück.</p>
+
+        <div class="note">
+          <strong>Erfordert Health Connect.</strong> Verbinde Heda mit Google Health Connect unter <strong>Einstellungen → Health Connect</strong>, um diesen Bildschirm zu aktivieren. Siehe den Abschnitt <a href="#health-connect">Health Connect</a> für Einrichtungsschritte.
+        </div>
+
+        <h3 class="sub-heading">Dein Ausgangswert</h3>
+        <p>Eine Ausgangswert-Karte oben zeigt deine Durchschnittswerte der letzten 14 Tage:</p>
+        <ul>
+          <li><strong>Schlaf</strong> — durchschnittliche nächtliche Schlafdauer</li>
+          <li><strong>HRV</strong> — durchschnittliche Herzratenvariabilität (ms)</li>
+          <li><strong>Schritte</strong> — durchschnittliche tägliche Schrittzahl</li>
+        </ul>
+
+        <h3 class="sub-heading">Erkannte Muster</h3>
+        <p>Heda sucht nach vier evidenzbasierten Mustern, die häufig vor Kopfschmerz- und Migräneanfällen auftreten:</p>
+
+        <ul class="feature-list">
+          <li><strong>Kurzer Schlaf</strong> — du hast vor diesem Anfall weniger als dein konfiguriertes Minimum geschlafen.</li>
+          <li><strong>Unregelmäßiger Schlafrhythmus</strong> — deine Schlafzeiten haben in der vorangegangenen Woche erheblich variiert.</li>
+          <li><strong>Geringe Aktivität</strong> — deine Schrittzahl am Vortag lag unter dem Mindestschwellenwert.</li>
+          <li><strong>Niedriger HRV</strong> — dein HRV fiel am Vortag unter den Ausgangswert, was auf erhöhten Stress oder schlechte Erholung hindeutet.</li>
+        </ul>
+
+        <p>Jeder Befund zeigt den spezifischen Nachweis: den gemessenen Wert und den überschrittenen Schwellenwert. Zum Beispiel: <em>„Schlief 5 Std. 30 Min. vor diesem Ereignis (Schwellenwert: 7 Std.)"</em>.</p>
+
+        <h3 class="sub-heading">Empfehlungen</h3>
+        <p>Basierend auf den erkannten Mustern erstellt Heda personalisierte Empfehlungen, die nach Priorität geordnet sind (Hoch / Mittel / Niedrig):</p>
+
+        <ul>
+          <li><strong>Schlafdauer erhöhen</strong> — strebe mindestens 7 Stunden pro Nacht an.</li>
+          <li><strong>Regelmäßigen Schlafrhythmus einhalten</strong> — gehe jeden Abend innerhalb von ±30 Minuten zur gleichen Zeit ins Bett.</li>
+          <li><strong>Tägliche Aktivität steigern</strong> — leichte Bewegung (z. B. ein 30-minütiger Spaziergang) kann das Migränerisiko reduzieren.</li>
+          <li><strong>Stress und Erholung managen</strong> — ein niedriger HRV deutet auf erhöhten Stress hin; erwäge Atemübungen oder Meditation.</li>
+        </ul>
+
+        <div class="warning">
+          <strong>Kein medizinischer Rat.</strong> Erkannte Muster sind Korrelationen, keine Diagnosen. Wende dich bei medizinischen Fragen zu deinen Kopfschmerzen immer an einen Arzt.
+        </div>
+      </section>
+
+      <!-- ─ Statistik ─ -->
+      <section class="doc-section" id="statistik">
+        <h2 class="section-heading">Statistik</h2>
+        <p>Der Abschnitt „Statistik" ist Teil der Registerkarte „Analyse". Er gibt dir einen Überblick über Häufigkeit und Schweregrad deiner Kopfschmerzen über einen ausgewählten Zeitraum.</p>
+
+        <h3 class="sub-heading">Zeitraumauswahl</h3>
+        <p>Wähle zwischen fünf Zeiträumen:</p>
+        <div class="tag-group">
+          <span class="tag accent">7 Tage</span>
+          <span class="tag">30 Tage</span>
+          <span class="tag">90 Tage</span>
+          <span class="tag">1 Jahr</span>
+          <span class="tag">Gesamtzeitraum</span>
+        </div>
+
+        <h3 class="sub-heading">Zusammenfassungskarten</h3>
+        <div class="card-grid">
+          <div class="info-card">
+            <div class="card-title">Ereignisse gesamt</div>
+            <div class="card-body">Anzahl aller Kopfschmerz- und Migräneereignisse im Zeitraum.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Durchschnittliche Intensität</div>
+            <div class="card-body">Mittlere Intensität (1–10) über alle Ereignisse im Zeitraum.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Ereignisse mit Aura</div>
+            <div class="card-body">Wie viele Ereignisse von einer Aura begleitet wurden.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Ereignisse mit Notfallmedikament</div>
+            <div class="card-body">Wie viele Ereignisse ein Akutmedikament erforderten.</div>
+          </div>
+        </div>
+
+        <h3 class="sub-heading">Diagramme</h3>
+        <ul>
+          <li><strong>Intensität</strong> — täglicher gewichteter Durchschnitt mit einem rollenden 7-Tage-Fenster.</li>
+          <li><strong>Stunden</strong> — rollende 7-Tage-Summe der Anfalldauer in Stunden.</li>
+          <li><strong>Anfallsanzahl</strong> — rollende 30-Tage-Summe der Ereignisse.</li>
+        </ul>
+
+        <h3 class="sub-heading">Ereignistyp &amp; Auslöseraufschlüsselung</h3>
+        <p>Eine Aufschlüsselung der Ereignisse nach Typ (Kopfschmerz vs. Migräne) und eine Liste deiner häufigsten Auslöser für den ausgewählten Zeitraum werden unterhalb der Diagramme angezeigt.</p>
+      </section>
+
+      <!-- ─ Berichte ─ -->
+      <section class="doc-section" id="berichte">
+        <h2 class="section-heading">Berichte</h2>
+        <p>Die Registerkarte „Berichte" ermöglicht dir, strukturierte Zusammenfassungen deiner Daten anzuzeigen und sie zur Weitergabe an einen Arzt zu exportieren.</p>
+
+        <h3 class="sub-heading">Monatsbericht</h3>
+        <p>Der Monatsbericht zeigt eine Kalenderansicht für jeden ausgewählten Monat, mit jedem farbig nach Status codierten Tag:</p>
+        <ul>
+          <li><strong>Keine Ereignisse</strong> — kein Anfall aufgezeichnet</li>
+          <li><strong>Kopfschmerz</strong> — mindestens ein Kopfschmerzereignis</li>
+          <li><strong>Migräne</strong> — mindestens ein Migräneereignis</li>
+        </ul>
+        <p>Ein Kreisdiagramm zeigt den Anteil der Tage in jeder Kategorie. Wähle einen oder mehrere Monate über die Monats-Chips aus. Tippe auf <strong>Alle auswählen</strong> oder <strong>Löschen</strong>, um schnell alle Monate auszuwählen oder abzuwählen.</p>
+
+        <h3 class="sub-heading">Tagesbericht</h3>
+        <p>Der Tagesbericht konzentriert sich auf einzelne Ereignisse innerhalb eines ausgewählten Zeitraums. Wähle aus:</p>
+        <div class="tag-group">
+          <span class="tag">7 Tage</span>
+          <span class="tag accent">30 Tage</span>
+          <span class="tag">90 Tage</span>
+          <span class="tag">Gesamtzeitraum</span>
+        </div>
+        <p>Eine Zusammenfassungszeile oben zeigt die Gesamtzahl der Ereignisse, die durchschnittliche Intensität und den Datumsbereich. Darunter ist jedes Ereignis mit Typ, Uhrzeit und Intensität aufgeführt.</p>
+
+        <h3 class="sub-heading">Daten exportieren</h3>
+        <p>Verwende die Exportschaltflächen, um deine Daten zu speichern:</p>
+        <ul>
+          <li><strong>Als CSV exportieren</strong> — speichert eine kommagetrennte Datei mit allen Ereignissen im aktuellen Zeitraum. Spalten: Datum, Uhrzeit, Typ, Intensität, Aura, Notfallmedikament, Auslöser, Notizen. Die Android-Systemdateiauswahl lässt dich den Speicherort wählen.</li>
+          <li><strong>Als PDF exportieren</strong> — erstellt ein formatiertes PDF-Dokument mit der Zusammenfassung und der Ereignistabelle, geeignet zum Ausdrucken oder Senden an einen Arzt.</li>
+          <li><strong>Health Connect-Daten als CSV exportieren</strong> — exportiert optional die zwischengespeicherten Schlaf-, HRV- und Schrittdaten zusammen mit deinen Kopfschmerzereignissen.</li>
+        </ul>
+
+        <div class="note">
+          <strong>Dateiort.</strong> Heda verwendet das Android Storage Access Framework, sodass du wählst, wo die exportierte Datei gespeichert wird. Es werden keine Dateien auf einen Server hochgeladen.
+        </div>
+      </section>
+
+      <!-- ─ Einstellungen ─ -->
+      <section class="doc-section" id="einstellungen">
+        <h2 class="section-heading">Einstellungen</h2>
+        <p>Öffne die Einstellungen über die untere Navigationsleiste. Änderungen werden sofort wirksam.</p>
+
+        <h3 class="sub-heading">Design</h3>
+        <p>Wähle zwischen drei Optionen:</p>
+        <ul>
+          <li><strong>Hell</strong> — warmer, papiertoniger heller Modus.</li>
+          <li><strong>Dunkel</strong> — tiefer, waldgrüner dunkler Modus (Standard).</li>
+          <li><strong>System</strong> — folgt automatisch der Dunkel/Hell-Einstellung deines Geräts.</li>
+        </ul>
+
+        <h3 class="sub-heading">Sprache</h3>
+        <p>Wähle aus mehr als 30 Sprachen, gruppiert nach Region (Nordisch, Germanisch, Romanisch, Slawisch, Baltisch und Sonstige). Die gewählte Sprache gilt für den gesamten Text in der App. Wähle <strong>System</strong>, um der Spracheinstellung deines Geräts zu folgen.</p>
+
+        <h3 class="sub-heading">Health Connect</h3>
+        <p>Führt zum Health Connect-Einstellungsbildschirm, auf dem du Berechtigungen für Schlaf-, HRV- und Schrittdaten erteilen oder widerrufen kannst. Siehe den Abschnitt <a href="#health-connect">Health Connect</a> für Details.</p>
+
+        <h3 class="sub-heading">Datenschutz &amp; Daten</h3>
+        <p>Öffnet den Bildschirm „Datenschutz &amp; Daten", auf dem du dein Konto verwalten, gespeicherte Daten einsehen, deine GDPR-Rechte ausüben und deine Daten löschen kannst. Siehe den Abschnitt <a href="#datenschutz">Datenschutz &amp; Daten</a> für Details.</p>
+
+        <h3 class="sub-heading">Automatische Health Connect-Synchronisierung</h3>
+        <p>Wenn aktiviert, ruft Heda deine neuesten Gesundheitsdaten aus Health Connect einmal täglich im Hintergrund ab, auch wenn die App geschlossen ist. Dies ist <strong>standardmäßig deaktiviert</strong>. Die Aktivierung erfordert erteilte Health Connect-Berechtigungen.</p>
+
+        <h3 class="sub-heading">Tägliche Gesundheitsempfehlungen</h3>
+        <p>Wenn aktiviert, sendet Heda eine tägliche Benachrichtigung, wenn eine hochpriore Korrelation erkannt wird. Durch Tippen auf die Benachrichtigung wird der Analyse-Bildschirm geöffnet. Dies ist <strong>standardmäßig deaktiviert</strong> und erfordert die Benachrichtigungsberechtigung des Geräts.</p>
+
+        <h3 class="sub-heading">Erweitert</h3>
+        <p>Erweitere den Abschnitt „Erweitert", um die vom Korrelationsmodul verwendeten Schwellenwerte fein abzustimmen. Die Standardwerte entsprechen etablierten klinischen Leitlinien zur Migräneprävention:</p>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Einstellung</th><th>Standard</th><th>Beschreibung</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Mindestschlaf</strong></td><td>7 Std. 0 Min.</td><td>Schlaf unter dieser Dauer wird als möglicher Auslöser markiert.</td></tr>
+            <tr><td><strong>Max. Schlafvariabilität</strong></td><td>60 Min.</td><td>Standardabweichung der Schlafzeiten über diesem Wert löst das Muster für unregelmäßigen Schlaf aus.</td></tr>
+            <tr><td><strong>Mindestschritte</strong></td><td>3 000</td><td>Schrittzahl unter diesem Wert wird als geringe Aktivität markiert.</td></tr>
+            <tr><td><strong>Mindest-HRV</strong></td><td>30 ms</td><td>HRV unter diesem absoluten Schwellenwert wird markiert.</td></tr>
+            <tr><td><strong>HRV-Basiswertbruch</strong></td><td>0,80</td><td>HRV unter diesem Anteil deines 14-Tage-Basiswerts wird ebenfalls markiert.</td></tr>
+          </tbody>
+        </table>
+
+        <p>Tippe auf <strong>Auf Standard zurücksetzen</strong>, um alle Schwellenwerte auf ihre ursprünglichen Werte zurückzusetzen.</p>
+      </section>
+
+      <!-- ─ Datenschutz & Daten ─ -->
+      <section class="doc-section" id="datenschutz">
+        <h2 class="section-heading">Datenschutz &amp; Daten</h2>
+        <p>Öffne <strong>Einstellungen → Datenschutz &amp; Daten</strong>, um alle Daten- und Kontoeinstellungen zu verwalten.</p>
+
+        <h3 class="sub-heading">Dein Konto</h3>
+        <p>Oben auf dem Bildschirm wird das aktuell angemeldete Google-Konto angezeigt. Tippe auf <strong>Abmelden</strong>, um dich von der App abzumelden. Deine Daten verbleiben auf dem Gerät; du kannst dich jederzeit wieder anmelden.</p>
+
+        <h3 class="sub-heading">Welche Daten gespeichert werden</h3>
+        <p>Alle Daten werden lokal auf deinem Gerät in zwei verschlüsselten Datenbanken gespeichert:</p>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Datentyp</th><th>Inhalt</th><th>Verschlüsselung</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Kopfschmerzereignisse</strong></td>
+              <td>Zeitstempel, Schmerzbereiche, Intensität, Aura, Notfallmedikament, Auslöser, Notizen</td>
+              <td>AES-256 (SQLCipher)</td>
+            </tr>
+            <tr>
+              <td><strong>Health Connect-Cache</strong></td>
+              <td>Tägliche Schlafdauer, HRV und Schrittzahl</td>
+              <td>AES-256 (SQLCipher)</td>
+            </tr>
+            <tr>
+              <td><strong>Authentifizierungstoken</strong></td>
+              <td>Firebase UID, E-Mail, Anmeldezeitstempel, Kontobindung</td>
+              <td>AES-256-GCM (Tink)</td>
+            </tr>
+            <tr>
+              <td><strong>App-Einstellungen</strong></td>
+              <td>Nur Design- und Sprachpräferenz — keine Gesundheitsdaten</td>
+              <td>Nicht verschlüsselt</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>Verschlüsselungsschlüssel werden im Android Keystore gespeichert, hardware-gesichert wo verfügbar, und verlassen das Gerät nie.</p>
+
+        <h3 class="sub-heading">Biometrische Sperre</h3>
+        <p>Aktiviere die biometrische Sperre, um zum Öffnen der App einen Fingerabdruck, Gesichtsentsperre oder PIN zu verlangen. Erfordert eine konfigurierte Bildschirmsperre in den Geräteeinstellungen.</p>
+
+        <h3 class="sub-heading">Diagnose</h3>
+        <p>Teile optional anonyme Nutzungsstatistiken (Firebase Analytics) und Absturzberichte (Firebase Crashlytics). <strong>Gesundheitsdaten werden niemals einbezogen.</strong> Diese können unabhängig voneinander ein- und ausgeschaltet und jederzeit geändert werden.</p>
+
+        <h3 class="sub-heading">Deine DSGVO-Rechte</h3>
+        <p>Heda entspricht EU-DSGVO Artikel 9 (besondere Kategorien personenbezogener Daten). Deine Rechte:</p>
+
+        <ul>
+          <li><strong>Auskunftsrecht (Art. 15)</strong> — alle deine Daten sind im Kalender und in der Statistik sichtbar.</li>
+          <li><strong>Berichtigungsrecht (Art. 16)</strong> — bearbeite jedes Ereignis, indem du es im Kalender antippst.</li>
+          <li><strong>Recht auf Löschung (Art. 17)</strong> — lösche alle Daten über die Gefahrenzone (siehe unten).</li>
+          <li><strong>Recht auf Einschränkung (Art. 18)</strong> — melde dich ab, um jede Verarbeitung zu stoppen.</li>
+          <li><strong>Recht auf Datenübertragbarkeit (Art. 20)</strong> — exportiere alle Ereignisse als CSV aus dem Berichte-Bildschirm.</li>
+          <li><strong>Widerspruchsrecht (Art. 21)</strong> — melde dich ab; die Verarbeitung stoppt sofort.</li>
+        </ul>
+
+        <h3 class="sub-heading">Gefahrenzone</h3>
+        <div class="warning">
+          <strong>Diese Aktionen sind dauerhaft und können nicht rückgängig gemacht werden.</strong>
+        </div>
+        <ul>
+          <li><strong>Lokale Daten löschen (Konto behalten)</strong> — löscht dauerhaft alle Kopfschmerzeinträge, Gesundheitsdaten, Einstellungen und Verschlüsselungsschlüssel von diesem Gerät. Deine Google-Kontoverbindung bleibt erhalten, sodass du dich auf jedem Gerät wieder anmelden kannst.</li>
+          <li><strong>Konto und alle Daten löschen</strong> — löscht dauerhaft alles oben Genannte plus dein Firebase-Konto. Es gibt keine Wiederherstellung. Eine zweistufige Bestätigung ist erforderlich.</li>
+        </ul>
+      </section>
+
+      <!-- ─ Health Connect ─ -->
+      <section class="doc-section" id="health-connect">
+        <h2 class="section-heading">Health Connect</h2>
+        <p>Health Connect ist Googles einheitliche Gesundheitsdatenplattform für Android. Heda liest drei Datentypen daraus, um den Analyse-Bildschirm zu betreiben:</p>
+
+        <div class="card-grid">
+          <div class="info-card">
+            <div class="card-title">Schlafsitzungen</div>
+            <div class="card-body">Nächtliche Schlafdauer von deinem Wearable oder deiner Schlaf-Tracking-App.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Herzratenvariabilität (HRV)</div>
+            <div class="card-body">Morgendliche HRV-Messungen, die Stress- und Erholungsstatus anzeigen.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Schrittzahl</div>
+            <div class="card-body">Tägliche Schrittzahl von deinem Telefon oder Wearable.</div>
+          </div>
+        </div>
+
+        <div class="note">
+          <strong>Nur Lesezugriff.</strong> Heda liest nur Daten aus Health Connect — es schreibt nie dorthin. Nur die spezifischen Datensatztypen, die für die Korrelationsanalyse erforderlich sind, werden angefordert.
+        </div>
+
+        <h3 class="sub-heading">Health Connect einrichten</h3>
+        <ol class="steps">
+          <li>Gehe in Heda zu <strong>Einstellungen → Health Connect</strong>.</li>
+          <li>Wenn die Health Connect-App nicht installiert ist, tippe auf <strong>Health Connect installieren</strong>, um sie aus dem Google Play Store zu holen. (Android 9 und höher. Ab Android 14+ ist Health Connect integriert.)</li>
+          <li>Tippe auf <strong>Health Connect verbinden</strong>.</li>
+          <li>Erteile im Health Connect-Berechtigungsbildschirm Heda Zugriff auf <strong>Schlaf</strong>, <strong>Herzratenvariabilität</strong> und <strong>Schritte</strong>.</li>
+          <li>Kehre zu Heda zurück. Deine aktuellen Gesundheitsdaten werden angezeigt.</li>
+        </ol>
+
+        <h3 class="sub-heading">Hintergrundsynchronisierung</h3>
+        <p>Standardmäßig werden Gesundheitsdaten nur abgerufen, wenn du den Health Connect-Bildschirm öffnest oder auf <strong>Aktualisieren</strong> tippst. Aktiviere <strong>Automatische Health Connect-Synchronisierung</strong> in den Einstellungen, um Daten einmal täglich im Hintergrund abzurufen.</p>
+
+        <h3 class="sub-heading">Zugriff widerrufen</h3>
+        <p>Du kannst Hedas Health Connect-Berechtigungen jederzeit in der Health Connect-App widerrufen (<strong>Apps &amp; Geräte verwalten → Heda → Berechtigungen</strong>) oder unter <strong>Einstellungen → Health Connect</strong> in Heda. Zuvor zwischengespeicherte Daten verbleiben auf deinem Gerät, bis du sie über <strong>Datenschutz &amp; Daten → Lokale Daten löschen</strong> löschst.</p>
+
+        <div class="note">
+          <strong>Daten bleiben auf dem Gerät.</strong> Health Connect-Daten werden in der verschlüsselten lokalen Datenbank zwischengespeichert und niemals an einen Server gesendet.
+        </div>
+      </section>
+
+      <hr class="section-sep" />
+      <p style="font-size:13px; color:var(--text-dim)">© 2026 EXSports Oy. Diese Dokumentation wird aktualisiert, wenn die App weiterentwickelt wird. Zuletzt überarbeitet im April 2026.</p>
+
+    </main>
+  </div><!-- /.doc-layout -->
+
+  <footer class="site-footer">
+    &copy; 2026 EXSports Oy &nbsp;·&nbsp;
+    <a href="../index.html">← Alle Sprachen</a> &nbsp;·&nbsp;
+    <a href="../../index.html">← Dokumente</a> &nbsp;·&nbsp;
+    <a href="../../legal/privacy_policy.html">Datenschutzrichtlinie</a> &nbsp;·&nbsp;
+    <a href="mailto:info@exsports.fi">Kontakt</a>
+  </footer>
+
+</body>
+</html>

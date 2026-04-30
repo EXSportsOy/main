@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guía de usuario – Heda</title>
+  <link rel="stylesheet" href="../shared.css" />
+</head>
+<body>
+
+  <!-- ── Site header ── -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand-lockup" href="../../index.html">
+        <svg width="26" height="26" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <circle cx="32" cy="32" r="29" stroke="currentColor" stroke-width="1" opacity="0.18" fill="none"/>
+          <circle cx="32" cy="32" r="23" stroke="currentColor" stroke-width="1" opacity="0.30" fill="none"/>
+          <circle cx="32" cy="32" r="17.5" stroke="currentColor" stroke-width="1" opacity="0.50" fill="none"/>
+          <ellipse cx="32" cy="30" rx="9" ry="11" fill="currentColor"/>
+          <path d="M27 41 Q32 44 37 41 L39 47 Q32 49 25 47 Z" fill="currentColor"/>
+        </svg>
+        <div class="header-meta">
+          <span class="wordmark">heda</span>
+          <span class="header-subtitle">Guía de usuario</span>
+        </div>
+      </a>
+      <nav class="header-nav">
+        <a href="../../index.html">← Documentos</a>
+        <a href="../index.html">← Todos los idiomas</a>
+      </nav>
+      <a class="lang-btn" href="../index.html">🌐</a>
+    </div>
+  </header>
+
+  <div class="doc-layout">
+
+    <!-- ── Sidebar TOC ── -->
+    <aside>
+      <nav class="toc" aria-label="Tabla de contenidos">
+        <p class="toc-label">Contenido</p>
+        <ul class="toc-list">
+          <li><a href="#descripcion">Descripción general</a></li>
+          <li><a href="#primeros-pasos">Primeros pasos</a></li>
+          <li><a href="#calendario">Calendario</a></li>
+          <li class="toc-sub"><ul class="toc-list">
+            <li><a href="#vista-mensual">Vista mensual</a></li>
+            <li><a href="#tarjetas-evento">Tarjetas de evento</a></li>
+            <li><a href="#anadir-rapido">Añadir rápido</a></li>
+          </ul></li>
+          <li><a href="#registrar">Registrar un evento</a></li>
+          <li class="toc-sub"><ul class="toc-list">
+            <li><a href="#tipo-intensidad">Tipo e intensidad</a></li>
+            <li><a href="#fecha-hora">Fecha y hora</a></li>
+            <li><a href="#area-dolor">Área de dolor</a></li>
+            <li><a href="#desencadenantes">Desencadenantes</a></li>
+            <li><a href="#aura-medicacion">Aura y medicación</a></li>
+            <li><a href="#notas">Notas</a></li>
+          </ul></li>
+          <li><a href="#edicion">Editar y eliminar</a></li>
+          <li><a href="#analisis">Análisis</a></li>
+          <li><a href="#estadisticas">Estadísticas</a></li>
+          <li><a href="#informes">Informes</a></li>
+          <li><a href="#ajustes">Ajustes</a></li>
+          <li><a href="#privacidad">Privacidad y datos</a></li>
+          <li><a href="#health-connect">Health Connect</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- ── Main content ── -->
+    <main class="doc-content">
+
+      <span class="section-label">Heda · Guía de usuario</span>
+      <h1 class="doc-title">Cómo usar Heda</h1>
+      <p class="doc-intro">Un diario tranquilo para el dolor de cabeza y la migraña. Mapea tu dolor, encuentra patrones y comprende tus desencadenantes — todo almacenado de forma privada en tu dispositivo.</p>
+
+      <!-- ─ Descripción general ─ -->
+      <section class="doc-section" id="descripcion">
+        <h2 class="section-heading">Descripción general</h2>
+
+        <p>Heda es un diario de cefaleas y migrañas para Android que funciona sin conexión de manera prioritaria. Todos los datos de salud están cifrados y almacenados únicamente en tu dispositivo. Nada se sube a ningún servidor — tus datos son solo tuyos.</p>
+
+        <p>La app tiene cuatro áreas principales, accesibles desde la barra de navegación inferior:</p>
+
+        <div class="nav-bar-demo" aria-hidden="true">
+          <div class="nav-tab active">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9h17M8 3v3M16 3v3"/></svg>
+            Calendario
+          </div>
+          <div class="nav-tab">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l4-6 3 3 5-8 4 6"/></svg>
+            Análisis
+          </div>
+          <div class="nav-tab">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7h14M5 12h14M5 17h9"/></svg>
+            Informes
+          </div>
+          <div class="nav-tab">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.5 5.5l1.5 1.5M17 17l1.5 1.5M5.5 18.5L7 17M17 7l1.5-1.5"/></svg>
+            Ajustes
+          </div>
+        </div>
+
+        <div class="card-grid">
+          <div class="info-card">
+            <div class="card-title">Calendario</div>
+            <div class="card-body">Explora y gestiona tus eventos de dolor de cabeza por fecha. Añade nuevos eventos desde aquí.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Análisis</div>
+            <div class="card-body">Patrones detectados y recomendaciones personalizadas basadas en tus datos de Health Connect.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Informes</div>
+            <div class="card-body">Resúmenes mensuales y diarios con gráficas. Exporta tus datos como CSV o PDF.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Ajustes</div>
+            <div class="card-body">Tema, idioma, Health Connect, notificaciones, privacidad y opciones avanzadas.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─ Primeros pasos ─ -->
+      <section class="doc-section" id="primeros-pasos">
+        <h2 class="section-heading">Primeros pasos</h2>
+
+        <h3 class="sub-heading">Iniciar sesión</h3>
+        <p>Heda requiere una cuenta de Google para proteger tus datos. Al iniciar sesión se crea una clave cifrada vinculada al dispositivo y asociada a tu cuenta — no se almacena ningún dato en la nube.</p>
+        <ol class="steps">
+          <li>Abre Heda después de instalarla desde Google Play.</li>
+          <li>Pulsa <strong>Iniciar sesión con Google</strong> y elige tu cuenta de Google.</li>
+          <li>Tu cuenta ahora está vinculada a esta instalación. Deberás usar la misma cuenta de Google si reinstales la app.</li>
+        </ol>
+        <div class="note">
+          <strong>La privacidad, lo primero.</strong> Heda no sube ningún dato de salud a servidores externos. Tu cuenta de Google se usa únicamente para identificación — para asociar las claves de cifrado a un único usuario en este dispositivo.
+        </div>
+
+        <h3 class="sub-heading">Consentimiento en el primer inicio</h3>
+        <p>En el primer inicio, Heda pregunta si deseas compartir estadísticas de uso anónimas e informes de fallos. Ninguna opción envía datos de salud. Puedes cambiar tu elección más adelante en <strong>Ajustes → Privacidad y datos</strong>.</p>
+
+        <ul>
+          <li><strong>Estadísticas de uso anónimas</strong> — ayuda al equipo a entender qué funciones se usan más (Firebase Analytics).</li>
+          <li><strong>Informes de fallos anónimos</strong> — reporta fallos automáticamente para que los errores se corrijan rápidamente (Firebase Crashlytics).</li>
+        </ul>
+      </section>
+
+      <!-- ─ Calendario ─ -->
+      <section class="doc-section" id="calendario">
+        <h2 class="section-heading">Calendario</h2>
+        <p>El Calendario es tu vista diaria. Muestra el mes actual de un vistazo, con puntos de colores que indican la intensidad del dolor de cabeza en cada día.</p>
+
+        <h3 class="sub-heading" id="vista-mensual">Vista mensual</h3>
+        <p>La banda mensual en la parte superior muestra el mes actual en una cuadrícula de semanas ISO (las semanas van de lunes a domingo). Cada día con al menos un evento registrado muestra un pequeño punto de intensidad:</p>
+
+        <ul>
+          <li><span style="color:var(--accent)">●</span> <strong>Azul/verde</strong> — intensidad 1–3 (leve)</li>
+          <li><span style="color:var(--warm)">●</span> <strong>Amarillo</strong> — intensidad 4–6 (moderado)</li>
+          <li><span style="color:var(--danger)">●</span> <strong>Rojo</strong> — intensidad 7–10 (grave)</li>
+        </ul>
+
+        <p>Usa los botones <strong>‹</strong> y <strong>›</strong> para navegar entre meses. Pulsa cualquier fecha para seleccionarla y ver los eventos de ese día abajo.</p>
+        <p>La fecha actual aparece resaltada. Pulsa la etiqueta <strong>Hoy</strong> o la fecha de hoy para volver al día actual.</p>
+
+        <h3 class="sub-heading" id="tarjetas-evento">Tarjetas de evento</h3>
+        <p>Los eventos de la fecha seleccionada se muestran como tarjetas debajo de la banda mensual. Cada tarjeta muestra:</p>
+        <ul>
+          <li>El <strong>tipo de cefalea</strong> (Dolor de cabeza o Migraña)</li>
+          <li>El <strong>intervalo de tiempo</strong> — hora de inicio y fin, y la duración</li>
+          <li>Una <strong>barra de intensidad</strong> (escala 1–10)</li>
+          <li>Indicadores de aura y medicación de rescate, si se registraron</li>
+        </ul>
+        <p>Pulsa una tarjeta para abrirla en <strong>modo edición</strong> donde se pueden cambiar todos los campos.</p>
+
+        <h3 class="sub-heading" id="anadir-rapido">Añadir rápido</h3>
+        <p>Para registrar rápidamente, pulsa <strong>Añadir rápido</strong> en la parte inferior de la pantalla Calendario. Un panel se desliza hacia arriba con los campos más esenciales:</p>
+        <ul>
+          <li><strong>Tipo</strong> — Dolor de cabeza o Migraña</li>
+          <li><strong>Intensidad</strong> — deslizador 1–10</li>
+          <li><strong>Aura</strong> — casilla de verificación</li>
+          <li><strong>Medicación de rescate</strong> — casilla de verificación</li>
+        </ul>
+        <p>Pulsa <strong>Guardar</strong> para registrar inmediatamente con la hora actual, o pulsa <strong>Añadir detalles…</strong> para abrir el formulario de evento completo prellenado con estos valores.</p>
+      </section>
+
+      <!-- ─ Registrar ─ -->
+      <section class="doc-section" id="registrar">
+        <h2 class="section-heading">Registrar un evento</h2>
+        <p>Para registrar un nuevo evento con todos los detalles, pulsa el botón <strong>+ Añadir evento</strong> en el Calendario. Si primero pulsaste una fecha específica, esa fecha estará preseleccionada en el formulario.</p>
+
+        <h3 class="sub-heading" id="tipo-intensidad">Tipo e intensidad</h3>
+        <p>Elige entre <strong>Dolor de cabeza</strong> y <strong>Migraña</strong> con el selector de la parte superior. Luego establece la intensidad en una escala del 1 (apenas perceptible) al 10 (incapacitante) con el deslizador.</p>
+
+        <h3 class="sub-heading" id="fecha-hora">Fecha y hora</h3>
+        <p>Tres campos controlan la información temporal del evento:</p>
+        <ul>
+          <li><strong>Fecha</strong> — pulsa para abrir un selector de fecha. Por defecto: hoy.</li>
+          <li><strong>Hora de inicio</strong> — cuándo comenzó el ataque. Pulsa para abrir un selector de hora en formato 24 h.</li>
+          <li><strong>Hora de fin</strong> — cuándo terminó el ataque. Por defecto: 2 horas después de la hora de inicio. Si desplazas la hora de inicio más allá de la hora de fin, esta avanza automáticamente para mantener el intervalo de 2 horas.</li>
+        </ul>
+
+        <h3 class="sub-heading" id="area-dolor">Área de dolor</h3>
+        <p>El <strong>modelo de cabeza 3D</strong> te permite marcar exactamente dónde se localiza el dolor. Admite dos gestos:</p>
+        <ul>
+          <li><strong>Un dedo</strong> — pinta las áreas de dolor arrastrando por la superficie de la cabeza.</li>
+          <li><strong>Dos dedos</strong> — gira la cabeza para acceder a zonas de la parte posterior, los lados o el cuello.</li>
+        </ul>
+
+        <p>Se admiten ocho regiones anatómicas:</p>
+        <div class="tag-group">
+          <span class="tag">Frente</span>
+          <span class="tag">Alrededor del ojo — izquierdo</span>
+          <span class="tag">Alrededor del ojo — derecho</span>
+          <span class="tag">Sien — izquierda</span>
+          <span class="tag">Sien — derecha</span>
+          <span class="tag">Occipital — izquierdo</span>
+          <span class="tag">Occipital — derecho</span>
+          <span class="tag">Nuca</span>
+        </div>
+
+        <p>Activa el interruptor <strong>Colorear según intensidad</strong> para teñir las regiones pintadas con el color de intensidad (azul para leve, amarillo para moderado, rojo para grave). Está desactivado de forma predeterminada.</p>
+
+        <div class="note">
+          <strong>Consejo.</strong> Puedes borrar regiones pintadas arrastrando de nuevo sobre ellas — el gesto alterna entre añadir y borrar.
+        </div>
+
+        <h3 class="sub-heading" id="desencadenantes">Posibles desencadenantes</h3>
+        <p>Registra los posibles desencadenantes que pueden haber contribuido a este ataque. Están agrupados en siete categorías:</p>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Categoría</th><th>Desencadenantes</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Estrés y estado de ánimo</strong></td>
+              <td>Estrés, Relajación tras estrés, Ansiedad</td>
+            </tr>
+            <tr>
+              <td><strong>Sueño</strong></td>
+              <td>Poco sueño, Demasiado sueño, Sueño irregular</td>
+            </tr>
+            <tr>
+              <td><strong>Comida y bebida</strong></td>
+              <td>Comida omitida, Ayuno prolongado, Deshidratación, Alcohol, Cafeína, Abstinencia de cafeína, Chocolate, Queso curado, Aditivos alimentarios, Carne procesada</td>
+            </tr>
+            <tr>
+              <td><strong>Hormonal</strong></td>
+              <td>Menstruación, Ovulación, Anticonceptivos hormonales</td>
+            </tr>
+            <tr>
+              <td><strong>Medioambiente</strong></td>
+              <td>Cambio de tiempo, Temperatura extrema, Humedad</td>
+            </tr>
+            <tr>
+              <td><strong>Sensorial</strong></td>
+              <td>Luz brillante, Olor fuerte, Ruido intenso, Parpadeo de pantalla</td>
+            </tr>
+            <tr>
+              <td><strong>Físico</strong></td>
+              <td>Ejercicio intenso, Tensión cervical, Viaje, Abuso de medicación</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 class="sub-heading" id="aura-medicacion">Aura y medicación de rescate</h3>
+        <ul>
+          <li><strong>Aura</strong> — marca si este evento fue precedido por un aura (alteraciones visuales, hormigueo, cambios en el habla, etc.).</li>
+          <li><strong>Medicación de rescate</strong> — marca si tomaste medicación aguda (p. ej. triptán, AINE o paracetamol) durante este ataque.</li>
+        </ul>
+
+        <h3 class="sub-heading" id="notas">Notas</h3>
+        <p>El campo de notas de texto libre captura todo lo que no cubren los campos estructurados — contexto, observaciones, qué ayudó u otros detalles que quieras recordar.</p>
+
+        <p>Pulsa <strong>Guardar</strong> cuando hayas terminado. El evento aparece inmediatamente en el Calendario.</p>
+      </section>
+
+      <!-- ─ Editar & eliminar ─ -->
+      <section class="doc-section" id="edicion">
+        <h2 class="section-heading">Editar y eliminar eventos</h2>
+
+        <h3 class="sub-heading">Editar un evento</h3>
+        <ol class="steps">
+          <li>Navega hasta la fecha en el Calendario.</li>
+          <li>Pulsa la tarjeta del evento que deseas cambiar.</li>
+          <li>El formulario de evento se abre en modo edición — todos los campos son editables.</li>
+          <li>Realiza tus cambios y luego pulsa <strong>Actualizar</strong> para guardar.</li>
+        </ol>
+
+        <h3 class="sub-heading">Eliminar un evento</h3>
+        <ol class="steps">
+          <li>Abre el evento en modo edición (pulsa su tarjeta en el Calendario).</li>
+          <li>Desplázate hacia abajo y pulsa <strong>Eliminar entrada</strong>.</li>
+          <li>Aparece un cuadro de confirmación. Pulsa <strong>Eliminar</strong> para borrar el evento de forma permanente.</li>
+        </ol>
+
+        <div class="warning">
+          <strong>Acción permanente.</strong> La eliminación no se puede deshacer. El evento se elimina inmediatamente de la base de datos cifrada en tu dispositivo.
+        </div>
+      </section>
+
+      <!-- ─ Análisis ─ -->
+      <section class="doc-section" id="analisis">
+        <h2 class="section-heading">Análisis</h2>
+        <p>La pestaña Análisis muestra las posibles correlaciones entre tus eventos de cefalea y tus métricas de salud diarias de Health Connect. Examina los últimos 90 días.</p>
+
+        <div class="note">
+          <strong>Requiere Health Connect.</strong> Conecta Heda a Google Health Connect en <strong>Ajustes → Health Connect</strong> para activar esta pantalla. Consulta la sección <a href="#health-connect">Health Connect</a> para los pasos de configuración.
+        </div>
+
+        <h3 class="sub-heading">Tu línea base</h3>
+        <p>Una tarjeta de línea base en la parte superior muestra tus valores medios de los últimos 14 días:</p>
+        <ul>
+          <li><strong>Sueño</strong> — duración media del sueño nocturno</li>
+          <li><strong>HRV</strong> — variabilidad media de la frecuencia cardíaca (ms)</li>
+          <li><strong>Pasos</strong> — número medio diario de pasos</li>
+        </ul>
+
+        <h3 class="sub-heading">Patrones detectados</h3>
+        <p>Heda busca cuatro patrones basados en evidencia que suelen preceder a los ataques de cefalea y migraña:</p>
+
+        <ul class="feature-list">
+          <li><strong>Sueño corto</strong> — dormiste menos que tu mínimo configurado antes de este ataque.</li>
+          <li><strong>Horario de sueño irregular</strong> — tus horarios de sueño variaron significativamente durante la semana anterior.</li>
+          <li><strong>Actividad baja</strong> — tu conteo de pasos el día anterior estaba por debajo del umbral mínimo.</li>
+          <li><strong>HRV bajo</strong> — tu HRV cayó por debajo de la línea base el día anterior, lo que sugiere estrés elevado o recuperación insuficiente.</li>
+        </ul>
+
+        <p>Cada hallazgo muestra la evidencia específica: el valor medido y el umbral que se cruzó. Por ejemplo: <em>«Durmió 5 h 30 min antes de este evento (umbral: 7 h)»</em>.</p>
+
+        <h3 class="sub-heading">Recomendaciones</h3>
+        <p>Basándose en los patrones detectados, Heda genera recomendaciones personalizadas ordenadas por prioridad (Alta / Media / Baja):</p>
+
+        <ul>
+          <li><strong>Aumentar la duración del sueño</strong> — procura dormir al menos 7 horas por noche.</li>
+          <li><strong>Mantener un horario de sueño regular</strong> — acuéstate dentro de ±30 minutos de la misma hora cada noche.</li>
+          <li><strong>Aumentar la actividad diaria</strong> — el ejercicio ligero (p. ej. una caminata de 30 minutos) puede reducir el riesgo de migraña.</li>
+          <li><strong>Gestionar el estrés y la recuperación</strong> — un HRV bajo indica estrés elevado; considera ejercicios de respiración o meditación.</li>
+        </ul>
+
+        <div class="warning">
+          <strong>No es consejo médico.</strong> Los patrones detectados son correlaciones, no diagnósticos. Consulta siempre a un profesional de la salud para orientación médica sobre tus dolores de cabeza.
+        </div>
+      </section>
+
+      <!-- ─ Estadísticas ─ -->
+      <section class="doc-section" id="estadisticas">
+        <h2 class="section-heading">Estadísticas</h2>
+        <p>La sección Estadísticas forma parte de la pestaña Análisis. Te da una visión general de la frecuencia y gravedad de tus cefaleas durante un período seleccionado.</p>
+
+        <h3 class="sub-heading">Selector de período</h3>
+        <p>Elige entre cinco períodos:</p>
+        <div class="tag-group">
+          <span class="tag accent">7 días</span>
+          <span class="tag">30 días</span>
+          <span class="tag">90 días</span>
+          <span class="tag">1 año</span>
+          <span class="tag">Todo el tiempo</span>
+        </div>
+
+        <h3 class="sub-heading">Tarjetas de resumen</h3>
+        <div class="card-grid">
+          <div class="info-card">
+            <div class="card-title">Total de eventos</div>
+            <div class="card-body">Número total de eventos de dolor de cabeza y migraña en el período.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Intensidad media</div>
+            <div class="card-body">Intensidad media (1–10) de todos los eventos del período.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Eventos con aura</div>
+            <div class="card-body">Cuántos eventos estuvieron acompañados de aura.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Eventos con medicación de rescate</div>
+            <div class="card-body">Cuántos eventos requirieron medicación aguda.</div>
+          </div>
+        </div>
+
+        <h3 class="sub-heading">Gráficas</h3>
+        <ul>
+          <li><strong>Intensidad</strong> — media ponderada diaria con una ventana deslizante de 7 días.</li>
+          <li><strong>Horas</strong> — total deslizante de 7 días de la duración de los ataques en horas.</li>
+          <li><strong>Número de ataques</strong> — total deslizante de 30 días de eventos.</li>
+        </ul>
+
+        <h3 class="sub-heading">Tipo de evento y desglose por desencadenante</h3>
+        <p>Un desglose de eventos por tipo (Dolor de cabeza vs. Migraña) y una lista de tus desencadenantes más frecuentes para el período seleccionado se muestran debajo de las gráficas.</p>
+      </section>
+
+      <!-- ─ Informes ─ -->
+      <section class="doc-section" id="informes">
+        <h2 class="section-heading">Informes</h2>
+        <p>La pestaña Informes te permite ver resúmenes estructurados de tus datos y exportarlos para compartirlos con un profesional de la salud.</p>
+
+        <h3 class="sub-heading">Informe mensual</h3>
+        <p>El informe mensual muestra una vista de calendario para cada mes seleccionado, con cada día codificado por color según su estado:</p>
+        <ul>
+          <li><strong>Sin eventos</strong> — no se registró ningún ataque</li>
+          <li><strong>Dolor de cabeza</strong> — al menos un evento de cefalea</li>
+          <li><strong>Migraña</strong> — al menos un evento de migraña</li>
+        </ul>
+        <p>Un gráfico circular muestra la proporción de días en cada categoría. Selecciona uno o más meses usando los chips de mes. Pulsa <strong>Seleccionar todos</strong> o <strong>Borrar</strong> para seleccionar o deseleccionar rápidamente todos los meses.</p>
+
+        <h3 class="sub-heading">Informe diario</h3>
+        <p>El informe diario se centra en eventos individuales dentro de un período seleccionado. Elige entre:</p>
+        <div class="tag-group">
+          <span class="tag">7 días</span>
+          <span class="tag accent">30 días</span>
+          <span class="tag">90 días</span>
+          <span class="tag">Todo el tiempo</span>
+        </div>
+        <p>Una fila de resumen en la parte superior muestra el total de eventos, la intensidad media y el intervalo de fechas. Debajo se lista cada evento con su tipo, hora e intensidad.</p>
+
+        <h3 class="sub-heading">Exportar datos</h3>
+        <p>Usa los botones de exportación para guardar tus datos:</p>
+        <ul>
+          <li><strong>Exportar como CSV</strong> — guarda un archivo separado por comas con todos los eventos del período actual. Columnas: Fecha, Hora, Tipo, Intensidad, Aura, Medicación de rescate, Desencadenantes, Notas. El selector de archivos del sistema Android te permite elegir la ubicación de guardado.</li>
+          <li><strong>Exportar como PDF</strong> — genera un documento PDF formateado con el resumen y la tabla de eventos, adecuado para imprimir o enviar a un médico.</li>
+          <li><strong>Exportar datos de Health Connect como CSV</strong> — exporta opcionalmente los datos en caché de sueño, HRV y pasos junto con tus eventos de cefalea.</li>
+        </ul>
+
+        <div class="note">
+          <strong>Ubicación del archivo.</strong> Heda utiliza el marco de acceso al almacenamiento de Android, por lo que tú eliges dónde se guarda el archivo exportado. No se sube ningún archivo a ningún servidor.
+        </div>
+      </section>
+
+      <!-- ─ Ajustes ─ -->
+      <section class="doc-section" id="ajustes">
+        <h2 class="section-heading">Ajustes</h2>
+        <p>Accede a Ajustes desde la barra de navegación inferior. Los cambios surten efecto inmediatamente.</p>
+
+        <h3 class="sub-heading">Tema</h3>
+        <p>Elige entre tres opciones:</p>
+        <ul>
+          <li><strong>Claro</strong> — modo claro con tonos cálidos de papel.</li>
+          <li><strong>Oscuro</strong> — modo oscuro profundo con tonos de bosque (predeterminado).</li>
+          <li><strong>Sistema</strong> — sigue automáticamente la configuración de modo oscuro/claro del dispositivo.</li>
+        </ul>
+
+        <h3 class="sub-heading">Idioma</h3>
+        <p>Elige entre más de 30 idiomas agrupados por región (Nórdico, Germánico, Romance, Eslavo, Báltico y Otros). El idioma seleccionado se aplica a todo el texto de la app. Elige <strong>Sistema</strong> para seguir la configuración de idioma del dispositivo.</p>
+
+        <h3 class="sub-heading">Health Connect</h3>
+        <p>Lleva a la pantalla de ajustes de Health Connect donde puedes conceder o revocar permisos para los datos de sueño, HRV y pasos. Consulta la sección <a href="#health-connect">Health Connect</a> para más detalles.</p>
+
+        <h3 class="sub-heading">Privacidad y datos</h3>
+        <p>Abre la pantalla Privacidad y datos donde puedes gestionar tu cuenta, revisar qué datos están almacenados, ejercer tus derechos RGPD y eliminar tus datos. Consulta la sección <a href="#privacidad">Privacidad y datos</a> para más detalles.</p>
+
+        <h3 class="sub-heading">Sincronización automática de Health Connect</h3>
+        <p>Cuando está activado, Heda obtiene tus datos de salud más recientes de Health Connect una vez al día en segundo plano, incluso cuando la app está cerrada. Está <strong>desactivado de forma predeterminada</strong>. Para activarlo es necesario que los permisos de Health Connect estén concedidos.</p>
+
+        <h3 class="sub-heading">Recomendaciones de salud diarias</h3>
+        <p>Cuando está activado, Heda envía una notificación diaria si se detecta una correlación de alta prioridad. Al pulsar la notificación se abre la pantalla Análisis. Está <strong>desactivado de forma predeterminada</strong> y requiere el permiso de notificaciones del dispositivo.</p>
+
+        <h3 class="sub-heading">Avanzado</h3>
+        <p>Despliega la sección Avanzado para ajustar los umbrales usados por el motor de correlaciones. Los valores predeterminados se corresponden con las directrices clínicas establecidas para la prevención de la migraña:</p>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Ajuste</th><th>Predeterminado</th><th>Descripción</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Sueño mínimo</strong></td><td>7 h 0 min</td><td>Un sueño inferior a esta duración se marca como posible desencadenante.</td></tr>
+            <tr><td><strong>Variabilidad máxima del sueño</strong></td><td>60 min</td><td>La desviación estándar del horario de sueño por encima de este valor activa el patrón de sueño irregular.</td></tr>
+            <tr><td><strong>Pasos mínimos</strong></td><td>3 000</td><td>Un conteo de pasos inferior a este se marca como actividad baja.</td></tr>
+            <tr><td><strong>HRV mínimo</strong></td><td>30 ms</td><td>Un HRV por debajo de este umbral absoluto se marca.</td></tr>
+            <tr><td><strong>Fracción de línea base HRV</strong></td><td>0,80</td><td>Un HRV por debajo de esta fracción de tu línea base de 14 días también se marca.</td></tr>
+          </tbody>
+        </table>
+
+        <p>Pulsa <strong>Restablecer valores predeterminados</strong> para restaurar todos los umbrales a sus valores originales.</p>
+      </section>
+
+      <!-- ─ Privacidad & Datos ─ -->
+      <section class="doc-section" id="privacidad">
+        <h2 class="section-heading">Privacidad y datos</h2>
+        <p>Abre <strong>Ajustes → Privacidad y datos</strong> para gestionar todos los ajustes de datos y cuenta.</p>
+
+        <h3 class="sub-heading">Tu cuenta</h3>
+        <p>En la parte superior de la pantalla se muestra la cuenta de Google con sesión iniciada. Pulsa <strong>Cerrar sesión</strong> para salir de la app. Tus datos permanecen en el dispositivo; puedes volver a iniciar sesión en cualquier momento.</p>
+
+        <h3 class="sub-heading">Qué datos se almacenan</h3>
+        <p>Todos los datos se almacenan localmente en tu dispositivo en dos bases de datos cifradas:</p>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Tipo de dato</th><th>Contenido</th><th>Cifrado</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Eventos de cefalea</strong></td>
+              <td>Marcas de tiempo, áreas de dolor, intensidad, aura, medicación de rescate, desencadenantes, notas</td>
+              <td>AES-256 (SQLCipher)</td>
+            </tr>
+            <tr>
+              <td><strong>Caché de Health Connect</strong></td>
+              <td>Duración diaria del sueño, HRV y conteo de pasos</td>
+              <td>AES-256 (SQLCipher)</td>
+            </tr>
+            <tr>
+              <td><strong>Token de autenticación</strong></td>
+              <td>UID de Firebase, correo electrónico, marca de tiempo de inicio de sesión, vinculación de cuenta</td>
+              <td>AES-256-GCM (Tink)</td>
+            </tr>
+            <tr>
+              <td><strong>Configuración de la app</strong></td>
+              <td>Solo preferencia de tema e idioma — sin datos de salud</td>
+              <td>Sin cifrar</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>Las claves de cifrado se almacenan en el Android Keystore, con respaldo de hardware cuando está disponible, y nunca salen del dispositivo.</p>
+
+        <h3 class="sub-heading">Bloqueo biométrico</h3>
+        <p>Activa el bloqueo biométrico para requerir huella dactilar, desbloqueo facial o PIN para abrir la app. Requiere que haya un bloqueo de pantalla configurado en los ajustes del dispositivo.</p>
+
+        <h3 class="sub-heading">Diagnóstico</h3>
+        <p>Comparte opcionalmente estadísticas de uso anónimas (Firebase Analytics) e informes de fallos (Firebase Crashlytics). <strong>Nunca se incluyen datos de salud.</strong> Estas opciones se pueden activar o desactivar de forma independiente y modificar en cualquier momento.</p>
+
+        <h3 class="sub-heading">Tus derechos RGPD</h3>
+        <p>Heda cumple con el artículo 9 del RGPD de la UE (categorías especiales de datos personales). Tus derechos:</p>
+
+        <ul>
+          <li><strong>Derecho de acceso (art. 15)</strong> — todos tus datos son visibles en Calendario y Estadísticas.</li>
+          <li><strong>Derecho de rectificación (art. 16)</strong> — edita cualquier evento pulsando sobre él en el Calendario.</li>
+          <li><strong>Derecho de supresión (art. 17)</strong> — elimina todos los datos a través de la Zona de peligro (ver más abajo).</li>
+          <li><strong>Derecho a la limitación (art. 18)</strong> — cierra sesión para detener todo el procesamiento.</li>
+          <li><strong>Derecho a la portabilidad (art. 20)</strong> — exporta todos los eventos como CSV desde la pantalla Informes.</li>
+          <li><strong>Derecho de oposición (art. 21)</strong> — cierra sesión; el procesamiento se detiene inmediatamente.</li>
+        </ul>
+
+        <h3 class="sub-heading">Zona de peligro</h3>
+        <div class="warning">
+          <strong>Estas acciones son permanentes y no se pueden deshacer.</strong>
+        </div>
+        <ul>
+          <li><strong>Eliminar datos locales (mantener cuenta)</strong> — elimina permanentemente todos los registros de cefalea, datos de salud, ajustes y claves de cifrado de este dispositivo. El vínculo con tu cuenta de Google se conserva, por lo que puedes volver a iniciar sesión en cualquier dispositivo.</li>
+          <li><strong>Eliminar cuenta y todos los datos</strong> — elimina permanentemente todo lo anterior más tu cuenta de Firebase. No hay recuperación posible. Se requiere una confirmación en dos pasos.</li>
+        </ul>
+      </section>
+
+      <!-- ─ Health Connect ─ -->
+      <section class="doc-section" id="health-connect">
+        <h2 class="section-heading">Health Connect</h2>
+        <p>Health Connect es la plataforma unificada de datos de salud de Google para Android. Heda lee tres tipos de datos para alimentar la pantalla Análisis:</p>
+
+        <div class="card-grid">
+          <div class="info-card">
+            <div class="card-title">Sesiones de sueño</div>
+            <div class="card-body">Duración del sueño nocturno desde tu dispositivo wearable o app de seguimiento del sueño.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Variabilidad de la frecuencia cardíaca (HRV)</div>
+            <div class="card-body">Mediciones matutinas de HRV que indican el nivel de estrés y recuperación.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Conteo de pasos</div>
+            <div class="card-body">Pasos diarios desde tu teléfono o dispositivo wearable.</div>
+          </div>
+        </div>
+
+        <div class="note">
+          <strong>Solo lectura.</strong> Heda únicamente lee datos de Health Connect — nunca escribe en él. Solo se solicitan los tipos de registros específicos necesarios para el análisis de correlaciones.
+        </div>
+
+        <h3 class="sub-heading">Configurar Health Connect</h3>
+        <ol class="steps">
+          <li>Ve a <strong>Ajustes → Health Connect</strong> en Heda.</li>
+          <li>Si la app Health Connect no está instalada, pulsa <strong>Instalar Health Connect</strong> para obtenerla en Google Play. (Android 9 y versiones posteriores. En Android 14+, Health Connect está integrado.)</li>
+          <li>Pulsa <strong>Conectar Health Connect</strong>.</li>
+          <li>En la pantalla de permisos de Health Connect, concede a Heda acceso a <strong>Sueño</strong>, <strong>Variabilidad de la frecuencia cardíaca</strong> y <strong>Pasos</strong>.</li>
+          <li>Vuelve a Heda. Tus datos de salud recientes se mostrarán.</li>
+        </ol>
+
+        <h3 class="sub-heading">Sincronización en segundo plano</h3>
+        <p>De forma predeterminada, los datos de salud solo se obtienen cuando abres la pantalla Health Connect o pulsas <strong>Actualizar</strong>. Activa <strong>Sincronización automática de Health Connect</strong> en Ajustes para obtener datos una vez al día en segundo plano.</p>
+
+        <h3 class="sub-heading">Revocar acceso</h3>
+        <p>Puedes revocar los permisos de Health Connect de Heda en cualquier momento desde la app Health Connect (<strong>Gestionar apps y dispositivos → Heda → Permisos</strong>) o en <strong>Ajustes → Health Connect</strong> dentro de Heda. Los datos previamente en caché permanecen en tu dispositivo hasta que los elimines a través de <strong>Privacidad y datos → Eliminar datos locales</strong>.</p>
+
+        <div class="note">
+          <strong>Los datos permanecen en el dispositivo.</strong> Los datos de Health Connect se almacenan en caché en la base de datos local cifrada y nunca se envían a ningún servidor.
+        </div>
+      </section>
+
+      <hr class="section-sep" />
+      <p style="font-size:13px; color:var(--text-dim)">© 2026 EXSports Oy. Esta documentación se actualiza conforme evoluciona la app. Última revisión: abril de 2026.</p>
+
+    </main>
+  </div><!-- /.doc-layout -->
+
+  <footer class="site-footer">
+    &copy; 2026 EXSports Oy &nbsp;·&nbsp;
+    <a href="../index.html">← Todos los idiomas</a> &nbsp;·&nbsp;
+    <a href="../../index.html">← Documentos</a> &nbsp;·&nbsp;
+    <a href="../../legal/privacy_policy.html">Política de privacidad</a> &nbsp;·&nbsp;
+    <a href="mailto:info@exsports.fi">Contacto</a>
+  </footer>
+
+</body>
+</html>
