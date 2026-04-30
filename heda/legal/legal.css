@@ -147,10 +147,8 @@
 .legal-main td {
   padding: 10px 12px;
   color: var(--text-mute);
-  border-bottom: 1px solid var(--line);
   vertical-align: top;
   line-height: 1.5;
-  border: none;
   border-bottom: 1px solid var(--line);
 }
 
