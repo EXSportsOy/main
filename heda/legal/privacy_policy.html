@@ -4,137 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy – Heda</title>
-    <style>
-        :root {
-            --bg-color: #ffffff;
-            --text-color: #333333;
-            --heading-color: #2c3e50;
-            --heading-border: #8b5dc8;
-            --subheading-color: #34495e;
-            --subheading-alt-color: #546e7a;
-            --border-color: #ddd;
-            --link-color: #8b5dc8;
-            --info-bg: #f3f0fa;
-            --info-border: #8b5dc8;
-            --warning-bg: #fff3cd;
-            --warning-border: #ffc107;
-            --muted-color: #7f8c8d;
-            --hr-color: #ddd;
-            --gdpr-bg: #f3f0fa;
-            --table-header-bg: #f2f2f2;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg-color: #121212;
-                --text-color: #e0e0e0;
-                --heading-color: #c4abf5;
-                --heading-border: #8b5dc8;
-                --subheading-color: #c4abf5;
-                --subheading-alt-color: #b0a0e0;
-                --border-color: #2a2a2a;
-                --link-color: #c4abf5;
-                --info-bg: #1e1a2a;
-                --info-border: #a78be0;
-                --warning-bg: #2a2200;
-                --warning-border: #f9a825;
-                --muted-color: #777777;
-                --hr-color: #2a2a2a;
-                --gdpr-bg: #1e1a2a;
-                --table-header-bg: #1e1a2a;
-            }
-        }
-
-        * { box-sizing: border-box; }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        h1 {
-            color: var(--heading-color);
-            border-bottom: 3px solid var(--heading-border);
-            padding-bottom: 10px;
-            margin-top: 0;
-        }
-
-        h2 { color: var(--subheading-color); margin-top: 30px; }
-        h3 { color: var(--subheading-alt-color); margin-top: 20px; }
-
-        .info-box {
-            background-color: var(--info-bg);
-            border-left: 5px solid var(--info-border);
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-
-        .warning-box {
-            background-color: var(--warning-bg);
-            border-left: 5px solid var(--warning-border);
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-
-        .info-header {
-            color: var(--muted-color);
-            font-size: 0.9em;
-            margin-bottom: 20px;
-        }
-
-        ul { margin: 10px 0; }
-        li { margin: 5px 0; }
-
-        a { color: var(--link-color); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-
-        th, td {
-            border: 1px solid var(--border-color);
-            padding: 12px;
-            text-align: left;
-        }
-
-        th {
-            background-color: var(--table-header-bg);
-            font-weight: bold;
-        }
-
-        .gdpr-rights {
-            background-color: var(--gdpr-bg);
-            padding: 15px;
-            border-radius: 4px;
-            margin: 15px 0;
-        }
-
-        hr {
-            border: none;
-            border-top: 1px solid var(--hr-color);
-            margin: 40px 0;
-        }
-
-        code {
-            background-color: var(--info-bg);
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-family: monospace;
-        }
-    </style>
+    <link rel="stylesheet" href="../user-guide/shared.css" />
+    <link rel="stylesheet" href="legal.css" />
 </head>
 <body>
+
+  <!-- ── Site header ── -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand-lockup" href="../index.html">
+        <svg width="26" height="26" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <circle cx="32" cy="32" r="29" stroke="currentColor" stroke-width="1" opacity="0.18" fill="none"/>
+          <circle cx="32" cy="32" r="23" stroke="currentColor" stroke-width="1" opacity="0.30" fill="none"/>
+          <circle cx="32" cy="32" r="17.5" stroke="currentColor" stroke-width="1" opacity="0.50" fill="none"/>
+          <ellipse cx="32" cy="30" rx="9" ry="11" fill="currentColor"/>
+          <path d="M27 41 Q32 44 37 41 L39 47 Q32 49 25 47 Z" fill="currentColor"/>
+        </svg>
+        <div class="header-meta">
+          <span class="wordmark">heda</span>
+          <span class="header-subtitle">Privacy Policy</span>
+        </div>
+      </a>
+      <nav class="header-nav">
+        <a href="../index.html">← Documents</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="legal-main">
     <h1>Privacy Policy</h1>
 
     <p class="info-header">
@@ -370,6 +267,14 @@
 
     <h2>13. Relationship to Disclaimer</h2>
     <p>By using this application, you also agree to the <a href="disclaimer.html">Disclaimer &amp; Terms of Use</a>. The Privacy Policy and Disclaimer together constitute the full agreement between you and EXSports Oy regarding the use of this application.</p>
+
+  </main>
+
+  <footer class="site-footer">
+    &copy; 2026 EXSports Oy &nbsp;·&nbsp;
+    <a href="../index.html">← Documents</a> &nbsp;·&nbsp;
+    <a href="mailto:info@exsports.fi">Contact</a>
+  </footer>
 
 </body>
 </html>

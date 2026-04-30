@@ -3,104 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disclaimer & Terms of Use – Heda</title>
-    <style>
-        :root {
-            --bg-color: #ffffff;
-            --text-color: #333333;
-            --heading-color: #2c3e50;
-            --heading-border: #8b5dc8;
-            --subheading-color: #34495e;
-            --border-color: #ddd;
-            --link-color: #8b5dc8;
-            --warning-bg: #fff3cd;
-            --warning-border: #ff6b6b;
-            --warning-text: #c0392b;
-            --info-bg: #f3f0fa;
-            --info-border: #8b5dc8;
-            --muted-color: #7f8c8d;
-            --hr-color: #ddd;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg-color: #121212;
-                --text-color: #e0e0e0;
-                --heading-color: #c4abf5;
-                --heading-border: #8b5dc8;
-                --subheading-color: #c4abf5;
-                --border-color: #2a2a2a;
-                --link-color: #c4abf5;
-                --warning-bg: #2a0000;
-                --warning-border: #ff4444;
-                --warning-text: #ffcccc;
-                --info-bg: #1e1a2a;
-                --info-border: #a78be0;
-                --muted-color: #777777;
-                --hr-color: #2a2a2a;
-            }
-        }
-
-        * { box-sizing: border-box; }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        h1 {
-            color: var(--heading-color);
-            border-bottom: 3px solid var(--heading-border);
-            padding-bottom: 10px;
-            margin-top: 0;
-        }
-
-        h2 { color: var(--subheading-color); margin-top: 30px; }
-
-        .warning-box {
-            background-color: var(--warning-bg);
-            border-left: 5px solid var(--warning-border);
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-
-        .warning-box strong { color: var(--warning-text); font-size: 1.1em; }
-
-        .info-header {
-            color: var(--muted-color);
-            font-size: 0.9em;
-            margin-bottom: 20px;
-        }
-
-        ul { margin: 10px 0; }
-        li { margin: 5px 0; }
-
-        a { color: var(--link-color); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-
-        .important-note {
-            background-color: var(--info-bg);
-            border-left: 5px solid var(--info-border);
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-
-        hr {
-            border: none;
-            border-top: 1px solid var(--hr-color);
-            margin: 40px 0;
-        }
-    </style>
+    <title>Disclaimer &amp; Terms of Use – Heda</title>
+    <link rel="stylesheet" href="../user-guide/shared.css" />
+    <link rel="stylesheet" href="legal.css" />
 </head>
 <body>
+
+  <!-- ── Site header ── -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand-lockup" href="../index.html">
+        <svg width="26" height="26" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <circle cx="32" cy="32" r="29" stroke="currentColor" stroke-width="1" opacity="0.18" fill="none"/>
+          <circle cx="32" cy="32" r="23" stroke="currentColor" stroke-width="1" opacity="0.30" fill="none"/>
+          <circle cx="32" cy="32" r="17.5" stroke="currentColor" stroke-width="1" opacity="0.50" fill="none"/>
+          <ellipse cx="32" cy="30" rx="9" ry="11" fill="currentColor"/>
+          <path d="M27 41 Q32 44 37 41 L39 47 Q32 49 25 47 Z" fill="currentColor"/>
+        </svg>
+        <div class="header-meta">
+          <span class="wordmark">heda</span>
+          <span class="header-subtitle">Disclaimer</span>
+        </div>
+      </a>
+      <nav class="header-nav">
+        <a href="../index.html">← Documents</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="legal-main">
     <h1>Disclaimer &amp; Terms of Use</h1>
 
     <p class="info-header">
@@ -236,8 +167,17 @@
 
     <hr>
 
-    <p style="font-size: 0.85em; color: var(--muted-color); text-align: center;">
+    <p style="font-size: 0.85em; color: var(--text-dim); text-align: center;">
         By using Heda, you acknowledge that you have read, understood, and agree to be bound by this Disclaimer &amp; Terms of Use and the Privacy Policy.
     </p>
+
+  </main>
+
+  <footer class="site-footer">
+    &copy; 2026 EXSports Oy &nbsp;·&nbsp;
+    <a href="../index.html">← Documents</a> &nbsp;·&nbsp;
+    <a href="mailto:info@exsports.fi">Contact</a>
+  </footer>
+
 </body>
 </html>
