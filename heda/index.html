@@ -4,200 +4,85 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Heda – Documents</title>
-  <style>
-    /* Default: Dark theme */
-    :root {
-      --bg-color: #121212;
-      --text-color: #e0e0e0;
-      --card-bg: #1e1e1e;
-      --card-border: #2a2a2a;
-      --card-shadow: rgba(0,0,0,0.5);
-      --logo-color: #a78be0;
-      --tagline-color: #555;
-      --heading-color: #777;
-      --link-bg: #252525;
-      --link-border: #333;
-      --link-text: #c4abf5;
-      --link-hover-bg: #2a2a3a;
-      --link-hover-border: #a78be0;
-      --link-hover-text: #a78be0;
-      --link-desc: #666;
-      --footer-color: #444;
-      --footer-link: #444;
-      --footer-link-hover: #a78be0;
-    }
-
-    @media (prefers-color-scheme: light) {
-      :root {
-        --bg-color: #f5f5f5;
-        --text-color: #333333;
-        --card-bg: #ffffff;
-        --card-border: #e0e0e0;
-        --card-shadow: rgba(0,0,0,0.1);
-        --logo-color: #6a3fa0;
-        --tagline-color: #666;
-        --heading-color: #555;
-        --link-bg: #f3f0fa;
-        --link-border: #ddd;
-        --link-text: #6a3fa0;
-        --link-hover-bg: #ede8f8;
-        --link-hover-border: #8b5dc8;
-        --link-hover-text: #8b5dc8;
-        --link-desc: #555;
-        --footer-color: #777;
-        --footer-link: #777;
-        --footer-link-hover: #8b5dc8;
-      }
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: var(--bg-color);
-      color: var(--text-color);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 20px;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    .card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 12px;
-      box-shadow: 0 4px 32px var(--card-shadow);
-      max-width: 440px;
-      width: 100%;
-      padding: 40px 36px 32px;
-      text-align: center;
-      transition: background-color 0.3s ease, border-color 0.3s ease;
-    }
-
-    .logo {
-      font-size: 28px;
-      font-weight: bold;
-      color: var(--logo-color);
-      letter-spacing: 1px;
-      margin-bottom: 4px;
-    }
-
-    .tagline {
-      font-size: 14px;
-      color: var(--tagline-color);
-      margin-bottom: 32px;
-    }
-
-    h1 {
-      font-size: 16px;
-      color: var(--heading-color);
-      margin-bottom: 24px;
-      font-weight: normal;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .links {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .link-btn {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      background: var(--link-bg);
-      border: 1px solid var(--link-border);
-      border-radius: 8px;
-      padding: 16px 20px;
-      text-decoration: none;
-      color: var(--link-text);
-      font-size: 15px;
-      font-weight: bold;
-      transition: background 0.15s, border-color 0.15s, color 0.15s;
-    }
-
-    .link-btn:hover {
-      background: var(--link-hover-bg);
-      border-color: var(--link-hover-border);
-      color: var(--link-hover-text);
-    }
-
-    .link-btn .icon { font-size: 22px; flex-shrink: 0; }
-
-    .link-btn .desc {
-      font-size: 12px;
-      font-weight: normal;
-      color: var(--link-desc);
-      margin-top: 2px;
-    }
-
-    .link-btn .text { text-align: left; }
-
-    footer {
-      margin-top: 32px;
-      font-size: 12px;
-      color: var(--footer-color);
-      text-align: center;
-    }
-
-    footer a { color: var(--footer-link); text-decoration: none; }
-    footer a:hover { color: var(--footer-link-hover); }
-  </style>
+  <link rel="stylesheet" href="user-guide/shared.css" />
 </head>
 <body>
 
-  <div class="card">
-    <div class="logo">Heda</div>
-    <div class="tagline">by EXSports Oy</div>
-    <h1>Documents</h1>
-    <div class="links">
-      <a class="link-btn" href="user-guide/index.html">
-        <span class="icon">📘</span>
-        <div class="text">
-          User Guide
-          <div class="desc">How to use Heda and its features</div>
+  <!-- ── Site header ── -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand-lockup" href="../index.html">
+        <svg width="26" height="26" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <circle cx="32" cy="32" r="29" stroke="currentColor" stroke-width="1" opacity="0.18" fill="none"/>
+          <circle cx="32" cy="32" r="23" stroke="currentColor" stroke-width="1" opacity="0.30" fill="none"/>
+          <circle cx="32" cy="32" r="17.5" stroke="currentColor" stroke-width="1" opacity="0.50" fill="none"/>
+          <ellipse cx="32" cy="30" rx="9" ry="11" fill="currentColor"/>
+          <path d="M27 41 Q32 44 37 41 L39 47 Q32 49 25 47 Z" fill="currentColor"/>
+        </svg>
+        <div class="header-meta">
+          <span class="wordmark">heda</span>
+          <span class="header-subtitle">by EXSports Oy</span>
         </div>
       </a>
-      <a class="link-btn" href="legal/privacy_policy.html">
-        <span class="icon">🔒</span>
-        <div class="text">
-          Privacy Policy
-          <div class="desc">How we collect, use and protect your data</div>
-        </div>
-      </a>
-      <a class="link-btn" href="legal/disclaimer.html">
-        <span class="icon">⚠️</span>
-        <div class="text">
-          Disclaimer
-          <div class="desc">Limitation of liability and terms of use</div>
-        </div>
-      </a>
-      <a class="link-btn" href="legal/report-bug.html">
-        <span class="icon">🐛</span>
-        <div class="text">
-          Report a Bug
-          <div class="desc">Tell us what went wrong in the app</div>
-        </div>
-      </a>
-      <a class="link-btn" href="legal/delete.html">
-        <span class="icon">🗑️</span>
-        <div class="text">
-          Data Deletion Request
-          <div class="desc">Request removal of your personal data</div>
-        </div>
-      </a>
+      <nav class="header-nav">
+        <a href="../index.html">← Home</a>
+      </nav>
     </div>
-  </div>
+  </header>
 
-  <footer>
-    &copy; 2026 EXSports Oy &nbsp;|&nbsp;
-    <a href="../index.html">← Home</a> &nbsp;|&nbsp;
-    <a href="mailto:info@exsports.fi">Contact Us</a>
+  <!-- ── Documents list ── -->
+  <main class="lang-page">
+    <div class="lang-hero">
+      <svg width="52" height="52" viewBox="0 0 64 64" fill="none" aria-hidden="true" style="color:var(--accent)">
+        <circle cx="32" cy="32" r="29" stroke="currentColor" stroke-width="1" opacity="0.18" fill="none"/>
+        <circle cx="32" cy="32" r="23" stroke="currentColor" stroke-width="1" opacity="0.30" fill="none"/>
+        <circle cx="32" cy="32" r="17.5" stroke="currentColor" stroke-width="1" opacity="0.50" fill="none"/>
+        <ellipse cx="32" cy="30" rx="9" ry="11" fill="currentColor"/>
+        <path d="M27 41 Q32 44 37 41 L39 47 Q32 49 25 47 Z" fill="currentColor"/>
+      </svg>
+      <h1 class="lang-hero-title">Documents</h1>
+      <p class="lang-hero-sub">User guide, legal information, and support.</p>
+    </div>
+
+    <div class="lang-grid">
+
+      <a class="lang-option available" href="user-guide/index.html">
+        <span class="lang-name">User Guide</span>
+        <span class="lang-native">How to use Heda and its features</span>
+        <span class="lang-badge">Guide</span>
+      </a>
+
+      <a class="lang-option available" href="legal/privacy_policy.html">
+        <span class="lang-name">Privacy Policy</span>
+        <span class="lang-native">How we collect, use and protect your data</span>
+        <span class="lang-badge">Legal</span>
+      </a>
+
+      <a class="lang-option available" href="legal/disclaimer.html">
+        <span class="lang-name">Disclaimer</span>
+        <span class="lang-native">Limitation of liability and terms of use</span>
+        <span class="lang-badge">Legal</span>
+      </a>
+
+      <a class="lang-option available" href="legal/report-bug.html">
+        <span class="lang-name">Report a Bug</span>
+        <span class="lang-native">Tell us what went wrong in the app</span>
+        <span class="lang-badge">Support</span>
+      </a>
+
+      <a class="lang-option available" href="legal/delete.html">
+        <span class="lang-name">Data Deletion Request</span>
+        <span class="lang-native">Request removal of your personal data</span>
+        <span class="lang-badge">Legal</span>
+      </a>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    &copy; 2026 EXSports Oy &nbsp;·&nbsp;
+    <a href="../index.html">← Home</a> &nbsp;·&nbsp;
+    <a href="mailto:info@exsports.fi">Contact</a>
   </footer>
 
 </body>
