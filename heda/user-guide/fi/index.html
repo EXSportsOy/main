@@ -369,7 +369,7 @@
         <p>Korrelaatiot-välilehti analysoi Health Connect -dataasi ja etsii yhdeksää näyttöön perustuvaa kaavaa, jotka yleisesti edeltävät päänsärky- ja migreenikohauksia. Se tarkastelee viimeisiä 90 päivää.</p>
 
         <div class="note">
-          <strong>Premium-ominaisuus.</strong> Korrelaatiot-välilehti vaatii Heda Premiumin. Se vaatii myös Health Connect -oikeudet uni-, HRV- ja askelmäärätietoja varten. Katso asennusohjeet <a href="#health-connect">Health Connect</a> -osiosta.
+          <strong>Premium-ominaisuus.</strong> Korrelaatiot-välilehti vaatii Heda Premiumin. Se vaatii myös Health Connect -oikeudet uni-, syke-, HRV-, askel- ja liikuntadataa varten. Katso asennusohjeet <a href="#health-connect">Health Connect</a> -osiosta.
         </div>
 
         <h3 class="sub-heading">Perusarvosi</h3>
@@ -437,7 +437,7 @@
         <ul>
           <li><strong>Vie CSV-tiedostona</strong> — tallentaa pilkuilla erotetun tiedoston kaikista nykyisen jakson tapahtumista. Sarakkeet: Päivämäärä, Aika, Tyyppi, Voimakkuus, Aura, Kohtauslääke, Laukaisijat, Muistiinpanot. Androidin järjestelmätiedostonvalitsin antaa sinun valita tallennuspaikan.</li>
           <li><strong>Vie PDF-tiedostona</strong> — luo muotoillun PDF-asiakirjan yhteenvedolla ja tapahtumataulukolla, sopii tulostettavaksi tai lääkärille lähetettäväksi.</li>
-          <li><strong>Vie Health Connect -data CSV-tiedostona</strong> — voit halutessasi viedä välimuistissa olevat uni-, HRV- ja askelmäärätiedot päänsärkykirjausten rinnalla.</li>
+          <li><strong>Vie Health Connect -data CSV-tiedostona</strong> — voit halutessasi viedä välimuistissa olevat uni-, syke-, HRV-, askel- ja liikuntadatan päänsärkykirjausten rinnalla.</li>
         </ul>
 
         <div class="note">
@@ -462,7 +462,7 @@
         <p>Valitse yli 30 kielestä alueittain ryhmiteltyinä (Pohjoismaat, Germaaniset, Romaaniset, Slaavilaiset, Balttiset ja Muut). Valittu kieli koskee kaikkia sovelluksen tekstejä. Valitse <strong>Järjestelmä</strong> seurataksesi laitteesi kieliasetusta.</p>
 
         <h3 class="sub-heading">Health Connect</h3>
-        <p>Linkki Health Connect -asetukset-näyttöön, jossa voit myöntää tai peruuttaa oikeudet uni-, HRV- ja askelmäärätietoihin. Katso tiedot <a href="#health-connect">Health Connect</a> -osiosta.</p>
+        <p>Linkki Health Connect -asetukset-näyttöön, jossa voit myöntää tai peruuttaa oikeudet uni-, syke-, HRV-, askel- ja liikuntadataan. Katso tiedot <a href="#health-connect">Health Connect</a> -osiosta.</p>
 
         <h3 class="sub-heading">Tietosuoja ja tiedot</h3>
         <p>Avaa Tietosuoja ja tiedot -näytön, jossa voit hallita tiliäsi, tarkastella tallennettuja tietoja, käyttää GDPR-oikeuksiasi ja poistaa tietosi. Katso tiedot <a href="#tietosuoja">Tietosuoja ja tiedot</a> -osiosta.</p>
@@ -515,7 +515,7 @@
             </tr>
             <tr>
               <td><strong>Health Connect -välimuisti</strong></td>
-              <td>Päivittäinen unen kesto, HRV ja askelmäärä</td>
+              <td>Uni, univaiheet, HRV, syke, askelmäärä ja liikunta</td>
               <td>AES-256 (SQLCipher)</td>
             </tr>
             <tr>
@@ -564,20 +564,28 @@
       <!-- ─ Health Connect ─ -->
       <section class="doc-section" id="health-connect">
         <h2 class="section-heading">Health Connect</h2>
-        <p>Health Connect on Googlen yhtenäinen terveysdatan alusta Androidille. Heda lukee siitä kolmea tietotyyppiä Analyysi-näytön toimintaa varten:</p>
+        <p>Health Connect on Googlen yhtenäinen terveysdatan alusta Androidille. Heda lukee siitä viittä terveystietotyyppiä Analyysi-näytön Korrelaatiot-ominaisuutta varten:</p>
 
         <div class="card-grid">
           <div class="info-card">
             <div class="card-title">Unijaksot</div>
-            <div class="card-body">Yöunen kesto puettavasta laitteesta tai unienseurantasovelluksesta.</div>
+            <div class="card-body">Yöunen kesto ja univaiheet (REM, syvä, kevyt ja valveilla olo) puettavasta laitteesta tai unienseurantasovelluksesta.</div>
           </div>
           <div class="info-card">
             <div class="card-title">Sykevälivaihtelu (HRV)</div>
-            <div class="card-body">Aamuiset HRV-mittaukset, jotka kuvaavat stressiä ja palautumista.</div>
+            <div class="card-body">Päivittäiset RMSSD-mittaukset, jotka kuvaavat palautumistilaa ja autonomisen hermoston tasapainoa.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Syke</div>
+            <div class="card-body">Jatkuvat sykedatanäytteet, joista lasketaan päivän keskisyke ja leposyke.</div>
           </div>
           <div class="info-card">
             <div class="card-title">Askelmäärä</div>
             <div class="card-body">Päivittäinen askelmäärä puhelimesta tai puettavasta laitteesta.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Liikuntajaksot</div>
+            <div class="card-body">Liikuntajaksojen kestot, joita käytetään päivittäisen aktiivisuustason laskemiseen.</div>
           </div>
         </div>
 
@@ -590,7 +598,7 @@
           <li>Siirry kohtaan <strong>Asetukset → Health Connect</strong> Hedassa.</li>
           <li>Jos Health Connect -sovellusta ei ole asennettu, napauta <strong>Asenna Health Connect</strong> saadaksesi sen Google Playsta. (Android 9 ja uudemmat. Android 14+:ssa Health Connect on sisäänrakennettu.)</li>
           <li>Napauta <strong>Yhdistä Health Connect</strong>.</li>
-          <li>Health Connect -oikeuksien näytöllä myönnä Hedalle pääsy <strong>Uneen</strong>, <strong>Sykevälihtelyyn</strong> ja <strong>Askeleisiin</strong>.</li>
+          <li>Health Connect -oikeuksien näytöllä myönnä Hedalle pääsy <strong>Uneen</strong>, <strong>Sykevälihtelyyn</strong>, <strong>Sykkeeseen</strong>, <strong>Askeleisiin</strong> ja <strong>Liikuntaan</strong>.</li>
           <li>Palaa Hedaan. Viimeaikaiset terveystietosi näytetään.</li>
         </ol>
 

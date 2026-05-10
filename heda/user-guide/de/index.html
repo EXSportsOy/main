@@ -369,7 +369,7 @@
         <p>Die Registerkarte „Korrelationen" analysiert deine Health Connect-Daten und sucht nach neun evidenzbasierten Mustern, die häufig vor Kopfschmerz- und Migräneanfällen auftreten. Sie blickt auf die letzten 90 Tage zurück.</p>
 
         <div class="note">
-          <strong>Premium-Funktion.</strong> Die Registerkarte „Korrelationen" erfordert Heda Premium. Außerdem werden Health Connect-Berechtigungen für Schlaf-, HRV- und Schrittzahldaten benötigt. Siehe den Abschnitt <a href="#health-connect">Health Connect</a> für Einrichtungsschritte.
+          <strong>Premium-Funktion.</strong> Die Registerkarte „Korrelationen" erfordert Heda Premium. Außerdem werden Health Connect-Berechtigungen für Schlaf-, Herzfrequenz-, HRV-, Schritt- und Trainingsdaten benötigt. Siehe den Abschnitt <a href="#health-connect">Health Connect</a> für Einrichtungsschritte.
         </div>
 
         <h3 class="sub-heading">Dein Ausgangswert</h3>
@@ -437,7 +437,7 @@
         <ul>
           <li><strong>Als CSV exportieren</strong> — speichert eine kommagetrennte Datei mit allen Ereignissen im aktuellen Zeitraum. Spalten: Datum, Uhrzeit, Typ, Intensität, Aura, Notfallmedikament, Auslöser, Notizen. Die Android-Systemdateiauswahl lässt dich den Speicherort wählen.</li>
           <li><strong>Als PDF exportieren</strong> — erstellt ein formatiertes PDF-Dokument mit der Zusammenfassung und der Ereignistabelle, geeignet zum Ausdrucken oder Senden an einen Arzt.</li>
-          <li><strong>Health Connect-Daten als CSV exportieren</strong> — exportiert optional die zwischengespeicherten Schlaf-, HRV- und Schrittdaten zusammen mit deinen Kopfschmerzereignissen.</li>
+          <li><strong>Health Connect-Daten als CSV exportieren</strong> — exportiert optional die zwischengespeicherten Schlaf-, Herzfrequenz-, HRV-, Schritt- und Trainingsdaten zusammen mit deinen Kopfschmerzereignissen.</li>
         </ul>
 
         <div class="note">
@@ -462,7 +462,7 @@
         <p>Wähle aus mehr als 30 Sprachen, gruppiert nach Region (Nordisch, Germanisch, Romanisch, Slawisch, Baltisch und Sonstige). Die gewählte Sprache gilt für den gesamten Text in der App. Wähle <strong>System</strong>, um der Spracheinstellung deines Geräts zu folgen.</p>
 
         <h3 class="sub-heading">Health Connect</h3>
-        <p>Führt zum Health Connect-Einstellungsbildschirm, auf dem du Berechtigungen für Schlaf-, HRV- und Schrittdaten erteilen oder widerrufen kannst. Siehe den Abschnitt <a href="#health-connect">Health Connect</a> für Details.</p>
+        <p>Führt zum Health Connect-Einstellungsbildschirm, auf dem du Berechtigungen für Schlaf-, Herzfrequenz-, HRV-, Schritt- und Trainingsdaten erteilen oder widerrufen kannst. Siehe den Abschnitt <a href="#health-connect">Health Connect</a> für Details.</p>
 
         <h3 class="sub-heading">Datenschutz &amp; Daten</h3>
         <p>Öffnet den Bildschirm „Datenschutz &amp; Daten", auf dem du dein Konto verwalten, gespeicherte Daten einsehen, deine GDPR-Rechte ausüben und deine Daten löschen kannst. Siehe den Abschnitt <a href="#datenschutz">Datenschutz &amp; Daten</a> für Details.</p>
@@ -515,7 +515,7 @@
             </tr>
             <tr>
               <td><strong>Health Connect-Cache</strong></td>
-              <td>Tägliche Schlafdauer, HRV und Schrittzahl</td>
+              <td>Schlaf, Schlafphasen, HRV, Herzfrequenz, Schritte und Training</td>
               <td>AES-256 (SQLCipher)</td>
             </tr>
             <tr>
@@ -564,20 +564,28 @@
       <!-- ─ Health Connect ─ -->
       <section class="doc-section" id="health-connect">
         <h2 class="section-heading">Health Connect</h2>
-        <p>Health Connect ist Googles einheitliche Gesundheitsdatenplattform für Android. Heda liest drei Datentypen daraus, um den Analyse-Bildschirm zu betreiben:</p>
+        <p>Health Connect ist Googles einheitliche Gesundheitsdatenplattform für Android. Heda liest fünf Arten von Gesundheitsdaten daraus, um die Korrelationen-Funktion auf dem Analyse-Bildschirm zu betreiben:</p>
 
         <div class="card-grid">
           <div class="info-card">
             <div class="card-title">Schlafsitzungen</div>
-            <div class="card-body">Nächtliche Schlafdauer von deinem Wearable oder deiner Schlaf-Tracking-App.</div>
+            <div class="card-body">Nächtliche Schlafdauer und Schlafphasen (REM, Tiefschlaf, Leichtschlaf und Wachzeit) von deinem Wearable oder deiner Schlaf-Tracking-App.</div>
           </div>
           <div class="info-card">
             <div class="card-title">Herzratenvariabilität (HRV)</div>
-            <div class="card-body">Morgendliche HRV-Messungen, die Stress- und Erholungsstatus anzeigen.</div>
+            <div class="card-body">Tägliche RMSSD-Messungen, die Erholungsstatus und die Balance des autonomen Nervensystems anzeigen.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Herzfrequenz</div>
+            <div class="card-body">Kontinuierliche Herzfrequenzdaten zur Berechnung deiner täglichen Durchschnitts- und Ruheherzfrequenz.</div>
           </div>
           <div class="info-card">
             <div class="card-title">Schrittzahl</div>
             <div class="card-body">Tägliche Schrittzahl von deinem Telefon oder Wearable.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Trainingseinheiten</div>
+            <div class="card-body">Dauer der Trainingseinheiten zur Berechnung deines täglichen Aktivitätsniveaus.</div>
           </div>
         </div>
 
@@ -590,7 +598,7 @@
           <li>Gehe in Heda zu <strong>Einstellungen → Health Connect</strong>.</li>
           <li>Wenn die Health Connect-App nicht installiert ist, tippe auf <strong>Health Connect installieren</strong>, um sie aus dem Google Play Store zu holen. (Android 9 und höher. Ab Android 14+ ist Health Connect integriert.)</li>
           <li>Tippe auf <strong>Health Connect verbinden</strong>.</li>
-          <li>Erteile im Health Connect-Berechtigungsbildschirm Heda Zugriff auf <strong>Schlaf</strong>, <strong>Herzratenvariabilität</strong> und <strong>Schritte</strong>.</li>
+          <li>Erteile im Health Connect-Berechtigungsbildschirm Heda Zugriff auf <strong>Schlaf</strong>, <strong>Herzratenvariabilität</strong>, <strong>Herzfrequenz</strong>, <strong>Schritte</strong> und <strong>Training</strong>.</li>
           <li>Kehre zu Heda zurück. Deine aktuellen Gesundheitsdaten werden angezeigt.</li>
         </ol>
 

@@ -369,7 +369,7 @@
         <p>Korrelasjoner-fanen analyserer Health Connect-dataene dine og ser etter ni evidensbaserte mønstre som ofte forekommer før hodepine- og migrene-anfall. Den ser tilbake over de siste 90 dagene.</p>
 
         <div class="note">
-          <strong>Premiumfunksjon.</strong> Korrelasjoner-fanen krever Heda Premium. Den krever også Health Connect-tillatelser for søvn-, HRV- og skrittellingdata. Se avsnittet <a href="#health-connect">Health Connect</a> for oppsettstrinn.
+          <strong>Premiumfunksjon.</strong> Korrelasjoner-fanen krever Heda Premium. Den krever også Health Connect-tillatelser for søvn-, hjertefrekvens-, HRV-, skritt- og treningsdata. Se avsnittet <a href="#health-connect">Health Connect</a> for oppsettstrinn.
         </div>
 
         <h3 class="sub-heading">Din grunnlinje</h3>
@@ -437,7 +437,7 @@
         <ul>
           <li><strong>Eksporter som CSV</strong> — lagrer en kommaseparert fil med alle hendelser i gjeldende periode. Kolonner: Dato, Tid, Type, Intensitet, Aura, Akuttmedisin, Utløsere, Notater. Androids systemfilvelger lar deg velge lagringssted.</li>
           <li><strong>Eksporter som PDF</strong> — genererer et formatert PDF-dokument med oppsummeringen og hendelsestabellen, egnet for utskrift eller sending til en lege.</li>
-          <li><strong>Eksporter Health Connect-data som CSV</strong> — eksporter eventuelt de bufrede søvn-, HRV- og skritt-dataene sammen med hodepinehendelsene dine.</li>
+          <li><strong>Eksporter Health Connect-data som CSV</strong> — eksporter eventuelt de bufrede søvn-, hjertefrekvens-, HRV-, skritt- og treningsdataene sammen med hodepinehendelsene dine.</li>
         </ul>
 
         <div class="note">
@@ -462,7 +462,7 @@
         <p>Velg blant 30+ språk gruppert etter region (Nordisk, Germansk, Romansk, Slavisk, Baltisk og Annet). Det valgte språket gjelder all tekst i appen. Velg <strong>System</strong> for å følge enhetens språkinnstilling.</p>
 
         <h3 class="sub-heading">Health Connect</h3>
-        <p>Kobler til Health Connect-innstillingsskjermen der du kan gi eller tilbakekalle tillatelser for søvn-, HRV- og skrittelledata. Se avsnittet <a href="#health-connect">Health Connect</a> for detaljer.</p>
+        <p>Kobler til Health Connect-innstillingsskjermen der du kan gi eller tilbakekalle tillatelser for søvn-, hjertefrekvens-, HRV-, skritt- og treningsdata. Se avsnittet <a href="#health-connect">Health Connect</a> for detaljer.</p>
 
         <h3 class="sub-heading">Personvern &amp; Data</h3>
         <p>Åpner skjermen Personvern &amp; Data der du kan administrere kontoen din, se gjennom hvilke data som er lagret, utøve GDPR-rettighetene dine og slette dataene dine. Se avsnittet <a href="#personvern">Personvern &amp; Data</a> for detaljer.</p>
@@ -515,7 +515,7 @@
             </tr>
             <tr>
               <td><strong>Health Connect-buffer</strong></td>
-              <td>Daglig søvnvarighet, HRV og skritttelling</td>
+              <td>Søvn, søvnstadier, HRV, hjertefrekvens, skritt og trening</td>
               <td>AES-256 (SQLCipher)</td>
             </tr>
             <tr>
@@ -564,20 +564,28 @@
       <!-- ─ Health Connect ─ -->
       <section class="doc-section" id="health-connect">
         <h2 class="section-heading">Health Connect</h2>
-        <p>Health Connect er Googles enhetlige helsedataplattform for Android. Heda leser tre datatyper fra den for å drive Analyse-skjermen:</p>
+        <p>Health Connect er Googles enhetlige helsedataplattform for Android. Heda leser fem typer helsedata fra den for å drive Korrelasjoner-funksjonen på Analyse-skjermen:</p>
 
         <div class="card-grid">
           <div class="info-card">
             <div class="card-title">Søvnøkter</div>
-            <div class="card-body">Nattlig søvnvarighet fra din wearable eller søvnsporingsapp.</div>
+            <div class="card-body">Nattlig søvnvarighet og søvnstadier (REM, dyp, lett og våkentid) fra din wearable eller søvnsporingsapp.</div>
           </div>
           <div class="info-card">
             <div class="card-title">Hjertefrekvensvariabilitet (HRV)</div>
-            <div class="card-body">Morgen-HRV-målinger som indikerer stress- og restitusjonstatus.</div>
+            <div class="card-body">Daglige RMSSD-målinger som indikerer restitusjonstilstand og autonomt nervesystems balanse.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Hjertefrekvens</div>
+            <div class="card-body">Kontinuerlige hjertefrekvensdata brukt til å beregne din daglige gjennomsnittlige og hvilende hjertefrekvens.</div>
           </div>
           <div class="info-card">
             <div class="card-title">Skritttelling</div>
             <div class="card-body">Daglig skritttelling fra telefonen eller wearable-en din.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Treningsøkter</div>
+            <div class="card-body">Varighet av treningsøkter brukt til å beregne ditt daglige aktivitetsnivå.</div>
           </div>
         </div>
 
@@ -590,7 +598,7 @@
           <li>Gå til <strong>Innstillinger → Health Connect</strong> i Heda.</li>
           <li>Hvis Health Connect-appen ikke er installert, trykk på <strong>Installer Health Connect</strong> for å hente den fra Google Play. (Android 9 og nyere. På Android 14+ er Health Connect innebygd.)</li>
           <li>Trykk på <strong>Koble til Health Connect</strong>.</li>
-          <li>På Health Connect-tillatelseskjermen, gi Heda tilgang til <strong>Søvn</strong>, <strong>Hjertefrekvensvariabilitet</strong> og <strong>Skritt</strong>.</li>
+          <li>På Health Connect-tillatelseskjermen, gi Heda tilgang til <strong>Søvn</strong>, <strong>Hjertefrekvensvariabilitet</strong>, <strong>Hjertefrekvens</strong>, <strong>Skritt</strong> og <strong>Trening</strong>.</li>
           <li>Gå tilbake til Heda. De nyeste helsedataene dine vil vises.</li>
         </ol>
 

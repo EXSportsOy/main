@@ -369,7 +369,7 @@
         <p>Zakładka Korelacje analizuje Twoje dane Health Connect i szuka dziewięciu wzorców opartych na dowodach, które często poprzedzają ataki bólu głowy i migreny. Analizuje ostatnie 90 dni.</p>
 
         <div class="note">
-          <strong>Funkcja premium.</strong> Zakładka Korelacje wymaga Heda Premium. Wymaga również uprawnień Health Connect do danych snu, HRV i liczby kroków. Zapoznaj się z sekcją <a href="#health-connect">Health Connect</a> w celu uzyskania kroków konfiguracji.
+          <strong>Funkcja premium.</strong> Zakładka Korelacje wymaga Heda Premium. Wymaga również uprawnień Health Connect do danych snu, tętna, HRV, kroków i aktywności fizycznej. Zapoznaj się z sekcją <a href="#health-connect">Health Connect</a> w celu uzyskania kroków konfiguracji.
         </div>
 
         <h3 class="sub-heading">Twoja linia bazowa</h3>
@@ -437,7 +437,7 @@
         <ul>
           <li><strong>Eksportuj jako CSV</strong> — zapisuje plik z wartościami oddzielonymi przecinkami ze wszystkimi zdarzeniami z bieżącego okresu. Kolumny: Data, Godzina, Typ, Intensywność, Aura, Lek ratunkowy, Wyzwalacze, Notatki. Systemowy selektor plików Androida pozwala wybrać miejsce zapisu.</li>
           <li><strong>Eksportuj jako PDF</strong> — generuje sformatowany dokument PDF z podsumowaniem i tabelą zdarzeń, odpowiedni do wydruku lub wysłania lekarzowi.</li>
-          <li><strong>Eksportuj dane Health Connect jako CSV</strong> — opcjonalnie eksportuje buforowane dane snu, HRV i kroków wraz ze zdarzeniami bólu głowy.</li>
+          <li><strong>Eksportuj dane Health Connect jako CSV</strong> — opcjonalnie eksportuje buforowane dane snu, tętna, HRV, kroków i aktywności fizycznej wraz ze zdarzeniami bólu głowy.</li>
         </ul>
 
         <div class="note">
@@ -462,7 +462,7 @@
         <p>Wybierz spośród ponad 30 języków pogrupowanych według regionu (Nordycki, Germański, Romański, Słowiański, Bałtycki i Inne). Wybrany język jest stosowany do całego tekstu aplikacji. Wybierz <strong>System</strong>, aby podążać za ustawieniem języka urządzenia.</p>
 
         <h3 class="sub-heading">Health Connect</h3>
-        <p>Przenosi do ekranu ustawień Health Connect, gdzie możesz przyznać lub cofnąć uprawnienia do danych snu, HRV i kroków. Zapoznaj się z sekcją <a href="#health-connect">Health Connect</a> w celu uzyskania szczegółów.</p>
+        <p>Przenosi do ekranu ustawień Health Connect, gdzie możesz przyznać lub cofnąć uprawnienia do danych snu, tętna, HRV, kroków i aktywności fizycznej. Zapoznaj się z sekcją <a href="#health-connect">Health Connect</a> w celu uzyskania szczegółów.</p>
 
         <h3 class="sub-heading">Prywatność i dane</h3>
         <p>Otwiera ekran Prywatność i dane, gdzie możesz zarządzać swoim kontem, przejrzeć przechowywane dane, skorzystać ze swoich praw RODO i usunąć swoje dane. Zapoznaj się z sekcją <a href="#prywatnosc">Prywatność i dane</a> w celu uzyskania szczegółów.</p>
@@ -515,7 +515,7 @@
             </tr>
             <tr>
               <td><strong>Bufor Health Connect</strong></td>
-              <td>Dzienny czas snu, HRV i liczba kroków</td>
+              <td>Sen, fazy snu, HRV, tętno, kroki i aktywność fizyczna</td>
               <td>AES-256 (SQLCipher)</td>
             </tr>
             <tr>
@@ -564,20 +564,28 @@
       <!-- ─ Health Connect ─ -->
       <section class="doc-section" id="health-connect">
         <h2 class="section-heading">Health Connect</h2>
-        <p>Health Connect to ujednolicona platforma danych zdrowotnych Google dla Androida. Heda odczytuje trzy typy danych, aby zasilić ekran Analizy:</p>
+        <p>Health Connect to ujednolicona platforma danych zdrowotnych Google dla Androida. Heda odczytuje pięć typów danych zdrowotnych, aby zasilić funkcję Korelacje na ekranie Analizy:</p>
 
         <div class="card-grid">
           <div class="info-card">
             <div class="card-title">Sesje snu</div>
-            <div class="card-body">Czas trwania nocnego snu z urządzenia noszonego lub aplikacji do śledzenia snu.</div>
+            <div class="card-body">Czas trwania nocnego snu i fazy snu (REM, głęboki, lekki i czas czuwania) z urządzenia noszonego lub aplikacji do śledzenia snu.</div>
           </div>
           <div class="info-card">
             <div class="card-title">Zmienność rytmu serca (HRV)</div>
-            <div class="card-body">Poranne pomiary HRV wskazujące poziom stresu i regeneracji.</div>
+            <div class="card-body">Codzienne pomiary RMSSD wskazujące stan regeneracji i równowagę autonomicznego układu nerwowego.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Tętno</div>
+            <div class="card-body">Ciągłe dane tętna używane do obliczania średniego i spoczynkowego tętna w ciągu dnia.</div>
           </div>
           <div class="info-card">
             <div class="card-title">Liczba kroków</div>
             <div class="card-body">Dzienna liczba kroków z telefonu lub urządzenia noszonego.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Sesje aktywności fizycznej</div>
+            <div class="card-body">Czas trwania sesji aktywności fizycznej używany do obliczania dziennego poziomu aktywności.</div>
           </div>
         </div>
 
@@ -590,7 +598,7 @@
           <li>Przejdź do <strong>Ustawienia → Health Connect</strong> w Hedzie.</li>
           <li>Jeśli aplikacja Health Connect nie jest zainstalowana, dotknij <strong>Zainstaluj Health Connect</strong>, aby pobrać ją z Google Play. (Android 9 i nowsze. Na Androidzie 14+ Health Connect jest wbudowany.)</li>
           <li>Dotknij <strong>Połącz Health Connect</strong>.</li>
-          <li>Na ekranie uprawnień Health Connect przyznaj Hedzie dostęp do <strong>Snu</strong>, <strong>Zmienności rytmu serca</strong> i <strong>Kroków</strong>.</li>
+          <li>Na ekranie uprawnień Health Connect przyznaj Hedzie dostęp do <strong>Snu</strong>, <strong>Zmienności rytmu serca</strong>, <strong>Tętna</strong>, <strong>Kroków</strong> i <strong>Aktywności fizycznej</strong>.</li>
           <li>Wróć do Hedy. Twoje ostatnie dane zdrowotne zostaną wyświetlone.</li>
         </ol>
 

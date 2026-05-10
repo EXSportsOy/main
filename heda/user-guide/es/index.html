@@ -369,7 +369,7 @@
         <p>La pestaña Correlaciones analiza tus datos de Health Connect y busca nueve patrones basados en evidencia que suelen preceder a los ataques de cefalea y migraña. Examina los últimos 90 días.</p>
 
         <div class="note">
-          <strong>Función premium.</strong> La pestaña Correlaciones requiere Heda Premium. También requiere permisos de Health Connect para datos de sueño, HRV y recuento de pasos. Consulta la sección <a href="#health-connect">Health Connect</a> para los pasos de configuración.
+          <strong>Función premium.</strong> La pestaña Correlaciones requiere Heda Premium. También requiere permisos de Health Connect para datos de sueño, frecuencia cardíaca, HRV, pasos y ejercicio. Consulta la sección <a href="#health-connect">Health Connect</a> para los pasos de configuración.
         </div>
 
         <h3 class="sub-heading">Tu línea base</h3>
@@ -437,7 +437,7 @@
         <ul>
           <li><strong>Exportar como CSV</strong> — guarda un archivo separado por comas con todos los eventos del período actual. Columnas: Fecha, Hora, Tipo, Intensidad, Aura, Medicación de rescate, Desencadenantes, Notas. El selector de archivos del sistema Android te permite elegir la ubicación de guardado.</li>
           <li><strong>Exportar como PDF</strong> — genera un documento PDF formateado con el resumen y la tabla de eventos, adecuado para imprimir o enviar a un médico.</li>
-          <li><strong>Exportar datos de Health Connect como CSV</strong> — exporta opcionalmente los datos en caché de sueño, HRV y pasos junto con tus eventos de cefalea.</li>
+          <li><strong>Exportar datos de Health Connect como CSV</strong> — exporta opcionalmente los datos en caché de sueño, frecuencia cardíaca, HRV, pasos y ejercicio junto con tus eventos de cefalea.</li>
         </ul>
 
         <div class="note">
@@ -462,7 +462,7 @@
         <p>Elige entre más de 30 idiomas agrupados por región (Nórdico, Germánico, Romance, Eslavo, Báltico y Otros). El idioma seleccionado se aplica a todo el texto de la app. Elige <strong>Sistema</strong> para seguir la configuración de idioma del dispositivo.</p>
 
         <h3 class="sub-heading">Health Connect</h3>
-        <p>Lleva a la pantalla de ajustes de Health Connect donde puedes conceder o revocar permisos para los datos de sueño, HRV y pasos. Consulta la sección <a href="#health-connect">Health Connect</a> para más detalles.</p>
+        <p>Lleva a la pantalla de ajustes de Health Connect donde puedes conceder o revocar permisos para los datos de sueño, frecuencia cardíaca, HRV, pasos y ejercicio. Consulta la sección <a href="#health-connect">Health Connect</a> para más detalles.</p>
 
         <h3 class="sub-heading">Privacidad y datos</h3>
         <p>Abre la pantalla Privacidad y datos donde puedes gestionar tu cuenta, revisar qué datos están almacenados, ejercer tus derechos RGPD y eliminar tus datos. Consulta la sección <a href="#privacidad">Privacidad y datos</a> para más detalles.</p>
@@ -515,7 +515,7 @@
             </tr>
             <tr>
               <td><strong>Caché de Health Connect</strong></td>
-              <td>Duración diaria del sueño, HRV y conteo de pasos</td>
+              <td>Sueño, fases del sueño, HRV, frecuencia cardíaca, pasos y ejercicio</td>
               <td>AES-256 (SQLCipher)</td>
             </tr>
             <tr>
@@ -564,20 +564,28 @@
       <!-- ─ Health Connect ─ -->
       <section class="doc-section" id="health-connect">
         <h2 class="section-heading">Health Connect</h2>
-        <p>Health Connect es la plataforma unificada de datos de salud de Google para Android. Heda lee tres tipos de datos para alimentar la pantalla Análisis:</p>
+        <p>Health Connect es la plataforma unificada de datos de salud de Google para Android. Heda lee cinco tipos de datos de salud para alimentar la función Correlaciones en la pantalla Análisis:</p>
 
         <div class="card-grid">
           <div class="info-card">
             <div class="card-title">Sesiones de sueño</div>
-            <div class="card-body">Duración del sueño nocturno desde tu dispositivo wearable o app de seguimiento del sueño.</div>
+            <div class="card-body">Duración del sueño nocturno y fases del sueño (REM, profundo, ligero y tiempo de vigilia) desde tu dispositivo wearable o app de seguimiento del sueño.</div>
           </div>
           <div class="info-card">
             <div class="card-title">Variabilidad de la frecuencia cardíaca (HRV)</div>
-            <div class="card-body">Mediciones matutinas de HRV que indican el nivel de estrés y recuperación.</div>
+            <div class="card-body">Mediciones RMSSD diarias que indican el estado de recuperación y el equilibrio del sistema nervioso autónomo.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Frecuencia cardíaca</div>
+            <div class="card-body">Datos continuos de frecuencia cardíaca usados para calcular tu frecuencia cardíaca media y en reposo.</div>
           </div>
           <div class="info-card">
             <div class="card-title">Conteo de pasos</div>
             <div class="card-body">Pasos diarios desde tu teléfono o dispositivo wearable.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Sesiones de ejercicio</div>
+            <div class="card-body">Duraciones de sesiones de ejercicio usadas para calcular tu nivel de actividad diaria.</div>
           </div>
         </div>
 
@@ -590,7 +598,7 @@
           <li>Ve a <strong>Ajustes → Health Connect</strong> en Heda.</li>
           <li>Si la app Health Connect no está instalada, pulsa <strong>Instalar Health Connect</strong> para obtenerla en Google Play. (Android 9 y versiones posteriores. En Android 14+, Health Connect está integrado.)</li>
           <li>Pulsa <strong>Conectar Health Connect</strong>.</li>
-          <li>En la pantalla de permisos de Health Connect, concede a Heda acceso a <strong>Sueño</strong>, <strong>Variabilidad de la frecuencia cardíaca</strong> y <strong>Pasos</strong>.</li>
+          <li>En la pantalla de permisos de Health Connect, concede a Heda acceso a <strong>Sueño</strong>, <strong>Variabilidad de la frecuencia cardíaca</strong>, <strong>Frecuencia cardíaca</strong>, <strong>Pasos</strong> y <strong>Ejercicio</strong>.</li>
           <li>Vuelve a Heda. Tus datos de salud recientes se mostrarán.</li>
         </ol>
 

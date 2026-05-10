@@ -369,7 +369,7 @@
         <p>The Correlations tab analyses your Health Connect data and looks for nine evidence-based patterns that commonly precede headache and migraine attacks. It looks back over the last 90 days.</p>
 
         <div class="note">
-          <strong>Premium feature.</strong> The Correlations tab requires Heda Premium. It also requires Health Connect permissions for sleep, HRV, and step count data. See the <a href="#health-connect">Health Connect</a> section for setup steps.
+          <strong>Premium feature.</strong> The Correlations tab requires Heda Premium. It also requires Health Connect permissions for sleep, heart rate, HRV, steps, and exercise data. See the <a href="#health-connect">Health Connect</a> section for setup steps.
         </div>
 
         <h3 class="sub-heading">Your baseline</h3>
@@ -437,7 +437,7 @@
         <ul>
           <li><strong>Export as CSV</strong> — saves a comma-separated file with all events in the current period. Columns: Date, Time, Type, Intensity, Aura, Rescue medication, Triggers, Notes. The Android system file picker lets you choose the save location.</li>
           <li><strong>Export as PDF</strong> — generates a formatted PDF document with the summary and event table, suitable for printing or sending to a doctor.</li>
-          <li><strong>Export Health Connect data as CSV</strong> — optionally export the cached sleep, HRV, and step count data alongside your headache events.</li>
+          <li><strong>Export Health Connect data as CSV</strong> — optionally export the cached sleep, heart rate, HRV, step count, and exercise data alongside your headache events.</li>
         </ul>
 
         <div class="note">
@@ -462,7 +462,7 @@
         <p>Choose from 30+ languages grouped by region (Nordic, Germanic, Romance, Slavic, Baltic, and Other). The selected language applies to all text in the app. Choose <strong>System</strong> to follow your device's language setting.</p>
 
         <h3 class="sub-heading">Health Connect</h3>
-        <p>Links to the Health Connect settings screen where you can grant or revoke permissions for sleep, HRV, and step count data. See the <a href="#health-connect">Health Connect</a> section for details.</p>
+        <p>Links to the Health Connect settings screen where you can grant or revoke permissions for sleep, heart rate, HRV, steps, and exercise data. See the <a href="#health-connect">Health Connect</a> section for details.</p>
 
         <h3 class="sub-heading">Privacy &amp; Data</h3>
         <p>Opens the Privacy &amp; Data screen where you can manage your account, review what data is stored, exercise your GDPR rights, and delete your data. See the <a href="#privacy">Privacy &amp; Data</a> section for details.</p>
@@ -515,7 +515,7 @@
             </tr>
             <tr>
               <td><strong>Health Connect cache</strong></td>
-              <td>Daily sleep duration, HRV, and step count</td>
+              <td>Sleep, sleep stages, HRV, heart rate, steps, and exercise</td>
               <td>AES-256 (SQLCipher)</td>
             </tr>
             <tr>
@@ -564,20 +564,28 @@
       <!-- ─ Health Connect ─ -->
       <section class="doc-section" id="health-connect">
         <h2 class="section-heading">Health Connect</h2>
-        <p>Health Connect is Google's unified health data platform for Android. Heda reads three data types from it to power the Analysis screen:</p>
+        <p>Health Connect is Google's unified health data platform for Android. Heda reads five types of health data from it to power the Correlations feature on the Analysis screen:</p>
 
         <div class="card-grid">
           <div class="info-card">
             <div class="card-title">Sleep sessions</div>
-            <div class="card-body">Nightly sleep duration from your wearable or sleep-tracking app.</div>
+            <div class="card-body">Nightly sleep duration and sleep stages (REM, deep, light, and awake time) from your wearable or sleep-tracking app.</div>
           </div>
           <div class="info-card">
             <div class="card-title">Heart rate variability (HRV)</div>
-            <div class="card-body">Morning HRV measurements indicating stress and recovery status.</div>
+            <div class="card-body">Daily RMSSD measurements indicating recovery status and autonomic nervous system balance.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Heart rate</div>
+            <div class="card-body">Continuous heart rate samples used to derive your daily average and resting heart rate.</div>
           </div>
           <div class="info-card">
             <div class="card-title">Step count</div>
             <div class="card-body">Daily step count from your phone or wearable.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Exercise sessions</div>
+            <div class="card-body">Exercise session durations used to calculate your daily activity level.</div>
           </div>
         </div>
 
@@ -590,7 +598,7 @@
           <li>Go to <strong>Settings → Health Connect</strong> in Heda.</li>
           <li>If the Health Connect app is not installed, tap <strong>Install Health Connect</strong> to get it from Google Play. (Android 9 and later. On Android 14+, Health Connect is built in.)</li>
           <li>Tap <strong>Connect Health Connect</strong>.</li>
-          <li>In the Health Connect permission screen, grant Heda access to <strong>Sleep</strong>, <strong>Heart rate variability</strong>, and <strong>Steps</strong>.</li>
+          <li>In the Health Connect permission screen, grant Heda access to <strong>Sleep</strong>, <strong>Heart rate variability</strong>, <strong>Heart rate</strong>, <strong>Steps</strong>, and <strong>Exercise</strong>.</li>
           <li>Return to Heda. Your recent health data will be displayed.</li>
         </ol>
 

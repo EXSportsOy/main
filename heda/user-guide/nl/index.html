@@ -369,7 +369,7 @@
         <p>Het tabblad Correlaties analyseert je Health Connect-gegevens en zoekt naar negen op bewijs gebaseerde patronen die vaak voorafgaan aan hoofdpijn- en migraineaanvallen. Het kijkt terug over de afgelopen 90 dagen.</p>
 
         <div class="note">
-          <strong>Premiumfunctie.</strong> Het tabblad Correlaties vereist Heda Premium. Het vereist ook Health Connect-machtigingen voor slaap-, HRV- en stappengegevens. Zie het gedeelte <a href="#health-connect">Health Connect</a> voor installatiesstappen.
+          <strong>Premiumfunctie.</strong> Het tabblad Correlaties vereist Heda Premium. Het vereist ook Health Connect-machtigingen voor slaap-, hartslag-, HRV-, stappen- en sportgegevens. Zie het gedeelte <a href="#health-connect">Health Connect</a> voor installatiesstappen.
         </div>
 
         <h3 class="sub-heading">Jouw basiswaarden</h3>
@@ -437,7 +437,7 @@
         <ul>
           <li><strong>Exporteren als CSV</strong> — slaat een door komma's gescheiden bestand op met alle gebeurtenissen in de huidige periode. Kolommen: Datum, Tijd, Type, Intensiteit, Aura, Noodmedicatie, Triggers, Notities. Met de Android-systeembestandskiezer kun je de opslaglocatie kiezen.</li>
           <li><strong>Exporteren als PDF</strong> — genereert een opgemaakt PDF-document met de samenvatting en de gebeurtenistabel, geschikt voor afdrukken of sturen naar een arts.</li>
-          <li><strong>Health Connect-gegevens exporteren als CSV</strong> — exporteer optioneel de gecachte slaap-, HRV- en stappengegevens samen met je hoofdpijngebeurtenissen.</li>
+          <li><strong>Health Connect-gegevens exporteren als CSV</strong> — exporteer optioneel de gecachte slaap-, hartslag-, HRV-, stappen- en sportgegevens samen met je hoofdpijngebeurtenissen.</li>
         </ul>
 
         <div class="note">
@@ -462,7 +462,7 @@
         <p>Kies uit 30+ talen gegroepeerd per regio (Scandinavisch, Germaans, Romaans, Slavisch, Baltisch en Overig). De geselecteerde taal wordt toegepast op alle tekst in de app. Kies <strong>Systeem</strong> om de taalinstelling van je apparaat te volgen.</p>
 
         <h3 class="sub-heading">Health Connect</h3>
-        <p>Leidt naar het Health Connect-instellingenscherm waar je machtigingen voor slaap-, HRV- en stappengegevens kunt verlenen of intrekken. Zie het gedeelte <a href="#health-connect">Health Connect</a> voor details.</p>
+        <p>Leidt naar het Health Connect-instellingenscherm waar je machtigingen voor slaap-, hartslag-, HRV-, stappen- en sportgegevens kunt verlenen of intrekken. Zie het gedeelte <a href="#health-connect">Health Connect</a> voor details.</p>
 
         <h3 class="sub-heading">Privacy &amp; Gegevens</h3>
         <p>Opent het scherm Privacy &amp; Gegevens waar je je account kunt beheren, kunt bekijken welke gegevens worden opgeslagen, je AVG-rechten kunt uitoefenen en je gegevens kunt verwijderen. Zie het gedeelte <a href="#privacy">Privacy &amp; Gegevens</a> voor details.</p>
@@ -515,7 +515,7 @@
             </tr>
             <tr>
               <td><strong>Health Connect-cache</strong></td>
-              <td>Dagelijkse slaapduur, HRV en stappenaantal</td>
+              <td>Slaap, slaapfasen, HRV, hartslag, stappen en sport</td>
               <td>AES-256 (SQLCipher)</td>
             </tr>
             <tr>
@@ -564,20 +564,28 @@
       <!-- ─ Health Connect ─ -->
       <section class="doc-section" id="health-connect">
         <h2 class="section-heading">Health Connect</h2>
-        <p>Health Connect is het uniforme gezondheidsgegevensplatform van Google voor Android. Heda leest drie gegevenstypen hieruit om het Analyse-scherm te voeden:</p>
+        <p>Health Connect is het uniforme gezondheidsgegevensplatform van Google voor Android. Heda leest vijf typen gezondheidsgegevens hieruit om de functie Correlaties op het Analyse-scherm te voeden:</p>
 
         <div class="card-grid">
           <div class="info-card">
             <div class="card-title">Slaapsessies</div>
-            <div class="card-body">Nachtelijke slaapduur van je wearable of slaap-tracking-app.</div>
+            <div class="card-body">Nachtelijke slaapduur en slaapfasen (REM, diepe slaap, lichte slaap en wakker zijn) van je wearable of slaap-tracking-app.</div>
           </div>
           <div class="info-card">
             <div class="card-title">Hartslagvariabiliteit (HRV)</div>
-            <div class="card-body">Ochtend-HRV-metingen die stress- en herstelstatus aangeven.</div>
+            <div class="card-body">Dagelijkse RMSSD-metingen die de herstelstatus en de balans van het autonome zenuwstelsel aangeven.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Hartslag</div>
+            <div class="card-body">Continue hartslagdata gebruikt om je dagelijkse gemiddelde en rustende hartslag te berekenen.</div>
           </div>
           <div class="info-card">
             <div class="card-title">Stappenaantal</div>
             <div class="card-body">Dagelijks stappenaantal van je telefoon of wearable.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Sportsessies</div>
+            <div class="card-body">Duur van sportsessies gebruikt om je dagelijkse activiteitsniveau te berekenen.</div>
           </div>
         </div>
 
@@ -590,7 +598,7 @@
           <li>Ga in Heda naar <strong>Instellingen → Health Connect</strong>.</li>
           <li>Als de Health Connect-app niet is geïnstalleerd, tik op <strong>Health Connect installeren</strong> om het van Google Play te halen. (Android 9 en later. Op Android 14+ is Health Connect ingebouwd.)</li>
           <li>Tik op <strong>Health Connect verbinden</strong>.</li>
-          <li>Verleen Heda in het Health Connect-machtigingenscherm toegang tot <strong>Slaap</strong>, <strong>Hartslagvariabiliteit</strong> en <strong>Stappen</strong>.</li>
+          <li>Verleen Heda in het Health Connect-machtigingenscherm toegang tot <strong>Slaap</strong>, <strong>Hartslagvariabiliteit</strong>, <strong>Hartslag</strong>, <strong>Stappen</strong> en <strong>Sport</strong>.</li>
           <li>Keer terug naar Heda. Je recente gezondheidsgegevens worden weergegeven.</li>
         </ol>
 
