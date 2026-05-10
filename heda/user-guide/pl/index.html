@@ -137,11 +137,10 @@
         </div>
 
         <h3 class="sub-heading">Zgoda przy pierwszym uruchomieniu</h3>
-        <p>Przy pierwszym uruchomieniu Heda pyta, czy chcesz udostępniać anonimowe statystyki użytkowania i raporty o awariach. Żadna opcja nie wysyła danych zdrowotnych. Możesz zmienić swój wybór później w <strong>Ustawienia → Prywatność i dane</strong>.</p>
+        <p>Przy pierwszym uruchomieniu Heda pyta, czy chcesz udostępniać anonimowe raporty o awariach. Nie wysyła żadnych danych zdrowotnych. Możesz zmienić swój wybór później w <strong>Ustawienia → Prywatność i dane</strong>.</p>
 
         <ul>
-          <li><strong>Anonimowe statystyki użytkowania</strong> — pomaga zespołowi zrozumieć, które funkcje są najczęściej używane (Firebase Analytics).</li>
-          <li><strong>Anonimowe raporty o awariach</strong> — automatycznie zgłasza awarie, aby błędy były szybko naprawiane (Firebase Crashlytics).</li>
+          <li><strong>Anonimowe raporty o awariach</strong> — automatycznie zgłasza awarie, aby błędy były szybko naprawiane (GlitchTip). Żadne statystyki użytkowania nie są zbierane.</li>
         </ul>
       </section>
 
@@ -500,7 +499,7 @@
             </tr>
             <tr>
               <td><strong>Token uwierzytelniania</strong></td>
-              <td>UID Firebase, e-mail, znacznik czasu logowania, powiązanie konta</td>
+              <td>UID Supabase, e-mail, znacznik czasu logowania, powiązanie konta</td>
               <td>AES-256-GCM (Tink)</td>
             </tr>
             <tr>
@@ -517,7 +516,7 @@
         <p>Włącz blokadę biometryczną, aby wymagać odcisku palca, odblokowania twarzą lub kodu PIN do otwarcia aplikacji. Wymaga skonfigurowanej blokady ekranu w ustawieniach urządzenia.</p>
 
         <h3 class="sub-heading">Diagnostyka</h3>
-        <p>Opcjonalnie udostępniaj anonimowe statystyki użytkowania (Firebase Analytics) i raporty o awariach (Firebase Crashlytics). <strong>Żadne dane zdrowotne nie są nigdy dołączane.</strong> Te opcje można włączać i wyłączać niezależnie oraz zmieniać w dowolnym momencie.</p>
+        <p>Opcjonalnie udostępniaj anonimowe raporty o awariach (GlitchTip). <strong>Żadne dane zdrowotne nie są nigdy dołączane.</strong> Żadne statystyki użytkowania nie są zbierane. Można to zmienić w dowolnym momencie.</p>
 
         <h3 class="sub-heading">Twoje prawa RODO</h3>
         <p>Heda jest zgodna z art. 9 RODO UE (szczególne kategorie danych osobowych). Twoje prawa:</p>
@@ -537,7 +536,7 @@
         </div>
         <ul>
           <li><strong>Usuń dane lokalne (zachowaj konto)</strong> — trwale usuwa wszystkie zapisy bólu głowy, dane zdrowotne, ustawienia i klucze szyfrowania z tego urządzenia. Powiązanie z Twoim kontem Google jest zachowane, więc możesz zalogować się ponownie na dowolnym urządzeniu.</li>
-          <li><strong>Usuń konto i wszystkie dane</strong> — trwale usuwa wszystko powyższe plus Twoje konto Firebase. Nie ma możliwości odzyskania. Wymagane jest potwierdzenie w dwóch krokach.</li>
+          <li><strong>Usuń konto i wszystkie dane</strong> — trwale usuwa wszystko powyższe plus Twoje konto Supabase. Nie ma możliwości odzyskania. Wymagane jest potwierdzenie w dwóch krokach.</li>
         </ul>
       </section>
 

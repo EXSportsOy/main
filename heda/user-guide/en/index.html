@@ -137,11 +137,10 @@
         </div>
 
         <h3 class="sub-heading">First-run consent</h3>
-        <p>On first launch, Heda asks whether you want to share anonymous usage statistics and crash reports. Neither option sends any health data. You can change your choice later in <strong>Settings → Privacy &amp; Data</strong>.</p>
+        <p>On first launch, Heda asks whether you want to share anonymous crash reports. This does not send any health data. You can change your choice later in <strong>Settings → Privacy &amp; Data</strong>.</p>
 
         <ul>
-          <li><strong>Anonymous usage statistics</strong> — helps the team understand which features are most used (Firebase Analytics).</li>
-          <li><strong>Anonymous crash reports</strong> — automatically reports crashes so bugs can be fixed quickly (Firebase Crashlytics).</li>
+          <li><strong>Anonymous crash reports</strong> — automatically reports crashes so bugs can be fixed quickly (GlitchTip). No usage analytics are collected.</li>
         </ul>
       </section>
 
@@ -500,7 +499,7 @@
             </tr>
             <tr>
               <td><strong>Authentication token</strong></td>
-              <td>Firebase UID, email, sign-in timestamp, account binding</td>
+              <td>Supabase user ID, email, sign-in timestamp, account binding</td>
               <td>AES-256-GCM (Tink)</td>
             </tr>
             <tr>
@@ -517,7 +516,7 @@
         <p>Enable biometric lock to require a fingerprint, face unlock, or PIN to open the app. Requires a screen lock to be configured in device Settings.</p>
 
         <h3 class="sub-heading">Diagnostics</h3>
-        <p>Optionally share anonymous usage statistics (Firebase Analytics) and crash reports (Firebase Crashlytics). <strong>No health data is ever included.</strong> These can be toggled independently and changed at any time.</p>
+        <p>Optionally share anonymous crash reports (GlitchTip). <strong>No health data is ever included.</strong> No usage analytics are collected. This can be changed at any time.</p>
 
         <h3 class="sub-heading">Your GDPR rights</h3>
         <p>Heda complies with EU GDPR Article 9 (special categories of personal data). Your rights:</p>
@@ -537,7 +536,7 @@
         </div>
         <ul>
           <li><strong>Delete local data (keep account)</strong> — permanently deletes all headache records, health data, settings, and encryption keys from this device. Your Google account link is kept, so you can sign in again on any device.</li>
-          <li><strong>Delete account and all data</strong> — permanently deletes everything above plus your Firebase account. There is no recovery. A two-step confirmation is required.</li>
+          <li><strong>Delete account and all data</strong> — permanently deletes everything above plus your Supabase account. There is no recovery. A two-step confirmation is required.</li>
         </ul>
       </section>
 

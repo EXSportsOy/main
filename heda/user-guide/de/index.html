@@ -137,11 +137,10 @@
         </div>
 
         <h3 class="sub-heading">Einwilligung beim ersten Start</h3>
-        <p>Beim ersten Start fragt Heda, ob du anonyme Nutzungsstatistiken und Absturzberichte teilen möchtest. Keine der Optionen sendet Gesundheitsdaten. Du kannst deine Wahl später unter <strong>Einstellungen → Datenschutz &amp; Daten</strong> ändern.</p>
+        <p>Beim ersten Start fragt Heda, ob du anonyme Absturzberichte teilen möchtest. Dies sendet keine Gesundheitsdaten. Du kannst deine Wahl später unter <strong>Einstellungen → Datenschutz &amp; Daten</strong> ändern.</p>
 
         <ul>
-          <li><strong>Anonyme Nutzungsstatistiken</strong> — hilft dem Team zu verstehen, welche Funktionen am häufigsten genutzt werden (Firebase Analytics).</li>
-          <li><strong>Anonyme Absturzberichte</strong> — meldet Abstürze automatisch, damit Fehler schnell behoben werden können (Firebase Crashlytics).</li>
+          <li><strong>Anonyme Absturzberichte</strong> — meldet Abstürze automatisch, damit Fehler schnell behoben werden können (GlitchTip). Keine Nutzungsstatistiken werden erfasst.</li>
         </ul>
       </section>
 
@@ -500,7 +499,7 @@
             </tr>
             <tr>
               <td><strong>Authentifizierungstoken</strong></td>
-              <td>Firebase UID, E-Mail, Anmeldezeitstempel, Kontobindung</td>
+              <td>Supabase-Benutzer-ID, E-Mail, Anmeldezeitstempel, Kontobindung</td>
               <td>AES-256-GCM (Tink)</td>
             </tr>
             <tr>
@@ -517,7 +516,7 @@
         <p>Aktiviere die biometrische Sperre, um zum Öffnen der App einen Fingerabdruck, Gesichtsentsperre oder PIN zu verlangen. Erfordert eine konfigurierte Bildschirmsperre in den Geräteeinstellungen.</p>
 
         <h3 class="sub-heading">Diagnose</h3>
-        <p>Teile optional anonyme Nutzungsstatistiken (Firebase Analytics) und Absturzberichte (Firebase Crashlytics). <strong>Gesundheitsdaten werden niemals einbezogen.</strong> Diese können unabhängig voneinander ein- und ausgeschaltet und jederzeit geändert werden.</p>
+        <p>Teile optional anonyme Absturzberichte (GlitchTip). <strong>Gesundheitsdaten werden niemals einbezogen.</strong> Keine Nutzungsstatistiken werden erfasst. Dies kann jederzeit geändert werden.</p>
 
         <h3 class="sub-heading">Deine DSGVO-Rechte</h3>
         <p>Heda entspricht EU-DSGVO Artikel 9 (besondere Kategorien personenbezogener Daten). Deine Rechte:</p>
@@ -537,7 +536,7 @@
         </div>
         <ul>
           <li><strong>Lokale Daten löschen (Konto behalten)</strong> — löscht dauerhaft alle Kopfschmerzeinträge, Gesundheitsdaten, Einstellungen und Verschlüsselungsschlüssel von diesem Gerät. Deine Google-Kontoverbindung bleibt erhalten, sodass du dich auf jedem Gerät wieder anmelden kannst.</li>
-          <li><strong>Konto und alle Daten löschen</strong> — löscht dauerhaft alles oben Genannte plus dein Firebase-Konto. Es gibt keine Wiederherstellung. Eine zweistufige Bestätigung ist erforderlich.</li>
+          <li><strong>Konto und alle Daten löschen</strong> — löscht dauerhaft alles oben Genannte plus dein Supabase-Konto. Es gibt keine Wiederherstellung. Eine zweistufige Bestätigung ist erforderlich.</li>
         </ul>
       </section>
 

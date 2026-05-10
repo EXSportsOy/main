@@ -137,11 +137,10 @@
         </div>
 
         <h3 class="sub-heading">Consentement au premier lancement</h3>
-        <p>Au premier démarrage, Heda vous demande si vous souhaitez partager des statistiques d'utilisation anonymes et des rapports de plantage. Aucune option n'envoie de données de santé. Vous pouvez modifier votre choix ultérieurement dans <strong>Paramètres → Confidentialité &amp; Données</strong>.</p>
+        <p>Au premier démarrage, Heda vous demande si vous souhaitez partager des rapports de plantage anonymes. Cela n'envoie aucune donnée de santé. Vous pouvez modifier votre choix ultérieurement dans <strong>Paramètres → Confidentialité &amp; Données</strong>.</p>
 
         <ul>
-          <li><strong>Statistiques d'utilisation anonymes</strong> — aide l'équipe à comprendre quelles fonctionnalités sont les plus utilisées (Firebase Analytics).</li>
-          <li><strong>Rapports de plantage anonymes</strong> — signale automatiquement les plantages pour que les bugs soient corrigés rapidement (Firebase Crashlytics).</li>
+          <li><strong>Rapports de plantage anonymes</strong> — signale automatiquement les plantages pour que les bugs soient corrigés rapidement (GlitchTip). Aucune statistique d'utilisation n'est collectée.</li>
         </ul>
       </section>
 
@@ -500,7 +499,7 @@
             </tr>
             <tr>
               <td><strong>Jeton d'authentification</strong></td>
-              <td>UID Firebase, e-mail, horodatage de connexion, liaison de compte</td>
+              <td>UID Supabase, e-mail, horodatage de connexion, liaison de compte</td>
               <td>AES-256-GCM (Tink)</td>
             </tr>
             <tr>
@@ -517,7 +516,7 @@
         <p>Activez le verrouillage biométrique pour exiger une empreinte digitale, une reconnaissance faciale ou un code PIN pour ouvrir l'application. Nécessite qu'un verrouillage d'écran soit configuré dans les paramètres de l'appareil.</p>
 
         <h3 class="sub-heading">Diagnostics</h3>
-        <p>Partagez optionnellement des statistiques d'utilisation anonymes (Firebase Analytics) et des rapports de plantage (Firebase Crashlytics). <strong>Aucune donnée de santé n'est jamais incluse.</strong> Ces options peuvent être activées/désactivées indépendamment et modifiées à tout moment.</p>
+        <p>Partagez optionnellement des rapports de plantage anonymes (GlitchTip). <strong>Aucune donnée de santé n'est jamais incluse.</strong> Aucune statistique d'utilisation n'est collectée. Cela peut être modifié à tout moment.</p>
 
         <h3 class="sub-heading">Vos droits RGPD</h3>
         <p>Heda est conforme à l'article 9 du RGPD de l'UE (catégories particulières de données personnelles). Vos droits :</p>
@@ -537,7 +536,7 @@
         </div>
         <ul>
           <li><strong>Supprimer les données locales (conserver le compte)</strong> — supprime définitivement tous les enregistrements de céphalées, les données de santé, les paramètres et les clés de chiffrement de cet appareil. Le lien avec votre compte Google est conservé, vous pouvez donc vous reconnecter sur n'importe quel appareil.</li>
-          <li><strong>Supprimer le compte et toutes les données</strong> — supprime définitivement tout ce qui précède ainsi que votre compte Firebase. Il n'y a aucune récupération possible. Une confirmation en deux étapes est requise.</li>
+          <li><strong>Supprimer le compte et toutes les données</strong> — supprime définitivement tout ce qui précède ainsi que votre compte Supabase. Il n'y a aucune récupération possible. Une confirmation en deux étapes est requise.</li>
         </ul>
       </section>
 

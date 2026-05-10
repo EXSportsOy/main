@@ -137,11 +137,10 @@
         </div>
 
         <h3 class="sub-heading">Ensikäynnistyksen suostumus</h3>
-        <p>Ensimmäisellä käynnistyskerralla Heda kysyy, haluatko jakaa nimettömiä käyttötilastoja ja kaatumisraportteja. Kumpikaan vaihtoehto ei lähetä terveystietoja. Voit muuttaa valintaasi myöhemmin kohdassa <strong>Asetukset → Tietosuoja ja tiedot</strong>.</p>
+        <p>Ensimmäisellä käynnistyskerralla Heda kysyy, haluatko jakaa nimettömiä kaatumisraportteja. Tämä ei lähetä terveystietoja. Voit muuttaa valintaasi myöhemmin kohdassa <strong>Asetukset → Tietosuoja ja tiedot</strong>.</p>
 
         <ul>
-          <li><strong>Nimettömät käyttötilastot</strong> — auttaa tiimiä ymmärtämään, mitkä ominaisuudet ovat suosituimpia (Firebase Analytics).</li>
-          <li><strong>Nimettömät kaatumisraportit</strong> — ilmoittaa automaattisesti kaatumisista, jotta virheet voidaan korjata nopeasti (Firebase Crashlytics).</li>
+          <li><strong>Nimettömät kaatumisraportit</strong> — ilmoittaa automaattisesti kaatumisista, jotta virheet voidaan korjata nopeasti (GlitchTip). Käyttötilastoja ei kerätä.</li>
         </ul>
       </section>
 
@@ -500,7 +499,7 @@
             </tr>
             <tr>
               <td><strong>Kirjautumistunniste</strong></td>
-              <td>Firebase UID, sähköposti, kirjautumisaikaleima, tilin sidontatieto</td>
+              <td>Supabase-käyttäjätunnus, sähköposti, kirjautumisaikaleima, tilin sidontatieto</td>
               <td>AES-256-GCM (Tink)</td>
             </tr>
             <tr>
@@ -517,7 +516,7 @@
         <p>Ota käyttöön biometrinen lukitus vaatiaksesi sormenjälkeä, kasvojentunnistusta tai PIN-koodia sovelluksen avaamiseen. Vaatii näytönlukituksen konfiguroinnin laitteen asetuksissa.</p>
 
         <h3 class="sub-heading">Diagnostiikka</h3>
-        <p>Voit halutessasi jakaa nimettömiä käyttötilastoja (Firebase Analytics) ja kaatumisraportteja (Firebase Crashlytics). <strong>Mitään terveystietoja ei koskaan sisällytetä.</strong> Niitä voidaan vaihtaa erikseen ja milloin tahansa.</p>
+        <p>Voit halutessasi jakaa nimettömiä kaatumisraportteja (GlitchTip). <strong>Mitään terveystietoja ei koskaan sisällytetä.</strong> Käyttötilastoja ei kerätä. Valintaa voi muuttaa milloin tahansa.</p>
 
         <h3 class="sub-heading">GDPR-oikeutesi</h3>
         <p>Heda noudattaa EU:n GDPR:n 9 artiklaa (erityiset henkilötietoryhmät). Oikeutesi:</p>
@@ -537,7 +536,7 @@
         </div>
         <ul>
           <li><strong>Poista paikalliset tiedot (säilytä tili)</strong> — poistaa pysyvästi kaikki päänsärkykirjaukset, terveystiedot, asetukset ja salausavaimet laitteeltasi. Google-tilin yhteys säilyy, joten voit kirjautua sisään uudelleen millä tahansa laitteella.</li>
-          <li><strong>Poista tili ja kaikki tiedot</strong> — poistaa pysyvästi kaiken yllä olevan lisäksi Firebase-tilisi. Tietojen palauttaminen ei ole mahdollista. Vaaditaan kaksivaiheinen vahvistus.</li>
+          <li><strong>Poista tili ja kaikki tiedot</strong> — poistaa pysyvästi kaiken yllä olevan lisäksi Supabase-tilisi. Tietojen palauttaminen ei ole mahdollista. Vaaditaan kaksivaiheinen vahvistus.</li>
         </ul>
       </section>
 

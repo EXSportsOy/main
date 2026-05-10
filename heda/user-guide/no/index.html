@@ -137,11 +137,10 @@
         </div>
 
         <h3 class="sub-heading">Samtykke ved første oppstart</h3>
-        <p>Ved første oppstart spør Heda om du ønsker å dele anonym bruksstatistikk og krasj-rapporter. Ingen av valgene sender helsedata. Du kan endre valget ditt senere under <strong>Innstillinger → Personvern &amp; Data</strong>.</p>
+        <p>Ved første oppstart spør Heda om du ønsker å dele anonyme krasj-rapporter. Dette sender ingen helsedata. Du kan endre valget ditt senere under <strong>Innstillinger → Personvern &amp; Data</strong>.</p>
 
         <ul>
-          <li><strong>Anonym bruksstatistikk</strong> — hjelper teamet å forstå hvilke funksjoner som brukes mest (Firebase Analytics).</li>
-          <li><strong>Anonyme krasj-rapporter</strong> — rapporterer krasjer automatisk slik at feil kan fikses raskt (Firebase Crashlytics).</li>
+          <li><strong>Anonyme krasj-rapporter</strong> — rapporterer krasjer automatisk slik at feil kan fikses raskt (GlitchTip). Ingen bruksstatistikk samles inn.</li>
         </ul>
       </section>
 
@@ -500,7 +499,7 @@
             </tr>
             <tr>
               <td><strong>Autentiseringstoken</strong></td>
-              <td>Firebase UID, e-post, innloggingstidsstempel, kontobinding</td>
+              <td>Supabase-bruker-ID, e-post, innloggingstidsstempel, kontobinding</td>
               <td>AES-256-GCM (Tink)</td>
             </tr>
             <tr>
@@ -517,7 +516,7 @@
         <p>Aktiver biometrisk lås for å kreve fingeravtrykk, ansiktsopplåsing eller PIN for å åpne appen. Krever at skjermlås er konfigurert i enhetens innstillinger.</p>
 
         <h3 class="sub-heading">Diagnostikk</h3>
-        <p>Del eventuelt anonym bruksstatistikk (Firebase Analytics) og krasj-rapporter (Firebase Crashlytics). <strong>Ingen helsedata inkluderes noen gang.</strong> Disse kan slås av og på uavhengig og endres når som helst.</p>
+        <p>Del eventuelt anonyme krasj-rapporter (GlitchTip). <strong>Ingen helsedata inkluderes noen gang.</strong> Ingen bruksstatistikk samles inn. Dette kan endres når som helst.</p>
 
         <h3 class="sub-heading">Dine GDPR-rettigheter</h3>
         <p>Heda overholder EU GDPR artikkel 9 (særlige kategorier av personopplysninger). Dine rettigheter:</p>
@@ -537,7 +536,7 @@
         </div>
         <ul>
           <li><strong>Slett lokal data (behold konto)</strong> — sletter permanent alle hodepineoppføringer, helsedata, innstillinger og krypteringsnøkler fra denne enheten. Google-kontolinken din beholdes, slik at du kan logge inn igjen på enhver enhet.</li>
-          <li><strong>Slett konto og all data</strong> — sletter permanent alt ovenfor pluss Firebase-kontoen din. Det finnes ingen gjenoppretting. En totrinnbekreftelse er nødvendig.</li>
+          <li><strong>Slett konto og all data</strong> — sletter permanent alt ovenfor pluss Supabase-kontoen din. Det finnes ingen gjenoppretting. En totrinnbekreftelse er nødvendig.</li>
         </ul>
       </section>
 

@@ -137,11 +137,10 @@
         </div>
 
         <h3 class="sub-heading">Samtycke vid första start</h3>
-        <p>Vid första start frågar Heda om du vill dela anonyma användningsstatistik och kraschrapporter. Inget av alternativen skickar hälsodata. Du kan ändra ditt val senare under <strong>Inställningar → Integritet &amp; Data</strong>.</p>
+        <p>Vid första start frågar Heda om du vill dela anonyma kraschrapporter. Detta skickar inga hälsodata. Du kan ändra ditt val senare under <strong>Inställningar → Integritet &amp; Data</strong>.</p>
 
         <ul>
-          <li><strong>Anonym användningsstatistik</strong> — hjälper teamet att förstå vilka funktioner som används mest (Firebase Analytics).</li>
-          <li><strong>Anonyma kraschrapporter</strong> — rapporterar krascher automatiskt så att buggar kan åtgärdas snabbt (Firebase Crashlytics).</li>
+          <li><strong>Anonyma kraschrapporter</strong> — rapporterar krascher automatiskt så att buggar kan åtgärdas snabbt (GlitchTip). Ingen användningsstatistik samlas in.</li>
         </ul>
       </section>
 
@@ -500,7 +499,7 @@
             </tr>
             <tr>
               <td><strong>Autentiseringstoken</strong></td>
-              <td>Firebase UID, e-post, inloggningstidsstämpel, kontobindning</td>
+              <td>Supabase-användar-ID, e-post, inloggningstidsstämpel, kontobindning</td>
               <td>AES-256-GCM (Tink)</td>
             </tr>
             <tr>
@@ -517,7 +516,7 @@
         <p>Aktivera biometrisk låsning för att kräva fingeravtryck, ansiktsupplåsning eller PIN för att öppna appen. Kräver att skärmlås är konfigurerat i enhetens inställningar.</p>
 
         <h3 class="sub-heading">Diagnostik</h3>
-        <p>Dela eventuellt anonyma användningsstatistik (Firebase Analytics) och kraschrapporter (Firebase Crashlytics). <strong>Inga hälsodata inkluderas någonsin.</strong> Dessa kan aktiveras/inaktiveras oberoende och ändras när som helst.</p>
+        <p>Dela eventuellt anonyma kraschrapporter (GlitchTip). <strong>Inga hälsodata inkluderas någonsin.</strong> Ingen användningsstatistik samlas in. Detta kan ändras när som helst.</p>
 
         <h3 class="sub-heading">Dina GDPR-rättigheter</h3>
         <p>Heda uppfyller EU GDPR artikel 9 (särskilda kategorier av personuppgifter). Dina rättigheter:</p>
@@ -537,7 +536,7 @@
         </div>
         <ul>
           <li><strong>Ta bort lokal data (behåll konto)</strong> — tar permanent bort alla huvudvärksposter, hälsodata, inställningar och krypteringsnycklar från den här enheten. Din Google-kontolänk behålls, så du kan logga in igen på vilken enhet som helst.</li>
-          <li><strong>Ta bort konto och all data</strong> — tar permanent bort allt ovanstående plus ditt Firebase-konto. Det finns ingen återhämtning. En tvåstegsbekräftelse krävs.</li>
+          <li><strong>Ta bort konto och all data</strong> — tar permanent bort allt ovanstående plus ditt Supabase-konto. Det finns ingen återhämtning. En tvåstegsbekräftelse krävs.</li>
         </ul>
       </section>
 

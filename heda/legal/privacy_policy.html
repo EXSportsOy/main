@@ -45,7 +45,7 @@
     </p>
 
     <div class="info-box">
-        <strong>Summary:</strong> Your migraine diary data is stored locally on your device. With your explicit consent we may read health data from Google Health Connect. We collect minimal analytics data and only with your consent. We do not sell your data. You have full control over your data under GDPR.
+        <strong>Summary:</strong> Your migraine diary data is stored locally on your device. With your explicit consent we may read health data from Google Health Connect. With your explicit consent we collect anonymous crash reports to fix bugs. We do not collect usage analytics. We do not sell your data. You have full control over your data under GDPR.
     </div>
 
     <hr>
@@ -77,16 +77,14 @@
 
     <h3>1.3 Information Collected Automatically</h3>
     <p>
-        With your <strong>explicit consent</strong> (requested upon first app launch), the application may collect the following information automatically:
+        With your <strong>explicit consent</strong> (requested upon first app launch), the application may collect crash reports automatically. No usage analytics are collected.
     </p>
     <ul>
-        <li><strong>Device information:</strong> Device type and model, mobile operating system and version</li>
-        <li><strong>Usage statistics:</strong> Anonymous data about features used, session length, and app interactions</li>
-        <li><strong>Crash reports:</strong> Technical diagnostic data including device state, stack trace, and error logs at the time of a crash</li>
+        <li><strong>Crash reports:</strong> Technical diagnostic data including device type, operating system version, stack trace, and error logs at the time of a crash. This data is processed by <strong>GlitchTip</strong>, an error monitoring service used to identify and fix bugs.</li>
     </ul>
 
     <div class="info-box">
-        <strong>Important Note:</strong> Analytics and crash reports do <strong>NOT</strong> include any diary entries, migraine data, health records, symptom information, or any personal health data you enter into the app.
+        <strong>Important Note:</strong> Crash reports do <strong>NOT</strong> include any diary entries, migraine data, health records, symptom information, or any personal health data you enter into the app.
     </div>
 
     <p>
@@ -126,12 +124,7 @@
                 <td>Contract performance (Article 6(1)(b))</td>
             </tr>
             <tr>
-                <td>Device information &amp; usage analytics</td>
-                <td>To improve app functionality and user experience</td>
-                <td>Consent (Article 6(1)(a))</td>
-            </tr>
-            <tr>
-                <td>Crash reports</td>
+                <td>Crash reports (GlitchTip)</td>
                 <td>To identify and fix technical errors</td>
                 <td>Consent (Article 6(1)(a))</td>
             </tr>
@@ -182,10 +175,7 @@
             <strong><a href="https://developer.android.com/health-and-fitness/guides/health-connect/plan/privacy-policy" target="_blank">Google Health Connect</a></strong> – On-device health data integration (read-only, with your permission)
         </li>
         <li>
-            <strong><a href="https://firebase.google.com/support/privacy" target="_blank">Google Firebase Analytics</a></strong> – Anonymous usage statistics (consent required)
-        </li>
-        <li>
-            <strong><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Crashlytics</a></strong> – Crash reporting and diagnostics (consent required)
+            <strong><a href="https://glitchtip.com/legal/privacy" target="_blank">GlitchTip</a></strong> – Crash reporting and diagnostics (consent required). GlitchTip receives anonymous technical crash data only; no health or diary data is ever included.
         </li>
     </ul>
 
@@ -195,10 +185,10 @@
 
     <h3>5.1 Data Transfers Outside the EU/EEA</h3>
     <p>
-        Firebase Analytics and Crashlytics are operated by Google LLC, a company based in the United States. Data processed by these services may be transferred to and stored in the United States or other countries outside the European Economic Area (EEA). Google has implemented <strong>Standard Contractual Clauses (SCCs)</strong> approved by the European Commission to ensure adequate protection. You can read more in Google's <a href="https://policies.google.com/privacy/frameworks" target="_blank">Privacy Framework documentation</a>.
+        Supabase stores authentication data (your Google account email) on infrastructure located in the EU. For details, see <a href="https://supabase.com/privacy" target="_blank">Supabase's Privacy Policy</a>.
     </p>
     <p>
-        Supabase stores authentication data (your Google account email) on infrastructure located in the EU. For details, see <a href="https://supabase.com/privacy" target="_blank">Supabase's Privacy Policy</a>.
+        Crash report data processed by GlitchTip may be stored outside the EU/EEA depending on the service configuration. Crash reports contain no personal health data. For details, see <a href="https://glitchtip.com/legal/privacy" target="_blank">GlitchTip's Privacy Policy</a>.
     </p>
 
     <h3>5.2 Legal Disclosure</h3>
@@ -227,8 +217,8 @@
                 <td>Retained for as long as you have an active account; deleted upon account deletion (via Settings → Privacy &amp; Data → Delete account) or by contacting us</td>
             </tr>
             <tr>
-                <td>Analytics and crash data</td>
-                <td>Up to 24 months, then anonymised or deleted</td>
+                <td>Crash reports (GlitchTip)</td>
+                <td>Up to 90 days, then deleted</td>
             </tr>
             <tr>
                 <td>Support inquiry emails</td>
@@ -251,14 +241,14 @@
         <li><strong>Right to erasure</strong> – you can request deletion of your personal data ("right to be forgotten")</li>
         <li><strong>Right to data portability</strong> – you can request your data in a machine-readable format</li>
         <li><strong>Right to object</strong> – you can object to data processing for analytics purposes at any time</li>
-        <li><strong>Right to withdraw consent</strong> – you can withdraw consent for crash reporting and analytics at any time in the app settings</li>
+        <li><strong>Right to withdraw consent</strong> – you can withdraw consent for crash reporting at any time in the app settings</li>
     </ul>
     <p>To exercise any of these rights, contact us at <a href="mailto:info@exsports.fi">info@exsports.fi</a>.</p>
 
     <hr>
 
     <h2>8. Consent</h2>
-    <p>Upon first launch, the application will ask for your consent before enabling crash reporting and analytics. You may decline without affecting the core diary functionality of the application. Health Connect permissions are requested separately and you can manage them at any time in Android settings.</p>
+    <p>Upon first launch, the application will ask for your consent before enabling crash reporting (via GlitchTip). You may decline without affecting the core diary functionality of the application. No usage analytics are collected. Health Connect permissions are requested separately and you can manage them at any time in Android settings.</p>
     <p>Continued use of the application after any updates to this Privacy Policy constitutes your acceptance of those changes.</p>
 
     <hr>
@@ -277,14 +267,14 @@
         <li><strong>App sandboxing:</strong> Diary data benefits from Android's standard app sandboxing; other apps on the device cannot access Heda's data.</li>
         <li><strong>Authentication security:</strong> Sign-in is handled via Google's Credential Manager — we never see or store your Google account password.</li>
     </ul>
-    <p>Access to any collected analytics or crash data is restricted to authorised personnel only. We recommend enabling device screen lock and biometric lock within the app to further protect your health diary data.</p>
+    <p>Access to any collected crash data is restricted to authorised personnel only. We recommend enabling device screen lock and biometric lock within the app to further protect your health diary data.</p>
 
     <hr>
 
     <h2>11. Opt-Out and Account Deletion</h2>
     <p>You can stop all data collection by uninstalling the application. You can also:</p>
     <ul>
-        <li>Disable crash reporting and analytics at any time under <strong>Settings → Privacy &amp; Data</strong></li>
+        <li>Disable crash reporting (GlitchTip) at any time under <strong>Settings → Privacy &amp; Data</strong></li>
         <li>Delete all locally stored diary data under <strong>Settings → Privacy &amp; Data → Delete local data</strong></li>
         <li>Delete your account (including authentication data stored by Supabase) under <strong>Settings → Privacy &amp; Data → Delete account</strong>. Account deletion is a two-step confirmation process and is permanent.</li>
         <li>Revoke Health Connect permissions in Android's Health Connect settings at any time, without uninstalling the app</li>

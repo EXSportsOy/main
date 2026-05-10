@@ -137,11 +137,10 @@
         </div>
 
         <h3 class="sub-heading">Toestemming bij eerste start</h3>
-        <p>Bij de eerste start vraagt Heda of je anonieme gebruiksstatistieken en crashrapporten wilt delen. Geen van de opties stuurt gezondheidsgegevens. Je kunt je keuze later wijzigen via <strong>Instellingen → Privacy &amp; Gegevens</strong>.</p>
+        <p>Bij de eerste start vraagt Heda of je anonieme crashrapporten wilt delen. Dit stuurt geen gezondheidsgegevens. Je kunt je keuze later wijzigen via <strong>Instellingen → Privacy &amp; Gegevens</strong>.</p>
 
         <ul>
-          <li><strong>Anonieme gebruiksstatistieken</strong> — helpt het team te begrijpen welke functies het meest worden gebruikt (Firebase Analytics).</li>
-          <li><strong>Anonieme crashrapporten</strong> — rapporteert crashes automatisch zodat bugs snel kunnen worden verholpen (Firebase Crashlytics).</li>
+          <li><strong>Anonieme crashrapporten</strong> — rapporteert crashes automatisch zodat bugs snel kunnen worden verholpen (GlitchTip). Er worden geen gebruiksstatistieken verzameld.</li>
         </ul>
       </section>
 
@@ -500,7 +499,7 @@
             </tr>
             <tr>
               <td><strong>Authenticatietoken</strong></td>
-              <td>Firebase UID, e-mail, inlogtijdstempel, accountkoppeling</td>
+              <td>Supabase-gebruikers-ID, e-mail, inlogtijdstempel, accountkoppeling</td>
               <td>AES-256-GCM (Tink)</td>
             </tr>
             <tr>
@@ -517,7 +516,7 @@
         <p>Schakel het biometrisch slot in om een vingerafdruk, gezichtsontgrendeling of pincode te vereisen om de app te openen. Vereist een geconfigureerde schermvergrendeling in de apparaatinstellingen.</p>
 
         <h3 class="sub-heading">Diagnostiek</h3>
-        <p>Deel optioneel anonieme gebruiksstatistieken (Firebase Analytics) en crashrapporten (Firebase Crashlytics). <strong>Er worden nooit gezondheidsgegevens opgenomen.</strong> Deze kunnen onafhankelijk worden in- en uitgeschakeld en op elk moment worden gewijzigd.</p>
+        <p>Deel optioneel anonieme crashrapporten (GlitchTip). <strong>Er worden nooit gezondheidsgegevens opgenomen.</strong> Er worden geen gebruiksstatistieken verzameld. Dit kan op elk moment worden gewijzigd.</p>
 
         <h3 class="sub-heading">Jouw AVG-rechten</h3>
         <p>Heda voldoet aan EU AVG Artikel 9 (bijzondere categorieën persoonsgegevens). Jouw rechten:</p>
@@ -537,7 +536,7 @@
         </div>
         <ul>
           <li><strong>Lokale gegevens verwijderen (account behouden)</strong> — verwijdert permanent alle hoofdpijnaantekeningen, gezondheidsgegevens, instellingen en versleutelingssleutels van dit apparaat. Je Google-accountkoppeling blijft behouden, zodat je opnieuw kunt inloggen op elk apparaat.</li>
-          <li><strong>Account en alle gegevens verwijderen</strong> — verwijdert permanent alles hierboven plus je Firebase-account. Er is geen herstel mogelijk. Een tweestapsbevestiging is vereist.</li>
+          <li><strong>Account en alle gegevens verwijderen</strong> — verwijdert permanent alles hierboven plus je Supabase-account. Er is geen herstel mogelijk. Een tweestapsbevestiging is vereist.</li>
         </ul>
       </section>
 

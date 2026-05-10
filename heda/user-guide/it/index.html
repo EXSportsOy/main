@@ -137,11 +137,10 @@
         </div>
 
         <h3 class="sub-heading">Consenso al primo avvio</h3>
-        <p>Al primo avvio, Heda chiede se desideri condividere statistiche di utilizzo anonime e segnalazioni di errori. Nessuna opzione invia dati sanitari. Puoi modificare la tua scelta in seguito in <strong>Impostazioni → Privacy e dati</strong>.</p>
+        <p>Al primo avvio, Heda chiede se desideri condividere segnalazioni di errori anonime. Nessuna opzione invia dati sanitari. Puoi modificare la tua scelta in seguito in <strong>Impostazioni → Privacy e dati</strong>.</p>
 
         <ul>
-          <li><strong>Statistiche di utilizzo anonime</strong> — aiuta il team a capire quali funzionalità vengono utilizzate di più (Firebase Analytics).</li>
-          <li><strong>Segnalazioni di errori anonime</strong> — segnala automaticamente i crash in modo da correggere i bug rapidamente (Firebase Crashlytics).</li>
+          <li><strong>Segnalazioni di errori anonime</strong> — segnala automaticamente i crash in modo da correggere i bug rapidamente (GlitchTip). Non vengono raccolte statistiche di utilizzo.</li>
         </ul>
       </section>
 
@@ -500,7 +499,7 @@
             </tr>
             <tr>
               <td><strong>Token di autenticazione</strong></td>
-              <td>UID Firebase, email, timestamp di accesso, collegamento account</td>
+              <td>UID Supabase, email, timestamp di accesso, collegamento account</td>
               <td>AES-256-GCM (Tink)</td>
             </tr>
             <tr>
@@ -517,7 +516,7 @@
         <p>Attiva il blocco biometrico per richiedere impronta digitale, sblocco facciale o PIN per aprire l'app. Richiede che sia configurato un blocco schermo nelle impostazioni del dispositivo.</p>
 
         <h3 class="sub-heading">Diagnostica</h3>
-        <p>Condividi opzionalmente statistiche di utilizzo anonime (Firebase Analytics) e segnalazioni di errori (Firebase Crashlytics). <strong>Nessun dato sanitario è mai incluso.</strong> Queste opzioni possono essere attivate o disattivate indipendentemente e modificate in qualsiasi momento.</p>
+        <p>Condividi opzionalmente segnalazioni di errori anonime (GlitchTip). <strong>Nessun dato sanitario è mai incluso.</strong> Non vengono raccolte statistiche di utilizzo. Questa opzione può essere modificata in qualsiasi momento.</p>
 
         <h3 class="sub-heading">I tuoi diritti GDPR</h3>
         <p>Heda è conforme all'art. 9 del GDPR UE (categorie particolari di dati personali). I tuoi diritti:</p>
@@ -537,7 +536,7 @@
         </div>
         <ul>
           <li><strong>Elimina dati locali (mantieni account)</strong> — elimina permanentemente tutte le registrazioni di cefalea, dati di salute, impostazioni e chiavi di cifratura da questo dispositivo. Il collegamento al tuo account Google viene conservato, quindi puoi rieffettuare l'accesso su qualsiasi dispositivo.</li>
-          <li><strong>Elimina account e tutti i dati</strong> — elimina permanentemente tutto quanto sopra più il tuo account Firebase. Non è possibile recuperare nulla. È richiesta una conferma in due passaggi.</li>
+          <li><strong>Elimina account e tutti i dati</strong> — elimina permanentemente tutto quanto sopra più il tuo account Supabase. Non è possibile recuperare nulla. È richiesta una conferma in due passaggi.</li>
         </ul>
       </section>
 
