@@ -58,7 +58,10 @@
           </ul></li>
           <li><a href="#bewerking">Bewerken &amp; verwijderen</a></li>
           <li><a href="#analyse">Analyse</a></li>
-          <li><a href="#statistieken">Statistieken</a></li>
+          <li class="toc-sub"><ul class="toc-list">
+            <li><a href="#statistieken">Statistieken</a></li>
+            <li><a href="#correlaties">Correlaties</a></li>
+          </ul></li>
           <li><a href="#rapporten">Rapporten</a></li>
           <li><a href="#instellingen">Instellingen</a></li>
           <li><a href="#privacy">Privacy &amp; Gegevens</a></li>
@@ -108,7 +111,7 @@
           </div>
           <div class="info-card">
             <div class="card-title">Analyse</div>
-            <div class="card-body">Gedetecteerde patronen en gepersonaliseerde aanbevelingen op basis van je Health Connect-gegevens.</div>
+            <div class="card-body">Statistieken en trendgrafieken voor alle gebruikers. Correlaties (premium) detecteert patronen tussen je Health Connect-gegevens en hoofdpijngebeurtenissen.</div>
           </div>
           <div class="info-card">
             <div class="card-title">Rapporten</div>
@@ -300,51 +303,24 @@
       <!-- ─ Analyse ─ -->
       <section class="doc-section" id="analyse">
         <h2 class="section-heading">Analyse</h2>
-        <p>Het tabblad Analyse toont mogelijke correlaties tussen je hoofdpijngebeurtenissen en je dagelijkse gezondheidsmetingen uit Health Connect. Het kijkt terug over de afgelopen 90 dagen.</p>
+        <p>Het Analyse-scherm heeft bovenaan twee tabbladen: <strong>Statistieken</strong> en <strong>Correlaties</strong>. Statistieken is beschikbaar voor alle gebruikers. Correlaties is een premiumfunctie waarvoor ook een Health Connect-verbinding vereist is.</p>
 
-        <div class="note">
-          <strong>Vereist Health Connect.</strong> Koppel Heda aan Google Health Connect via <strong>Instellingen → Health Connect</strong> om dit scherm te activeren. Zie het gedeelte <a href="#health-connect">Health Connect</a> voor installatiesstappen.
-        </div>
-
-        <h3 class="sub-heading">Jouw basiswaarden</h3>
-        <p>Een basiswaardenkaart bovenaan toont je gemiddelde waarden voor de afgelopen 14 dagen:</p>
-        <ul>
-          <li><strong>Slaap</strong> — gemiddelde nachtelijke slaapduur</li>
-          <li><strong>HRV</strong> — gemiddelde hartslagvariabiliteit (ms)</li>
-          <li><strong>Stappen</strong> — gemiddeld dagelijks stappenaantal</li>
-        </ul>
-
-        <h3 class="sub-heading">Gedetecteerde patronen</h3>
-        <p>Heda zoekt naar vier op bewijs gebaseerde patronen die vaak voorafgaan aan hoofdpijn- en migraineaanvallen:</p>
-
-        <ul class="feature-list">
-          <li><strong>Korte slaap</strong> — je sliep minder dan je geconfigureerde minimum voor deze aanval.</li>
-          <li><strong>Onregelmatig slaapschema</strong> — je slaaptijden varieerden aanzienlijk in de voorgaande week.</li>
-          <li><strong>Lage activiteit</strong> — je stappenaantal de dag ervoor lag onder de minimumdrempel.</li>
-          <li><strong>Lage HRV</strong> — je HRV daalde de dag ervoor onder de basiswaarde, wat kan wijzen op verhoogde stress of slechte herstel.</li>
-        </ul>
-
-        <p>Elke bevinding toont het specifieke bewijs: de gemeten waarde en de drempel die werd overschreden. Bijvoorbeeld: <em>"Sliep 5 u 30 min voor deze gebeurtenis (drempel: 7 u)"</em>.</p>
-
-        <h3 class="sub-heading">Aanbevelingen</h3>
-        <p>Op basis van de gedetecteerde patronen genereert Heda gepersonaliseerde aanbevelingen gerangschikt op prioriteit (Hoog / Gemiddeld / Laag):</p>
-
-        <ul>
-          <li><strong>Vergroot de slaapduur</strong> — streef naar minimaal 7 uur per nacht.</li>
-          <li><strong>Handhaaf een regelmatig slaapschema</strong> — ga elke avond binnen ±30 minuten op hetzelfde tijdstip naar bed.</li>
-          <li><strong>Vergroot de dagelijkse activiteit</strong> — lichte beweging (bijv. een wandeling van 30 minuten) kan het migraine-risico verminderen.</li>
-          <li><strong>Beheer stress en herstel</strong> — lage HRV duidt op verhoogde stress; overweeg ademhalingsoefeningen of meditatie.</li>
-        </ul>
-
-        <div class="warning">
-          <strong>Geen medisch advies.</strong> Gedetecteerde patronen zijn correlaties, geen diagnoses. Raadpleeg altijd een zorgverlener voor medisch advies over je hoofdpijn.
+        <div class="card-grid">
+          <div class="info-card">
+            <div class="card-title">Statistieken</div>
+            <div class="card-body">Frequentie- en ernstgrafieken voor een geselecteerde tijdsperiode. Beschikbaar voor alle gebruikers.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Correlaties</div>
+            <div class="card-body">Detecteert patronen in je Health Connect-gegevens die hoofdpijnaanvallen kunnen voorafgaan. Vereist premium en Health Connect.</div>
+          </div>
         </div>
       </section>
 
       <!-- ─ Statistieken ─ -->
       <section class="doc-section" id="statistieken">
         <h2 class="section-heading">Statistieken</h2>
-        <p>Het gedeelte Statistieken maakt deel uit van het tabblad Analyse. Het geeft je een overzicht van de frequentie en ernst van je hoofdpijn over een geselecteerde periode.</p>
+        <p>Het tabblad Statistieken geeft je een overzicht van de frequentie en ernst van je hoofdpijn over een geselecteerde periode.</p>
 
         <h3 class="sub-heading">Periodekiezer</h3>
         <p>Kies uit vijf tijdsperiodes:</p>
@@ -356,7 +332,8 @@
           <span class="tag">Alle tijd</span>
         </div>
 
-        <h3 class="sub-heading">Samenvattingskaarten</h3>
+        <h3 class="sub-heading">Samenvattingskaart</h3>
+        <p>Een hoofdkaart toont de volgende statistieken voor de geselecteerde periode. Trendpijlen (↑ / ↓) vergelijken elk cijfer met de overeenkomstige vorige periode:</p>
         <div class="card-grid">
           <div class="info-card">
             <div class="card-title">Totale gebeurtenissen</div>
@@ -378,13 +355,57 @@
 
         <h3 class="sub-heading">Grafieken</h3>
         <ul>
-          <li><strong>Intensiteit</strong> — dagelijks gewogen gemiddelde met een rollend 7-daags venster.</li>
-          <li><strong>Uren</strong> — rollende 7-daagse totaal van aanvalduur in uren.</li>
-          <li><strong>Aanvalaantal</strong> — rollende 30-daagse totaal van gebeurtenissen.</li>
+          <li><strong>Trendgrafiek</strong> — aantal gebeurtenissen per tijdseenheid (dagelijks voor 7/30/90 dagen, wekelijks voor 1 jaar, maandelijks voor Alle tijd).</li>
+          <li><strong>Weekdag-heatmap</strong> — toont op welke weekdagen je hoofdpijnen het vaakst optreden.</li>
         </ul>
 
-        <h3 class="sub-heading">Gebeurtenistype &amp; triggeranalyse</h3>
-        <p>Een uitsplitsing van gebeurtenissen naar type (Hoofdpijn vs. Migraine) en een lijst van je meest voorkomende triggers voor de geselecteerde periode worden onder de grafieken weergegeven.</p>
+        <h3 class="sub-heading">Gebeurtenistype &amp; triggers</h3>
+        <p>Een gestapeld staafdiagram toont de verdeling tussen gebeurtenistypes (Hoofdpijn / Ernstige hoofdpijn / Migraine / Ernstige migraine) met aantallen en percentages. Eronder toont een horizontaal staafdiagram je meest voorkomende triggers voor de geselecteerde periode.</p>
+      </section>
+
+      <!-- ─ Correlaties ─ -->
+      <section class="doc-section" id="correlaties">
+        <h2 class="section-heading">Correlaties</h2>
+        <p>Het tabblad Correlaties analyseert je Health Connect-gegevens en zoekt naar negen op bewijs gebaseerde patronen die vaak voorafgaan aan hoofdpijn- en migraineaanvallen. Het kijkt terug over de afgelopen 90 dagen.</p>
+
+        <div class="note">
+          <strong>Premiumfunctie.</strong> Het tabblad Correlaties vereist Heda Premium. Het vereist ook Health Connect-machtigingen voor slaap-, HRV- en stappengegevens. Zie het gedeelte <a href="#health-connect">Health Connect</a> voor installatiesstappen.
+        </div>
+
+        <h3 class="sub-heading">Jouw basiswaarden</h3>
+        <p>Een basiswaardenkaart bovenaan toont je 14-daagse mediaanwaarden voor elke gezondheidsmaatstaf. "—" wordt weergegeven voor maatstaven zonder voldoende gegevens.</p>
+        <ul>
+          <li><strong>Slaap</strong> — mediaan totale nachtelijke slaapduur</li>
+          <li><strong>HRV</strong> — mediaan hartslagvariabiliteit (ms)</li>
+          <li><strong>Rusthartslag</strong> — mediaan rusthartslag (slagen/min)</li>
+          <li><strong>Stappen</strong> — mediaan dagelijks stappenaantal</li>
+          <li><strong>Beweging</strong> — mediaan dagelijkse actieve minuten</li>
+          <li><strong>Diepe slaap</strong> — mediaan nachtelijke diepe slaapduur</li>
+          <li><strong>REM-slaap</strong> — mediaan nachtelijke REM-slaapduur</li>
+          <li><strong>Wakker tijdens slaap</strong> — mediaan waktijd binnen slaaperiodes</li>
+        </ul>
+
+        <h3 class="sub-heading">Gedetecteerde patronen</h3>
+        <p>Heda controleert negen op bewijs gebaseerde patronen voor elke hoofdpijngebeurtenis. Elke bevinding toont de gemeten waarde en de drempel die werd overschreden — bijvoorbeeld: <em>"Sliep 5 u 30 min voor deze gebeurtenis (drempel: 7 u)"</em>.</p>
+
+        <ul class="feature-list">
+          <li><strong>Korte slaap</strong> — totale slaapduur de nacht ervoor was minder dan 7 uur (instelbaar via Instellingen → Geavanceerd).</li>
+          <li><strong>Onregelmatig slaapschema</strong> — slaaptijden varieerden meer dan 120 minuten (standaardafwijking) gedurende de voorgaande 7 dagen.</li>
+          <li><strong>Laag stappenaantal</strong> — minder dan 3 000 stappen de dag voor de gebeurtenis (instelbaar).</li>
+          <li><strong>HRV-daling</strong> — HRV daalde onder 30 ms of onder 80% van je persoonlijke 14-daagse basislijn.</li>
+          <li><strong>Verhoogde rusthartslag</strong> — rusthartslag was de dag voor de gebeurtenis boven je 14-daagse mediaan.</li>
+          <li><strong>Bewegingspiek</strong> — actieve minuten waren de dag ervoor ongewoon hoog vergeleken met je 14-daagse mediaan.</li>
+          <li><strong>Weinig diepe slaap</strong> — diepe slaap was de nacht ervoor aanzienlijk onder je 14-daagse mediaan.</li>
+          <li><strong>Weinig REM-slaap</strong> — REM-slaap was de nacht ervoor aanzienlijk onder je 14-daagse mediaan.</li>
+          <li><strong>Gefragmenteerde slaap</strong> — waktijd binnen slaaperiodes was ongewoon hoog ten opzichte van de totale slaap en je basislijn.</li>
+        </ul>
+
+        <h3 class="sub-heading">Aanbevelingen</h3>
+        <p>Op basis van de gedetecteerde patronen genereert Heda gepersonaliseerde aanbevelingen gerangschikt op prioriteit (Hoog / Gemiddeld / Laag). Voorbeelden zijn het verbeteren van slaapduuur of -regelmaat, meer dagelijkse activiteit of het beheren van stress en herstel.</p>
+
+        <div class="warning">
+          <strong>Geen medisch advies.</strong> Gedetecteerde patronen zijn correlaties, geen diagnoses. Raadpleeg altijd een zorgverlener voor medisch advies over je hoofdpijn.
+        </div>
       </section>
 
       <!-- ─ Rapporten ─ -->

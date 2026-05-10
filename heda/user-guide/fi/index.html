@@ -58,7 +58,10 @@
           </ul></li>
           <li><a href="#muokkaus">Muokkaus ja poisto</a></li>
           <li><a href="#analyysi">Analyysi</a></li>
-          <li><a href="#tilastot">Tilastot</a></li>
+          <li class="toc-sub"><ul class="toc-list">
+            <li><a href="#tilastot">Tilastot</a></li>
+            <li><a href="#korrelaatiot">Korrelaatiot</a></li>
+          </ul></li>
           <li><a href="#raportit">Raportit</a></li>
           <li><a href="#asetukset">Asetukset</a></li>
           <li><a href="#tietosuoja">Tietosuoja ja tiedot</a></li>
@@ -108,7 +111,7 @@
           </div>
           <div class="info-card">
             <div class="card-title">Analyysi</div>
-            <div class="card-body">Havaitut kaavat ja henkilökohtaiset suositukset Health Connect -datan pohjalta.</div>
+            <div class="card-body">Tilastot ja trendikuvaajat kaikille käyttäjille. Korrelaatiot (premium) tunnistaa kaavoja Health Connect -datan ja päänsärkytapahtumien välillä.</div>
           </div>
           <div class="info-card">
             <div class="card-title">Raportit</div>
@@ -300,51 +303,24 @@
       <!-- ─ Analyysi ─ -->
       <section class="doc-section" id="analyysi">
         <h2 class="section-heading">Analyysi</h2>
-        <p>Analyysi-välilehti näyttää mahdolliset korrelaatiot päänsärkykirjaustesi ja Health Connect -päiväterveystietojesi välillä. Se tarkastelee viimeisiä 90 päivää.</p>
+        <p>Analyysi-näytöllä on kaksi välilehteä yläosassa: <strong>Tilastot</strong> ja <strong>Korrelaatiot</strong>. Tilastot ovat käytettävissä kaikille käyttäjille. Korrelaatiot on premium-ominaisuus, joka vaatii myös Health Connect -yhteyden.</p>
 
-        <div class="note">
-          <strong>Vaatii Health Connectin.</strong> Yhdistä Heda Google Health Connectiin kohdassa <strong>Asetukset → Health Connect</strong> ottaaksesi tämän näytön käyttöön. Katso asennusohjeet <a href="#health-connect">Health Connect</a> -osiosta.
-        </div>
-
-        <h3 class="sub-heading">Perusarvosi</h3>
-        <p>Yläosan perustasokortissa näkyvät keskiarvosi viimeiseltä 14 päivältä:</p>
-        <ul>
-          <li><strong>Uni</strong> — keskimääräinen yöunen kesto</li>
-          <li><strong>HRV</strong> — sydämen sykevälivaihtelu (ms)</li>
-          <li><strong>Askeleet</strong> — keskimääräinen päivittäinen askelmäärä</li>
-        </ul>
-
-        <h3 class="sub-heading">Havaitut kaavat</h3>
-        <p>Heda etsii neljää näyttöön perustuvaa kaavaa, jotka yleensä edeltävät päänsärky- ja migreenikohauksia:</p>
-
-        <ul class="feature-list">
-          <li><strong>Lyhyt uni</strong> — nukuit alle asetetun minimin ennen tätä kohtausta.</li>
-          <li><strong>Epäsäännöllinen uni</strong> — uniaikasi vaihteli merkittävästi edeltävällä viikolla.</li>
-          <li><strong>Vähäinen aktiivisuus</strong> — askelmääräsi edellisenä päivänä alitti minimikynnyksen.</li>
-          <li><strong>Alhainen HRV</strong> — HRV-arvosi laski alle peruslinjan edellisenä päivänä, mikä viittaa kohonneeseen stressiin tai riittämättömään palautumiseen.</li>
-        </ul>
-
-        <p>Jokainen havainto näyttää konkreettisen näytön: mitatun arvon ja ylitetyn kynnyksen. Esimerkiksi: <em>"Nukuit 5 t 30 min ennen tätä kohtausta (kynnys: 7 t)"</em>.</p>
-
-        <h3 class="sub-heading">Suositukset</h3>
-        <p>Havaittujen kaavojen perusteella Heda tuottaa henkilökohtaisia suosituksia prioriteetin mukaan (Korkea / Kohtalainen / Matala):</p>
-
-        <ul>
-          <li><strong>Lisää unen kestoa</strong> — pyri nukkumaan vähintään 7 tuntia yöllä.</li>
-          <li><strong>Ylläpidä säännöllistä unirytmiä</strong> — mene nukkumaan ±30 minuutin tarkkuudella samaan aikaan joka ilta.</li>
-          <li><strong>Lisää päivittäistä aktiivisuutta</strong> — kevyt liikunta (esim. 30 minuutin kävely) voi vähentää migreeniriskiä.</li>
-          <li><strong>Hallitse stressiä ja palautumista</strong> — alhainen HRV viittaa kohonneeseen stressiin; harkitse rentoutusharjoituksia kuten syvähengitystä tai meditaatiota.</li>
-        </ul>
-
-        <div class="warning">
-          <strong>Ei lääketieteellistä neuvontaa.</strong> Havaitut kaavat ovat korrelaatioita, eivät diagnooseja. Konsultoi aina terveydenhuollon ammattilaista päänsärkyihisi liittyvissä lääketieteellisissä kysymyksissä.
+        <div class="card-grid">
+          <div class="info-card">
+            <div class="card-title">Tilastot</div>
+            <div class="card-body">Päänsärkyjen esiintymistiheys- ja vakavuuskuvaajat valitulle ajanjaksolle. Käytettävissä kaikille käyttäjille.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Korrelaatiot</div>
+            <div class="card-body">Tunnistaa kaavoja Health Connect -datassasi, jotka saattavat edeltää päänsärkykohtauksia. Vaatii premiumin ja Health Connectin.</div>
+          </div>
         </div>
       </section>
 
       <!-- ─ Tilastot ─ -->
       <section class="doc-section" id="tilastot">
         <h2 class="section-heading">Tilastot</h2>
-        <p>Tilastot-osio on osa Analyysi-välilehteä. Se antaa yleiskatsauksen päänsärkyjen esiintymistiheydestä ja voimakkuudesta valitun ajanjakson ajalta.</p>
+        <p>Tilastot-välilehti antaa yleiskatsauksen päänsärkyjen esiintymistiheydestä ja voimakkuudesta valitun ajanjakson ajalta.</p>
 
         <h3 class="sub-heading">Aikajakson valinta</h3>
         <p>Valitse viidestä aikajaksosta:</p>
@@ -356,7 +332,8 @@
           <span class="tag">Kaikki</span>
         </div>
 
-        <h3 class="sub-heading">Yhteenvetokortit</h3>
+        <h3 class="sub-heading">Yhteenvetokortti</h3>
+        <p>Pääkortti näyttää seuraavat mittarit valitulle jaksolle. Trendi-nuolet (↑ / ↓) vertaavat lukuja edelliseen vastaavaan jaksoon:</p>
         <div class="card-grid">
           <div class="info-card">
             <div class="card-title">Tapahtumat yhteensä</div>
@@ -378,13 +355,57 @@
 
         <h3 class="sub-heading">Kaaviot</h3>
         <ul>
-          <li><strong>Voimakkuus</strong> — päivittäinen painotettu keskiarvo 7 päivän liukuvalla ikkunalla.</li>
-          <li><strong>Tunnit</strong> — kohtauskeston 7 päivän liukuva kokonaissumma tunteina.</li>
-          <li><strong>Kohtauksien lukumäärä</strong> — 30 päivän liukuva kokonaissumma tapahtumista.</li>
+          <li><strong>Trendikuvaaja</strong> — tapahtumien lukumäärä per aikajakso (päivittäinen 7/30/90 päivän jaksoilla, viikoittainen 1 vuoden jaksolla, kuukausittainen kaikki-jaksolla).</li>
+          <li><strong>Viikonpäivälämpökartta</strong> — näyttää, mihin viikonpäiviin päänsärkysi osuvat useimmin.</li>
         </ul>
 
         <h3 class="sub-heading">Tapahtumatyypit ja laukaisijat</h3>
-        <p>Kaavioiden alla näkyy erittelyt tapahtumatyypeittäin (Päänsärky vs. Migreeni) sekä luettelo yleisimmistä laukaisijoista valitulla ajanjaksolla.</p>
+        <p>Pinottu pylväskaavio näyttää jakauman tapahtumatyypeittäin (Päänsärky / Voimakas päänsärky / Migreeni / Voimakas migreeni) luvuilla ja prosenteilla. Sen alla vaakasuora pylväskaavio listaa yleisimmät laukaisijasi valitulle jaksolle.</p>
+      </section>
+
+      <!-- ─ Korrelaatiot ─ -->
+      <section class="doc-section" id="korrelaatiot">
+        <h2 class="section-heading">Korrelaatiot</h2>
+        <p>Korrelaatiot-välilehti analysoi Health Connect -dataasi ja etsii yhdeksää näyttöön perustuvaa kaavaa, jotka yleisesti edeltävät päänsärky- ja migreenikohauksia. Se tarkastelee viimeisiä 90 päivää.</p>
+
+        <div class="note">
+          <strong>Premium-ominaisuus.</strong> Korrelaatiot-välilehti vaatii Heda Premiumin. Se vaatii myös Health Connect -oikeudet uni-, HRV- ja askelmäärätietoja varten. Katso asennusohjeet <a href="#health-connect">Health Connect</a> -osiosta.
+        </div>
+
+        <h3 class="sub-heading">Perusarvosi</h3>
+        <p>Yläosan perusarvokortti näyttää 14 päivän mediaaniarvosi kullekin terveysmittarille. "—" näytetään mittareille, joista ei ole riittävästi dataa.</p>
+        <ul>
+          <li><strong>Uni</strong> — mediaaninen yöunen kokonaiskesto</li>
+          <li><strong>HRV</strong> — mediaaninen sykevälivaihtelu (ms)</li>
+          <li><strong>Leposyke</strong> — mediaaninen leposyke (lyöntiä/min)</li>
+          <li><strong>Askeleet</strong> — mediaaninen päivittäinen askelmäärä</li>
+          <li><strong>Liikunta</strong> — mediaaniset päivittäiset aktiivisuusminuutit</li>
+          <li><strong>Syvä uni</strong> — mediaaninen yöllinen syvän unen kesto</li>
+          <li><strong>REM-uni</strong> — mediaaninen yöllinen REM-unen kesto</li>
+          <li><strong>Valvominen unen aikana</strong> — mediaaninen valveaika unijaksossa</li>
+        </ul>
+
+        <h3 class="sub-heading">Havaitut kaavat</h3>
+        <p>Heda tarkistaa yhdeksän näyttöön perustuvaa kaavaa jokaisen päänsärkykohtauksen kohdalla. Jokainen havainto näyttää mitatun arvon ja ylitetyn kynnyksen — esimerkiksi: <em>"Nukuit 5 t 30 min ennen tätä kohtausta (kynnys: 7 t)"</em>.</p>
+
+        <ul class="feature-list">
+          <li><strong>Lyhyt uni</strong> — yöunen kokonaiskesto edellisenä yönä alle 7 tuntia (muokattavissa kohdassa Asetukset → Edistynyt).</li>
+          <li><strong>Epäsäännöllinen unirytmi</strong> — uniajat vaihtelivat yli 120 minuuttia (keskihajonta) edeltävien 7 päivän aikana.</li>
+          <li><strong>Vähäinen askelmäärä</strong> — alle 3 000 askelta kohtausta edeltävänä päivänä (muokattavissa).</li>
+          <li><strong>HRV-lasku</strong> — HRV laski alle 30 ms tai alle 80 % 14 päivän henkilökohtaisesta perustasostasi.</li>
+          <li><strong>Kohonnut leposyke</strong> — leposyke oli kohtausta edeltävänä päivänä 14 päivän mediaanisi yläpuolella.</li>
+          <li><strong>Liikunnan piikki</strong> — aktiivisuusminuutit olivat epätavallisen korkeat verrattuna 14 päivän mediaaniisi kohtausta edeltävänä päivänä.</li>
+          <li><strong>Vähäinen syvä uni</strong> — syvä uni oli selvästi alle 14 päivän mediaanisi edellisenä yönä.</li>
+          <li><strong>Vähäinen REM-uni</strong> — REM-uni oli selvästi alle 14 päivän mediaanisi edellisenä yönä.</li>
+          <li><strong>Katkonainen uni</strong> — valveaika unijaksossa oli epätavallisen korkea suhteessa unen kokonaiskestoon ja perustasoon.</li>
+        </ul>
+
+        <h3 class="sub-heading">Suositukset</h3>
+        <p>Havaittujen kaavojen perusteella Heda tuottaa yksilöllisiä suosituksia prioriteetin mukaan (Korkea / Kohtalainen / Matala). Esimerkkejä: unen keston tai säännöllisyyden parantaminen, päivittäisen aktiivisuuden lisääminen tai stressin ja palautumisen hallinta.</p>
+
+        <div class="warning">
+          <strong>Ei lääketieteellistä neuvontaa.</strong> Havaitut kaavat ovat korrelaatioita, eivät diagnooseja. Konsultoi aina terveydenhuollon ammattilaista päänsärkyihisi liittyvissä lääketieteellisissä kysymyksissä.
+        </div>
       </section>
 
       <!-- ─ Raportit ─ -->

@@ -58,7 +58,10 @@
           </ul></li>
           <li><a href="#modification">Modifier &amp; supprimer</a></li>
           <li><a href="#analyse">Analyse</a></li>
-          <li><a href="#statistiques">Statistiques</a></li>
+          <li class="toc-sub"><ul class="toc-list">
+            <li><a href="#statistiques">Statistiques</a></li>
+            <li><a href="#correlations">Corrélations</a></li>
+          </ul></li>
           <li><a href="#rapports">Rapports</a></li>
           <li><a href="#parametres">Paramètres</a></li>
           <li><a href="#confidentialite">Confidentialité &amp; Données</a></li>
@@ -108,7 +111,7 @@
           </div>
           <div class="info-card">
             <div class="card-title">Analyse</div>
-            <div class="card-body">Schémas détectés et recommandations personnalisées basés sur vos données Health Connect.</div>
+            <div class="card-body">Statistiques et graphiques de tendances pour tous les utilisateurs. Corrélations (premium) détecte des schémas entre vos données Health Connect et vos crises de céphalées.</div>
           </div>
           <div class="info-card">
             <div class="card-title">Rapports</div>
@@ -300,51 +303,24 @@
       <!-- ─ Analyse ─ -->
       <section class="doc-section" id="analyse">
         <h2 class="section-heading">Analyse</h2>
-        <p>L'onglet Analyse affiche les corrélations possibles entre vos événements de céphalées et vos mesures de santé quotidiennes issues de Health Connect. Il remonte sur les 90 derniers jours.</p>
+        <p>L'écran Analyse comporte deux onglets en haut : <strong>Statistiques</strong> et <strong>Corrélations</strong>. Statistiques est disponible pour tous les utilisateurs. Corrélations est une fonctionnalité premium qui nécessite également une connexion Health Connect.</p>
 
-        <div class="note">
-          <strong>Nécessite Health Connect.</strong> Connectez Heda à Google Health Connect dans <strong>Paramètres → Health Connect</strong> pour activer cet écran. Consultez la section <a href="#health-connect">Health Connect</a> pour les étapes de configuration.
-        </div>
-
-        <h3 class="sub-heading">Votre référence de base</h3>
-        <p>Une fiche de référence en haut affiche vos valeurs moyennes des 14 derniers jours :</p>
-        <ul>
-          <li><strong>Sommeil</strong> — durée moyenne de sommeil nocturne</li>
-          <li><strong>HRV</strong> — variabilité moyenne de la fréquence cardiaque (ms)</li>
-          <li><strong>Pas</strong> — nombre moyen de pas quotidiens</li>
-        </ul>
-
-        <h3 class="sub-heading">Schémas détectés</h3>
-        <p>Heda recherche quatre schémas basés sur des preuves qui précèdent souvent les crises de céphalées et de migraine :</p>
-
-        <ul class="feature-list">
-          <li><strong>Sommeil court</strong> — vous avez dormi moins que votre minimum configuré avant cette crise.</li>
-          <li><strong>Horaires de sommeil irréguliers</strong> — vos horaires de sommeil ont sensiblement varié au cours de la semaine précédente.</li>
-          <li><strong>Faible activité</strong> — votre nombre de pas la veille était inférieur au seuil minimal.</li>
-          <li><strong>HRV bas</strong> — votre HRV est tombé sous la valeur de référence la veille, ce qui suggère un stress élevé ou une récupération insuffisante.</li>
-        </ul>
-
-        <p>Chaque résultat montre les preuves spécifiques : la valeur mesurée et le seuil franchi. Par exemple : <em>« A dormi 5 h 30 min avant cet événement (seuil : 7 h) »</em>.</p>
-
-        <h3 class="sub-heading">Recommandations</h3>
-        <p>Sur la base des schémas détectés, Heda génère des recommandations personnalisées classées par priorité (Haute / Moyenne / Basse) :</p>
-
-        <ul>
-          <li><strong>Augmenter la durée du sommeil</strong> — visez au moins 7 heures par nuit.</li>
-          <li><strong>Maintenir des horaires de sommeil réguliers</strong> — couchez-vous dans un créneau de ±30 minutes chaque soir.</li>
-          <li><strong>Augmenter l'activité quotidienne</strong> — un exercice léger (ex. 30 minutes de marche) peut réduire le risque de migraine.</li>
-          <li><strong>Gérer le stress et la récupération</strong> — un HRV bas indique un stress élevé ; envisagez des exercices de respiration ou la méditation.</li>
-        </ul>
-
-        <div class="warning">
-          <strong>Pas un conseil médical.</strong> Les schémas détectés sont des corrélations, pas des diagnostics. Consultez toujours un professionnel de santé pour un avis médical concernant vos maux de tête.
+        <div class="card-grid">
+          <div class="info-card">
+            <div class="card-title">Statistiques</div>
+            <div class="card-body">Graphiques de fréquence et de sévérité pour une période sélectionnée. Disponible pour tous les utilisateurs.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Corrélations</div>
+            <div class="card-body">Détecte des schémas dans vos données Health Connect pouvant précéder les crises de céphalées. Nécessite le premium et Health Connect.</div>
+          </div>
         </div>
       </section>
 
       <!-- ─ Statistiques ─ -->
       <section class="doc-section" id="statistiques">
         <h2 class="section-heading">Statistiques</h2>
-        <p>La section Statistiques fait partie de l'onglet Analyse. Elle vous donne un aperçu de la fréquence et de la sévérité de vos céphalées sur une période sélectionnée.</p>
+        <p>L'onglet Statistiques vous donne un aperçu de la fréquence et de la sévérité de vos céphalées sur une période sélectionnée.</p>
 
         <h3 class="sub-heading">Sélecteur de période</h3>
         <p>Choisissez parmi cinq périodes :</p>
@@ -356,7 +332,8 @@
           <span class="tag">Toute la période</span>
         </div>
 
-        <h3 class="sub-heading">Fiches récapitulatives</h3>
+        <h3 class="sub-heading">Fiche récapitulative</h3>
+        <p>Une fiche principale affiche les indicateurs suivants pour la période sélectionnée. Les flèches de tendance (↑ / ↓) comparent chaque chiffre à la période précédente équivalente :</p>
         <div class="card-grid">
           <div class="info-card">
             <div class="card-title">Total des événements</div>
@@ -378,13 +355,57 @@
 
         <h3 class="sub-heading">Graphiques</h3>
         <ul>
-          <li><strong>Intensité</strong> — moyenne quotidienne pondérée avec une fenêtre glissante de 7 jours.</li>
-          <li><strong>Heures</strong> — total glissant sur 7 jours de la durée des crises en heures.</li>
-          <li><strong>Nombre de crises</strong> — total glissant sur 30 jours des événements.</li>
+          <li><strong>Graphique de tendance</strong> — nombre d'événements par tranche de temps (quotidien pour 7/30/90 jours, hebdomadaire pour 1 an, mensuel pour Toute la période).</li>
+          <li><strong>Carte thermique par jour de la semaine</strong> — montre quels jours de la semaine vos céphalées surviennent le plus souvent.</li>
         </ul>
 
-        <h3 class="sub-heading">Type d'événement &amp; répartition des déclencheurs</h3>
-        <p>Une répartition des événements par type (Céphalée vs. Migraine) et une liste de vos déclencheurs les plus fréquents pour la période sélectionnée sont affichées sous les graphiques.</p>
+        <h3 class="sub-heading">Type d'événement &amp; déclencheurs</h3>
+        <p>Un graphique à barres empilées montre la répartition entre les types d'événements (Céphalée / Céphalée sévère / Migraine / Migraine sévère) avec les nombres et pourcentages. En dessous, un graphique à barres horizontales liste vos déclencheurs les plus fréquents pour la période sélectionnée.</p>
+      </section>
+
+      <!-- ─ Corrélations ─ -->
+      <section class="doc-section" id="correlations">
+        <h2 class="section-heading">Corrélations</h2>
+        <p>L'onglet Corrélations analyse vos données Health Connect et recherche neuf schémas basés sur des preuves qui précèdent souvent les crises de céphalées et de migraine. Il remonte sur les 90 derniers jours.</p>
+
+        <div class="note">
+          <strong>Fonctionnalité premium.</strong> L'onglet Corrélations nécessite Heda Premium. Il requiert également des autorisations Health Connect pour les données de sommeil, HRV et nombre de pas. Consultez la section <a href="#health-connect">Health Connect</a> pour les étapes de configuration.
+        </div>
+
+        <h3 class="sub-heading">Votre référence de base</h3>
+        <p>Une fiche de référence en haut affiche vos valeurs médianes sur 14 jours pour chaque indicateur de santé. « — » est affiché pour les indicateurs sans données suffisantes.</p>
+        <ul>
+          <li><strong>Sommeil</strong> — durée totale médiane de sommeil nocturne</li>
+          <li><strong>HRV</strong> — variabilité médiane de la fréquence cardiaque (ms)</li>
+          <li><strong>Fréquence cardiaque au repos</strong> — fréquence cardiaque médiane au repos (bpm)</li>
+          <li><strong>Pas</strong> — nombre médian de pas quotidiens</li>
+          <li><strong>Exercice</strong> — minutes actives médianes quotidiennes</li>
+          <li><strong>Sommeil profond</strong> — durée médiane de sommeil profond nocturne</li>
+          <li><strong>Sommeil paradoxal</strong> — durée médiane de sommeil paradoxal nocturne</li>
+          <li><strong>Éveillé pendant le sommeil</strong> — temps médian d'éveil dans les périodes de sommeil</li>
+        </ul>
+
+        <h3 class="sub-heading">Schémas détectés</h3>
+        <p>Heda vérifie neuf schémas basés sur des preuves pour chaque événement de céphalée. Chaque résultat montre la valeur mesurée et le seuil franchi — par exemple : <em>« A dormi 5 h 30 min avant cet événement (seuil : 7 h) »</em>.</p>
+
+        <ul class="feature-list">
+          <li><strong>Sommeil court</strong> — la durée totale de sommeil la nuit précédente était inférieure à 7 heures (configurable dans Paramètres → Avancé).</li>
+          <li><strong>Horaires de sommeil irréguliers</strong> — les horaires de sommeil ont varié de plus de 120 minutes (écart-type) au cours des 7 jours précédents.</li>
+          <li><strong>Faible nombre de pas</strong> — moins de 3 000 pas la veille de l'événement (configurable).</li>
+          <li><strong>Chute de HRV</strong> — le HRV est tombé sous 30 ms ou sous 80 % de votre référence personnelle sur 14 jours.</li>
+          <li><strong>Fréquence cardiaque au repos élevée</strong> — la fréquence cardiaque au repos était supérieure à votre médiane sur 14 jours la veille de l'événement.</li>
+          <li><strong>Pic d'exercice</strong> — les minutes actives étaient inhabituellement élevées par rapport à votre médiane sur 14 jours la veille.</li>
+          <li><strong>Peu de sommeil profond</strong> — le sommeil profond était nettement inférieur à votre médiane sur 14 jours la nuit précédente.</li>
+          <li><strong>Peu de sommeil paradoxal</strong> — le sommeil paradoxal était nettement inférieur à votre médiane sur 14 jours la nuit précédente.</li>
+          <li><strong>Sommeil fragmenté</strong> — le temps d'éveil dans les périodes de sommeil était inhabituellement élevé par rapport au sommeil total et à votre référence.</li>
+        </ul>
+
+        <h3 class="sub-heading">Recommandations</h3>
+        <p>Sur la base des schémas détectés, Heda génère des recommandations personnalisées classées par priorité (Haute / Moyenne / Basse). Les exemples incluent l'amélioration de la durée ou de la régularité du sommeil, l'augmentation de l'activité quotidienne ou la gestion du stress et de la récupération.</p>
+
+        <div class="warning">
+          <strong>Pas un conseil médical.</strong> Les schémas détectés sont des corrélations, pas des diagnostics. Consultez toujours un professionnel de santé pour un avis médical concernant vos maux de tête.
+        </div>
       </section>
 
       <!-- ─ Rapports ─ -->

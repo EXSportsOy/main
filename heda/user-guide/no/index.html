@@ -58,7 +58,10 @@
           </ul></li>
           <li><a href="#redigering">Redigere &amp; slette</a></li>
           <li><a href="#analyse">Analyse</a></li>
-          <li><a href="#statistikk">Statistikk</a></li>
+          <li class="toc-sub"><ul class="toc-list">
+            <li><a href="#statistikk">Statistikk</a></li>
+            <li><a href="#korrelasjoner">Korrelasjoner</a></li>
+          </ul></li>
           <li><a href="#rapporter">Rapporter</a></li>
           <li><a href="#innstillinger">Innstillinger</a></li>
           <li><a href="#personvern">Personvern &amp; Data</a></li>
@@ -108,7 +111,7 @@
           </div>
           <div class="info-card">
             <div class="card-title">Analyse</div>
-            <div class="card-body">Oppdagede mønstre og personlige anbefalinger basert på Health Connect-dataene dine.</div>
+            <div class="card-body">Statistikk og trenddiagrammer for alle brukere. Korrelasjoner (premium) oppdager mønstre mellom Health Connect-dataene dine og hodepinehendelser.</div>
           </div>
           <div class="info-card">
             <div class="card-title">Rapporter</div>
@@ -300,51 +303,24 @@
       <!-- ─ Analyse ─ -->
       <section class="doc-section" id="analyse">
         <h2 class="section-heading">Analyse</h2>
-        <p>Analyse-fanen viser mulige korrelasjoner mellom hodepinehendelsene dine og de daglige helsemålingene dine fra Health Connect. Den ser tilbake over de siste 90 dagene.</p>
+        <p>Analyse-skjermen har to faner øverst: <strong>Statistikk</strong> og <strong>Korrelasjoner</strong>. Statistikk er tilgjengelig for alle brukere. Korrelasjoner er en premiumfunksjon som også krever en Health Connect-tilkobling.</p>
 
-        <div class="note">
-          <strong>Krever Health Connect.</strong> Koble Heda til Google Health Connect under <strong>Innstillinger → Health Connect</strong> for å aktivere denne skjermen. Se avsnittet <a href="#health-connect">Health Connect</a> for oppsettstrinn.
-        </div>
-
-        <h3 class="sub-heading">Din grunnlinje</h3>
-        <p>Et grunnlinjekort øverst viser gjennomsnittsverdiene dine for de siste 14 dagene:</p>
-        <ul>
-          <li><strong>Søvn</strong> — gjennomsnittlig nattlig søvnvarighet</li>
-          <li><strong>HRV</strong> — gjennomsnittlig hjertefrekvensvariabilitet (ms)</li>
-          <li><strong>Skritt</strong> — gjennomsnittlig daglig skritttelling</li>
-        </ul>
-
-        <h3 class="sub-heading">Oppdagede mønstre</h3>
-        <p>Heda ser etter fire evidensbaserte mønstre som ofte forekommer før hodepine- og migrene-anfall:</p>
-
-        <ul class="feature-list">
-          <li><strong>Kort søvn</strong> — du sov mindre enn din konfigurerte minimumsnattsøvn før dette anfallet.</li>
-          <li><strong>Uregelmessig søvnplan</strong> — søvntimingen din varierte betydelig i løpet av den foregående uken.</li>
-          <li><strong>Lav aktivitet</strong> — skritttellingen din dagen før var under minimumsgrensen.</li>
-          <li><strong>Lavt HRV</strong> — HRV-en din falt under grunnlinjen dagen før, noe som tyder på forhøyet stress eller dårlig restitusjonen.</li>
-        </ul>
-
-        <p>Hvert funn viser de spesifikke bevisene: den målte verdien og terskelen den krysset. For eksempel: <em>"Sov 5 t 30 min før denne hendelsen (terskel: 7 t)"</em>.</p>
-
-        <h3 class="sub-heading">Anbefalinger</h3>
-        <p>Basert på oppdagede mønstre genererer Heda personlige anbefalinger rangert etter prioritet (Høy / Middels / Lav):</p>
-
-        <ul>
-          <li><strong>Øk søvnvarigheten</strong> — sikt mot minst 7 timer per natt.</li>
-          <li><strong>Oppretthold en regelmessig søvnplan</strong> — legg deg innenfor ±30 minutter av samme tid hver kveld.</li>
-          <li><strong>Øk daglig aktivitet</strong> — lett trening (f.eks. en 30-minutters spasertur) kan redusere migrenerisikoen.</li>
-          <li><strong>Håndter stress og restitusjon</strong> — lavt HRV indikerer forhøyet stress; vurder pusteøvelser eller meditasjon.</li>
-        </ul>
-
-        <div class="warning">
-          <strong>Ikke medisinsk råd.</strong> Oppdagede mønstre er korrelasjoner, ikke diagnoser. Konsulter alltid en helsepersonell for medisinsk veiledning om hodepinen din.
+        <div class="card-grid">
+          <div class="info-card">
+            <div class="card-title">Statistikk</div>
+            <div class="card-body">Frekvens- og alvorlighetsdiagrammer for en valgt tidsperiode. Tilgjengelig for alle brukere.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Korrelasjoner</div>
+            <div class="card-body">Oppdager mønstre i Health Connect-dataene dine som kan forutgå hodepineanfall. Krever premium og Health Connect.</div>
+          </div>
         </div>
       </section>
 
       <!-- ─ Statistikk ─ -->
       <section class="doc-section" id="statistikk">
         <h2 class="section-heading">Statistikk</h2>
-        <p>Statistikk-seksjonen er en del av Analyse-fanen. Den gir deg en oversikt over hodepinefrekvensen og alvorlighetsgraden over en valgt tidsperiode.</p>
+        <p>Statistikk-fanen gir deg en oversikt over hodepinefrekvensen og alvorlighetsgraden over en valgt tidsperiode.</p>
 
         <h3 class="sub-heading">Periodevalger</h3>
         <p>Velg mellom fem tidsperioder:</p>
@@ -357,6 +333,7 @@
         </div>
 
         <h3 class="sub-heading">Oppsummeringskort</h3>
+        <p>Et hovedkort viser følgende målinger for den valgte perioden. Trendpiler (↑ / ↓) sammenligner hver verdi med tilsvarende foregående periode:</p>
         <div class="card-grid">
           <div class="info-card">
             <div class="card-title">Totalt antall hendelser</div>
@@ -378,13 +355,57 @@
 
         <h3 class="sub-heading">Diagrammer</h3>
         <ul>
-          <li><strong>Intensitet</strong> — daglig vektet gjennomsnitt med et rullende 7-dagers vindu.</li>
-          <li><strong>Timer</strong> — rullende 7-dagers total av anfallsvarighet i timer.</li>
-          <li><strong>Anfallsantall</strong> — rullende 30-dagers total av hendelser.</li>
+          <li><strong>Trenddiagram</strong> — antall hendelser per tidsenhet (daglig for 7/30/90 dager, ukentlig for 1 år, månedlig for All tid).</li>
+          <li><strong>Ukedagsvarmekart</strong> — viser hvilke ukedager hodepinene dine oftest oppstår.</li>
         </ul>
 
-        <h3 class="sub-heading">Hendelsestype &amp; utløserfordeling</h3>
-        <p>En fordeling av hendelser etter type (Hodepine vs. Migrene) og en liste over dine vanligste utløsere for den valgte perioden vises under diagrammene.</p>
+        <h3 class="sub-heading">Hendelsestype &amp; utløsere</h3>
+        <p>Et stablet søylediagram viser fordelingen mellom hendelsestyper (Hodepine / Alvorlig hodepine / Migrene / Alvorlig migrene) med antall og prosenter. Under det viser et horisontalt søylediagram dine vanligste utløsere for den valgte perioden.</p>
+      </section>
+
+      <!-- ─ Korrelasjoner ─ -->
+      <section class="doc-section" id="korrelasjoner">
+        <h2 class="section-heading">Korrelasjoner</h2>
+        <p>Korrelasjoner-fanen analyserer Health Connect-dataene dine og ser etter ni evidensbaserte mønstre som ofte forekommer før hodepine- og migrene-anfall. Den ser tilbake over de siste 90 dagene.</p>
+
+        <div class="note">
+          <strong>Premiumfunksjon.</strong> Korrelasjoner-fanen krever Heda Premium. Den krever også Health Connect-tillatelser for søvn-, HRV- og skrittellingdata. Se avsnittet <a href="#health-connect">Health Connect</a> for oppsettstrinn.
+        </div>
+
+        <h3 class="sub-heading">Din grunnlinje</h3>
+        <p>Et grunnlinjekort øverst viser dine 14-dagers medianverdier for hvert helsemål. "—" vises for mål uten tilstrekkelig data.</p>
+        <ul>
+          <li><strong>Søvn</strong> — median nattlig total søvnvarighet</li>
+          <li><strong>HRV</strong> — median hjertefrekvensvariabilitet (ms)</li>
+          <li><strong>Hvilepuls</strong> — median hvilepuls (slag/min)</li>
+          <li><strong>Skritt</strong> — median daglig skritttelling</li>
+          <li><strong>Trening</strong> — median daglige aktive minutter</li>
+          <li><strong>Dyp søvn</strong> — median nattlig dyp søvnvarighet</li>
+          <li><strong>REM-søvn</strong> — median nattlig REM-søvnvarighet</li>
+          <li><strong>Våken under søvn</strong> — median våken tid i søvnøkter</li>
+        </ul>
+
+        <h3 class="sub-heading">Oppdagede mønstre</h3>
+        <p>Heda sjekker ni evidensbaserte mønstre for hver hodepinehendelse. Hvert funn viser den målte verdien og terskelen den krysset — for eksempel: <em>"Sov 5 t 30 min før denne hendelsen (terskel: 7 t)"</em>.</p>
+
+        <ul class="feature-list">
+          <li><strong>Kort søvn</strong> — total søvntid natten før var under 7 timer (konfigurerbar under Innstillinger → Avansert).</li>
+          <li><strong>Uregelmessig søvnplan</strong> — søvntimingen varierte mer enn 120 minutter (standardavvik) de foregående 7 dagene.</li>
+          <li><strong>Lavt skritttall</strong> — færre enn 3 000 skritt dagen før hendelsen (konfigurerbar).</li>
+          <li><strong>HRV-fall</strong> — HRV falt under 30 ms eller under 80 % av din personlige 14-dagers grunnlinje.</li>
+          <li><strong>Forhøyet hvilepuls</strong> — hvilepulsen var over din 14-dagers median dagen før hendelsen.</li>
+          <li><strong>Treningstopp</strong> — aktive minutter var uvanlig høye sammenlignet med din 14-dagers median dagen før.</li>
+          <li><strong>Lite dyp søvn</strong> — dyp søvn var godt under din 14-dagers median natten før.</li>
+          <li><strong>Lite REM-søvn</strong> — REM-søvn var godt under din 14-dagers median natten før.</li>
+          <li><strong>Fragmentert søvn</strong> — våken tid i søvnøkter var uvanlig høy i forhold til total søvn og din grunnlinje.</li>
+        </ul>
+
+        <h3 class="sub-heading">Anbefalinger</h3>
+        <p>Basert på oppdagede mønstre genererer Heda personlige anbefalinger rangert etter prioritet (Høy / Middels / Lav). Eksempler inkluderer å forbedre søvnlengde eller -regelmessighet, øke daglig aktivitet eller håndtere stress og restitusjon.</p>
+
+        <div class="warning">
+          <strong>Ikke medisinsk råd.</strong> Oppdagede mønstre er korrelasjoner, ikke diagnoser. Konsulter alltid en helsepersonell for medisinsk veiledning om hodepinen din.
+        </div>
       </section>
 
       <!-- ─ Rapporter ─ -->

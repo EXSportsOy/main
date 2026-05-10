@@ -58,7 +58,10 @@
           </ul></li>
           <li><a href="#edicion">Editar y eliminar</a></li>
           <li><a href="#analisis">Análisis</a></li>
-          <li><a href="#estadisticas">Estadísticas</a></li>
+          <li class="toc-sub"><ul class="toc-list">
+            <li><a href="#estadisticas">Estadísticas</a></li>
+            <li><a href="#correlaciones">Correlaciones</a></li>
+          </ul></li>
           <li><a href="#informes">Informes</a></li>
           <li><a href="#ajustes">Ajustes</a></li>
           <li><a href="#privacidad">Privacidad y datos</a></li>
@@ -108,7 +111,7 @@
           </div>
           <div class="info-card">
             <div class="card-title">Análisis</div>
-            <div class="card-body">Patrones detectados y recomendaciones personalizadas basadas en tus datos de Health Connect.</div>
+            <div class="card-body">Estadísticas y gráficas de tendencia para todos los usuarios. Correlaciones (premium) detecta patrones entre tus datos de Health Connect y tus eventos de cefalea.</div>
           </div>
           <div class="info-card">
             <div class="card-title">Informes</div>
@@ -300,51 +303,24 @@
       <!-- ─ Análisis ─ -->
       <section class="doc-section" id="analisis">
         <h2 class="section-heading">Análisis</h2>
-        <p>La pestaña Análisis muestra las posibles correlaciones entre tus eventos de cefalea y tus métricas de salud diarias de Health Connect. Examina los últimos 90 días.</p>
+        <p>La pantalla Análisis tiene dos pestañas en la parte superior: <strong>Estadísticas</strong> y <strong>Correlaciones</strong>. Estadísticas está disponible para todos los usuarios. Correlaciones es una función premium que también requiere una conexión con Health Connect.</p>
 
-        <div class="note">
-          <strong>Requiere Health Connect.</strong> Conecta Heda a Google Health Connect en <strong>Ajustes → Health Connect</strong> para activar esta pantalla. Consulta la sección <a href="#health-connect">Health Connect</a> para los pasos de configuración.
-        </div>
-
-        <h3 class="sub-heading">Tu línea base</h3>
-        <p>Una tarjeta de línea base en la parte superior muestra tus valores medios de los últimos 14 días:</p>
-        <ul>
-          <li><strong>Sueño</strong> — duración media del sueño nocturno</li>
-          <li><strong>HRV</strong> — variabilidad media de la frecuencia cardíaca (ms)</li>
-          <li><strong>Pasos</strong> — número medio diario de pasos</li>
-        </ul>
-
-        <h3 class="sub-heading">Patrones detectados</h3>
-        <p>Heda busca cuatro patrones basados en evidencia que suelen preceder a los ataques de cefalea y migraña:</p>
-
-        <ul class="feature-list">
-          <li><strong>Sueño corto</strong> — dormiste menos que tu mínimo configurado antes de este ataque.</li>
-          <li><strong>Horario de sueño irregular</strong> — tus horarios de sueño variaron significativamente durante la semana anterior.</li>
-          <li><strong>Actividad baja</strong> — tu conteo de pasos el día anterior estaba por debajo del umbral mínimo.</li>
-          <li><strong>HRV bajo</strong> — tu HRV cayó por debajo de la línea base el día anterior, lo que sugiere estrés elevado o recuperación insuficiente.</li>
-        </ul>
-
-        <p>Cada hallazgo muestra la evidencia específica: el valor medido y el umbral que se cruzó. Por ejemplo: <em>«Durmió 5 h 30 min antes de este evento (umbral: 7 h)»</em>.</p>
-
-        <h3 class="sub-heading">Recomendaciones</h3>
-        <p>Basándose en los patrones detectados, Heda genera recomendaciones personalizadas ordenadas por prioridad (Alta / Media / Baja):</p>
-
-        <ul>
-          <li><strong>Aumentar la duración del sueño</strong> — procura dormir al menos 7 horas por noche.</li>
-          <li><strong>Mantener un horario de sueño regular</strong> — acuéstate dentro de ±30 minutos de la misma hora cada noche.</li>
-          <li><strong>Aumentar la actividad diaria</strong> — el ejercicio ligero (p. ej. una caminata de 30 minutos) puede reducir el riesgo de migraña.</li>
-          <li><strong>Gestionar el estrés y la recuperación</strong> — un HRV bajo indica estrés elevado; considera ejercicios de respiración o meditación.</li>
-        </ul>
-
-        <div class="warning">
-          <strong>No es consejo médico.</strong> Los patrones detectados son correlaciones, no diagnósticos. Consulta siempre a un profesional de la salud para orientación médica sobre tus dolores de cabeza.
+        <div class="card-grid">
+          <div class="info-card">
+            <div class="card-title">Estadísticas</div>
+            <div class="card-body">Gráficas de frecuencia y gravedad para un período seleccionado. Disponible para todos los usuarios.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Correlaciones</div>
+            <div class="card-body">Detecta patrones en tus datos de Health Connect que pueden preceder a los ataques de cefalea. Requiere premium y Health Connect.</div>
+          </div>
         </div>
       </section>
 
       <!-- ─ Estadísticas ─ -->
       <section class="doc-section" id="estadisticas">
         <h2 class="section-heading">Estadísticas</h2>
-        <p>La sección Estadísticas forma parte de la pestaña Análisis. Te da una visión general de la frecuencia y gravedad de tus cefaleas durante un período seleccionado.</p>
+        <p>La pestaña Estadísticas te da una visión general de la frecuencia y gravedad de tus cefaleas durante un período seleccionado.</p>
 
         <h3 class="sub-heading">Selector de período</h3>
         <p>Elige entre cinco períodos:</p>
@@ -356,7 +332,8 @@
           <span class="tag">Todo el tiempo</span>
         </div>
 
-        <h3 class="sub-heading">Tarjetas de resumen</h3>
+        <h3 class="sub-heading">Tarjeta de resumen</h3>
+        <p>Una tarjeta principal muestra las siguientes métricas para el período seleccionado. Las flechas de tendencia (↑ / ↓) comparan cada cifra con el período anterior equivalente:</p>
         <div class="card-grid">
           <div class="info-card">
             <div class="card-title">Total de eventos</div>
@@ -378,13 +355,57 @@
 
         <h3 class="sub-heading">Gráficas</h3>
         <ul>
-          <li><strong>Intensidad</strong> — media ponderada diaria con una ventana deslizante de 7 días.</li>
-          <li><strong>Horas</strong> — total deslizante de 7 días de la duración de los ataques en horas.</li>
-          <li><strong>Número de ataques</strong> — total deslizante de 30 días de eventos.</li>
+          <li><strong>Gráfica de tendencia</strong> — número de eventos por franja temporal (diario para 7/30/90 días, semanal para 1 año, mensual para Todo el tiempo).</li>
+          <li><strong>Mapa de calor por día de la semana</strong> — muestra en qué días de la semana suelen producirse más tus cefaleas.</li>
         </ul>
 
-        <h3 class="sub-heading">Tipo de evento y desglose por desencadenante</h3>
-        <p>Un desglose de eventos por tipo (Dolor de cabeza vs. Migraña) y una lista de tus desencadenantes más frecuentes para el período seleccionado se muestran debajo de las gráficas.</p>
+        <h3 class="sub-heading">Tipo de evento y desencadenantes</h3>
+        <p>Un gráfico de barras apiladas muestra la distribución entre tipos de evento (Dolor de cabeza / Dolor de cabeza grave / Migraña / Migraña grave) con conteos y porcentajes. Debajo, un gráfico de barras horizontal lista tus desencadenantes más frecuentes para el período seleccionado.</p>
+      </section>
+
+      <!-- ─ Correlaciones ─ -->
+      <section class="doc-section" id="correlaciones">
+        <h2 class="section-heading">Correlaciones</h2>
+        <p>La pestaña Correlaciones analiza tus datos de Health Connect y busca nueve patrones basados en evidencia que suelen preceder a los ataques de cefalea y migraña. Examina los últimos 90 días.</p>
+
+        <div class="note">
+          <strong>Función premium.</strong> La pestaña Correlaciones requiere Heda Premium. También requiere permisos de Health Connect para datos de sueño, HRV y recuento de pasos. Consulta la sección <a href="#health-connect">Health Connect</a> para los pasos de configuración.
+        </div>
+
+        <h3 class="sub-heading">Tu línea base</h3>
+        <p>Una tarjeta de línea base en la parte superior muestra tus valores medianos de 14 días para cada métrica de salud. «—» se muestra para las métricas sin datos suficientes.</p>
+        <ul>
+          <li><strong>Sueño</strong> — duración total mediana del sueño nocturno</li>
+          <li><strong>HRV</strong> — variabilidad mediana de la frecuencia cardíaca (ms)</li>
+          <li><strong>Frecuencia cardíaca en reposo</strong> — frecuencia cardíaca mediana en reposo (lpm)</li>
+          <li><strong>Pasos</strong> — número mediano diario de pasos</li>
+          <li><strong>Ejercicio</strong> — minutos activos medianos diarios</li>
+          <li><strong>Sueño profundo</strong> — duración mediana del sueño profundo nocturno</li>
+          <li><strong>Sueño REM</strong> — duración mediana del sueño REM nocturno</li>
+          <li><strong>Despierto durante el sueño</strong> — tiempo mediano de vigilia en los períodos de sueño</li>
+        </ul>
+
+        <h3 class="sub-heading">Patrones detectados</h3>
+        <p>Heda comprueba nueve patrones basados en evidencia para cada evento de cefalea. Cada hallazgo muestra el valor medido y el umbral que se cruzó — por ejemplo: <em>«Durmió 5 h 30 min antes de este evento (umbral: 7 h)»</em>.</p>
+
+        <ul class="feature-list">
+          <li><strong>Sueño corto</strong> — la duración total del sueño la noche anterior fue inferior a 7 horas (configurable en Ajustes → Avanzado).</li>
+          <li><strong>Horario de sueño irregular</strong> — los horarios de sueño variaron más de 120 minutos (desviación estándar) durante los 7 días anteriores.</li>
+          <li><strong>Recuento de pasos bajo</strong> — menos de 3 000 pasos el día anterior al evento (configurable).</li>
+          <li><strong>Caída de HRV</strong> — el HRV cayó por debajo de 30 ms o por debajo del 80 % de tu línea base personal de 14 días.</li>
+          <li><strong>Frecuencia cardíaca en reposo elevada</strong> — la frecuencia cardíaca en reposo estaba por encima de tu mediana de 14 días el día anterior al evento.</li>
+          <li><strong>Pico de ejercicio</strong> — los minutos activos fueron inusualmente altos en comparación con tu mediana de 14 días el día anterior.</li>
+          <li><strong>Poco sueño profundo</strong> — el sueño profundo estuvo muy por debajo de tu mediana de 14 días la noche anterior.</li>
+          <li><strong>Poco sueño REM</strong> — el sueño REM estuvo muy por debajo de tu mediana de 14 días la noche anterior.</li>
+          <li><strong>Sueño fragmentado</strong> — el tiempo de vigilia en los períodos de sueño fue inusualmente alto en relación con el sueño total y tu línea base.</li>
+        </ul>
+
+        <h3 class="sub-heading">Recomendaciones</h3>
+        <p>Basándose en los patrones detectados, Heda genera recomendaciones personalizadas ordenadas por prioridad (Alta / Media / Baja). Los ejemplos incluyen mejorar la duración o regularidad del sueño, aumentar la actividad diaria o gestionar el estrés y la recuperación.</p>
+
+        <div class="warning">
+          <strong>No es consejo médico.</strong> Los patrones detectados son correlaciones, no diagnósticos. Consulta siempre a un profesional de la salud para orientación médica sobre tus dolores de cabeza.
+        </div>
       </section>
 
       <!-- ─ Informes ─ -->

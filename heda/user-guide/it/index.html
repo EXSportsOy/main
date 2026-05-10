@@ -58,7 +58,10 @@
           </ul></li>
           <li><a href="#modifica">Modificare ed eliminare</a></li>
           <li><a href="#analisi">Analisi</a></li>
-          <li><a href="#statistiche">Statistiche</a></li>
+          <li class="toc-sub"><ul class="toc-list">
+            <li><a href="#statistiche">Statistiche</a></li>
+            <li><a href="#correlazioni">Correlazioni</a></li>
+          </ul></li>
           <li><a href="#rapporti">Rapporti</a></li>
           <li><a href="#impostazioni">Impostazioni</a></li>
           <li><a href="#privacy">Privacy e dati</a></li>
@@ -108,7 +111,7 @@
           </div>
           <div class="info-card">
             <div class="card-title">Analisi</div>
-            <div class="card-body">Pattern rilevati e raccomandazioni personalizzate basate sui tuoi dati di Health Connect.</div>
+            <div class="card-body">Statistiche e grafici di tendenza per tutti gli utenti. Correlazioni (premium) rileva pattern tra i tuoi dati Health Connect e gli eventi di mal di testa.</div>
           </div>
           <div class="info-card">
             <div class="card-title">Rapporti</div>
@@ -300,51 +303,24 @@
       <!-- ─ Analisi ─ -->
       <section class="doc-section" id="analisi">
         <h2 class="section-heading">Analisi</h2>
-        <p>La scheda Analisi mostra le possibili correlazioni tra i tuoi eventi di mal di testa e le tue metriche di salute giornaliere da Health Connect. Esamina gli ultimi 90 giorni.</p>
+        <p>La schermata Analisi ha due schede in cima: <strong>Statistiche</strong> e <strong>Correlazioni</strong>. Statistiche è disponibile per tutti gli utenti. Correlazioni è una funzione premium che richiede anche una connessione Health Connect.</p>
 
-        <div class="note">
-          <strong>Richiede Health Connect.</strong> Collega Heda a Google Health Connect in <strong>Impostazioni → Health Connect</strong> per attivare questa schermata. Consulta la sezione <a href="#health-connect">Health Connect</a> per i passi di configurazione.
-        </div>
-
-        <h3 class="sub-heading">La tua linea di base</h3>
-        <p>Una scheda della linea di base in cima mostra i tuoi valori medi degli ultimi 14 giorni:</p>
-        <ul>
-          <li><strong>Sonno</strong> — durata media del sonno notturno</li>
-          <li><strong>HRV</strong> — variabilità media della frequenza cardiaca (ms)</li>
-          <li><strong>Passi</strong> — numero medio giornaliero di passi</li>
-        </ul>
-
-        <h3 class="sub-heading">Pattern rilevati</h3>
-        <p>Heda cerca quattro pattern basati su evidenze che spesso precedono gli attacchi di mal di testa ed emicrania:</p>
-
-        <ul class="feature-list">
-          <li><strong>Sonno breve</strong> — hai dormito meno del tuo minimo configurato prima di questo attacco.</li>
-          <li><strong>Orario di sonno irregolare</strong> — i tuoi orari di sonno sono variati significativamente durante la settimana precedente.</li>
-          <li><strong>Attività bassa</strong> — il tuo conteggio di passi il giorno precedente era sotto la soglia minima.</li>
-          <li><strong>HRV basso</strong> — il tuo HRV è sceso sotto la linea di base il giorno precedente, suggerendo stress elevato o recupero insufficiente.</li>
-        </ul>
-
-        <p>Ogni rilevamento mostra l'evidenza specifica: il valore misurato e la soglia superata. Ad esempio: <em>«Hai dormito 5 h 30 min prima di questo evento (soglia: 7 h)»</em>.</p>
-
-        <h3 class="sub-heading">Raccomandazioni</h3>
-        <p>Sulla base dei pattern rilevati, Heda genera raccomandazioni personalizzate ordinate per priorità (Alta / Media / Bassa):</p>
-
-        <ul>
-          <li><strong>Aumentare la durata del sonno</strong> — cerca di dormire almeno 7 ore per notte.</li>
-          <li><strong>Mantenere un orario di sonno regolare</strong> — vai a letto entro ±30 minuti dalla stessa ora ogni notte.</li>
-          <li><strong>Aumentare l'attività quotidiana</strong> — l'esercizio leggero (es. una camminata di 30 minuti) può ridurre il rischio di emicrania.</li>
-          <li><strong>Gestire stress e recupero</strong> — un HRV basso indica stress elevato; considera esercizi di respirazione o meditazione.</li>
-        </ul>
-
-        <div class="warning">
-          <strong>Non è un consiglio medico.</strong> I pattern rilevati sono correlazioni, non diagnosi. Consulta sempre un professionista della salute per una guida medica sui tuoi mal di testa.
+        <div class="card-grid">
+          <div class="info-card">
+            <div class="card-title">Statistiche</div>
+            <div class="card-body">Grafici di frequenza e gravità per un periodo selezionato. Disponibile per tutti gli utenti.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Correlazioni</div>
+            <div class="card-body">Rileva pattern nei tuoi dati Health Connect che possono precedere gli attacchi di mal di testa. Richiede premium e Health Connect.</div>
+          </div>
         </div>
       </section>
 
       <!-- ─ Statistiche ─ -->
       <section class="doc-section" id="statistiche">
         <h2 class="section-heading">Statistiche</h2>
-        <p>La sezione Statistiche fa parte della scheda Analisi. Ti offre una panoramica della frequenza e della gravità dei tuoi mal di testa in un periodo selezionato.</p>
+        <p>La scheda Statistiche ti offre una panoramica della frequenza e della gravità dei tuoi mal di testa in un periodo selezionato.</p>
 
         <h3 class="sub-heading">Selettore del periodo</h3>
         <p>Scegli tra cinque periodi:</p>
@@ -356,7 +332,8 @@
           <span class="tag">Tutto il tempo</span>
         </div>
 
-        <h3 class="sub-heading">Schede di riepilogo</h3>
+        <h3 class="sub-heading">Scheda di riepilogo</h3>
+        <p>Una scheda principale mostra le seguenti metriche per il periodo selezionato. Le frecce di tendenza (↑ / ↓) confrontano ogni valore con il periodo precedente equivalente:</p>
         <div class="card-grid">
           <div class="info-card">
             <div class="card-title">Totale eventi</div>
@@ -378,13 +355,57 @@
 
         <h3 class="sub-heading">Grafici</h3>
         <ul>
-          <li><strong>Intensità</strong> — media ponderata giornaliera con una finestra scorrevole di 7 giorni.</li>
-          <li><strong>Ore</strong> — totale scorrevole di 7 giorni della durata degli attacchi in ore.</li>
-          <li><strong>Numero di attacchi</strong> — totale scorrevole di 30 giorni degli eventi.</li>
+          <li><strong>Grafico di tendenza</strong> — numero di eventi per intervallo di tempo (giornaliero per 7/30/90 giorni, settimanale per 1 anno, mensile per Tutto il tempo).</li>
+          <li><strong>Mappa termica per giorno della settimana</strong> — mostra in quali giorni della settimana i tuoi mal di testa si verificano più spesso.</li>
         </ul>
 
-        <h3 class="sub-heading">Tipo di evento e suddivisione per fattore scatenante</h3>
-        <p>Una suddivisione degli eventi per tipo (Mal di testa vs. Emicrania) e un elenco dei tuoi fattori scatenanti più frequenti nel periodo selezionato vengono mostrati sotto i grafici.</p>
+        <h3 class="sub-heading">Tipo di evento e fattori scatenanti</h3>
+        <p>Un grafico a barre sovrapposte mostra la distribuzione tra i tipi di eventi (Mal di testa / Mal di testa grave / Emicrania / Emicrania grave) con conteggi e percentuali. Sotto, un grafico a barre orizzontale elenca i tuoi fattori scatenanti più frequenti nel periodo selezionato.</p>
+      </section>
+
+      <!-- ─ Correlazioni ─ -->
+      <section class="doc-section" id="correlazioni">
+        <h2 class="section-heading">Correlazioni</h2>
+        <p>La scheda Correlazioni analizza i tuoi dati Health Connect e cerca nove pattern basati su evidenze che spesso precedono gli attacchi di mal di testa ed emicrania. Esamina gli ultimi 90 giorni.</p>
+
+        <div class="note">
+          <strong>Funzione premium.</strong> La scheda Correlazioni richiede Heda Premium. Richiede anche le autorizzazioni Health Connect per i dati di sonno, HRV e conteggio passi. Consulta la sezione <a href="#health-connect">Health Connect</a> per i passi di configurazione.
+        </div>
+
+        <h3 class="sub-heading">La tua linea di base</h3>
+        <p>Una scheda della linea di base in cima mostra i tuoi valori mediani a 14 giorni per ogni metrica di salute. "—" viene mostrato per le metriche senza dati sufficienti.</p>
+        <ul>
+          <li><strong>Sonno</strong> — durata totale mediana del sonno notturno</li>
+          <li><strong>HRV</strong> — variabilità mediana della frequenza cardiaca (ms)</li>
+          <li><strong>Frequenza cardiaca a riposo</strong> — frequenza cardiaca mediana a riposo (bpm)</li>
+          <li><strong>Passi</strong> — numero mediano giornaliero di passi</li>
+          <li><strong>Esercizio</strong> — minuti attivi mediani giornalieri</li>
+          <li><strong>Sonno profondo</strong> — durata mediana del sonno profondo notturno</li>
+          <li><strong>Sonno REM</strong> — durata mediana del sonno REM notturno</li>
+          <li><strong>Sveglio durante il sonno</strong> — tempo mediano di veglia nelle sessioni di sonno</li>
+        </ul>
+
+        <h3 class="sub-heading">Pattern rilevati</h3>
+        <p>Heda controlla nove pattern basati su evidenze per ogni evento di mal di testa. Ogni rilevamento mostra il valore misurato e la soglia superata — ad esempio: <em>«Hai dormito 5 h 30 min prima di questo evento (soglia: 7 h)»</em>.</p>
+
+        <ul class="feature-list">
+          <li><strong>Sonno breve</strong> — la durata totale del sonno la notte prima era inferiore a 7 ore (configurabile in Impostazioni → Avanzate).</li>
+          <li><strong>Orario di sonno irregolare</strong> — gli orari di sonno sono variati di più di 120 minuti (deviazione standard) nei 7 giorni precedenti.</li>
+          <li><strong>Basso conteggio di passi</strong> — meno di 3 000 passi il giorno prima dell'evento (configurabile).</li>
+          <li><strong>Calo di HRV</strong> — l'HRV è sceso sotto 30 ms o sotto l'80% della tua linea di base personale a 14 giorni.</li>
+          <li><strong>Frequenza cardiaca a riposo elevata</strong> — la frequenza cardiaca a riposo era superiore alla tua mediana a 14 giorni il giorno prima dell'evento.</li>
+          <li><strong>Picco di esercizio</strong> — i minuti attivi erano insolitamente alti rispetto alla tua mediana a 14 giorni il giorno prima.</li>
+          <li><strong>Poco sonno profondo</strong> — il sonno profondo era ben al di sotto della tua mediana a 14 giorni la notte prima.</li>
+          <li><strong>Poco sonno REM</strong> — il sonno REM era ben al di sotto della tua mediana a 14 giorni la notte prima.</li>
+          <li><strong>Sonno frammentato</strong> — il tempo di veglia nelle sessioni di sonno era insolitamente alto rispetto al sonno totale e alla tua linea di base.</li>
+        </ul>
+
+        <h3 class="sub-heading">Raccomandazioni</h3>
+        <p>Sulla base dei pattern rilevati, Heda genera raccomandazioni personalizzate ordinate per priorità (Alta / Media / Bassa). Gli esempi includono il miglioramento della durata o della regolarità del sonno, l'aumento dell'attività quotidiana o la gestione dello stress e del recupero.</p>
+
+        <div class="warning">
+          <strong>Non è un consiglio medico.</strong> I pattern rilevati sono correlazioni, non diagnosi. Consulta sempre un professionista della salute per una guida medica sui tuoi mal di testa.
+        </div>
       </section>
 
       <!-- ─ Rapporti ─ -->

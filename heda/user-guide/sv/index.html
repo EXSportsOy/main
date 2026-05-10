@@ -58,7 +58,10 @@
           </ul></li>
           <li><a href="#redigering">Redigera &amp; ta bort</a></li>
           <li><a href="#analys">Analys</a></li>
-          <li><a href="#statistik">Statistik</a></li>
+          <li class="toc-sub"><ul class="toc-list">
+            <li><a href="#statistik">Statistik</a></li>
+            <li><a href="#korrelationer">Korrelationer</a></li>
+          </ul></li>
           <li><a href="#rapporter">Rapporter</a></li>
           <li><a href="#installningar">Inställningar</a></li>
           <li><a href="#integritet">Integritet &amp; Data</a></li>
@@ -108,7 +111,7 @@
           </div>
           <div class="info-card">
             <div class="card-title">Analys</div>
-            <div class="card-body">Identifierade mönster och personliga rekommendationer baserade på dina Health Connect-data.</div>
+            <div class="card-body">Statistik och trenddiagram för alla användare. Korrelationer (premium) identifierar mönster mellan dina Health Connect-data och huvudvärkshändelser.</div>
           </div>
           <div class="info-card">
             <div class="card-title">Rapporter</div>
@@ -300,51 +303,24 @@
       <!-- ─ Analys ─ -->
       <section class="doc-section" id="analys">
         <h2 class="section-heading">Analys</h2>
-        <p>Analysfliken visar möjliga samband mellan dina huvudvärkshändelser och dina dagliga hälsomätningar från Health Connect. Den tittar tillbaka 90 dagar.</p>
+        <p>Analysskärmen har två flikar längst upp: <strong>Statistik</strong> och <strong>Korrelationer</strong>. Statistik är tillgängligt för alla användare. Korrelationer är en premiumfunktion som även kräver en Health Connect-anslutning.</p>
 
-        <div class="note">
-          <strong>Kräver Health Connect.</strong> Anslut Heda till Google Health Connect under <strong>Inställningar → Health Connect</strong> för att aktivera den här skärmen. Se avsnittet <a href="#health-connect">Health Connect</a> för installationssteg.
-        </div>
-
-        <h3 class="sub-heading">Din baslinje</h3>
-        <p>Ett baslinjekort längst upp visar dina genomsnittsvärden för de senaste 14 dagarna:</p>
-        <ul>
-          <li><strong>Sömn</strong> — genomsnittlig nattsömn</li>
-          <li><strong>HRV</strong> — genomsnittlig hjärtfrekvensvariabilitet (ms)</li>
-          <li><strong>Steg</strong> — genomsnittligt dagligt stegantal</li>
-        </ul>
-
-        <h3 class="sub-heading">Identifierade mönster</h3>
-        <p>Heda söker efter fyra evidensbaserade mönster som vanligtvis föregår huvud- och migränanfall:</p>
-
-        <ul class="feature-list">
-          <li><strong>Kort sömn</strong> — du sov kortare än din konfigurerade miniminatt före det här anfallet.</li>
-          <li><strong>Oregelbundet sömnschema</strong> — din sömnrytm varierade markant under föregående vecka.</li>
-          <li><strong>Låg aktivitet</strong> — ditt stegantal dagen innan var under minimigränsen.</li>
-          <li><strong>Lågt HRV</strong> — ditt HRV sjönk under baslinjen dagen innan, vilket tyder på förhöjd stress eller dålig återhämtning.</li>
-        </ul>
-
-        <p>Varje fynd visar det specifika beviset: det uppmätta värdet och det tröskelvärde det korsade. Till exempel: <em>"Sov 5 t 30 min före den här händelsen (tröskel: 7 t)"</em>.</p>
-
-        <h3 class="sub-heading">Rekommendationer</h3>
-        <p>Baserat på identifierade mönster genererar Heda personliga rekommendationer rankade efter prioritet (Hög / Medel / Låg):</p>
-
-        <ul>
-          <li><strong>Öka sömnlängden</strong> — sträva efter minst 7 timmar per natt.</li>
-          <li><strong>Håll ett regelbundet sömnschema</strong> — lägg dig inom ±30 minuter vid samma tid varje kväll.</li>
-          <li><strong>Öka den dagliga aktiviteten</strong> — lätt motion (t.ex. 30 minuters promenad) kan minska migränrisken.</li>
-          <li><strong>Hantera stress och återhämtning</strong> — lågt HRV indikerar förhöjd stress; överväg andningsövningar eller meditation.</li>
-        </ul>
-
-        <div class="warning">
-          <strong>Inte medicinsk rådgivning.</strong> Identifierade mönster är korrelationer, inte diagnoser. Konsultera alltid en sjukvårdsprofessionell för medicinsk vägledning om dina huvudvärksbesvär.
+        <div class="card-grid">
+          <div class="info-card">
+            <div class="card-title">Statistik</div>
+            <div class="card-body">Frekvens- och svårighetsdiagram för en vald tidsperiod. Tillgängligt för alla användare.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Korrelationer</div>
+            <div class="card-body">Identifierar mönster i dina Health Connect-data som kan föregå huvudvärksepisoder. Kräver premium och Health Connect.</div>
+          </div>
         </div>
       </section>
 
       <!-- ─ Statistik ─ -->
       <section class="doc-section" id="statistik">
         <h2 class="section-heading">Statistik</h2>
-        <p>Statistikavsnittet är en del av analysfliken. Det ger dig en överblick över din huvudvärksfrekvens och -svårighetsgrad under en vald tidsperiod.</p>
+        <p>Statistikfliken ger dig en överblick över din huvudvärksfrekvens och -svårighetsgrad under en vald tidsperiod.</p>
 
         <h3 class="sub-heading">Periodsväljare</h3>
         <p>Välj mellan fem tidsperioder:</p>
@@ -357,6 +333,7 @@
         </div>
 
         <h3 class="sub-heading">Sammanfattningskort</h3>
+        <p>Ett huvudkort visar följande mätvärden för den valda perioden. Trendpilar (↑ / ↓) jämför varje siffra med motsvarande föregående period:</p>
         <div class="card-grid">
           <div class="info-card">
             <div class="card-title">Totalt antal händelser</div>
@@ -378,13 +355,57 @@
 
         <h3 class="sub-heading">Diagram</h3>
         <ul>
-          <li><strong>Intensitet</strong> — dagligt vägt genomsnitt med ett rullande 7-dagarsfönster.</li>
-          <li><strong>Timmar</strong> — rullande 7-dagarstotal för anfallsvaraktighet i timmar.</li>
-          <li><strong>Antal anfall</strong> — rullande 30-dagarstotal för händelser.</li>
+          <li><strong>Trenddiagram</strong> — antal händelser per tidsintervall (dagligen för 7/30/90 dagar, veckovis för 1 år, månadsvis för All tid).</li>
+          <li><strong>Veckodagsvärmekartor</strong> — visar vilka veckodagar dina huvudvärkar oftast inträffar.</li>
         </ul>
 
-        <h3 class="sub-heading">Händelsetyp &amp; utlösaranalys</h3>
-        <p>En fördelning av händelser efter typ (Huvudvärk mot Migrän) och en lista över dina vanligaste utlösare för den valda perioden visas nedanför diagrammen.</p>
+        <h3 class="sub-heading">Händelsetyp &amp; utlösare</h3>
+        <p>Ett stapeldiagram visar fördelningen mellan händelsetyper (Huvudvärk / Svår huvudvärk / Migrän / Svår migrän) med antal och procent. Under det visar ett vågrätt stapeldiagram dina vanligaste utlösare för den valda perioden.</p>
+      </section>
+
+      <!-- ─ Korrelationer ─ -->
+      <section class="doc-section" id="korrelationer">
+        <h2 class="section-heading">Korrelationer</h2>
+        <p>Korrelationsfliken analyserar dina Health Connect-data och letar efter nio evidensbaserade mönster som vanligtvis föregår huvud- och migränanfall. Den tittar tillbaka 90 dagar.</p>
+
+        <div class="note">
+          <strong>Premiumfunktion.</strong> Korrelationsfliken kräver Heda Premium. Den kräver även Health Connect-behörigheter för sömn-, HRV- och stegräkningsdata. Se avsnittet <a href="#health-connect">Health Connect</a> för installationssteg.
+        </div>
+
+        <h3 class="sub-heading">Din baslinje</h3>
+        <p>Ett baslinjekort längst upp visar dina 14-dagarsmedianvärden för varje hälsomått. "—" visas för mått utan tillräcklig data.</p>
+        <ul>
+          <li><strong>Sömn</strong> — medianvärde för total nattsömnslängd</li>
+          <li><strong>HRV</strong> — medianvärde för hjärtfrekvensvariabilitet (ms)</li>
+          <li><strong>Vilopuls</strong> — medianvärde för vilopuls (slag/min)</li>
+          <li><strong>Steg</strong> — medianvärde för dagligt stegantal</li>
+          <li><strong>Träning</strong> — medianvärde för dagliga aktiva minuter</li>
+          <li><strong>Djupsömn</strong> — medianvärde för nattlig djupsömnslängd</li>
+          <li><strong>REM-sömn</strong> — medianvärde för nattlig REM-sömnslängd</li>
+          <li><strong>Vaken under sömn</strong> — medianvärde för vaken tid i sömnperioder</li>
+        </ul>
+
+        <h3 class="sub-heading">Identifierade mönster</h3>
+        <p>Heda kontrollerar nio evidensbaserade mönster för varje huvudvärkshändelse. Varje fynd visar det uppmätta värdet och det tröskelvärde som överskridits — till exempel: <em>"Sov 5 t 30 min före den här händelsen (tröskel: 7 t)"</em>.</p>
+
+        <ul class="feature-list">
+          <li><strong>Kort sömn</strong> — total sömntid natten innan var under 7 timmar (konfigurerbar under Inställningar → Avancerat).</li>
+          <li><strong>Oregelbundet sömnschema</strong> — sömnrytmen varierade mer än 120 minuter (standardavvikelse) under föregående 7 dagar.</li>
+          <li><strong>Lågt stegantal</strong> — färre än 3 000 steg dagen före händelsen (konfigurerbar).</li>
+          <li><strong>HRV-fall</strong> — HRV sjönk under 30 ms eller under 80 % av din personliga 14-dagarsbaslinje.</li>
+          <li><strong>Förhöjd vilopuls</strong> — vilopulsen var över din 14-dagarsmedian dagen före händelsen.</li>
+          <li><strong>Träningspik</strong> — aktiva minuter var ovanligt höga jämfört med din 14-dagarsmedian dagen före.</li>
+          <li><strong>Lite djupsömn</strong> — djupsömnen var betydligt under din 14-dagarsmedian natten innan.</li>
+          <li><strong>Lite REM-sömn</strong> — REM-sömnen var betydligt under din 14-dagarsmedian natten innan.</li>
+          <li><strong>Fragmenterad sömn</strong> — vaken tid i sömnperioder var ovanligt hög i förhållande till total sömn och din baslinje.</li>
+        </ul>
+
+        <h3 class="sub-heading">Rekommendationer</h3>
+        <p>Baserat på identifierade mönster genererar Heda personliga rekommendationer rankade efter prioritet (Hög / Medel / Låg). Exempel inkluderar att förbättra sömnlängden eller -regelbundenheten, öka den dagliga aktiviteten eller hantera stress och återhämtning.</p>
+
+        <div class="warning">
+          <strong>Inte medicinsk rådgivning.</strong> Identifierade mönster är korrelationer, inte diagnoser. Konsultera alltid en sjukvårdsprofessionell för medicinsk vägledning om dina huvudvärksbesvär.
+        </div>
       </section>
 
       <!-- ─ Rapporter ─ -->

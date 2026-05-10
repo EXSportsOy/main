@@ -58,7 +58,10 @@
           </ul></li>
           <li><a href="#edycja">Edytowanie i usuwanie</a></li>
           <li><a href="#analiza">Analiza</a></li>
-          <li><a href="#statystyki">Statystyki</a></li>
+          <li class="toc-sub"><ul class="toc-list">
+            <li><a href="#statystyki">Statystyki</a></li>
+            <li><a href="#korelacje">Korelacje</a></li>
+          </ul></li>
           <li><a href="#raporty">Raporty</a></li>
           <li><a href="#ustawienia">Ustawienia</a></li>
           <li><a href="#prywatnosc">Prywatność i dane</a></li>
@@ -108,7 +111,7 @@
           </div>
           <div class="info-card">
             <div class="card-title">Analiza</div>
-            <div class="card-body">Wykryte wzorce i spersonalizowane zalecenia na podstawie Twoich danych z Health Connect.</div>
+            <div class="card-body">Statystyki i wykresy trendów dla wszystkich użytkowników. Korelacje (premium) wykrywają wzorce między Twoimi danymi Health Connect a zdarzeniami bólu głowy.</div>
           </div>
           <div class="info-card">
             <div class="card-title">Raporty</div>
@@ -300,51 +303,24 @@
       <!-- ─ Analiza ─ -->
       <section class="doc-section" id="analiza">
         <h2 class="section-heading">Analiza</h2>
-        <p>Zakładka Analiza pokazuje możliwe korelacje między Twoimi zdarzeniami bólu głowy a codziennymi wskaźnikami zdrowotnymi z Health Connect. Analizuje ostatnie 90 dni.</p>
+        <p>Ekran Analiza ma dwie zakładki na górze: <strong>Statystyki</strong> i <strong>Korelacje</strong>. Statystyki są dostępne dla wszystkich użytkowników. Korelacje to funkcja premium, która wymaga również połączenia z Health Connect.</p>
 
-        <div class="note">
-          <strong>Wymaga Health Connect.</strong> Połącz Hedę z Google Health Connect w <strong>Ustawienia → Health Connect</strong>, aby aktywować ten ekran. Zapoznaj się z sekcją <a href="#health-connect">Health Connect</a> w celu uzyskania kroków konfiguracji.
-        </div>
-
-        <h3 class="sub-heading">Twoja linia bazowa</h3>
-        <p>Karta linii bazowej na górze pokazuje Twoje średnie wartości z ostatnich 14 dni:</p>
-        <ul>
-          <li><strong>Sen</strong> — średni czas trwania snu nocnego</li>
-          <li><strong>HRV</strong> — średnia zmienność rytmu serca (ms)</li>
-          <li><strong>Kroki</strong> — średnia dzienna liczba kroków</li>
-        </ul>
-
-        <h3 class="sub-heading">Wykryte wzorce</h3>
-        <p>Heda szuka czterech wzorców opartych na dowodach, które często poprzedzają ataki bólu głowy i migreny:</p>
-
-        <ul class="feature-list">
-          <li><strong>Krótki sen</strong> — spałeś mniej niż skonfigurowane minimum przed tym atakiem.</li>
-          <li><strong>Nieregularny harmonogram snu</strong> — Twoje godziny snu znacznie się zmieniały w poprzednim tygodniu.</li>
-          <li><strong>Niska aktywność</strong> — liczba Twoich kroków poprzedniego dnia była poniżej minimalnego progu.</li>
-          <li><strong>Niskie HRV</strong> — Twoje HRV spadło poniżej linii bazowej poprzedniego dnia, co sugeruje wysoki poziom stresu lub niewystarczającą regenerację.</li>
-        </ul>
-
-        <p>Każde wykrycie pokazuje konkretne dowody: zmierzoną wartość i przekroczony próg. Na przykład: <em>„Spałeś 5 godz. 30 min przed tym zdarzeniem (próg: 7 godz.)"</em>.</p>
-
-        <h3 class="sub-heading">Zalecenia</h3>
-        <p>Na podstawie wykrytych wzorców Heda generuje spersonalizowane zalecenia posortowane według priorytetu (Wysoki / Średni / Niski):</p>
-
-        <ul>
-          <li><strong>Zwiększ czas snu</strong> — staraj się spać co najmniej 7 godzin na dobę.</li>
-          <li><strong>Utrzymuj regularny harmonogram snu</strong> — kładź się spać w ciągu ±30 minut od tej samej pory każdej nocy.</li>
-          <li><strong>Zwiększ codzienną aktywność</strong> — lekkie ćwiczenia (np. 30-minutowy spacer) mogą zmniejszyć ryzyko migreny.</li>
-          <li><strong>Zarządzaj stresem i regeneracją</strong> — niskie HRV wskazuje na wysoki poziom stresu; rozważ ćwiczenia oddechowe lub medytację.</li>
-        </ul>
-
-        <div class="warning">
-          <strong>To nie jest porada medyczna.</strong> Wykryte wzorce są korelacjami, nie diagnozami. Zawsze konsultuj się ze specjalistą opieki zdrowotnej w celu uzyskania medycznej pomocy dotyczącej Twoich bólów głowy.
+        <div class="card-grid">
+          <div class="info-card">
+            <div class="card-title">Statystyki</div>
+            <div class="card-body">Wykresy częstotliwości i nasilenia dla wybranego okresu. Dostępne dla wszystkich użytkowników.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Korelacje</div>
+            <div class="card-body">Wykrywa wzorce w Twoich danych Health Connect, które mogą poprzedzać ataki bólu głowy. Wymaga premium i Health Connect.</div>
+          </div>
         </div>
       </section>
 
       <!-- ─ Statystyki ─ -->
       <section class="doc-section" id="statystyki">
         <h2 class="section-heading">Statystyki</h2>
-        <p>Sekcja Statystyki jest częścią zakładki Analiza. Daje Ci przegląd częstotliwości i nasilenia Twoich bólów głowy w wybranym okresie.</p>
+        <p>Zakładka Statystyki daje Ci przegląd częstotliwości i nasilenia Twoich bólów głowy w wybranym okresie.</p>
 
         <h3 class="sub-heading">Selektor okresu</h3>
         <p>Wybierz spośród pięciu okresów:</p>
@@ -356,7 +332,8 @@
           <span class="tag">Cały czas</span>
         </div>
 
-        <h3 class="sub-heading">Karty podsumowań</h3>
+        <h3 class="sub-heading">Karta podsumowania</h3>
+        <p>Główna karta pokazuje następujące wskaźniki za wybrany okres. Strzałki trendu (↑ / ↓) porównują każdą wartość z analogicznym poprzednim okresem:</p>
         <div class="card-grid">
           <div class="info-card">
             <div class="card-title">Łączna liczba zdarzeń</div>
@@ -378,13 +355,57 @@
 
         <h3 class="sub-heading">Wykresy</h3>
         <ul>
-          <li><strong>Intensywność</strong> — ważona średnia dzienna z oknem kroczącym 7 dni.</li>
-          <li><strong>Godziny</strong> — kroczący 7-dniowy łączny czas trwania ataków w godzinach.</li>
-          <li><strong>Liczba ataków</strong> — kroczący 30-dniowy łączny wynik zdarzeń.</li>
+          <li><strong>Wykres trendu</strong> — liczba zdarzeń na przedział czasu (dzienny dla 7/30/90 dni, tygodniowy dla 1 roku, miesięczny dla Całego czasu).</li>
+          <li><strong>Mapa cieplna dni tygodnia</strong> — pokazuje, w które dni tygodnia Twoje bóle głowy występują najczęściej.</li>
         </ul>
 
-        <h3 class="sub-heading">Typ zdarzenia i podział według wyzwalacza</h3>
-        <p>Podział zdarzeń według typu (Ból głowy vs. Migrena) oraz lista Twoich najczęstszych wyzwalaczy w wybranym okresie są wyświetlane poniżej wykresów.</p>
+        <h3 class="sub-heading">Typ zdarzenia i wyzwalacze</h3>
+        <p>Skumulowany wykres słupkowy pokazuje podział między typami zdarzeń (Ból głowy / Silny ból głowy / Migrena / Silna migrena) z liczbami i procentami. Poniżej poziomy wykres słupkowy wymienia Twoje najczęstsze wyzwalacze w wybranym okresie.</p>
+      </section>
+
+      <!-- ─ Korelacje ─ -->
+      <section class="doc-section" id="korelacje">
+        <h2 class="section-heading">Korelacje</h2>
+        <p>Zakładka Korelacje analizuje Twoje dane Health Connect i szuka dziewięciu wzorców opartych na dowodach, które często poprzedzają ataki bólu głowy i migreny. Analizuje ostatnie 90 dni.</p>
+
+        <div class="note">
+          <strong>Funkcja premium.</strong> Zakładka Korelacje wymaga Heda Premium. Wymaga również uprawnień Health Connect do danych snu, HRV i liczby kroków. Zapoznaj się z sekcją <a href="#health-connect">Health Connect</a> w celu uzyskania kroków konfiguracji.
+        </div>
+
+        <h3 class="sub-heading">Twoja linia bazowa</h3>
+        <p>Karta linii bazowej na górze pokazuje Twoje 14-dniowe wartości mediany dla każdego wskaźnika zdrowotnego. „—" jest wyświetlane dla wskaźników bez wystarczającej ilości danych.</p>
+        <ul>
+          <li><strong>Sen</strong> — mediana całkowitego czasu snu nocnego</li>
+          <li><strong>HRV</strong> — mediana zmienności rytmu serca (ms)</li>
+          <li><strong>Tętno spoczynkowe</strong> — mediana tętna spoczynkowego (uderzenia/min)</li>
+          <li><strong>Kroki</strong> — mediana dziennej liczby kroków</li>
+          <li><strong>Ćwiczenia</strong> — mediana dziennych aktywnych minut</li>
+          <li><strong>Sen głęboki</strong> — mediana czasu trwania snu głębokiego nocnego</li>
+          <li><strong>Sen REM</strong> — mediana czasu trwania snu REM nocnego</li>
+          <li><strong>Czuwanie podczas snu</strong> — mediana czasu czuwania w sesjach snu</li>
+        </ul>
+
+        <h3 class="sub-heading">Wykryte wzorce</h3>
+        <p>Heda sprawdza dziewięć wzorców opartych na dowodach dla każdego zdarzenia bólu głowy. Każde wykrycie pokazuje zmierzoną wartość i przekroczony próg — na przykład: <em>„Spałeś 5 godz. 30 min przed tym zdarzeniem (próg: 7 godz.)"</em>.</p>
+
+        <ul class="feature-list">
+          <li><strong>Krótki sen</strong> — całkowity czas snu poprzedniej nocy był krótszy niż 7 godzin (konfigurowalny w Ustawienia → Zaawansowane).</li>
+          <li><strong>Nieregularny harmonogram snu</strong> — godziny snu zmieniały się o ponad 120 minut (odchylenie standardowe) przez poprzednie 7 dni.</li>
+          <li><strong>Niska liczba kroków</strong> — mniej niż 3 000 kroków w dniu przed zdarzeniem (konfigurowalny).</li>
+          <li><strong>Spadek HRV</strong> — HRV spadło poniżej 30 ms lub poniżej 80% Twojej osobistej linii bazowej z 14 dni.</li>
+          <li><strong>Podwyższone tętno spoczynkowe</strong> — tętno spoczynkowe było powyżej Twojej mediany z 14 dni w dniu przed zdarzeniem.</li>
+          <li><strong>Szczyt ćwiczeń</strong> — aktywne minuty były niezwykle wysokie w porównaniu z Twoją medianą z 14 dni w dniu poprzednim.</li>
+          <li><strong>Mało snu głębokiego</strong> — sen głęboki był znacznie poniżej Twojej mediany z 14 dni poprzedniej nocy.</li>
+          <li><strong>Mało snu REM</strong> — sen REM był znacznie poniżej Twojej mediany z 14 dni poprzedniej nocy.</li>
+          <li><strong>Fragmentaryczny sen</strong> — czas czuwania w sesjach snu był niezwykle wysoki w stosunku do całkowitego snu i Twojej linii bazowej.</li>
+        </ul>
+
+        <h3 class="sub-heading">Zalecenia</h3>
+        <p>Na podstawie wykrytych wzorców Heda generuje spersonalizowane zalecenia posortowane według priorytetu (Wysoki / Średni / Niski). Przykłady obejmują poprawę czasu trwania lub regularności snu, zwiększenie codziennej aktywności lub zarządzanie stresem i regeneracją.</p>
+
+        <div class="warning">
+          <strong>To nie jest porada medyczna.</strong> Wykryte wzorce są korelacjami, nie diagnozami. Zawsze konsultuj się ze specjalistą opieki zdrowotnej w celu uzyskania medycznej pomocy dotyczącej Twoich bólów głowy.
+        </div>
       </section>
 
       <!-- ─ Raporty ─ -->

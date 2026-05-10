@@ -58,7 +58,10 @@
           </ul></li>
           <li><a href="#editing">Editing &amp; deleting</a></li>
           <li><a href="#analysis">Analysis</a></li>
-          <li><a href="#statistics">Statistics</a></li>
+          <li class="toc-sub"><ul class="toc-list">
+            <li><a href="#statistics">Statistics</a></li>
+            <li><a href="#correlations">Correlations</a></li>
+          </ul></li>
           <li><a href="#reports">Reports</a></li>
           <li><a href="#settings">Settings</a></li>
           <li><a href="#privacy">Privacy &amp; Data</a></li>
@@ -108,7 +111,7 @@
           </div>
           <div class="info-card">
             <div class="card-title">Analysis</div>
-            <div class="card-body">Detected patterns and personalised recommendations powered by your Health Connect data.</div>
+            <div class="card-body">Statistics and trend charts for all users. Correlations (premium) detects patterns between your Health Connect data and headache events.</div>
           </div>
           <div class="info-card">
             <div class="card-title">Reports</div>
@@ -300,51 +303,24 @@
       <!-- ─ Analysis ─ -->
       <section class="doc-section" id="analysis">
         <h2 class="section-heading">Analysis</h2>
-        <p>The Analysis tab shows possible correlations between your headache events and your daily health metrics from Health Connect. It looks back over the last 90 days.</p>
+        <p>The Analysis screen has two tabs at the top: <strong>Statistics</strong> and <strong>Correlations</strong>. Statistics is available to all users. Correlations is a premium feature that also requires a Health Connect connection.</p>
 
-        <div class="note">
-          <strong>Requires Health Connect.</strong> Connect Heda to Google Health Connect in <strong>Settings → Health Connect</strong> to enable this screen. See the <a href="#health-connect">Health Connect</a> section for setup steps.
-        </div>
-
-        <h3 class="sub-heading">Your baseline</h3>
-        <p>A baseline card at the top shows your average values for the last 14 days:</p>
-        <ul>
-          <li><strong>Sleep</strong> — average nightly sleep duration</li>
-          <li><strong>HRV</strong> — average heart rate variability (ms)</li>
-          <li><strong>Steps</strong> — average daily step count</li>
-        </ul>
-
-        <h3 class="sub-heading">Detected patterns</h3>
-        <p>Heda looks for four evidence-based patterns that commonly precede headache and migraine attacks:</p>
-
-        <ul class="feature-list">
-          <li><strong>Short sleep</strong> — you slept less than your configured minimum before this attack.</li>
-          <li><strong>Irregular sleep schedule</strong> — your sleep timing varied significantly over the preceding week.</li>
-          <li><strong>Low activity</strong> — your step count the day before was below the minimum threshold.</li>
-          <li><strong>Low HRV</strong> — your HRV dropped below baseline the day before, suggesting elevated stress or poor recovery.</li>
-        </ul>
-
-        <p>Each finding shows the specific evidence: the measured value and the threshold it crossed. For example: <em>"Slept 5 h 30 min before this event (threshold: 7 h)"</em>.</p>
-
-        <h3 class="sub-heading">Recommendations</h3>
-        <p>Based on the detected patterns, Heda generates personalised recommendations ranked by priority (High / Medium / Low):</p>
-
-        <ul>
-          <li><strong>Increase sleep duration</strong> — aim for at least 7 hours per night.</li>
-          <li><strong>Maintain a regular sleep schedule</strong> — go to bed within ±30 minutes of the same time each night.</li>
-          <li><strong>Increase daily activity</strong> — light exercise (e.g. a 30-minute walk) may reduce migraine risk.</li>
-          <li><strong>Manage stress and recovery</strong> — lower HRV indicates elevated stress; consider breathing exercises or meditation.</li>
-        </ul>
-
-        <div class="warning">
-          <strong>Not medical advice.</strong> Detected patterns are correlations, not diagnoses. Always consult a healthcare professional for medical guidance about your headaches.
+        <div class="card-grid">
+          <div class="info-card">
+            <div class="card-title">Statistics</div>
+            <div class="card-body">Frequency and severity charts for a selected time period. Available to all users.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Correlations</div>
+            <div class="card-body">Detects patterns in your Health Connect data that may precede headache attacks. Requires premium and Health Connect.</div>
+          </div>
         </div>
       </section>
 
       <!-- ─ Statistics ─ -->
       <section class="doc-section" id="statistics">
         <h2 class="section-heading">Statistics</h2>
-        <p>The Statistics section is part of the Analysis tab. It gives you an overview of your headache frequency and severity across a selected time period.</p>
+        <p>The Statistics tab gives you an overview of your headache frequency and severity across a selected time period.</p>
 
         <h3 class="sub-heading">Period selector</h3>
         <p>Choose between five time periods:</p>
@@ -356,7 +332,8 @@
           <span class="tag">All time</span>
         </div>
 
-        <h3 class="sub-heading">Summary cards</h3>
+        <h3 class="sub-heading">Summary card</h3>
+        <p>A hero card shows the following metrics for the selected period. Trend arrows (↑ / ↓) compare each figure to the equivalent previous period:</p>
         <div class="card-grid">
           <div class="info-card">
             <div class="card-title">Total events</div>
@@ -378,13 +355,57 @@
 
         <h3 class="sub-heading">Charts</h3>
         <ul>
-          <li><strong>Intensity</strong> — daily weighted average with a 7-day rolling window.</li>
-          <li><strong>Hours</strong> — 7-day rolling total of attack duration in hours.</li>
-          <li><strong>Attack count</strong> — 30-day rolling total of events.</li>
+          <li><strong>Trend chart</strong> — event count per time bucket (daily for 7/30/90 days, weekly for 1 year, monthly for All time).</li>
+          <li><strong>Weekday heatmap</strong> — shows which days of the week your headaches occur most often.</li>
         </ul>
 
-        <h3 class="sub-heading">Event type &amp; trigger breakdown</h3>
-        <p>A breakdown of events by type (Headache vs. Migraine) and a list of your most common triggers for the selected period are shown below the charts.</p>
+        <h3 class="sub-heading">Type breakdown &amp; triggers</h3>
+        <p>A stacked bar shows the split between event types (Headache / Severe Headache / Migraine / Severe Migraine) with counts and percentages. Below it, a horizontal bar chart lists your most frequent triggers for the selected period.</p>
+      </section>
+
+      <!-- ─ Correlations ─ -->
+      <section class="doc-section" id="correlations">
+        <h2 class="section-heading">Correlations</h2>
+        <p>The Correlations tab analyses your Health Connect data and looks for nine evidence-based patterns that commonly precede headache and migraine attacks. It looks back over the last 90 days.</p>
+
+        <div class="note">
+          <strong>Premium feature.</strong> The Correlations tab requires Heda Premium. It also requires Health Connect permissions for sleep, HRV, and step count data. See the <a href="#health-connect">Health Connect</a> section for setup steps.
+        </div>
+
+        <h3 class="sub-heading">Your baseline</h3>
+        <p>A baseline card at the top shows your 14-day median values for each health metric. A "—" is shown for any metric without sufficient data.</p>
+        <ul>
+          <li><strong>Sleep</strong> — median nightly total sleep duration</li>
+          <li><strong>HRV</strong> — median heart rate variability (ms)</li>
+          <li><strong>Resting heart rate</strong> — median resting heart rate (bpm)</li>
+          <li><strong>Steps</strong> — median daily step count</li>
+          <li><strong>Exercise</strong> — median daily active minutes</li>
+          <li><strong>Deep sleep</strong> — median nightly deep sleep duration</li>
+          <li><strong>REM sleep</strong> — median nightly REM sleep duration</li>
+          <li><strong>Awake during sleep</strong> — median awake time within sleep sessions</li>
+        </ul>
+
+        <h3 class="sub-heading">Detected patterns</h3>
+        <p>Heda checks nine evidence-based patterns for each headache event. Each finding shows the measured value and the threshold it crossed — for example: <em>"Slept 5 h 30 min before this event (threshold: 7 h)"</em>.</p>
+
+        <ul class="feature-list">
+          <li><strong>Short sleep</strong> — total sleep the night before was less than 7 hours (configurable in Settings → Advanced).</li>
+          <li><strong>Irregular sleep schedule</strong> — sleep timing varied by more than 120 minutes (std. dev.) over the preceding 7 days.</li>
+          <li><strong>Low step count</strong> — fewer than 3 000 steps the day before the event (configurable).</li>
+          <li><strong>HRV drop</strong> — HRV fell below 30 ms or below 80 % of your 14-day personal baseline.</li>
+          <li><strong>Elevated resting heart rate</strong> — resting heart rate was above your 14-day median the day before the event.</li>
+          <li><strong>Exercise spike</strong> — active minutes were unusually high compared to your 14-day median the day before.</li>
+          <li><strong>Low deep sleep</strong> — deep sleep was well below your 14-day median the night before.</li>
+          <li><strong>Low REM sleep</strong> — REM sleep was well below your 14-day median the night before.</li>
+          <li><strong>Fragmented sleep</strong> — awake time within sleep sessions was unusually high relative to total sleep and your baseline.</li>
+        </ul>
+
+        <h3 class="sub-heading">Recommendations</h3>
+        <p>Based on the detected patterns, Heda generates personalised recommendations ranked by priority (High / Medium / Low). Examples include improving sleep duration or regularity, increasing daily activity, or managing stress and recovery.</p>
+
+        <div class="warning">
+          <strong>Not medical advice.</strong> Detected patterns are correlations, not diagnoses. Always consult a healthcare professional for medical guidance about your headaches.
+        </div>
       </section>
 
       <!-- ─ Reports ─ -->

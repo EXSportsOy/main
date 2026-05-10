@@ -58,7 +58,10 @@
           </ul></li>
           <li><a href="#edicao">Editar e eliminar</a></li>
           <li><a href="#analise">Análise</a></li>
-          <li><a href="#estatisticas">Estatísticas</a></li>
+          <li class="toc-sub"><ul class="toc-list">
+            <li><a href="#estatisticas">Estatísticas</a></li>
+            <li><a href="#correlacoes">Correlações</a></li>
+          </ul></li>
           <li><a href="#relatorios">Relatórios</a></li>
           <li><a href="#configuracoes">Configurações</a></li>
           <li><a href="#privacidade">Privacidade e dados</a></li>
@@ -108,7 +111,7 @@
           </div>
           <div class="info-card">
             <div class="card-title">Análise</div>
-            <div class="card-body">Padrões detetados e recomendações personalizadas com base nos seus dados do Health Connect.</div>
+            <div class="card-body">Estatísticas e gráficos de tendências para todos os utilizadores. Correlações (premium) deteta padrões entre os seus dados do Health Connect e eventos de dor de cabeça.</div>
           </div>
           <div class="info-card">
             <div class="card-title">Relatórios</div>
@@ -300,51 +303,24 @@
       <!-- ─ Análise ─ -->
       <section class="doc-section" id="analise">
         <h2 class="section-heading">Análise</h2>
-        <p>O separador Análise mostra as possíveis correlações entre os seus eventos de dor de cabeça e as suas métricas de saúde diárias do Health Connect. Examina os últimos 90 dias.</p>
+        <p>O ecrã Análise tem dois separadores no topo: <strong>Estatísticas</strong> e <strong>Correlações</strong>. Estatísticas está disponível para todos os utilizadores. Correlações é uma funcionalidade premium que também requer uma ligação ao Health Connect.</p>
 
-        <div class="note">
-          <strong>Requer Health Connect.</strong> Ligue o Heda ao Google Health Connect em <strong>Configurações → Health Connect</strong> para ativar este ecrã. Consulte a secção <a href="#health-connect">Health Connect</a> para os passos de configuração.
-        </div>
-
-        <h3 class="sub-heading">A sua linha de base</h3>
-        <p>Um cartão de linha de base no topo mostra os seus valores médios dos últimos 14 dias:</p>
-        <ul>
-          <li><strong>Sono</strong> — duração média do sono noturno</li>
-          <li><strong>HRV</strong> — variabilidade média da frequência cardíaca (ms)</li>
-          <li><strong>Passos</strong> — número médio diário de passos</li>
-        </ul>
-
-        <h3 class="sub-heading">Padrões detetados</h3>
-        <p>O Heda procura quatro padrões baseados em evidências que frequentemente precedem ataques de dor de cabeça e enxaqueca:</p>
-
-        <ul class="feature-list">
-          <li><strong>Sono curto</strong> — dormiu menos do que o mínimo configurado antes deste ataque.</li>
-          <li><strong>Horário de sono irregular</strong> — os seus horários de sono variaram significativamente durante a semana anterior.</li>
-          <li><strong>Atividade baixa</strong> — a sua contagem de passos do dia anterior estava abaixo do limiar mínimo.</li>
-          <li><strong>HRV baixo</strong> — o seu HRV caiu abaixo da linha de base no dia anterior, sugerindo stress elevado ou recuperação insuficiente.</li>
-        </ul>
-
-        <p>Cada deteção mostra a evidência específica: o valor medido e o limiar ultrapassado. Por exemplo: <em>«Dormiu 5 h 30 min antes deste evento (limiar: 7 h)»</em>.</p>
-
-        <h3 class="sub-heading">Recomendações</h3>
-        <p>Com base nos padrões detetados, o Heda gera recomendações personalizadas ordenadas por prioridade (Alta / Média / Baixa):</p>
-
-        <ul>
-          <li><strong>Aumentar a duração do sono</strong> — procure dormir pelo menos 7 horas por noite.</li>
-          <li><strong>Manter um horário de sono regular</strong> — deite-se dentro de ±30 minutos da mesma hora todas as noites.</li>
-          <li><strong>Aumentar a atividade diária</strong> — o exercício leve (ex. uma caminhada de 30 minutos) pode reduzir o risco de enxaqueca.</li>
-          <li><strong>Gerir o stress e a recuperação</strong> — um HRV baixo indica stress elevado; considere exercícios de respiração ou meditação.</li>
-        </ul>
-
-        <div class="warning">
-          <strong>Não é aconselhamento médico.</strong> Os padrões detetados são correlações, não diagnósticos. Consulte sempre um profissional de saúde para orientação médica sobre as suas dores de cabeça.
+        <div class="card-grid">
+          <div class="info-card">
+            <div class="card-title">Estatísticas</div>
+            <div class="card-body">Gráficos de frequência e gravidade para um período selecionado. Disponível para todos os utilizadores.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Correlações</div>
+            <div class="card-body">Deteta padrões nos seus dados do Health Connect que podem preceder ataques de dor de cabeça. Requer premium e Health Connect.</div>
+          </div>
         </div>
       </section>
 
       <!-- ─ Estatísticas ─ -->
       <section class="doc-section" id="estatisticas">
         <h2 class="section-heading">Estatísticas</h2>
-        <p>A secção Estatísticas faz parte do separador Análise. Dá-lhe uma visão geral da frequência e gravidade das suas dores de cabeça num período selecionado.</p>
+        <p>O separador Estatísticas dá-lhe uma visão geral da frequência e gravidade das suas dores de cabeça num período selecionado.</p>
 
         <h3 class="sub-heading">Seletor de período</h3>
         <p>Escolha entre cinco períodos:</p>
@@ -356,7 +332,8 @@
           <span class="tag">Todo o tempo</span>
         </div>
 
-        <h3 class="sub-heading">Cartões de resumo</h3>
+        <h3 class="sub-heading">Cartão de resumo</h3>
+        <p>Um cartão principal mostra as seguintes métricas para o período selecionado. As setas de tendência (↑ / ↓) comparam cada valor com o período anterior equivalente:</p>
         <div class="card-grid">
           <div class="info-card">
             <div class="card-title">Total de eventos</div>
@@ -378,13 +355,57 @@
 
         <h3 class="sub-heading">Gráficos</h3>
         <ul>
-          <li><strong>Intensidade</strong> — média ponderada diária com uma janela deslizante de 7 dias.</li>
-          <li><strong>Horas</strong> — total deslizante de 7 dias da duração dos ataques em horas.</li>
-          <li><strong>Número de ataques</strong> — total deslizante de 30 dias de eventos.</li>
+          <li><strong>Gráfico de tendência</strong> — número de eventos por intervalo de tempo (diário para 7/30/90 dias, semanal para 1 ano, mensal para Todo o tempo).</li>
+          <li><strong>Mapa de calor por dia da semana</strong> — mostra em que dias da semana as suas dores de cabeça ocorrem com mais frequência.</li>
         </ul>
 
-        <h3 class="sub-heading">Tipo de evento e divisão por gatilho</h3>
-        <p>Uma divisão de eventos por tipo (Dor de cabeça vs. Enxaqueca) e uma lista dos seus gatilhos mais frequentes no período selecionado são apresentados abaixo dos gráficos.</p>
+        <h3 class="sub-heading">Tipo de evento e gatilhos</h3>
+        <p>Um gráfico de barras empilhadas mostra a distribuição entre tipos de evento (Dor de cabeça / Dor de cabeça grave / Enxaqueca / Enxaqueca grave) com contagens e percentagens. Abaixo, um gráfico de barras horizontal lista os seus gatilhos mais frequentes no período selecionado.</p>
+      </section>
+
+      <!-- ─ Correlações ─ -->
+      <section class="doc-section" id="correlacoes">
+        <h2 class="section-heading">Correlações</h2>
+        <p>O separador Correlações analisa os seus dados do Health Connect e procura nove padrões baseados em evidências que frequentemente precedem ataques de dor de cabeça e enxaqueca. Examina os últimos 90 dias.</p>
+
+        <div class="note">
+          <strong>Funcionalidade premium.</strong> O separador Correlações requer o Heda Premium. Também requer permissões do Health Connect para dados de sono, HRV e contagem de passos. Consulte a secção <a href="#health-connect">Health Connect</a> para os passos de configuração.
+        </div>
+
+        <h3 class="sub-heading">A sua linha de base</h3>
+        <p>Um cartão de linha de base no topo mostra os seus valores medianos de 14 dias para cada métrica de saúde. "—" é mostrado para métricas sem dados suficientes.</p>
+        <ul>
+          <li><strong>Sono</strong> — duração total mediana do sono noturno</li>
+          <li><strong>HRV</strong> — variabilidade mediana da frequência cardíaca (ms)</li>
+          <li><strong>Frequência cardíaca em repouso</strong> — frequência cardíaca mediana em repouso (bpm)</li>
+          <li><strong>Passos</strong> — número mediano diário de passos</li>
+          <li><strong>Exercício</strong> — minutos ativos medianos diários</li>
+          <li><strong>Sono profundo</strong> — duração mediana do sono profundo noturno</li>
+          <li><strong>Sono REM</strong> — duração mediana do sono REM noturno</li>
+          <li><strong>Acordado durante o sono</strong> — tempo mediano acordado nas sessões de sono</li>
+        </ul>
+
+        <h3 class="sub-heading">Padrões detetados</h3>
+        <p>O Heda verifica nove padrões baseados em evidências para cada evento de dor de cabeça. Cada deteção mostra o valor medido e o limiar ultrapassado — por exemplo: <em>«Dormiu 5 h 30 min antes deste evento (limiar: 7 h)»</em>.</p>
+
+        <ul class="feature-list">
+          <li><strong>Sono curto</strong> — a duração total do sono na noite anterior foi inferior a 7 horas (configurável em Configurações → Avançado).</li>
+          <li><strong>Horário de sono irregular</strong> — os horários de sono variaram mais de 120 minutos (desvio padrão) durante os 7 dias anteriores.</li>
+          <li><strong>Contagem de passos baixa</strong> — menos de 3 000 passos no dia anterior ao evento (configurável).</li>
+          <li><strong>Queda de HRV</strong> — o HRV caiu abaixo de 30 ms ou abaixo de 80% da sua linha de base pessoal de 14 dias.</li>
+          <li><strong>Frequência cardíaca em repouso elevada</strong> — a frequência cardíaca em repouso estava acima da sua mediana de 14 dias no dia anterior ao evento.</li>
+          <li><strong>Pico de exercício</strong> — os minutos ativos foram invulgarmente altos em comparação com a sua mediana de 14 dias no dia anterior.</li>
+          <li><strong>Pouco sono profundo</strong> — o sono profundo estava bem abaixo da sua mediana de 14 dias na noite anterior.</li>
+          <li><strong>Pouco sono REM</strong> — o sono REM estava bem abaixo da sua mediana de 14 dias na noite anterior.</li>
+          <li><strong>Sono fragmentado</strong> — o tempo acordado nas sessões de sono foi invulgarmente alto em relação ao sono total e à sua linha de base.</li>
+        </ul>
+
+        <h3 class="sub-heading">Recomendações</h3>
+        <p>Com base nos padrões detetados, o Heda gera recomendações personalizadas ordenadas por prioridade (Alta / Média / Baixa). Os exemplos incluem melhorar a duração ou regularidade do sono, aumentar a atividade diária ou gerir o stress e a recuperação.</p>
+
+        <div class="warning">
+          <strong>Não é aconselhamento médico.</strong> Os padrões detetados são correlações, não diagnósticos. Consulte sempre um profissional de saúde para orientação médica sobre as suas dores de cabeça.
+        </div>
       </section>
 
       <!-- ─ Relatórios ─ -->

@@ -58,7 +58,10 @@
           </ul></li>
           <li><a href="#bearbeitung">Bearbeiten &amp; Löschen</a></li>
           <li><a href="#analyse">Analyse</a></li>
-          <li><a href="#statistik">Statistik</a></li>
+          <li class="toc-sub"><ul class="toc-list">
+            <li><a href="#statistik">Statistik</a></li>
+            <li><a href="#korrelationen">Korrelationen</a></li>
+          </ul></li>
           <li><a href="#berichte">Berichte</a></li>
           <li><a href="#einstellungen">Einstellungen</a></li>
           <li><a href="#datenschutz">Datenschutz &amp; Daten</a></li>
@@ -108,7 +111,7 @@
           </div>
           <div class="info-card">
             <div class="card-title">Analyse</div>
-            <div class="card-body">Erkannte Muster und personalisierte Empfehlungen auf Basis deiner Health Connect-Daten.</div>
+            <div class="card-body">Statistiken und Trenddiagramme für alle Nutzer. Korrelationen (Premium) erkennt Muster zwischen deinen Health Connect-Daten und Kopfschmerzereignissen.</div>
           </div>
           <div class="info-card">
             <div class="card-title">Berichte</div>
@@ -300,51 +303,24 @@
       <!-- ─ Analyse ─ -->
       <section class="doc-section" id="analyse">
         <h2 class="section-heading">Analyse</h2>
-        <p>Die Registerkarte „Analyse" zeigt mögliche Zusammenhänge zwischen deinen Kopfschmerzereignissen und deinen täglichen Gesundheitsmessungen aus Health Connect. Sie blickt auf die letzten 90 Tage zurück.</p>
+        <p>Der Analysebildschirm hat oben zwei Registerkarten: <strong>Statistik</strong> und <strong>Korrelationen</strong>. Statistik ist für alle Nutzer verfügbar. Korrelationen ist eine Premium-Funktion, die außerdem eine Health Connect-Verbindung erfordert.</p>
 
-        <div class="note">
-          <strong>Erfordert Health Connect.</strong> Verbinde Heda mit Google Health Connect unter <strong>Einstellungen → Health Connect</strong>, um diesen Bildschirm zu aktivieren. Siehe den Abschnitt <a href="#health-connect">Health Connect</a> für Einrichtungsschritte.
-        </div>
-
-        <h3 class="sub-heading">Dein Ausgangswert</h3>
-        <p>Eine Ausgangswert-Karte oben zeigt deine Durchschnittswerte der letzten 14 Tage:</p>
-        <ul>
-          <li><strong>Schlaf</strong> — durchschnittliche nächtliche Schlafdauer</li>
-          <li><strong>HRV</strong> — durchschnittliche Herzratenvariabilität (ms)</li>
-          <li><strong>Schritte</strong> — durchschnittliche tägliche Schrittzahl</li>
-        </ul>
-
-        <h3 class="sub-heading">Erkannte Muster</h3>
-        <p>Heda sucht nach vier evidenzbasierten Mustern, die häufig vor Kopfschmerz- und Migräneanfällen auftreten:</p>
-
-        <ul class="feature-list">
-          <li><strong>Kurzer Schlaf</strong> — du hast vor diesem Anfall weniger als dein konfiguriertes Minimum geschlafen.</li>
-          <li><strong>Unregelmäßiger Schlafrhythmus</strong> — deine Schlafzeiten haben in der vorangegangenen Woche erheblich variiert.</li>
-          <li><strong>Geringe Aktivität</strong> — deine Schrittzahl am Vortag lag unter dem Mindestschwellenwert.</li>
-          <li><strong>Niedriger HRV</strong> — dein HRV fiel am Vortag unter den Ausgangswert, was auf erhöhten Stress oder schlechte Erholung hindeutet.</li>
-        </ul>
-
-        <p>Jeder Befund zeigt den spezifischen Nachweis: den gemessenen Wert und den überschrittenen Schwellenwert. Zum Beispiel: <em>„Schlief 5 Std. 30 Min. vor diesem Ereignis (Schwellenwert: 7 Std.)"</em>.</p>
-
-        <h3 class="sub-heading">Empfehlungen</h3>
-        <p>Basierend auf den erkannten Mustern erstellt Heda personalisierte Empfehlungen, die nach Priorität geordnet sind (Hoch / Mittel / Niedrig):</p>
-
-        <ul>
-          <li><strong>Schlafdauer erhöhen</strong> — strebe mindestens 7 Stunden pro Nacht an.</li>
-          <li><strong>Regelmäßigen Schlafrhythmus einhalten</strong> — gehe jeden Abend innerhalb von ±30 Minuten zur gleichen Zeit ins Bett.</li>
-          <li><strong>Tägliche Aktivität steigern</strong> — leichte Bewegung (z. B. ein 30-minütiger Spaziergang) kann das Migränerisiko reduzieren.</li>
-          <li><strong>Stress und Erholung managen</strong> — ein niedriger HRV deutet auf erhöhten Stress hin; erwäge Atemübungen oder Meditation.</li>
-        </ul>
-
-        <div class="warning">
-          <strong>Kein medizinischer Rat.</strong> Erkannte Muster sind Korrelationen, keine Diagnosen. Wende dich bei medizinischen Fragen zu deinen Kopfschmerzen immer an einen Arzt.
+        <div class="card-grid">
+          <div class="info-card">
+            <div class="card-title">Statistik</div>
+            <div class="card-body">Häufigkeits- und Schweregraddiagramme für einen ausgewählten Zeitraum. Für alle Nutzer verfügbar.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">Korrelationen</div>
+            <div class="card-body">Erkennt Muster in deinen Health Connect-Daten, die Kopfschmerzepisoden vorausgehen können. Erfordert Premium und Health Connect.</div>
+          </div>
         </div>
       </section>
 
       <!-- ─ Statistik ─ -->
       <section class="doc-section" id="statistik">
         <h2 class="section-heading">Statistik</h2>
-        <p>Der Abschnitt „Statistik" ist Teil der Registerkarte „Analyse". Er gibt dir einen Überblick über Häufigkeit und Schweregrad deiner Kopfschmerzen über einen ausgewählten Zeitraum.</p>
+        <p>Die Registerkarte „Statistik" gibt dir einen Überblick über Häufigkeit und Schweregrad deiner Kopfschmerzen über einen ausgewählten Zeitraum.</p>
 
         <h3 class="sub-heading">Zeitraumauswahl</h3>
         <p>Wähle zwischen fünf Zeiträumen:</p>
@@ -356,7 +332,8 @@
           <span class="tag">Gesamtzeitraum</span>
         </div>
 
-        <h3 class="sub-heading">Zusammenfassungskarten</h3>
+        <h3 class="sub-heading">Zusammenfassungskarte</h3>
+        <p>Eine Hauptkarte zeigt folgende Kennzahlen für den gewählten Zeitraum. Trendpfeile (↑ / ↓) vergleichen jeden Wert mit dem entsprechenden Vorjahreszeitraum:</p>
         <div class="card-grid">
           <div class="info-card">
             <div class="card-title">Ereignisse gesamt</div>
@@ -378,13 +355,57 @@
 
         <h3 class="sub-heading">Diagramme</h3>
         <ul>
-          <li><strong>Intensität</strong> — täglicher gewichteter Durchschnitt mit einem rollenden 7-Tage-Fenster.</li>
-          <li><strong>Stunden</strong> — rollende 7-Tage-Summe der Anfalldauer in Stunden.</li>
-          <li><strong>Anfallsanzahl</strong> — rollende 30-Tage-Summe der Ereignisse.</li>
+          <li><strong>Trenddiagramm</strong> — Anzahl der Ereignisse pro Zeiteinheit (täglich für 7/30/90 Tage, wöchentlich für 1 Jahr, monatlich für Gesamtzeitraum).</li>
+          <li><strong>Wochentag-Heatmap</strong> — zeigt, an welchen Wochentagen deine Kopfschmerzen am häufigsten auftreten.</li>
         </ul>
 
-        <h3 class="sub-heading">Ereignistyp &amp; Auslöseraufschlüsselung</h3>
-        <p>Eine Aufschlüsselung der Ereignisse nach Typ (Kopfschmerz vs. Migräne) und eine Liste deiner häufigsten Auslöser für den ausgewählten Zeitraum werden unterhalb der Diagramme angezeigt.</p>
+        <h3 class="sub-heading">Ereignistyp &amp; Auslöser</h3>
+        <p>Ein gestapeltes Balkendiagramm zeigt die Verteilung nach Ereignistypen (Kopfschmerz / Starker Kopfschmerz / Migräne / Starke Migräne) mit Anzahl und Prozentsätzen. Darunter listet ein horizontales Balkendiagramm deine häufigsten Auslöser für den ausgewählten Zeitraum.</p>
+      </section>
+
+      <!-- ─ Korrelationen ─ -->
+      <section class="doc-section" id="korrelationen">
+        <h2 class="section-heading">Korrelationen</h2>
+        <p>Die Registerkarte „Korrelationen" analysiert deine Health Connect-Daten und sucht nach neun evidenzbasierten Mustern, die häufig vor Kopfschmerz- und Migräneanfällen auftreten. Sie blickt auf die letzten 90 Tage zurück.</p>
+
+        <div class="note">
+          <strong>Premium-Funktion.</strong> Die Registerkarte „Korrelationen" erfordert Heda Premium. Außerdem werden Health Connect-Berechtigungen für Schlaf-, HRV- und Schrittzahldaten benötigt. Siehe den Abschnitt <a href="#health-connect">Health Connect</a> für Einrichtungsschritte.
+        </div>
+
+        <h3 class="sub-heading">Dein Ausgangswert</h3>
+        <p>Eine Ausgangswert-Karte oben zeigt deine 14-Tage-Medianwerte für jede Gesundheitskennzahl. „—" wird für Kennzahlen ohne ausreichende Daten angezeigt.</p>
+        <ul>
+          <li><strong>Schlaf</strong> — medianer nächtlicher Gesamtschlaf</li>
+          <li><strong>HRV</strong> — mediane Herzratenvariabilität (ms)</li>
+          <li><strong>Ruhepuls</strong> — medianer Ruhepuls (Schläge/Min)</li>
+          <li><strong>Schritte</strong> — mediane tägliche Schrittzahl</li>
+          <li><strong>Sport</strong> — mediane tägliche aktive Minuten</li>
+          <li><strong>Tiefschlaf</strong> — mediane nächtliche Tiefschlafdauer</li>
+          <li><strong>REM-Schlaf</strong> — mediane nächtliche REM-Schlafdauer</li>
+          <li><strong>Wach während des Schlafs</strong> — mediane Wachzeit innerhalb von Schlafperioden</li>
+        </ul>
+
+        <h3 class="sub-heading">Erkannte Muster</h3>
+        <p>Heda überprüft für jedes Kopfschmerzereignis neun evidenzbasierte Muster. Jeder Befund zeigt den gemessenen Wert und den überschrittenen Schwellenwert — zum Beispiel: <em>„Schlief 5 Std. 30 Min. vor diesem Ereignis (Schwellenwert: 7 Std.)"</em>.</p>
+
+        <ul class="feature-list">
+          <li><strong>Kurzer Schlaf</strong> — Gesamtschlafdauer der Nacht zuvor war unter 7 Stunden (konfigurierbar unter Einstellungen → Erweitert).</li>
+          <li><strong>Unregelmäßiger Schlafrhythmus</strong> — Schlafzeiten schwankten in den vorangegangenen 7 Tagen um mehr als 120 Minuten (Standardabweichung).</li>
+          <li><strong>Niedrige Schrittzahl</strong> — weniger als 3 000 Schritte am Tag vor dem Ereignis (konfigurierbar).</li>
+          <li><strong>HRV-Abfall</strong> — HRV fiel unter 30 ms oder unter 80 % deines persönlichen 14-Tage-Ausgangswertes.</li>
+          <li><strong>Erhöhter Ruhepuls</strong> — Ruhepuls lag am Vortag über deinem 14-Tage-Median.</li>
+          <li><strong>Sport-Spitze</strong> — aktive Minuten waren am Vortag im Vergleich zu deinem 14-Tage-Median ungewöhnlich hoch.</li>
+          <li><strong>Wenig Tiefschlaf</strong> — Tiefschlaf lag deutlich unter deinem 14-Tage-Median in der Nacht zuvor.</li>
+          <li><strong>Wenig REM-Schlaf</strong> — REM-Schlaf lag deutlich unter deinem 14-Tage-Median in der Nacht zuvor.</li>
+          <li><strong>Fragmentierter Schlaf</strong> — Wachzeit innerhalb von Schlafperioden war im Verhältnis zum Gesamtschlaf und deinem Ausgangswert ungewöhnlich hoch.</li>
+        </ul>
+
+        <h3 class="sub-heading">Empfehlungen</h3>
+        <p>Basierend auf den erkannten Mustern erstellt Heda personalisierte Empfehlungen, die nach Priorität geordnet sind (Hoch / Mittel / Niedrig). Beispiele sind die Verbesserung der Schlafdauer oder -regelmäßigkeit, mehr tägliche Aktivität oder das Management von Stress und Erholung.</p>
+
+        <div class="warning">
+          <strong>Kein medizinischer Rat.</strong> Erkannte Muster sind Korrelationen, keine Diagnosen. Wende dich bei medizinischen Fragen zu deinen Kopfschmerzen immer an einen Arzt.
+        </div>
       </section>
 
       <!-- ─ Berichte ─ -->
