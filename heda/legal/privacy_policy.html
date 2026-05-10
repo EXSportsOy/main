@@ -35,7 +35,7 @@
     <h1>Privacy Policy</h1>
 
     <p class="info-header">
-        <strong>Effective date:</strong> 2026-04-28 |
+        <strong>Effective date:</strong> 2026-05-10 |
         <strong>Developer:</strong> EXSports Oy |
         <strong>Contact:</strong> <a href="mailto:info@exsports.fi">info@exsports.fi</a>
     </p>
@@ -45,7 +45,7 @@
     </p>
 
     <div class="info-box">
-        <strong>Summary:</strong> Your migraine diary data is stored locally on your device. With your explicit consent we may sync data via Google Health Connect. We collect minimal analytics data and only with your consent. We do not sell your data. You have full control over your data under GDPR.
+        <strong>Summary:</strong> Your migraine diary data is stored locally on your device. With your explicit consent we may read health data from Google Health Connect. We collect minimal analytics data and only with your consent. We do not sell your data. You have full control over your data under GDPR.
     </div>
 
     <hr>
@@ -57,7 +57,7 @@
         Heda is a diary application. The migraine entries, symptom records, pain levels, triggers, medications, and other diary content you create are stored <strong>locally on your device</strong>. This data is not transmitted to EXSports Oy's servers.
     </p>
     <p>
-        If you choose to use the <strong>Google Health Connect</strong> integration, selected health data (such as migraine episodes) may be read from or written to Health Connect in accordance with your permissions. This data exchange takes place on your device between Heda and the Health Connect platform. EXSports Oy does not receive or store this data on external servers.
+        If you choose to use the <strong>Google Health Connect</strong> integration, selected health data (such as sleep records, heart rate variability, and step counts) may be read from Health Connect in accordance with your permissions. Heda only reads data from Health Connect — it never writes data to it. This data exchange takes place on your device between Heda and the Health Connect platform. EXSports Oy does not receive or store this data on external servers.
     </p>
 
     <div class="warning-box">
@@ -66,7 +66,10 @@
 
     <h3>1.2 Information You Provide</h3>
     <p>
-        The application <strong>does not require account registration</strong>. We do not collect names, email addresses, or any personal identifiers through the Application itself.
+        The application <strong>requires sign-in with a Google account</strong> via Android's Credential Manager. Your Google account email address is used solely to authenticate your identity and to link any premium entitlement purchases to your account. We do not collect your name or any other profile information beyond the email address provided by Google Sign-In.
+    </p>
+    <p>
+        Your Google account email address is processed by <strong>Supabase</strong> (our authentication and backend provider) to manage your login session and to verify premium subscription entitlements via Google Play. See Section 5 for details on Supabase as a third-party service.
     </p>
     <p>
         <strong>Support inquiries:</strong> If you contact us for support via email (<a href="mailto:info@exsports.fi">info@exsports.fi</a>), we may retain your name and email address solely for the purpose of responding to your inquiry. This data is stored securely and deleted once the support matter is resolved, unless you request otherwise.
@@ -87,12 +90,12 @@
     </div>
 
     <p>
-        You can <strong>withdraw your consent at any time</strong> in the app's settings menu under "Privacy Settings."
+        You can <strong>withdraw your consent at any time</strong> in the app's settings menu under <strong>Settings → Privacy &amp; Data</strong>.
     </p>
 
     <h3>1.4 Google Health Connect</h3>
     <p>
-        Heda may integrate with <strong>Google Health Connect</strong> to read and write health data (such as migraine episodes) on your device. This integration requires your explicit permission through the Android Health Connect permissions dialog. You can grant or revoke these permissions at any time in your device's Health Connect settings.
+        Heda may integrate with <strong>Google Health Connect</strong> to <strong>read</strong> health data (such as sleep records, heart rate variability, and step counts) from your device. Heda never writes data back to Health Connect. This integration requires your explicit permission through the Android Health Connect permissions dialog. You can grant or revoke these permissions at any time in your device's Health Connect settings.
     </p>
     <p>
         Data exchanged via Health Connect remains on your device and is governed by <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a> and the Health Connect terms of service. EXSports Oy does not receive or process Health Connect data on external servers.
@@ -115,6 +118,11 @@
             <tr>
                 <td>Diary &amp; health data</td>
                 <td>Stored locally; used only within the app on your device</td>
+                <td>Contract performance (Article 6(1)(b))</td>
+            </tr>
+            <tr>
+                <td>Google account email address</td>
+                <td>Authentication via Google Sign-In; linking premium entitlement purchases</td>
                 <td>Contract performance (Article 6(1)(b))</td>
             </tr>
             <tr>
@@ -165,10 +173,13 @@
 
     <ul>
         <li>
-            <strong><a href="https://policies.google.com/privacy" target="_blank">Google Play Services</a></strong> – App distribution and in-app purchases
+            <strong><a href="https://policies.google.com/privacy" target="_blank">Google Play Services / Google Play Billing</a></strong> – App distribution and processing of in-app purchases (premium unlock). Google Play Billing handles all payment transactions; EXSports Oy does not receive or store your payment card details.
         </li>
         <li>
-            <strong><a href="https://developer.android.com/health-and-fitness/guides/health-connect/plan/privacy-policy" target="_blank">Google Health Connect</a></strong> – On-device health data integration (with your permission)
+            <strong><a href="https://supabase.com/privacy" target="_blank">Supabase</a></strong> – Authentication backend (stores your Google account email for session management) and premium entitlement verification. Supabase is hosted in the EU. See <a href="https://supabase.com/privacy" target="_blank">Supabase's Privacy Policy</a>.
+        </li>
+        <li>
+            <strong><a href="https://developer.android.com/health-and-fitness/guides/health-connect/plan/privacy-policy" target="_blank">Google Health Connect</a></strong> – On-device health data integration (read-only, with your permission)
         </li>
         <li>
             <strong><a href="https://firebase.google.com/support/privacy" target="_blank">Google Firebase Analytics</a></strong> – Anonymous usage statistics (consent required)
@@ -185,6 +196,9 @@
     <h3>5.1 Data Transfers Outside the EU/EEA</h3>
     <p>
         Firebase Analytics and Crashlytics are operated by Google LLC, a company based in the United States. Data processed by these services may be transferred to and stored in the United States or other countries outside the European Economic Area (EEA). Google has implemented <strong>Standard Contractual Clauses (SCCs)</strong> approved by the European Commission to ensure adequate protection. You can read more in Google's <a href="https://policies.google.com/privacy/frameworks" target="_blank">Privacy Framework documentation</a>.
+    </p>
+    <p>
+        Supabase stores authentication data (your Google account email) on infrastructure located in the EU. For details, see <a href="https://supabase.com/privacy" target="_blank">Supabase's Privacy Policy</a>.
     </p>
 
     <h3>5.2 Legal Disclosure</h3>
@@ -206,7 +220,11 @@
         <tbody>
             <tr>
                 <td>Diary &amp; health data (local)</td>
-                <td>Stored locally on device; deleted when app is uninstalled or you clear app data</td>
+                <td>Stored locally on device; deleted when app is uninstalled, when you use "Delete local data" in Settings → Privacy &amp; Data, or when you clear app data</td>
+            </tr>
+            <tr>
+                <td>Google account email (Supabase)</td>
+                <td>Retained for as long as you have an active account; deleted upon account deletion (via Settings → Privacy &amp; Data → Delete account) or by contacting us</td>
             </tr>
             <tr>
                 <td>Analytics and crash data</td>
@@ -251,12 +269,26 @@
     <hr>
 
     <h2>10. Security</h2>
-    <p>The Service Provider implements physical, electronic, and procedural safeguards to protect your information. Diary data stored locally on your device benefits from Android's standard app sandboxing and, where available, device encryption. Access to any collected analytics or crash data is restricted to authorised personnel only. We recommend enabling device screen lock to further protect your health diary data.</p>
+    <p>The Service Provider implements physical, electronic, and procedural safeguards to protect your information. Specifically:</p>
+    <ul>
+        <li><strong>Database encryption:</strong> All diary data is stored in a SQLCipher-encrypted database using AES-256, so the data is unreadable without the correct key even if the device storage is accessed directly.</li>
+        <li><strong>Key management:</strong> The database encryption key is managed by the <strong>Android Keystore</strong> system and further protected with Google Tink (AES-256-GCM), so keys are hardware-backed where supported by the device.</li>
+        <li><strong>Biometric lock:</strong> The app supports an optional <strong>biometric lock</strong> (fingerprint, face recognition, or device PIN) that restricts access to the app without affecting diary data.</li>
+        <li><strong>App sandboxing:</strong> Diary data benefits from Android's standard app sandboxing; other apps on the device cannot access Heda's data.</li>
+        <li><strong>Authentication security:</strong> Sign-in is handled via Google's Credential Manager — we never see or store your Google account password.</li>
+    </ul>
+    <p>Access to any collected analytics or crash data is restricted to authorised personnel only. We recommend enabling device screen lock and biometric lock within the app to further protect your health diary data.</p>
 
     <hr>
 
-    <h2>11. Opt-Out</h2>
-    <p>You can stop all data collection by uninstalling the application. You can also disable crash reporting and analytics at any time in the app's settings, and revoke Health Connect permissions in Android's Health Connect settings, without uninstalling the app.</p>
+    <h2>11. Opt-Out and Account Deletion</h2>
+    <p>You can stop all data collection by uninstalling the application. You can also:</p>
+    <ul>
+        <li>Disable crash reporting and analytics at any time under <strong>Settings → Privacy &amp; Data</strong></li>
+        <li>Delete all locally stored diary data under <strong>Settings → Privacy &amp; Data → Delete local data</strong></li>
+        <li>Delete your account (including authentication data stored by Supabase) under <strong>Settings → Privacy &amp; Data → Delete account</strong>. Account deletion is a two-step confirmation process and is permanent.</li>
+        <li>Revoke Health Connect permissions in Android's Health Connect settings at any time, without uninstalling the app</li>
+    </ul>
 
     <hr>
 
