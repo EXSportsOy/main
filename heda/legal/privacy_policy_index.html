@@ -6,34 +6,21 @@
   <title>Privacy Policy – Heda</title>
   <link rel="stylesheet" href="../user-guide/shared.css" />
   <script>
-    // Auto-redirect based on browser language preference.
-    // Falls through to the manual picker if no match is found.
     (function () {
+      if (new URLSearchParams(window.location.search).get('pick') === '1') return;
       var map = {
-        fi: 'fi/privacy_policy.html',
-        sv: 'sv/privacy_policy.html',
-        no: 'no/privacy_policy.html',
-        nb: 'no/privacy_policy.html',
-        nn: 'no/privacy_policy.html',
-        da: 'da/privacy_policy.html',
-        de: 'de/privacy_policy.html',
-        nl: 'nl/privacy_policy.html',
-        fr: 'fr/privacy_policy.html',
-        es: 'es/privacy_policy.html',
-        it: 'it/privacy_policy.html',
-        pl: 'pl/privacy_policy.html',
-        pt: 'pt/privacy_policy.html',
-        en: 'privacy_policy.html'
+        fi: 'fi/privacy_policy.html', sv: 'sv/privacy_policy.html',
+        no: 'no/privacy_policy.html', nb: 'no/privacy_policy.html', nn: 'no/privacy_policy.html',
+        da: 'da/privacy_policy.html', de: 'de/privacy_policy.html', nl: 'nl/privacy_policy.html',
+        fr: 'fr/privacy_policy.html', es: 'es/privacy_policy.html', it: 'it/privacy_policy.html',
+        pl: 'pl/privacy_policy.html', pt: 'pt/privacy_policy.html', en: 'privacy_policy.html'
       };
-      var langs = navigator.languages || [navigator.language || navigator.userLanguage || 'en'];
+      var langs = navigator.languages || [navigator.language || 'en'];
       for (var i = 0; i < langs.length; i++) {
         var code = langs[i].split('-')[0].toLowerCase();
-        if (map[code]) {
-          window.location.replace(map[code]);
-          return;
-        }
+        if (map[code]) { window.location.replace(map[code]); return; }
       }
-      // No match — fall through to show the manual picker below
+      window.location.replace('privacy_policy.html');
     })();
   </script>
 </head>

@@ -7,30 +7,20 @@
   <link rel="stylesheet" href="shared.css" />
   <script>
     (function () {
+      if (new URLSearchParams(window.location.search).get('pick') === '1') return;
       var map = {
-        fi: 'fi/index.html',
-        sv: 'sv/index.html',
-        no: 'no/index.html',
-        nb: 'no/index.html',
-        nn: 'no/index.html',
-        da: 'da/index.html',
-        de: 'de/index.html',
-        nl: 'nl/index.html',
-        fr: 'fr/index.html',
-        es: 'es/index.html',
-        it: 'it/index.html',
-        pl: 'pl/index.html',
-        pt: 'pt/index.html',
-        en: 'en/index.html'
+        fi: 'fi/index.html', sv: 'sv/index.html',
+        no: 'no/index.html', nb: 'no/index.html', nn: 'no/index.html',
+        da: 'da/index.html', de: 'de/index.html', nl: 'nl/index.html',
+        fr: 'fr/index.html', es: 'es/index.html', it: 'it/index.html',
+        pl: 'pl/index.html', pt: 'pt/index.html', en: 'en/index.html'
       };
-      var langs = navigator.languages || [navigator.language || navigator.userLanguage || 'en'];
+      var langs = navigator.languages || [navigator.language || 'en'];
       for (var i = 0; i < langs.length; i++) {
         var code = langs[i].split('-')[0].toLowerCase();
-        if (map[code]) {
-          window.location.replace(map[code]);
-          return;
-        }
+        if (map[code]) { window.location.replace(map[code]); return; }
       }
+      window.location.replace('en/index.html');
     })();
   </script>
 </head>
