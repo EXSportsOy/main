@@ -1,42 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap');
+
+/* ── Pine Mist palette (dark default) ── */
 :root {
-  --bg-color: #121212;
-  --text-color: #e0e0e0;
-  --card-bg: #1e1e1e;
-  --card-border: #2a2a2a;
-  --card-shadow: rgba(0,0,0,0.5);
-  --logo-color: #64a8f0;
-  --tagline-color: #7d7d7d;
-  --heading-color: #b0b0b0;
-  --link-bg: #252525;
-  --link-border: #333;
-  --link-text: #90bdf7;
-  --link-hover-bg: #2a2a3a;
-  --link-hover-border: #64a8f0;
-  --link-hover-text: #64a8f0;
-  --muted: #9a9a9a;
-  --code-bg: #0f0f0f;
-  --code-border: #2a2a2a;
+  --bg:      #0A1212;
+  --surface: #10191A;
+  --line:    #1A2425;
+  --ink:     #DDE9E7;
+  --sub:     #86988F;
+  --primary: #8FCCB6;
+  --accent:  #5E9F8A;
+
+  /* legacy names used in templates */
+  --bg-color:         var(--bg);
+  --text-color:       var(--ink);
+  --card-bg:          var(--surface);
+  --card-border:      var(--line);
+  --card-shadow:      rgba(0,0,0,0.45);
+  --logo-color:       var(--primary);
+  --tagline-color:    var(--sub);
+  --heading-color:    var(--ink);
+  --link-bg:          var(--bg);
+  --link-border:      var(--line);
+  --link-text:        var(--ink);
+  --link-hover-bg:    var(--surface);
+  --link-hover-border:var(--accent);
+  --link-hover-text:  var(--primary);
+  --muted:            var(--sub);
+  --code-bg:          #0A1212;
+  --code-border:      var(--line);
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --bg-color: #f5f5f5;
-    --text-color: #333333;
-    --card-bg: #ffffff;
-    --card-border: #e0e0e0;
-    --card-shadow: rgba(0,0,0,0.1);
-    --logo-color: #2c3e50;
-    --tagline-color: #666;
-    --heading-color: #555;
-    --link-bg: #f0f0f0;
-    --link-border: #ddd;
-    --link-text: #2c3e50;
-    --link-hover-bg: #e8f4f8;
-    --link-hover-border: #3498db;
-    --link-hover-text: #3498db;
-    --muted: #5f5f5f;
-    --code-bg: #fafafa;
-    --code-border: #e6e6e6;
+    --bg:      #F4F2EC;
+    --surface: #ECE9E1;
+    --line:    #DDD8CD;
+    --ink:     #0A1212;
+    --sub:     #6A736D;
+    --primary: #5E9F8A;
+    --accent:  #4A8A76;
+
+    --card-shadow: rgba(0,0,0,0.08);
+    --code-bg:     #ECE9E1;
   }
 }
 
@@ -44,7 +49,7 @@
 html, body { height: 100%; }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   background: var(--bg-color);
   color: var(--text-color);
   margin: 0;
@@ -72,23 +77,28 @@ body {
 }
 
 .brand .logo {
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 22px;
+  font-weight: 600;
   color: var(--logo-color);
-  letter-spacing: 1px;
+  letter-spacing: -0.2px;
 }
 
 .brand .tagline {
-  font-size: 14px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 11px;
   color: var(--tagline-color);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
 }
 
 .nav a {
+  font-family: 'Geist Mono', monospace;
+  font-size: 12px;
   color: var(--link-text);
   text-decoration: none;
   border: 1px solid var(--link-border);
   background: var(--link-bg);
-  padding: 10px 12px;
+  padding: 8px 12px;
   border-radius: 8px;
   display: inline-block;
   transition: background 0.15s, border-color 0.15s, color 0.15s;
@@ -113,96 +123,125 @@ h1 {
   margin: 0 0 10px 0;
   font-size: 22px;
   color: var(--heading-color);
-  font-weight: bold;
+  font-weight: 600;
+  letter-spacing: -0.3px;
 }
 
 h2 {
   margin: 28px 0 10px 0;
-  font-size: 18px;
-  color: var(--heading-color);
+  font-size: 16px;
+  color: var(--ink);
+  font-weight: 500;
 }
 
 h3 {
-  margin: 18px 0 6px 0;
-  font-size: 15px;
-  color: var(--heading-color);
+  margin: 18px 0 8px 0;
+  font-size: 13px;
+  font-family: 'Geist Mono', monospace;
+  font-weight: 500;
+  color: var(--sub);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
-p { line-height: 1.55; }
-.small { color: var(--muted); font-size: 13px; }
+p {
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 0 0 14px 0;
+  color: var(--text-color);
+}
 
+ul, ol {
+  margin: 12px 0 12px 24px;
+}
+
+li {
+  font-size: 15px;
+  line-height: 1.65;
+  margin-bottom: 6px;
+  color: var(--text-color);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+code {
+  font-family: 'Geist Mono', monospace;
+  font-size: 13px;
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+pre {
+  font-family: 'Geist Mono', monospace;
+  font-size: 13px;
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
+  border-radius: 8px;
+  padding: 16px;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+strong { font-weight: 600; }
+
+hr {
+  border: none;
+  border-top: 1px solid var(--card-border);
+  margin: 28px 0;
+}
+
+/* ── Module tiles grid ── */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 12px;
   margin-top: 16px;
 }
 
 .tile {
   display: block;
-  text-decoration: none;
-  color: inherit;
-  background: var(--link-bg);
-  border: 1px solid var(--link-border);
+  background: var(--bg-color);
+  border: 1px solid var(--card-border);
   border-radius: 10px;
-  padding: 14px 16px;
-  transition: background 0.15s, border-color 0.15s;
+  padding: 16px;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: border-color 150ms, box-shadow 150ms, transform 150ms;
 }
 
 .tile:hover {
-  background: var(--link-hover-bg);
-  border-color: var(--link-hover-border);
+  border-color: var(--accent);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  transform: translateY(-1px);
 }
 
 .tile .title {
-  font-weight: bold;
-  color: var(--link-text);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--link-hover-text);
   margin-bottom: 6px;
 }
 
 .tile .desc {
-  font-size: 13px;
-  color: var(--muted);
-}
-
-ul { margin: 8px 0 0 18px; }
-li { margin: 6px 0; }
-
-code, pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
-}
-
-pre {
-  background: var(--code-bg);
-  border: 1px solid var(--code-border);
-  border-radius: 10px;
-  padding: 14px;
-  overflow: auto;
-}
-
-details {
-  margin-top: 12px;
-  background: var(--code-bg);
-  border: 1px solid var(--code-border);
-  border-radius: 10px;
-  padding: 12px 14px;
-}
-
-summary {
-  cursor: pointer;
-  font-weight: bold;
-  color: var(--link-text);
-}
-
-.footer {
-  margin-top: 22px;
-  color: var(--muted);
   font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
 }
 
-hr {
-  border: none;
-  border-top: 1px solid var(--card-border);
-  margin: 18px 0;
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  body { padding: 20px 14px; }
+  .header { flex-direction: column; align-items: flex-start; }
+  .grid { grid-template-columns: 1fr; }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .tile { transition: none; }
+  .tile:hover { transform: none; }
+}

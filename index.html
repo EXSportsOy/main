@@ -2,180 +2,362 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EXSports Oy</title>
-  <style>
-    :root {
-      --bg-color: #121212;
-      --text-color: #e0e0e0;
-      --card-bg: #1e1e1e;
-      --card-border: #2a2a2a;
-      --card-shadow: rgba(0,0,0,0.5);
-      --logo-color: #64a8f0;
-      --tagline-color: #555;
-      --heading-color: #777;
-      --link-bg: #252525;
-      --link-border: #333;
-      --link-text: #90bdf7;
-      --link-hover-bg: #2a2a3a;
-      --link-hover-border: #64a8f0;
-      --link-hover-text: #64a8f0;
-      --link-desc: #666;
-      --footer-color: #444;
-      --footer-link: #444;
-      --footer-link-hover: #64a8f0;
-    }
 
+  <!-- Brand meta -->
+  <meta name="description" content="EXSports Oy — Mobile Applications" />
+  <meta property="og:title" content="EXSports Oy" />
+  <meta property="og:description" content="Mobile Applications" />
+  <meta property="og:image" content="/assets/brand/og-image.png" />
+  <meta name="theme-color" content="#0A1212" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#F4F2EC" media="(prefers-color-scheme: light)" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/brand/favicon-64.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/favicon-16.png" />
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── Pine Mist palette ── */
+    :root {
+      --bg:      #0A1212;
+      --surface: #10191A;
+      --line:    #1A2425;
+      --ink:     #DDE9E7;
+      --sub:     #86988F;
+      --primary: #8FCCB6;
+      --accent:  #5E9F8A;
+      --sage:    #B7D69A;
+      --sage-acc:#8FB877;
+    }
     @media (prefers-color-scheme: light) {
       :root {
-        --bg-color: #f5f5f5;
-        --text-color: #333333;
-        --card-bg: #ffffff;
-        --card-border: #e0e0e0;
-        --card-shadow: rgba(0,0,0,0.1);
-        --logo-color: #2c3e50;
-        --tagline-color: #666;
-        --heading-color: #555;
-        --link-bg: #f0f0f0;
-        --link-border: #ddd;
-        --link-text: #2c3e50;
-        --link-hover-bg: #e8f4f8;
-        --link-hover-border: #3498db;
-        --link-hover-text: #3498db;
-        --link-desc: #555;
-        --footer-color: #777;
-        --footer-link: #777;
-        --footer-link-hover: #3498db;
+        --bg:      #F4F2EC;
+        --surface: #ECE9E1;
+        --line:    #DDD8CD;
+        --ink:     #0A1212;
+        --sub:     #6A736D;
       }
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
 
     body {
-      font-family: Arial, sans-serif;
-      background: var(--bg-color);
-      color: var(--text-color);
-      min-height: 100vh;
+      font-family: 'Geist', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      min-height: 100dvh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 40px 20px;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      padding: clamp(32px, 6vw, 80px) clamp(16px, 5vw, 40px);
+      /* Subtle radial vignette from center */
+      background-image: radial-gradient(ellipse 80% 60% at 50% 30%, #10191A 0%, #0A1212 100%);
     }
 
-    .card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 12px;
-      box-shadow: 0 4px 32px var(--card-shadow);
-      max-width: 480px;
+    /* ── Page shell ── */
+    .page {
       width: 100%;
-      padding: 40px 36px 32px;
-      text-align: center;
-      transition: background-color 0.3s ease, border-color 0.3s ease;
-    }
-
-    .logo {
-      font-size: 30px;
-      font-weight: bold;
-      color: var(--logo-color);
-      letter-spacing: 1px;
-      margin-bottom: 6px;
-    }
-
-    .tagline {
-      font-size: 14px;
-      color: var(--tagline-color);
-      margin-bottom: 36px;
-    }
-
-    h1 {
-      font-size: 13px;
-      color: var(--heading-color);
-      margin-bottom: 20px;
-      font-weight: normal;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .apps {
+      max-width: 680px;
       display: flex;
       flex-direction: column;
+      gap: clamp(40px, 6vw, 64px);
+    }
+
+    /* ── Hero ── */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+    }
+
+    .hero-mark {
+      position: relative;
+      display: inline-flex;
+    }
+
+    .hero-mark img {
+      width: clamp(72px, 14vw, 112px);
+      height: clamp(72px, 14vw, 112px);
+      display: block;
+    }
+
+    /* Dark mode: use the on-bg monogram (Pine Mist squircle) */
+    .hero-mark .mark-dark  { display: block; }
+    .hero-mark .mark-light { display: none;  }
+
+    @media (prefers-color-scheme: light) {
+      .hero-mark .mark-dark  { display: none;  }
+      .hero-mark .mark-light { display: block; }
+    }
+
+    .hero-wordmark {
+      height: clamp(22px, 4.5vw, 34px);
+    }
+    .hero-wordmark img {
+      height: 100%;
+      width: auto;
+      display: block;
+    }
+    .hero-wordmark .wm-dark  { display: block; }
+    .hero-wordmark .wm-light { display: none;  }
+    @media (prefers-color-scheme: light) {
+      .hero-wordmark .wm-dark  { display: none; }
+      .hero-wordmark .wm-light { display: block; }
+    }
+
+    .hero-tagline {
+      font-family: 'Geist Mono', monospace;
+      font-size: clamp(10px, 1.8vw, 12px);
+      color: var(--sub);
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+    }
+
+    /* X-diagonal hairline divider */
+    .divider {
+      width: 100%;
+      height: 1px;
+      position: relative;
+      overflow: visible;
+    }
+    .divider::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent 0%, var(--line) 20%, var(--accent) 50%, var(--line) 80%, transparent 100%);
+    }
+    .divider::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(18deg);
+      width: 32px;
+      height: 1px;
+      background: var(--primary);
+      opacity: 0.5;
+    }
+
+    /* ── Apps section ── */
+    .apps-label {
+      font-family: 'Geist Mono', monospace;
+      font-size: 11px;
+      color: var(--sub);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 14px;
     }
 
-    .app-btn {
+    /* ── App card ── */
+    .app-card {
       display: flex;
       align-items: center;
-      gap: 16px;
-      background: var(--link-bg);
-      border: 1px solid var(--link-border);
-      border-radius: 10px;
-      padding: 18px 20px;
+      gap: 18px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 22px 20px 22px 22px;
       text-decoration: none;
-      color: var(--link-text);
+      color: var(--ink);
+      transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .app-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      opacity: 0;
+      transition: opacity 180ms ease;
+    }
+
+    .app-card.pine::before {
+      background: radial-gradient(ellipse 80% 120% at 0% 50%, rgba(143,204,182,0.06) 0%, transparent 70%);
+    }
+
+    .app-card.sage::before {
+      background: radial-gradient(ellipse 80% 120% at 0% 50%, rgba(183,214,154,0.07) 0%, transparent 70%);
+    }
+
+    .app-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.28);
+    }
+    .app-card:hover::before { opacity: 1; }
+
+    .app-card.pine:hover { border-color: var(--accent); }
+    .app-card.sage:hover { border-color: var(--sage-acc); }
+
+    .app-card:focus-visible {
+      outline: 2px solid var(--primary);
+      outline-offset: 3px;
+    }
+
+    /* Icon wrapper */
+    .app-icon {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .app-icon.pine {
+      background: rgba(143,204,182,0.12);
+    }
+    .app-icon.sage {
+      background: rgba(183,214,154,0.10);
+    }
+    .app-icon svg {
+      display: block;
+    }
+
+    /* Text block */
+    .app-text {
+      flex: 1;
+      min-width: 0;
+    }
+    .app-name {
       font-size: 16px;
-      font-weight: bold;
-      transition: background 0.15s, border-color 0.15s, color 0.15s;
-      text-align: left;
+      font-weight: 600;
+      letter-spacing: -0.2px;
+      line-height: 1.2;
     }
-
-    .app-btn:hover {
-      background: var(--link-hover-bg);
-      border-color: var(--link-hover-border);
-      color: var(--link-hover-text);
-    }
-
-    .app-btn .icon { font-size: 28px; flex-shrink: 0; }
-
-    .app-btn .desc {
+    .app-desc {
       font-size: 12px;
-      font-weight: normal;
-      color: var(--link-desc);
-      margin-top: 3px;
+      color: var(--sub);
+      margin-top: 4px;
+      line-height: 1.4;
     }
 
+    /* Arrow */
+    .app-arrow {
+      font-family: 'Geist Mono', monospace;
+      font-size: 14px;
+      color: var(--sub);
+      flex-shrink: 0;
+      transition: color 180ms ease, transform 180ms ease;
+    }
+    .app-card.pine:hover .app-arrow { color: var(--primary); transform: translateX(3px); }
+    .app-card.sage:hover .app-arrow { color: var(--sage); transform: translateX(3px); }
+
+    /* ── Footer ── */
     footer {
-      margin-top: 32px;
-      font-size: 12px;
-      color: var(--footer-color);
       text-align: center;
+      font-family: 'Geist Mono', monospace;
+      font-size: 11px;
+      color: var(--sub);
+      letter-spacing: 1px;
+      opacity: 0.7;
     }
+    footer a {
+      color: var(--sub);
+      text-decoration: none;
+      transition: color 150ms;
+    }
+    footer a:hover { color: var(--primary); }
 
-    footer a { color: var(--footer-link); text-decoration: none; }
-    footer a:hover { color: var(--footer-link-hover); }
+    /* ── Reduced motion ── */
+    @media (prefers-reduced-motion: reduce) {
+      .app-card, .app-arrow { transition: none; }
+      .app-card:hover { transform: none; }
+    }
   </style>
 </head>
 <body>
 
-  <div class="card">
-    <div class="logo">EXSports Oy</div>
-    <div class="tagline">Mobile Applications</div>
-    <h1>Our Apps</h1>
-    <div class="apps">
-      <a class="app-btn" href="surveytools/index.html">
-        <span class="icon">📐</span>
-        <div>
-          SurveyTools
-          <div class="desc">Calculators for survey &amp; measurement workflows</div>
-        </div>
-      </a>
-      <a class="app-btn" href="heda/index.html">
-        <span class="icon">🧠</span>
-        <div>
-          Heda
-          <div class="desc">Versatile migraine diary with Google Health Connect</div>
-        </div>
-      </a>
-    </div>
-  </div>
+  <main class="page">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-mark" aria-hidden="true">
+        <img class="mark-dark"  src="assets/brand/monogram-512.png" alt="" width="512" height="512" />
+        <img class="mark-light" src="assets/brand/monogram-512.png" alt="" width="512" height="512" />
+      </div>
+      <div class="hero-wordmark">
+        <img class="wm-dark"  src="assets/brand/wordmark-ink.png"      alt="exs" />
+        <img class="wm-light" src="assets/brand/wordmark-dark-light.png" alt="exs" />
+      </div>
+      <p class="hero-tagline">Mobile Applications</p>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <!-- Apps -->
+    <section aria-label="Our apps">
+      <p class="apps-label" style="margin-bottom:16px;">Our Apps</p>
+      <div class="apps-grid">
+
+        <!-- SurveyTools -->
+        <a class="app-card pine" href="surveytools/index.html">
+          <div class="app-icon pine" aria-hidden="true">
+            <!-- Survey / compass motif -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9.5"/>
+              <line x1="12" y1="2.5" x2="12" y2="5"/>
+              <line x1="12" y1="19" x2="12" y2="21.5"/>
+              <line x1="2.5" y1="12" x2="5" y2="12"/>
+              <line x1="19" y1="12" x2="21.5" y2="12"/>
+              <polyline points="8.5,15.5 12,8.5 15.5,15.5" stroke-width="1.5"/>
+              <line x1="9.5" y1="13.5" x2="14.5" y2="13.5"/>
+            </svg>
+          </div>
+          <div class="app-text">
+            <div class="app-name">SurveyTools</div>
+            <div class="app-desc">Calculators for survey &amp; measurement workflows</div>
+          </div>
+          <span class="app-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <!-- Heda -->
+        <a class="app-card sage" href="heda/index.html">
+          <div class="app-icon sage" aria-hidden="true">
+            <!-- Heda brain/drop motif — mirrors the SVG used in heda/index.html -->
+            <svg width="24" height="24" viewBox="0 0 64 64" fill="none" aria-hidden="true" style="color:var(--sage)">
+              <circle cx="32" cy="32" r="27" stroke="currentColor" stroke-width="1.2" opacity="0.25" fill="none"/>
+              <circle cx="32" cy="32" r="20" stroke="currentColor" stroke-width="1.2" opacity="0.40" fill="none"/>
+              <ellipse cx="32" cy="30" rx="8.5" ry="10.5" fill="currentColor"/>
+              <path d="M27.5 40.5 Q32 43.5 36.5 40.5 L38 46 Q32 48 26 46 Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="app-text">
+            <div class="app-name">Heda</div>
+            <div class="app-desc">Versatile migraine diary with Google Health Connect</div>
+          </div>
+          <span class="app-arrow" aria-hidden="true">→</span>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
 
   <footer>
-    &copy; 2026 EXSports Oy &nbsp;|&nbsp;
-    <a href="mailto:info@exsports.fi">Contact Us</a>
+    <p>&copy; 2026 EXSPORTS OY &nbsp;&middot;&nbsp; <a href="mailto:info@exsports.fi">Contact</a></p>
   </footer>
 
 </body>
 </html>
-
