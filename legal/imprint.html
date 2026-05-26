@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Legal Notice · Impressum · Yritystiedot — EXSports Oy</title>
+    <meta name="description" content="Legal notice and company information for EXSports Oy — Impressum gemäß § 5 DDG." />
+    <meta name="theme-color" content="#0A1212" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#F4F2EC" media="(prefers-color-scheme: light)" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/brand/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/brand/favicon-16.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <style>
+        :root {
+            --bg:       #0A1212;
+            --surface:  #10191A;
+            --line:     #1A2425;
+            --ink:      #DDE9E7;
+            --sub:      #86988F;
+            --primary:  #8FCCB6;
+            --accent:   #5E9F8A;
+        }
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg:      #F4F2EC;
+                --surface: #ECE9E1;
+                --line:    #DDD8CD;
+                --ink:     #0A1212;
+                --sub:     #6A736D;
+                --primary: #5E9F8A;
+                --accent:  #4A8A76;
+            }
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+
+        body {
+            font-family: 'Geist', system-ui, sans-serif;
+            line-height: 1.6;
+            color: var(--ink);
+            background: var(--bg);
+            margin: 0;
+            max-width: 820px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 32px 20px 64px;
+        }
+
+        h1 {
+            color: var(--ink);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 10px;
+            margin-top: 0;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+        }
+
+        h2 {
+            color: var(--ink);
+            margin-top: 36px;
+            font-weight: 500;
+            font-size: 1.35em;
+        }
+
+        h3 {
+            color: var(--sub);
+            margin-top: 22px;
+            font-weight: 500;
+            font-size: 0.95em;
+            font-family: 'Geist Mono', monospace;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        p { margin: 0 0 14px; }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        a:hover { text-decoration: underline; }
+
+        ul { margin: 10px 0; padding-left: 20px; }
+        li { margin: 5px 0; }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--line);
+            margin: 40px 0;
+        }
+
+        .info-header {
+            font-family: 'Geist Mono', monospace;
+            font-size: 11px;
+            color: var(--sub);
+            letter-spacing: 0.5px;
+            margin-bottom: 24px;
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin: 20px 0 32px;
+            font-family: 'Geist Mono', monospace;
+            font-size: 11px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .lang-switch a {
+            display: inline-block;
+            padding: 6px 12px;
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            color: var(--sub);
+            transition: border-color 150ms, color 150ms, background 150ms;
+        }
+        .lang-switch a:hover {
+            border-color: var(--accent);
+            color: var(--primary);
+            background: rgba(143, 204, 182, 0.08);
+            text-decoration: none;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0 24px;
+            font-size: 14px;
+        }
+        .data-table th, .data-table td {
+            border: 1px solid var(--line);
+            padding: 10px 14px;
+            text-align: left;
+            vertical-align: top;
+        }
+        .data-table th {
+            background: var(--surface);
+            font-family: 'Geist Mono', monospace;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            color: var(--sub);
+            width: 38%;
+            white-space: nowrap;
+        }
+        .data-table td { color: var(--ink); }
+
+        .info-box {
+            background: var(--surface);
+            border-left: 4px solid var(--accent);
+            padding: 14px 18px;
+            margin: 20px 0;
+            border-radius: 4px;
+            font-size: 14px;
+            color: var(--ink);
+            line-height: 1.7;
+        }
+
+        footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--line);
+            font-family: 'Geist Mono', monospace;
+            font-size: 11px;
+            color: var(--sub);
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+        footer a { color: var(--sub); }
+        footer a:hover { color: var(--primary); }
+
+        section { scroll-margin-top: 24px; }
+
+        @media (max-width: 600px) {
+            body { padding: 20px 14px 48px; }
+            .data-table th, .data-table td { padding: 8px 10px; font-size: 13px; }
+            .data-table th { white-space: normal; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Legal Notice · Impressum · Yritystiedot</h1>
+
+    <p class="info-header">
+        <strong>EXSports Oy</strong> &nbsp;·&nbsp;
+        Business ID 2719500-4 &nbsp;·&nbsp;
+        Last updated: 2026-05-26
+    </p>
+
+    <nav class="lang-switch" aria-label="Language">
+        <a href="#en">English</a>
+        <a href="#de">Deutsch</a>
+        <a href="#fi">Suomi</a>
+    </nav>
+
+    <!-- ────────────────────────────────────────────────────────── -->
+    <!--  ENGLISH                                                   -->
+    <!-- ────────────────────────────────────────────────────────── -->
+    <section id="en" lang="en">
+        <h2>Legal Notice &amp; Company Information</h2>
+
+        <h3>Provider / Service Operator</h3>
+        <table class="data-table">
+            <tbody>
+                <tr><th>Company name</th><td>EXSports Oy</td></tr>
+                <tr><th>Legal form</th><td>Osakeyhtiö (Finnish limited liability company, comparable to GmbH / Ltd)</td></tr>
+                <tr><th>Postal &amp; visiting address</th><td>Korkeavuorenkatu 25<br />48100 Kotka<br />Finland</td></tr>
+                <tr><th>Registered seat</th><td>Jyväskylä, Finland</td></tr>
+                <tr><th>Phone</th><td><a href="tel:+358404144110">+358 40 414 4110</a></td></tr>
+                <tr><th>Email</th><td><a href="mailto:info@exsports.fi">info@exsports.fi</a></td></tr>
+                <tr><th>Website</th><td><a href="https://www.exsports.fi">www.exsports.fi</a></td></tr>
+            </tbody>
+        </table>
+
+        <h3>Registration</h3>
+        <table class="data-table">
+            <tbody>
+                <tr><th>Business ID (Y-tunnus)</th><td>2719500-4</td></tr>
+                <tr><th>VAT ID</th><td>FI27195004</td></tr>
+                <tr><th>EUID</th><td>FIFPRO.2719500-4</td></tr>
+                <tr><th>Trade register</th><td>Finnish Patent and Registration Office (Patentti- ja rekisterihallitus, PRH)</td></tr>
+                <tr><th>Date of registration</th><td>26 October 2015</td></tr>
+                <tr><th>Primary line of business</th><td>32300 — Manufacture of sports goods</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Representation &amp; Responsibility for Content</h3>
+        <p>
+            Responsible for content under § 18 (2) MStV (German Interstate Media Treaty)
+            and equivalent EU provisions:
+        </p>
+        <p>
+            <strong>Joel Paananen</strong>, Managing Director (toimitusjohtaja),<br />
+            EXSports Oy, Korkeavuorenkatu 25, 48100 Kotka, Finland<br />
+            <a href="mailto:info@exsports.fi">info@exsports.fi</a>
+        </p>
+
+        <h3>Online Dispute Resolution (EU)</h3>
+        <p>
+            The European Commission provides a platform for online dispute resolution (ODR),
+            available at <a href="https://ec.europa.eu/consumers/odr" rel="noopener" target="_blank">https://ec.europa.eu/consumers/odr</a>.
+        </p>
+        <p>
+            EXSports Oy is neither obliged nor willing to participate in a dispute
+            settlement procedure before a consumer arbitration board.
+        </p>
+
+        <h3>Liability for Content</h3>
+        <p>
+            As a service provider, EXSports Oy is responsible for its own content on these
+            pages in accordance with general laws (incl. § 7 (1) DDG). According to
+            §§ 8–10 DDG we are, however, not obliged to monitor transmitted or stored
+            third-party information, or to investigate circumstances that indicate illegal
+            activity. Obligations to remove or block the use of information under general
+            laws remain unaffected. Any liability in this respect is only possible from the
+            point in time at which a concrete infringement of the law becomes known. Upon
+            notification of corresponding infringements, we will remove such content
+            immediately.
+        </p>
+
+        <h3>Liability for Links</h3>
+        <p>
+            Our offer contains links to external websites of third parties, over whose
+            content we have no influence. Therefore, we cannot assume any liability for
+            this external content. The respective provider or operator of the pages is
+            always responsible for the content of the linked pages.
+        </p>
+
+        <h3>Copyright</h3>
+        <p>
+            The content and works on these pages created by EXSports Oy are subject to
+            Finnish and EU copyright law. Duplication, processing, distribution and any
+            form of commercialisation of such material beyond the scope of copyright law
+            require the prior written consent of EXSports Oy.
+        </p>
+
+        <h3>Related Documents</h3>
+        <ul>
+            <li><a href="../surveytools/legal/privacy_policy.html">Privacy Policy (SurveyTools)</a></li>
+            <li><a href="../surveytools/legal/disclaimer.html">Disclaimer &amp; Terms of Use (SurveyTools)</a></li>
+            <li><a href="../surveytools/legal/delete.html">Data Deletion Request</a></li>
+            <li><a href="../surveytools/legal/report-bug.html">Report a Bug</a></li>
+        </ul>
+    </section>
+
+    <hr />
+
+    <!-- ────────────────────────────────────────────────────────── -->
+    <!--  DEUTSCH — Impressum gem. § 5 DDG                          -->
+    <!-- ────────────────────────────────────────────────────────── -->
+    <section id="de" lang="de">
+        <h2>Impressum</h2>
+        <p style="color: var(--sub); font-size: 14px;">
+            Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz, vormals § 5 TMG)
+            sowie § 18 Abs. 2 MStV.
+        </p>
+
+        <h3>Anbieter / Diensteanbieter</h3>
+        <table class="data-table">
+            <tbody>
+                <tr><th>Firma</th><td>EXSports Oy</td></tr>
+                <tr><th>Rechtsform</th><td>Osakeyhtiö (finnische Aktiengesellschaft, vergleichbar mit GmbH)</td></tr>
+                <tr><th>Anschrift (ladungsfähig)</th><td>Korkeavuorenkatu 25<br />48100 Kotka<br />Finnland</td></tr>
+                <tr><th>Sitz der Gesellschaft</th><td>Jyväskylä, Finnland</td></tr>
+                <tr><th>Telefon</th><td><a href="tel:+358404144110">+358 40 414 4110</a></td></tr>
+                <tr><th>E-Mail</th><td><a href="mailto:info@exsports.fi">info@exsports.fi</a></td></tr>
+                <tr><th>Internet</th><td><a href="https://www.exsports.fi">www.exsports.fi</a></td></tr>
+            </tbody>
+        </table>
+
+        <h3>Registereintragung</h3>
+        <table class="data-table">
+            <tbody>
+                <tr><th>Handelsregister</th><td>Finnisches Patent- und Registeramt (Patentti- ja rekisterihallitus, PRH)</td></tr>
+                <tr><th>Registernummer (Y-tunnus)</th><td>2719500-4</td></tr>
+                <tr><th>EUID</th><td>FIFPRO.2719500-4</td></tr>
+                <tr><th>Eintragungsdatum</th><td>26.10.2015</td></tr>
+                <tr><th>Umsatzsteuer-ID</th><td>FI27195004 (gemäß § 27 a UStG entspr. finn. Recht)</td></tr>
+                <tr><th>Haupttätigkeit (TOL/NACE)</th><td>32300 — Herstellung von Sportgeräten</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Vertretungsberechtigter / Verantwortlich für den Inhalt</h3>
+        <p>
+            Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:
+        </p>
+        <p>
+            <strong>Ville Paananen</strong>, Geschäftsführer (toimitusjohtaja),<br />
+            EXSports Oy, Korkeavuorenkatu 25, 48100 Kotka, Finnland<br />
+            <a href="mailto:info@exsports.fi">info@exsports.fi</a>
+        </p>
+
+        <h3>EU-Streitschlichtung</h3>
+        <p>
+            Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung
+            (OS) bereit:
+            <a href="https://ec.europa.eu/consumers/odr" rel="noopener" target="_blank">https://ec.europa.eu/consumers/odr</a>.<br />
+            Unsere E-Mail-Adresse finden Sie oben im Impressum.
+        </p>
+
+        <h3>Verbraucher&shy;streit&shy;beilegung / Universal&shy;schlichtungs&shy;stelle</h3>
+        <p>
+            Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor
+            einer Verbraucherschlichtungsstelle teilzunehmen.
+        </p>
+
+        <h3>Haftung für Inhalte</h3>
+        <p>
+            Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf
+            diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10
+            DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder
+            gespeicherte fremde Informationen zu überwachen oder nach Umständen zu
+            forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur
+            Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen
+            Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch
+            erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich.
+            Bei Bekanntwerden entsprechender Rechtsverletzungen werden wir diese Inhalte
+            umgehend entfernen.
+        </p>
+
+        <h3>Haftung für Links</h3>
+        <p>
+            Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte
+            wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch
+            keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der
+            jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
+        </p>
+
+        <h3>Urheberrecht</h3>
+        <p>
+            Die durch EXSports Oy erstellten Inhalte und Werke auf diesen Seiten
+            unterliegen dem finnischen und europäischen Urheberrecht. Die
+            Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung
+            außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung
+            der EXSports Oy.
+        </p>
+
+        <h3>Weiterführende Dokumente</h3>
+        <ul>
+            <li><a href="../surveytools/legal/privacy_policy.html">Datenschutzerklärung (SurveyTools)</a></li>
+            <li><a href="../surveytools/legal/disclaimer.html">Haftungsausschluss &amp; Nutzungsbedingungen (SurveyTools)</a></li>
+            <li><a href="../surveytools/legal/delete.html">Antrag auf Datenlöschung</a></li>
+            <li><a href="../surveytools/legal/report-bug.html">Fehler melden</a></li>
+        </ul>
+    </section>
+
+    <hr />
+
+    <!-- ────────────────────────────────────────────────────────── -->
+    <!--  SUOMI                                                     -->
+    <!-- ────────────────────────────────────────────────────────── -->
+    <section id="fi" lang="fi">
+        <h2>Yritystiedot</h2>
+        <p style="color: var(--sub); font-size: 14px;">
+            Tiedot annetaan kuluttajansuojalain, sähköisestä kaupasta annetun lain
+            (228/2003) sekä EU:n Digital Services Act -asetuksen (2022/2065) mukaisesti.
+        </p>
+
+        <h3>Palveluntarjoaja</h3>
+        <table class="data-table">
+            <tbody>
+                <tr><th>Toiminimi</th><td>EXSports Oy</td></tr>
+                <tr><th>Yritysmuoto</th><td>Osakeyhtiö</td></tr>
+                <tr><th>Posti- ja käyntiosoite</th><td>Korkeavuorenkatu 25<br />48100 Kotka</td></tr>
+                <tr><th>Kotipaikka</th><td>Jyväskylä</td></tr>
+                <tr><th>Puhelin</th><td><a href="tel:+358404144110">+358 40 414 4110</a></td></tr>
+                <tr><th>Sähköposti</th><td><a href="mailto:info@exsports.fi">info@exsports.fi</a></td></tr>
+                <tr><th>Verkkosivu</th><td><a href="https://www.exsports.fi">www.exsports.fi</a></td></tr>
+                <tr><th>Kieli</th><td>Suomi</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Rekisteröintitiedot</h3>
+        <table class="data-table">
+            <tbody>
+                <tr><th>Y-tunnus</th><td>2719500-4</td></tr>
+                <tr><th>ALV-tunnus</th><td>FI27195004</td></tr>
+                <tr><th>EUID</th><td>FIFPRO.2719500-4</td></tr>
+                <tr><th>Rekisteri</th><td>Patentti- ja rekisterihallitus (PRH), kaupparekisteri</td></tr>
+                <tr><th>Rekisteröintipäivä</th><td>26.10.2015</td></tr>
+                <tr><th>Päätoimiala</th><td>32300 — Urheiluvälineiden valmistus</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Edustaja ja sisällöstä vastaava henkilö</h3>
+        <p>
+            <strong>Ville Paananen</strong>, toimitusjohtaja,<br />
+            EXSports Oy, Korkeavuorenkatu 25, 48100 Kotka<br />
+            <a href="mailto:info@exsports.fi">info@exsports.fi</a>
+        </p>
+
+        <h3>Riitojenratkaisu</h3>
+        <p>
+            Kuluttaja voi viedä kauppaa koskevan erimielisyyden kuluttajariitalautakunnan
+            (<a href="https://www.kuluttajariita.fi" rel="noopener" target="_blank">www.kuluttajariita.fi</a>)
+            ratkaistavaksi. Ennen asian viemistä lautakuntaan suosittelemme ottamaan
+            yhteyttä kuluttajaneuvontaan
+            (<a href="https://www.kkv.fi/kuluttajaneuvonta" rel="noopener" target="_blank">www.kkv.fi/kuluttajaneuvonta</a>).
+        </p>
+        <p>
+            EU:n verkkovälitteinen riidanratkaisualusta:
+            <a href="https://ec.europa.eu/consumers/odr" rel="noopener" target="_blank">https://ec.europa.eu/consumers/odr</a>.
+        </p>
+
+        <h3>Vastuu sisällöstä ja linkeistä</h3>
+        <p>
+            EXSports Oy vastaa näiden sivujen omasta sisällöstä yleisten lakien mukaisesti.
+            Emme vastaa kolmansien osapuolten verkkosivujen sisällöstä, joihin sivuiltamme
+            on linkitetty. Mikäli havaitset sivuillamme oikeuksia loukkaavaa sisältöä,
+            pyydämme ottamaan yhteyttä yllä mainittuun sähköpostiosoitteeseen — poistamme
+            tällaisen sisällön viipymättä.
+        </p>
+
+        <h3>Tekijänoikeudet</h3>
+        <p>
+            EXSports Oy:n näille sivuille luoma sisältö on suojattu tekijänoikeuslain
+            mukaisesti. Sisällön kopiointi, muokkaus, levittäminen tai muu hyödyntäminen
+            tekijänoikeuslain sallimaa käyttöä laajemmin edellyttää EXSports Oy:n
+            kirjallista suostumusta.
+        </p>
+
+        <h3>Asiakirjat</h3>
+        <ul>
+            <li><a href="../surveytools/legal/privacy_policy.html">Tietosuojaseloste (SurveyTools)</a></li>
+            <li><a href="../surveytools/legal/disclaimer.html">Vastuuvapauslauseke ja käyttöehdot (SurveyTools)</a></li>
+            <li><a href="../surveytools/legal/delete.html">Tietojen poistopyyntö</a></li>
+            <li><a href="../surveytools/legal/report-bug.html">Ilmoita virheestä</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        &copy; 2026 EXSPORTS OY &nbsp;·&nbsp;
+        <a href="../index.html">← Home</a> &nbsp;·&nbsp;
+        <a href="mailto:info@exsports.fi">Contact</a>
+    </footer>
+
+</body>
+</html>
