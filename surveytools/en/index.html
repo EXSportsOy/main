@@ -14,6 +14,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="SurveyTools — EXSports Oy" />
+<meta property="og:description" content="SurveyTools — survey and measurement calculators as an educational and recreational aid. Not a certified instrument. By EXSports Oy." />
+<meta property="og:image" content="/assets/brand/og-image.png" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.exsports.fi/surveytools/en/index.html" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/en/index.html" />
+
 <style>
   .stage { position: relative; overflow: clip; }
   .glow { position:absolute; pointer-events:none; z-index:0; border-radius:50%; filter: blur(80px); }
@@ -63,6 +73,7 @@
   <div class="wrap nav__inner">
     <a class="nav__brand" href="/index.html"><img src="/assets/brand/wordmark-ink.png" alt="exs" /><span class="mono-tag">EXSports Oy</span></a>
     <nav class="nav__links">
+      <span data-i18n-switcher data-current="en"></span>
       <a href="/index.html" class="hide-sm">Home</a>
       <a href="/legal/imprint.html" class="hide-sm">Imprint</a>
       <a href="mailto:info@exsports.fi" class="cta">Contact</a>
@@ -167,5 +178,7 @@
   } else reveals.forEach(show);
   setTimeout(()=>reveals.forEach(show),1600);
 </script>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
 </body>
 </html>
