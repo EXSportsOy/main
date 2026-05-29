@@ -30,7 +30,11 @@ function sectionEntries(section) {
       alternates[code] = `${ORIGIN}${base}/${code}/index.html`;
     }
   }
-  if (Object.keys(alternates).length === 0) return [];
+  if (Object.keys(alternates).length === 0) {
+    return existsSync(join(dirAbs, 'index.html'))
+      ? [buildUrlEntry(`${ORIGIN}${base}/`, {}, null)]
+      : [];
+  }
   const xDefault = alternates.en ? 'en' : Object.keys(alternates)[0];
   const entries = [buildUrlEntry(`${ORIGIN}${base}/`, alternates, xDefault)];
   for (const href of Object.values(alternates)) {
