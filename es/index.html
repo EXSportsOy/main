@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>EXSports Oy — Herramientas móviles especializadas</title>
+<meta name="description" content="EXSports Oy crea pequeñas aplicaciones móviles fiables — cada una diseñada para hacer una sola cosa de forma excepcional. Hecho en Finlandia." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#0A1212" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="EXSports Oy — Herramientas móviles especializadas" />
+<meta property="og:description" content="Pequeñas aplicaciones móviles fiables — cada una diseñada para hacer una sola cosa de forma excepcional. Hecho en Finlandia." />
+<meta property="og:image" content="/assets/brand/og-image.png" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.exsports.fi/es/index.html" />
+<link rel="canonical" href="https://www.exsports.fi/es/index.html" />
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/brand/favicon-64.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png" />
+<link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>
+  /* ===== ambient backdrop ===== */
+  .stage { position: relative; overflow: clip; }
+  .glow {
+    position: absolute; pointer-events: none; z-index: 0;
+    border-radius: 50%;
+    filter: blur(70px);
+    opacity: calc(var(--glow) * 1);
+  }
+  .glow--hero {
+    width: min(760px, 92vw); aspect-ratio: 1;
+    top: -8%; right: -6%;
+    background: radial-gradient(circle at 50% 50%, var(--signature), transparent 64%);
+    opacity: calc(var(--glow) * 0.9);
+  }
+  .grain {
+    position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background-image: linear-gradient(115deg, transparent 49.4%, color-mix(in srgb, var(--ink) 3%, transparent) 49.5%, color-mix(in srgb, var(--ink) 3%, transparent) 50.5%, transparent 50.6%);
+    background-size: 26px 26px;
+    opacity: 0.5; mask-image: linear-gradient(180deg, #000, transparent 80%);
+  }
+
+  /* ===== hero ===== */
+  .hero { position: relative; z-index: 1; padding-top: clamp(48px, 9vw, 110px); padding-bottom: clamp(60px, 10vw, 130px); }
+  .hero__grid {
+    display: grid; grid-template-columns: 1.25fr 0.75fr;
+    gap: clamp(32px, 6vw, 80px); align-items: center;
+  }
+  .hero__title { margin: 22px 0 0; }
+  .hero__title .tint { color: var(--signature); }
+  .hero__lead { margin-top: 28px; }
+  .hero__actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px; }
+
+  .hero__mark { position: relative; display: grid; place-items: center; }
+  .hero__mark img {
+    width: min(360px, 70%); height: auto;
+    filter: drop-shadow(0 30px 70px color-mix(in srgb, var(--signature) 30%, transparent));
+    animation: floaty 9s var(--ease) infinite alternate;
+  }
+  @keyframes floaty { to { transform: translateY(-14px); } }
+  body.no-motion .hero__mark img { animation: none; }
+
+  .hero__ring {
+    position: absolute; inset: 0; margin: auto;
+    width: min(440px, 88%); aspect-ratio: 1; border-radius: 50%;
+    border: 1px solid var(--line-2);
+    opacity: 0.5;
+  }
+  .hero__ring::after {
+    content: ""; position: absolute; inset: 34px; border-radius: 50%;
+    border: 1px dashed color-mix(in srgb, var(--signature) 40%, transparent);
+  }
+
+  @media (max-width: 880px) {
+    .hero__grid { grid-template-columns: 1fr; }
+    .hero__mark { order: -1; }
+    .hero__mark img { width: 168px; }
+    .hero__ring { width: 230px; }
+    .hero__ring::after { inset: 22px; }
+  }
+
+  /* ===== section header ===== */
+  .sec-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: clamp(36px, 6vw, 64px); }
+  .sec-head .count { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.16em; color: var(--sub); }
+
+  /* ===== app cards ===== */
+  .apps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  @media (max-width: 920px) { .apps { grid-template-columns: 1fr; } }
+
+  .app {
+    position: relative; display: flex; flex-direction: column;
+    padding: 32px 30px 28px;
+    background: linear-gradient(180deg, var(--surface), color-mix(in srgb, var(--surface) 70%, var(--bg)));
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    transition: transform 0.5s var(--ease), border-color 0.5s var(--ease), box-shadow 0.5s var(--ease);
+    min-height: 340px;
+  }
+  .app::before {
+    content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background: radial-gradient(120% 80% at 80% -10%, var(--signature-soft), transparent 60%);
+    opacity: 0; transition: opacity 0.5s var(--ease);
+  }
+  .app:hover { transform: translateY(-8px); border-color: color-mix(in srgb, var(--signature) 55%, var(--line)); box-shadow: 0 30px 60px -28px color-mix(in srgb, var(--signature) 45%, transparent); }
+  .app:hover::before { opacity: 1; }
+  .app > * { position: relative; z-index: 1; }
+
+  .app__top { display: flex; align-items: flex-start; justify-content: space-between; }
+  .app__idx { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.14em; color: var(--sub); }
+  .app__badge {
+    font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--bg-deep); background: var(--signature); padding: 4px 9px; border-radius: 999px; font-weight: 500;
+  }
+  .app__name { font-size: clamp(1.6rem, 2.6vw, 2.1rem); margin-top: 26px; }
+  .app__name .by { display: block; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; color: var(--sub); text-transform: uppercase; margin-top: 8px; font-weight: 400; }
+  .app__desc { color: var(--sub); margin: 16px 0 0; flex: 1; text-wrap: pretty; }
+  .app__tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 20px; }
+  .app__tags span {
+    font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--sub); border: 1px solid var(--line-2); padding: 4px 10px; border-radius: 999px;
+  }
+  .app__go { display: inline-flex; align-items: center; gap: 9px; margin-top: 24px; font-family: var(--mono); font-size: 0.76rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--signature); }
+  .app__go .arrow { transition: transform 0.35s var(--ease); }
+  .app:hover .app__go .arrow { transform: translateX(5px); }
+
+  /* per-app signature */
+  .app--survey { --signature: var(--accent); --signature-soft: color-mix(in oklch, var(--accent) 16%, transparent); }
+  .app--heda   { --signature: #C9DDA6; --signature-soft: color-mix(in oklch, #C9DDA6 16%, transparent); }
+  .app--shodia { --signature: #B7D69A; --signature-soft: color-mix(in oklch, #B7D69A 16%, transparent); }
+
+  /* abstract marks (CSS) */
+  .mark { width: 56px; height: 56px; position: relative; }
+  /* crosshair — survey */
+  .mark--cross::before, .mark--cross::after { content:""; position:absolute; background: var(--signature); }
+  .mark--cross::before { left: 50%; top: 0; width: 2px; height: 100%; transform: translateX(-50%); }
+  .mark--cross::after  { top: 50%; left: 0; height: 2px; width: 100%; transform: translateY(-50%); }
+  .mark--cross i { position:absolute; inset: 9px; border: 2px solid var(--signature); border-radius: 50%; }
+  /* arcs — heda */
+  .mark--arc i, .mark--arc::before, .mark--arc::after { content:""; position:absolute; border-radius:50%; border:2px solid var(--signature); }
+  .mark--arc::before { inset: 0; clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%); }
+  .mark--arc i { inset: 12px; clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%); opacity:0.75; }
+  .mark--arc::after { inset: 24px; clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%); opacity:0.5; }
+  /* target rings — shodia */
+  .mark--target i, .mark--target::before, .mark--target::after { content:""; position:absolute; border-radius:50%; border:2px solid var(--signature); }
+  .mark--target::before { inset: 0; opacity: 0.45; }
+  .mark--target i { inset: 13px; opacity: 0.75; }
+  .mark--target::after { inset: 24px; background: var(--signature); }
+  /* head + circles — heda (bust silhouette + radiating rings) */
+  .mark--head .hr { fill:none; stroke:var(--signature); stroke-width:2; }
+  .mark--head .o2 { opacity:0.5; }
+  .mark--head .o3 { opacity:0.26; }
+  .mark--head .hf { fill:var(--signature); }
+
+  /* ===== principles band ===== */
+  .principles { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .principles__grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .principles__grid > div { padding: clamp(34px, 5vw, 56px) clamp(20px,3vw,40px); border-left: 1px solid var(--line); }
+  .principles__grid > div:first-child { border-left: none; padding-left: 0; }
+  @media (max-width: 760px) {
+    .principles__grid { grid-template-columns: 1fr; }
+    .principles__grid > div { border-left: none; border-top: 1px solid var(--line); padding-inline: 0; }
+    .principles__grid > div:first-child { border-top: none; }
+  }
+  .principles h3 { font-size: 1.25rem; margin-top: 14px; }
+  .principles p { color: var(--sub); margin: 10px 0 0; font-size: 0.98rem; max-width: 30ch; }
+  .principles .num { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.14em; color: var(--signature); }
+
+  /* ===== contact strip ===== */
+  .contact__inner { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap: 28px; }
+</style>
+</head>
+<body class="theme-pine">
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap nav__inner">
+    <a class="nav__brand" href="/index.html" aria-label="Inicio de EXSports">
+      <img src="/assets/brand/wordmark-ink.png" alt="exs" />
+      <span class="mono-tag">EXSports Oy</span>
+    </a>
+    <nav class="nav__links">
+      <span data-i18n-switcher data-current="es"></span>
+      <a href="#apps" class="hide-sm">Aplicaciones</a>
+      <a href="/legal/imprint.html" class="hide-sm">Aviso legal</a>
+      <a href="mailto:info@exsports.fi" class="cta">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="stage">
+  <div class="glow glow--hero"></div>
+  <div class="grain"></div>
+  <div class="wrap hero">
+    <div class="hero__grid">
+      <div>
+        <p class="eyebrow reveal">EXSports Oy — Aplicaciones móviles</p>
+        <h1 class="display hero__title reveal" data-d="1">Pequeñas aplicaciones que hacen<br><span class="tint">una&nbsp;sola cosa</span> excepcionalmente bien.</h1>
+        <p class="lead hero__lead reveal" data-d="2">Creamos herramientas móviles especializadas — discretas, fiables y respetuosas con tus datos. Hecho en Finlandia.</p>
+        <div class="hero__actions reveal" data-d="3">
+          <a href="#apps" class="btn btn--primary">Explorar nuestras apps <span class="arrow">→</span></a>
+          <a href="/legal/imprint.html" class="btn btn--ghost">Empresa &amp; aviso legal</a>
+        </div>
+      </div>
+      <div class="hero__mark reveal" data-d="2">
+        <div class="hero__ring"></div>
+        <img src="/assets/brand/monogram-transparent.png" alt="EXS monogram" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPS -->
+<section class="section" id="apps">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow reveal">Nuestras aplicaciones</p>
+        <h2 class="h2 reveal" data-d="1" style="margin-top:14px;">Tres herramientas. Un solo estándar.</h2>
+      </div>
+      <span class="count reveal" data-d="1">03 / disponibles</span>
+    </div>
+
+    <div class="apps">
+      <!-- SurveyTools -->
+      <a class="app app--survey reveal" href="/surveytools/index.html" data-d="1">
+        <div class="app__top">
+          <div class="mark mark--cross"><i></i></div>
+          <span class="app__idx">01</span>
+        </div>
+        <h3 class="app__name">SurveyTools<span class="by">Calculadoras</span></h3>
+        <p class="app__desc">Calculadoras para flujos de trabajo de topografía y medición — una herramienta educativa y recreativa para aprender, practicar y obtener estimaciones rápidas.</p>
+        <div class="app__tags"><span>Medición</span><span>Sin conexión</span></div>
+        <span class="app__go">Abrir <span class="arrow">→</span></span>
+      </a>
+
+      <!-- Heda -->
+      <a class="app app--heda reveal" href="/heda/index.html" data-d="2">
+        <div class="app__top">
+          <svg class="mark mark--head" viewBox="0 0 56 56" aria-hidden="true">
+            <circle class="hr o3" cx="28" cy="31" r="24" />
+            <circle class="hr o2" cx="28" cy="31" r="17" />
+            <circle class="hf" cx="28" cy="21" r="8" />
+            <path class="hf" d="M17 45 C17 34 22 30 28 30 C34 30 39 34 39 45 Z" />
+          </svg>
+          <span class="app__idx">02</span>
+        </div>
+        <h3 class="app__name">Heda<span class="by">Diario de salud</span></h3>
+        <p class="app__desc">Un diario personal de migrañas y cefaleas con compatibilidad opcional con Google Health Connect — registra tus episodios, síntomas y notas en un solo lugar.</p>
+        <div class="app__tags"><span>Migraña</span><span>Health Connect</span></div>
+        <span class="app__go">Abrir <span class="arrow">→</span></span>
+      </a>
+
+      <!-- Shodia -->
+      <a class="app app--shodia reveal" href="/shodia/index.html" data-d="3">
+        <div class="app__top">
+          <div class="mark mark--target"><i></i></div>
+          <span class="app__badge">Próximamente</span>
+        </div>
+        <h3 class="app__name">Shodia<span class="by">Diario de tiro</span></h3>
+        <p class="app__desc">Un diario de entrenamiento privado y cifrado para deportes de tiro — tus sesiones permanecen en tu dispositivo. Sin nube, sin seguimiento.</p>
+        <div class="app__tags"><span>Privado</span><span>En el dispositivo</span></div>
+        <span class="app__go">Descubrir <span class="arrow">→</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PRINCIPLES -->
+<section class="principles">
+  <div class="wrap section--tight">
+    <p class="eyebrow reveal">Lo que defendemos</p>
+    <div class="principles__grid" style="margin-top: 28px;">
+      <div class="reveal" data-d="1">
+        <span class="num">01</span>
+        <h3>En tu dispositivo</h3>
+        <p>Tus datos viven donde deben. Los mantenemos locales siempre que podemos, y transparentes en todo lo demás.</p>
+      </div>
+      <div class="reveal" data-d="2">
+        <span class="num">02</span>
+        <h3>Sin rastreo</h3>
+        <p>Sin redes publicitarias, sin perfiles de comportamiento. Herramientas, no embudos — vendemos software, no atención.</p>
+      </div>
+      <div class="reveal" data-d="3">
+        <span class="num">03</span>
+        <h3>Hecho en Finlandia</h3>
+        <p>Diseñado y desarrollado por EXSports Oy en Kotka — equipo pequeño, visión a largo plazo, atención al detalle.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section--tight stage">
+  <div class="glow glow--hero" style="left:-10%; right:auto; top:auto; bottom:-40%; opacity: calc(var(--glow) * 0.5);"></div>
+  <div class="wrap contact__inner" style="position:relative; z-index:1;">
+    <div>
+      <h2 class="h2 reveal">Ponte en contacto.</h2>
+      <p class="lead reveal" data-d="1" style="margin-top:14px;">Preguntas, soporte o colaboración — leemos cada mensaje.</p>
+    </div>
+    <a href="mailto:info@exsports.fi" class="btn btn--primary reveal" data-d="2">info@exsports.fi <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <a class="footer__brand" href="/index.html">
+      <img src="/assets/brand/wordmark-ink.png" alt="exs" />
+    </a>
+    <div class="footer__meta">
+      <span>© 2026 EXSPORTS OY</span>
+      <span class="dot">·</span>
+      <a href="/legal/imprint.html">Aviso legal / Impressum</a>
+      <span class="dot">·</span>
+      <a href="mailto:info@exsports.fi">Contacto</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // mark JS active (enables reveal hidden-state; no-JS users see content)
+  document.body.classList.add('js');
+
+  // sticky nav border
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('is-stuck', window.scrollY > 8);
+  onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+  // scroll reveal — with immediate in-viewport pass + failsafe
+  const reveals = [...document.querySelectorAll('.reveal')];
+  const show = el => el.classList.add('in');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { show(e.target); io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    reveals.forEach(el => io.observe(el));
+    // reveal anything already on screen at load
+    requestAnimationFrame(() => {
+      const vh = window.innerHeight;
+      reveals.forEach(el => { if (el.getBoundingClientRect().top < vh * 0.92) show(el); });
+    });
+  } else {
+    reveals.forEach(show);
+  }
+  // failsafe: never leave content hidden
+  setTimeout(() => reveals.forEach(show), 1600);
+</script>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>
