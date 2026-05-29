@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -150,9 +150,16 @@
             border-radius: 4px;
             margin: 15px 0;
         }
+        .lang-bar { display:flex; justify-content:flex-end; margin-bottom:16px; }
+        .lang-switch { font:inherit; padding:6px 10px; border-radius:6px; border:1px solid var(--border-color); background:var(--bg-color); color:var(--text-color); cursor:pointer; }
+        .mt-notice { background:var(--warning-bg); border:1px solid var(--warning-border); color:var(--text-color); padding:10px 14px; border-radius:6px; margin:0 0 20px; font-size:0.9rem; }
     </style>
+<meta property="og:url" content="https://www.exsports.fi/legal/en/disclaimer.html" />
+<link rel="canonical" href="https://www.exsports.fi/legal/en/disclaimer.html" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
 </head>
 <body>
+<div class="lang-bar"><span data-i18n-switcher data-current="en"></span></div>
     <h1>Disclaimer & Terms of Use</h1>
     
     <p class="info-header">
@@ -309,5 +316,7 @@
     <p style="font-size: 0.85em; color: var(--muted-color); text-align: center;">
         By using SurveyTools, you acknowledge that you have read, understood, and agree to be bound by this Disclaimer & Terms of Use and the Privacy Policy.
     </p>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -154,9 +154,16 @@
             border-radius: 3px;
             font-family: monospace;
         }
+        .lang-bar { display:flex; justify-content:flex-end; margin-bottom:16px; }
+        .lang-switch { font:inherit; padding:6px 10px; border-radius:6px; border:1px solid var(--border-color); background:var(--bg-color); color:var(--text-color); cursor:pointer; }
+        .mt-notice { background:var(--warning-bg); border:1px solid var(--warning-border); color:var(--text-color); padding:10px 14px; border-radius:6px; margin:0 0 20px; font-size:0.9rem; }
     </style>
+<meta property="og:url" content="https://www.exsports.fi/legal/en/privacy_policy.html" />
+<link rel="canonical" href="https://www.exsports.fi/legal/en/privacy_policy.html" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
 </head>
 <body>
+<div class="lang-bar"><span data-i18n-switcher data-current="en"></span></div>
     <h1>Privacy Policy</h1>
     
     <p class="info-header">
@@ -401,5 +408,7 @@
 <h2>13. Relationship to Disclaimer</h2>
 <p>By using this application, you also agree to the <a href="disclaimer.html">Disclaimer & Terms of Use</a>. The Disclaimer explicitly restricts the use of this software to non-professional, educational, and recreational purposes. The Privacy Policy and Disclaimer together constitute the full agreement between you and EXSports Oy regarding the use of this application. Any use of the application contrary to the restrictions in the Disclaimer is done entirely at your own risk and does not alter the data protection principles outlined herein.</p>
 
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
 </body>
 </html>
