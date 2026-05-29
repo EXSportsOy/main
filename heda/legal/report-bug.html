@@ -1,54 +1,76 @@
-<!DOCTYPE html>
-<html lang="en-GB">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Report a Bug – Heda</title>
-  <link rel="stylesheet" href="../user-guide/shared.css" />
-  <link rel="stylesheet" href="legal.css" />
+<meta charset="utf-8" />
+<title>Report a Bug — Heda · EXSports Oy</title>
+<meta name="description" content="Tell us what went wrong in Heda." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#0E1310" />
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/brand/favicon-64.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png" />
+<link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css" />
+<link rel="stylesheet" href="/legal.css" />
+<style>body.theme-heda{ --signature:#C9DDA6; }</style>
 </head>
-<body>
+<body class="theme-sage theme-heda">
+<header class="nav" id="nav">
+  <div class="wrap nav__inner">
+    <a class="nav__brand" href="/index.html"><img src="/assets/brand/wordmark-ink.png" alt="exs" /><span class="mono-tag">EXSports Oy</span></a>
+    <nav class="nav__links">
+      <a href="/index.html" class="hide-sm">Home</a>
+      <a href="/legal/imprint.html" class="hide-sm">Imprint</a>
+      <a href="mailto:info@exsports.fi" class="cta">Contact</a>
+    </nav>
+  </div>
+</header>
+<section class="doc-head stage">
+  <div class="wrap doc-head__inner">
+    <a class="backlink" href="/heda/index.html"><span>←</span> Heda</a>
+    <p class="eyebrow">Heda · Support</p>
+    <h1>Report a Bug</h1>
 
-  <!-- ── Site header ── -->
-  <header class="site-header">
-    <div class="site-header-inner">
-      <a class="brand-lockup" href="../index.html">
-        <svg width="26" height="26" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-          <circle cx="32" cy="32" r="29" stroke="currentColor" stroke-width="1" opacity="0.18" fill="none"/>
-          <circle cx="32" cy="32" r="23" stroke="currentColor" stroke-width="1" opacity="0.30" fill="none"/>
-          <circle cx="32" cy="32" r="17.5" stroke="currentColor" stroke-width="1" opacity="0.50" fill="none"/>
-          <ellipse cx="32" cy="30" rx="9" ry="11" fill="currentColor"/>
-          <path d="M27 41 Q32 44 37 41 L39 47 Q32 49 25 47 Z" fill="currentColor"/>
-        </svg>
-        <div class="header-meta">
-          <span class="wordmark">heda</span>
-          <span class="header-subtitle">Report a Bug</span>
-        </div>
-      </a>
-      <nav class="header-nav">
-        <a href="../index.html">← Documents</a>
-      </nav>
+  </div>
+</section>
+<div class="wrap"><div class="prose">
+<p style="font-size:1.15rem;color:var(--ink);line-height:1.6;margin-bottom:28px;">Something not behaving as expected? A short, specific report helps us fix it fast.</p>
+
+<h3>What to include</h3>
+<ul>
+<li><strong>What you were doing</strong> when it happened (for example logging an attack, signing in, syncing Health Connect).</li>
+<li><strong>What you expected</strong> versus what actually happened.</li>
+<li>Your <strong>device and OS version</strong>, and the app version (shown in Settings).</li>
+<li>Whether <strong>Health Connect</strong> was involved, and which data types.</li>
+<li>A screenshot, if it helps — but please avoid sharing sensitive health details you would rather keep private.</li>
+</ul>
+<h3>Where to send it</h3>
+<p>Email <a href="mailto:info@exsports.fi?subject=Heda%20bug%20report">info@exsports.fi</a> with the subject "Heda bug report". We typically reply within a few working days. Anonymous crash reports may already have alerted us, but your context always helps.</p>
+<div class="doc-cta">
+  <h3>Send your report</h3>
+  <p>Email us with the details below and we will get on it.</p>
+  <a class="btn btn--primary" href="mailto:info@exsports.fi">info@exsports.fi <span class="arrow">→</span></a>
+</div>
+</div></div>
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <a class="footer__brand" href="/index.html"><img src="/assets/brand/wordmark-ink.png" alt="exs" /></a>
+    <div class="footer__meta">
+      <span>© 2026 EXSPORTS OY</span><span class="dot">·</span>
+      <a href="/index.html">Home</a><span class="dot">·</span>
+      <a href="/legal/imprint.html">Imprint</a><span class="dot">·</span>
+      <a href="mailto:info@exsports.fi">Contact</a>
     </div>
-  </header>
-
-  <main class="action-page">
-    <div class="action-card">
-
-      <h1>Report a Bug</h1>
-
-      <iframe
-        class="form-iframe"
-        src="https://docs.google.com/forms/d/e/1FAIpQLScfq5JxMEYEhA09dq80IlMBHLVZq6dD9mGkXnBwB3qoj4h-Ww/viewform?embedded=true"
-        title="Bug Report Form"
-      >Loading form…</iframe>
-
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    &copy; 2026 EXSports Oy &nbsp;·&nbsp;
-    <a href="../index.html">← Documents</a>
-  </footer>
-
+  </div>
+</footer>
+<script>
+  document.body.classList.add('js');
+  const nav=document.getElementById('nav');
+  const onScroll=()=>nav.classList.toggle('is-stuck',window.scrollY>8);
+  onScroll(); addEventListener('scroll',onScroll,{passive:true});
+</script>
 </body>
 </html>

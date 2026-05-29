@@ -1,367 +1,356 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EXSports Oy</title>
+<meta charset="utf-8" />
+<title>EXSports Oy — Focused mobile tools</title>
+<meta name="description" content="EXSports Oy builds small, dependable mobile apps — each designed to do one job exceptionally well. Made in Finland." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#0A1212" />
 
-  <!-- Brand meta -->
-  <meta name="description" content="EXSports Oy — Mobile Applications" />
-  <meta property="og:title" content="EXSports Oy" />
-  <meta property="og:description" content="Mobile Applications" />
-  <meta property="og:image" content="/assets/brand/og-image.png" />
-  <meta name="theme-color" content="#0A1212" media="(prefers-color-scheme: dark)" />
-  <meta name="theme-color" content="#F4F2EC" media="(prefers-color-scheme: light)" />
+<!-- Open Graph -->
+<meta property="og:title" content="EXSports Oy — Focused mobile tools" />
+<meta property="og:description" content="Small, dependable mobile apps — each designed to do one job exceptionally well. Made in Finland." />
+<meta property="og:image" content="/assets/brand/og-image.png" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.exsports.fi/" />
 
-  <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="64x64" href="assets/brand/favicon-64.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/favicon-16.png" />
-  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png" />
+<!-- Favicons -->
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/brand/favicon-64.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png" />
+<link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css" />
+<style>
+  /* ===== ambient backdrop ===== */
+  .stage { position: relative; overflow: clip; }
+  .glow {
+    position: absolute; pointer-events: none; z-index: 0;
+    border-radius: 50%;
+    filter: blur(70px);
+    opacity: calc(var(--glow) * 1);
+  }
+  .glow--hero {
+    width: min(760px, 92vw); aspect-ratio: 1;
+    top: -8%; right: -6%;
+    background: radial-gradient(circle at 50% 50%, var(--signature), transparent 64%);
+    opacity: calc(var(--glow) * 0.9);
+  }
+  .grain {
+    position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background-image: linear-gradient(115deg, transparent 49.4%, color-mix(in srgb, var(--ink) 3%, transparent) 49.5%, color-mix(in srgb, var(--ink) 3%, transparent) 50.5%, transparent 50.6%);
+    background-size: 26px 26px;
+    opacity: 0.5; mask-image: linear-gradient(180deg, #000, transparent 80%);
+  }
 
-  <style>
-    /* ── Pine Mist palette ── */
-    :root {
-      --bg:      #0A1212;
-      --surface: #10191A;
-      --line:    #1A2425;
-      --ink:     #DDE9E7;
-      --sub:     #86988F;
-      --primary: #8FCCB6;
-      --accent:  #5E9F8A;
-      --sage:    #B7D69A;
-      --sage-acc:#8FB877;
-    }
-    @media (prefers-color-scheme: light) {
-      :root {
-        --bg:      #F4F2EC;
-        --surface: #ECE9E1;
-        --line:    #DDD8CD;
-        --ink:     #0A1212;
-        --sub:     #6A736D;
-      }
-    }
+  /* ===== hero ===== */
+  .hero { position: relative; z-index: 1; padding-top: clamp(48px, 9vw, 110px); padding-bottom: clamp(60px, 10vw, 130px); }
+  .hero__grid {
+    display: grid; grid-template-columns: 1.25fr 0.75fr;
+    gap: clamp(32px, 6vw, 80px); align-items: center;
+  }
+  .hero__title { margin: 22px 0 0; }
+  .hero__title .tint { color: var(--signature); }
+  .hero__lead { margin-top: 28px; }
+  .hero__actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px; }
 
-    /* ── Reset ── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  .hero__mark { position: relative; display: grid; place-items: center; }
+  .hero__mark img {
+    width: min(360px, 70%); height: auto;
+    filter: drop-shadow(0 30px 70px color-mix(in srgb, var(--signature) 30%, transparent));
+    animation: floaty 9s var(--ease) infinite alternate;
+  }
+  @keyframes floaty { to { transform: translateY(-14px); } }
+  body.no-motion .hero__mark img { animation: none; }
 
-    html { scroll-behavior: smooth; }
+  .hero__ring {
+    position: absolute; inset: 0; margin: auto;
+    width: min(440px, 88%); aspect-ratio: 1; border-radius: 50%;
+    border: 1px solid var(--line-2);
+    opacity: 0.5;
+  }
+  .hero__ring::after {
+    content: ""; position: absolute; inset: 34px; border-radius: 50%;
+    border: 1px dashed color-mix(in srgb, var(--signature) 40%, transparent);
+  }
 
-    body {
-      font-family: 'Geist', system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--ink);
-      min-height: 100dvh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: clamp(32px, 6vw, 80px) clamp(16px, 5vw, 40px);
-      /* Subtle radial vignette from center */
-      background-image: radial-gradient(ellipse 80% 60% at 50% 30%, #10191A 0%, #0A1212 100%);
-    }
+  @media (max-width: 880px) {
+    .hero__grid { grid-template-columns: 1fr; }
+    .hero__mark { order: -1; }
+    .hero__mark img { width: 168px; }
+    .hero__ring { width: 230px; }
+    .hero__ring::after { inset: 22px; }
+  }
 
-    /* ── Page shell ── */
-    .page {
-      width: 100%;
-      max-width: 680px;
-      display: flex;
-      flex-direction: column;
-      gap: clamp(40px, 6vw, 64px);
-    }
+  /* ===== section header ===== */
+  .sec-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: clamp(36px, 6vw, 64px); }
+  .sec-head .count { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.16em; color: var(--sub); }
 
-    /* ── Hero ── */
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      text-align: center;
-    }
+  /* ===== app cards ===== */
+  .apps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  @media (max-width: 920px) { .apps { grid-template-columns: 1fr; } }
 
-    .hero-mark {
-      position: relative;
-      display: inline-flex;
-    }
+  .app {
+    position: relative; display: flex; flex-direction: column;
+    padding: 32px 30px 28px;
+    background: linear-gradient(180deg, var(--surface), color-mix(in srgb, var(--surface) 70%, var(--bg)));
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    transition: transform 0.5s var(--ease), border-color 0.5s var(--ease), box-shadow 0.5s var(--ease);
+    min-height: 340px;
+  }
+  .app::before {
+    content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background: radial-gradient(120% 80% at 80% -10%, var(--signature-soft), transparent 60%);
+    opacity: 0; transition: opacity 0.5s var(--ease);
+  }
+  .app:hover { transform: translateY(-8px); border-color: color-mix(in srgb, var(--signature) 55%, var(--line)); box-shadow: 0 30px 60px -28px color-mix(in srgb, var(--signature) 45%, transparent); }
+  .app:hover::before { opacity: 1; }
+  .app > * { position: relative; z-index: 1; }
 
-    .hero-mark img {
-      width: clamp(72px, 14vw, 112px);
-      height: clamp(72px, 14vw, 112px);
-      display: block;
-    }
+  .app__top { display: flex; align-items: flex-start; justify-content: space-between; }
+  .app__idx { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.14em; color: var(--sub); }
+  .app__badge {
+    font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--bg-deep); background: var(--signature); padding: 4px 9px; border-radius: 999px; font-weight: 500;
+  }
+  .app__name { font-size: clamp(1.6rem, 2.6vw, 2.1rem); margin-top: 26px; }
+  .app__name .by { display: block; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; color: var(--sub); text-transform: uppercase; margin-top: 8px; font-weight: 400; }
+  .app__desc { color: var(--sub); margin: 16px 0 0; flex: 1; text-wrap: pretty; }
+  .app__tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 20px; }
+  .app__tags span {
+    font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--sub); border: 1px solid var(--line-2); padding: 4px 10px; border-radius: 999px;
+  }
+  .app__go { display: inline-flex; align-items: center; gap: 9px; margin-top: 24px; font-family: var(--mono); font-size: 0.76rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--signature); }
+  .app__go .arrow { transition: transform 0.35s var(--ease); }
+  .app:hover .app__go .arrow { transform: translateX(5px); }
 
-    /* Dark mode: use the on-bg monogram (Pine Mist squircle) */
-    .hero-mark .mark-dark  { display: block; }
-    .hero-mark .mark-light { display: none;  }
+  /* per-app signature */
+  .app--survey { --signature: var(--accent); --signature-soft: color-mix(in oklch, var(--accent) 16%, transparent); }
+  .app--heda   { --signature: #C9DDA6; --signature-soft: color-mix(in oklch, #C9DDA6 16%, transparent); }
+  .app--shodia { --signature: #B7D69A; --signature-soft: color-mix(in oklch, #B7D69A 16%, transparent); }
 
-    @media (prefers-color-scheme: light) {
-      .hero-mark .mark-dark  { display: none;  }
-      .hero-mark .mark-light { display: block; }
-    }
+  /* abstract marks (CSS) */
+  .mark { width: 56px; height: 56px; position: relative; }
+  /* crosshair — survey */
+  .mark--cross::before, .mark--cross::after { content:""; position:absolute; background: var(--signature); }
+  .mark--cross::before { left: 50%; top: 0; width: 2px; height: 100%; transform: translateX(-50%); }
+  .mark--cross::after  { top: 50%; left: 0; height: 2px; width: 100%; transform: translateY(-50%); }
+  .mark--cross i { position:absolute; inset: 9px; border: 2px solid var(--signature); border-radius: 50%; }
+  /* arcs — heda */
+  .mark--arc i, .mark--arc::before, .mark--arc::after { content:""; position:absolute; border-radius:50%; border:2px solid var(--signature); }
+  .mark--arc::before { inset: 0; clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%); }
+  .mark--arc i { inset: 12px; clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%); opacity:0.75; }
+  .mark--arc::after { inset: 24px; clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%); opacity:0.5; }
+  /* target rings — shodia */
+  .mark--target i, .mark--target::before, .mark--target::after { content:""; position:absolute; border-radius:50%; border:2px solid var(--signature); }
+  .mark--target::before { inset: 0; opacity: 0.45; }
+  .mark--target i { inset: 13px; opacity: 0.75; }
+  .mark--target::after { inset: 24px; background: var(--signature); }
+  /* head + circles — heda (bust silhouette + radiating rings) */
+  .mark--head .hr { fill:none; stroke:var(--signature); stroke-width:2; }
+  .mark--head .o2 { opacity:0.5; }
+  .mark--head .o3 { opacity:0.26; }
+  .mark--head .hf { fill:var(--signature); }
 
-    .hero-wordmark {
-      height: clamp(22px, 4.5vw, 34px);
-    }
-    .hero-wordmark img {
-      height: 100%;
-      width: auto;
-      display: block;
-    }
-    .hero-wordmark .wm-dark  { display: block; }
-    .hero-wordmark .wm-light { display: none;  }
-    @media (prefers-color-scheme: light) {
-      .hero-wordmark .wm-dark  { display: none; }
-      .hero-wordmark .wm-light { display: block; }
-    }
+  /* ===== principles band ===== */
+  .principles { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .principles__grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .principles__grid > div { padding: clamp(34px, 5vw, 56px) clamp(20px,3vw,40px); border-left: 1px solid var(--line); }
+  .principles__grid > div:first-child { border-left: none; padding-left: 0; }
+  @media (max-width: 760px) {
+    .principles__grid { grid-template-columns: 1fr; }
+    .principles__grid > div { border-left: none; border-top: 1px solid var(--line); padding-inline: 0; }
+    .principles__grid > div:first-child { border-top: none; }
+  }
+  .principles h3 { font-size: 1.25rem; margin-top: 14px; }
+  .principles p { color: var(--sub); margin: 10px 0 0; font-size: 0.98rem; max-width: 30ch; }
+  .principles .num { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.14em; color: var(--signature); }
 
-    .hero-tagline {
-      font-family: 'Geist Mono', monospace;
-      font-size: clamp(10px, 1.8vw, 12px);
-      color: var(--sub);
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-    }
-
-    /* X-diagonal hairline divider */
-    .divider {
-      width: 100%;
-      height: 1px;
-      position: relative;
-      overflow: visible;
-    }
-    .divider::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(90deg, transparent 0%, var(--line) 20%, var(--accent) 50%, var(--line) 80%, transparent 100%);
-    }
-    .divider::after {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%) rotate(18deg);
-      width: 32px;
-      height: 1px;
-      background: var(--primary);
-      opacity: 0.5;
-    }
-
-    /* ── Apps section ── */
-    .apps-label {
-      font-family: 'Geist Mono', monospace;
-      font-size: 11px;
-      color: var(--sub);
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      text-align: center;
-    }
-
-    .apps-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 14px;
-    }
-
-    /* ── App card ── */
-    .app-card {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 22px 20px 22px 22px;
-      text-decoration: none;
-      color: var(--ink);
-      transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .app-card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
-      opacity: 0;
-      transition: opacity 180ms ease;
-    }
-
-    .app-card.pine::before {
-      background: radial-gradient(ellipse 80% 120% at 0% 50%, rgba(143,204,182,0.06) 0%, transparent 70%);
-    }
-
-    .app-card.sage::before {
-      background: radial-gradient(ellipse 80% 120% at 0% 50%, rgba(183,214,154,0.07) 0%, transparent 70%);
-    }
-
-    .app-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.28);
-    }
-    .app-card:hover::before { opacity: 1; }
-
-    .app-card.pine:hover { border-color: var(--accent); }
-    .app-card.sage:hover { border-color: var(--sage-acc); }
-
-    .app-card:focus-visible {
-      outline: 2px solid var(--primary);
-      outline-offset: 3px;
-    }
-
-    /* Icon wrapper */
-    .app-icon {
-      flex-shrink: 0;
-      width: 44px;
-      height: 44px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .app-icon.pine {
-      background: rgba(143,204,182,0.12);
-    }
-    .app-icon.sage {
-      background: rgba(183,214,154,0.10);
-    }
-    .app-icon svg {
-      display: block;
-    }
-
-    /* Text block */
-    .app-text {
-      flex: 1;
-      min-width: 0;
-    }
-    .app-name {
-      font-size: 16px;
-      font-weight: 600;
-      letter-spacing: -0.2px;
-      line-height: 1.2;
-    }
-    .app-desc {
-      font-size: 12px;
-      color: var(--sub);
-      margin-top: 4px;
-      line-height: 1.4;
-    }
-
-    /* Arrow */
-    .app-arrow {
-      font-family: 'Geist Mono', monospace;
-      font-size: 14px;
-      color: var(--sub);
-      flex-shrink: 0;
-      transition: color 180ms ease, transform 180ms ease;
-    }
-    .app-card.pine:hover .app-arrow { color: var(--primary); transform: translateX(3px); }
-    .app-card.sage:hover .app-arrow { color: var(--sage); transform: translateX(3px); }
-
-    /* ── Footer ── */
-    footer {
-      text-align: center;
-      font-family: 'Geist Mono', monospace;
-      font-size: 11px;
-      color: var(--sub);
-      letter-spacing: 1px;
-      opacity: 0.7;
-    }
-    footer a {
-      color: var(--sub);
-      text-decoration: none;
-      transition: color 150ms;
-    }
-    footer a:hover { color: var(--primary); }
-
-    /* ── Reduced motion ── */
-    @media (prefers-reduced-motion: reduce) {
-      .app-card, .app-arrow { transition: none; }
-      .app-card:hover { transform: none; }
-    }
-  </style>
+  /* ===== contact strip ===== */
+  .contact__inner { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap: 28px; }
+</style>
 </head>
-<body>
+<body class="theme-pine">
 
-  <main class="page">
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap nav__inner">
+    <a class="nav__brand" href="/index.html" aria-label="EXSports home">
+      <img src="/assets/brand/wordmark-ink.png" alt="exs" />
+      <span class="mono-tag">EXSports Oy</span>
+    </a>
+    <nav class="nav__links">
+      <a href="#apps" class="hide-sm">Apps</a>
+      <a href="/legal/imprint.html" class="hide-sm">Imprint</a>
+      <a href="mailto:info@exsports.fi" class="cta">Contact</a>
+    </nav>
+  </div>
+</header>
 
-    <!-- Hero -->
-    <section class="hero">
-      <div class="hero-mark" aria-hidden="true">
-        <img class="mark-dark"  src="assets/brand/monogram-512.png" alt="" width="512" height="512" />
-        <img class="mark-light" src="assets/brand/monogram-512.png" alt="" width="512" height="512" />
+<!-- HERO -->
+<section class="stage">
+  <div class="glow glow--hero"></div>
+  <div class="grain"></div>
+  <div class="wrap hero">
+    <div class="hero__grid">
+      <div>
+        <p class="eyebrow reveal">EXSports Oy — Mobile applications</p>
+        <h1 class="display hero__title reveal" data-d="1">Small apps that do<br><span class="tint">one&nbsp;thing</span> exceptionally well.</h1>
+        <p class="lead hero__lead reveal" data-d="2">We build focused mobile tools — quiet, dependable, and respectful of your data. Made in Finland.</p>
+        <div class="hero__actions reveal" data-d="3">
+          <a href="#apps" class="btn btn--primary">Explore our apps <span class="arrow">→</span></a>
+          <a href="/legal/imprint.html" class="btn btn--ghost">Company &amp; legal</a>
+        </div>
       </div>
-      <div class="hero-wordmark">
-        <img class="wm-dark"  src="assets/brand/wordmark-ink.png"      alt="exs" />
-        <img class="wm-light" src="assets/brand/wordmark-dark-light.png" alt="exs" />
+      <div class="hero__mark reveal" data-d="2">
+        <div class="hero__ring"></div>
+        <img src="/assets/brand/monogram-transparent.png" alt="EXS monogram" />
       </div>
-      <p class="hero-tagline">Mobile Applications</p>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <div class="divider" aria-hidden="true"></div>
-
-    <!-- Apps -->
-    <section aria-label="Our apps">
-      <p class="apps-label" style="margin-bottom:16px;">Our Apps</p>
-      <div class="apps-grid">
-
-        <!-- SurveyTools -->
-        <a class="app-card pine" href="surveytools/index.html">
-          <div class="app-icon pine" aria-hidden="true">
-            <!-- SurveyTools: water drop + calculator + test tube, Pine Mist -->
-            <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-              <path d="M44,14 C34,24 17,40 17,57 A27,27,0,0,0,71,57 C71,40 54,24 44,14Z" fill="var(--primary)"/>
-              <rect x="15" y="33" width="46" height="50" rx="4" fill="var(--primary)"/>
-              <rect x="20" y="38" width="36" height="10" rx="2" style="fill:var(--bg)"/>
-              <rect x="20" y="53" width="11" height="10" rx="2" style="fill:var(--bg)"/>
-              <rect x="34" y="53" width="11" height="10" rx="2" style="fill:var(--bg)"/>
-              <rect x="48" y="53" width="11" height="10" rx="2" style="fill:var(--bg)"/>
-              <rect x="20" y="66" width="11" height="10" rx="2" style="fill:var(--bg)"/>
-              <rect x="34" y="66" width="11" height="10" rx="2" style="fill:var(--bg)"/>
-              <rect x="48" y="66" width="11" height="10" rx="2" style="fill:var(--bg)"/>
-              <rect x="63" y="19" width="15" height="6" rx="3" fill="var(--primary)"/>
-              <path d="M65,25 L76,25 L76,70 Q76,81 70.5,81 Q65,81 65,70Z" fill="var(--primary)"/>
-            </svg>
-          </div>
-          <div class="app-text">
-            <div class="app-name">SurveyTools</div>
-            <div class="app-desc">Calculators for survey &amp; measurement workflows</div>
-          </div>
-          <span class="app-arrow" aria-hidden="true">→</span>
-        </a>
-
-        <!-- Heda -->
-        <a class="app-card sage" href="heda/index.html">
-          <div class="app-icon sage" aria-hidden="true">
-            <!-- Heda brain/drop motif — mirrors the SVG used in heda/index.html -->
-            <svg width="24" height="24" viewBox="0 0 64 64" fill="none" aria-hidden="true" style="color:var(--sage)">
-              <circle cx="32" cy="32" r="27" stroke="currentColor" stroke-width="1.2" opacity="0.25" fill="none"/>
-              <circle cx="32" cy="32" r="20" stroke="currentColor" stroke-width="1.2" opacity="0.40" fill="none"/>
-              <ellipse cx="32" cy="30" rx="8.5" ry="10.5" fill="currentColor"/>
-              <path d="M27.5 40.5 Q32 43.5 36.5 40.5 L38 46 Q32 48 26 46 Z" fill="currentColor"/>
-            </svg>
-          </div>
-          <div class="app-text">
-            <div class="app-name">Heda</div>
-            <div class="app-desc">Versatile migraine diary with Google Health Connect</div>
-          </div>
-          <span class="app-arrow" aria-hidden="true">→</span>
-        </a>
-
+<!-- APPS -->
+<section class="section" id="apps">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow reveal">Our apps</p>
+        <h2 class="h2 reveal" data-d="1" style="margin-top:14px;">Three tools. One standard.</h2>
       </div>
-    </section>
+      <span class="count reveal" data-d="1">03 / available</span>
+    </div>
 
-  </main>
+    <div class="apps">
+      <!-- SurveyTools -->
+      <a class="app app--survey reveal" href="/surveytools/index.html" data-d="1">
+        <div class="app__top">
+          <div class="mark mark--cross"><i></i></div>
+          <span class="app__idx">01</span>
+        </div>
+        <h3 class="app__name">SurveyTools<span class="by">Calculators</span></h3>
+        <p class="app__desc">Calculators for survey &amp; measurement workflows — an educational and recreational aid for learning, practice and quick estimates.</p>
+        <div class="app__tags"><span>Measurement</span><span>Offline</span></div>
+        <span class="app__go">Open <span class="arrow">→</span></span>
+      </a>
 
-  <footer>
-    <p>&copy; 2026 EXSPORTS OY &nbsp;&middot;&nbsp; <a href="legal/imprint.html">Imprint / Impressum</a> &nbsp;&middot;&nbsp; <a href="mailto:info@exsports.fi">Contact</a></p>
-  </footer>
+      <!-- Heda -->
+      <a class="app app--heda reveal" href="/heda/index.html" data-d="2">
+        <div class="app__top">
+          <svg class="mark mark--head" viewBox="0 0 56 56" aria-hidden="true">
+            <circle class="hr o3" cx="28" cy="31" r="24" />
+            <circle class="hr o2" cx="28" cy="31" r="17" />
+            <circle class="hf" cx="28" cy="21" r="8" />
+            <path class="hf" d="M17 45 C17 34 22 30 28 30 C34 30 39 34 39 45 Z" />
+          </svg>
+          <span class="app__idx">02</span>
+        </div>
+        <h3 class="app__name">Heda<span class="by">Health diary</span></h3>
+        <p class="app__desc">A personal migraine &amp; headache diary with optional Google Health Connect — log your attacks, symptoms and notes in one place.</p>
+        <div class="app__tags"><span>Migraine</span><span>Health Connect</span></div>
+        <span class="app__go">Open <span class="arrow">→</span></span>
+      </a>
 
+      <!-- Shodia -->
+      <a class="app app--shodia reveal" href="/shodia/index.html" data-d="3">
+        <div class="app__top">
+          <div class="mark mark--target"><i></i></div>
+          <span class="app__badge">Coming</span>
+        </div>
+        <h3 class="app__name">Shodia<span class="by">Shooting diary</span></h3>
+        <p class="app__desc">A private, encrypted training diary for shooting sports — your sessions stay on your device. No cloud, no tracking.</p>
+        <div class="app__tags"><span>Private</span><span>On-device</span></div>
+        <span class="app__go">Discover <span class="arrow">→</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PRINCIPLES -->
+<section class="principles">
+  <div class="wrap section--tight">
+    <p class="eyebrow reveal">What we stand for</p>
+    <div class="principles__grid" style="margin-top: 28px;">
+      <div class="reveal" data-d="1">
+        <span class="num">01</span>
+        <h3>On your device</h3>
+        <p>Your data lives where it belongs. We keep it local wherever we can, and explicit everywhere else.</p>
+      </div>
+      <div class="reveal" data-d="2">
+        <span class="num">02</span>
+        <h3>No tracking</h3>
+        <p>No ad networks, no behavioural profiling. Tools, not funnels — we sell software, not attention.</p>
+      </div>
+      <div class="reveal" data-d="3">
+        <span class="num">03</span>
+        <h3>Made in Finland</h3>
+        <p>Designed and built by EXSports Oy in Kotka — small team, long-term thinking, careful detail.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section--tight stage">
+  <div class="glow glow--hero" style="left:-10%; right:auto; top:auto; bottom:-40%; opacity: calc(var(--glow) * 0.5);"></div>
+  <div class="wrap contact__inner" style="position:relative; z-index:1;">
+    <div>
+      <h2 class="h2 reveal">Get in touch.</h2>
+      <p class="lead reveal" data-d="1" style="margin-top:14px;">Questions, support, or partnership — we read every message.</p>
+    </div>
+    <a href="mailto:info@exsports.fi" class="btn btn--primary reveal" data-d="2">info@exsports.fi <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <a class="footer__brand" href="/index.html">
+      <img src="/assets/brand/wordmark-ink.png" alt="exs" />
+    </a>
+    <div class="footer__meta">
+      <span>© 2026 EXSPORTS OY</span>
+      <span class="dot">·</span>
+      <a href="/legal/imprint.html">Imprint / Impressum</a>
+      <span class="dot">·</span>
+      <a href="mailto:info@exsports.fi">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // mark JS active (enables reveal hidden-state; no-JS users see content)
+  document.body.classList.add('js');
+
+  // sticky nav border
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('is-stuck', window.scrollY > 8);
+  onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+  // scroll reveal — with immediate in-viewport pass + failsafe
+  const reveals = [...document.querySelectorAll('.reveal')];
+  const show = el => el.classList.add('in');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { show(e.target); io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    reveals.forEach(el => io.observe(el));
+    // reveal anything already on screen at load
+    requestAnimationFrame(() => {
+      const vh = window.innerHeight;
+      reveals.forEach(el => { if (el.getBoundingClientRect().top < vh * 0.92) show(el); });
+    });
+  } else {
+    reveals.forEach(show);
+  }
+  // failsafe: never leave content hidden
+  setTimeout(() => reveals.forEach(show), 1600);
+</script>
 </body>
 </html>

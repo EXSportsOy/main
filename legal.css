@@ -1,0 +1,74 @@
+/* ============================================================
+   EXS — legal & document pages (prose layout)
+   loads AFTER styles.css
+   ============================================================ */
+
+.doc-head { border-bottom: 1px solid var(--line); }
+.doc-head__inner { padding-top: clamp(28px, 5vw, 56px); padding-bottom: clamp(28px, 4vw, 44px); }
+.doc-head .backlink {
+  display:inline-flex; align-items:center; gap:8px;
+  font-family:var(--mono); font-size:0.74rem; letter-spacing:0.1em; text-transform:uppercase;
+  color:var(--sub); transition:color .25s var(--ease); margin-bottom: 22px;
+}
+.doc-head .backlink:hover { color: var(--ink); }
+.doc-head .eyebrow { margin-bottom: 16px; }
+.doc-head h1 { font-size: clamp(2rem, 5vw, 3.4rem); letter-spacing:-0.04em; }
+.doc-head .meta {
+  font-family:var(--mono); font-size:0.76rem; letter-spacing:0.06em; color:var(--sub);
+  margin-top: 18px; display:flex; flex-wrap:wrap; gap: 8px 16px;
+}
+.doc-head .meta b { color: var(--ink); font-weight:500; }
+
+/* language tabs */
+.lang-tabs { display:flex; gap:8px; margin-top: 26px; flex-wrap:wrap; }
+.lang-tabs a {
+  font-family:var(--mono); font-size:0.74rem; letter-spacing:0.08em; text-transform:uppercase;
+  color:var(--sub); border:1px solid var(--line-2); padding:8px 16px; border-radius:999px;
+  transition: all .25s var(--ease);
+}
+.lang-tabs a:hover { color: var(--ink); border-color: var(--sub); }
+.lang-tabs a.active { color: var(--bg-deep); background: var(--signature); border-color: var(--signature); font-weight:500; }
+
+/* prose */
+.prose { max-width: 760px; padding-block: clamp(40px, 6vw, 72px); }
+.prose .lang-section { scroll-margin-top: 90px; }
+.prose .lang-section + .lang-section { margin-top: clamp(48px, 7vw, 90px); padding-top: clamp(40px,6vw,64px); border-top:1px solid var(--line); }
+.prose h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); letter-spacing:-0.03em; margin: 0 0 8px; }
+.prose h3 {
+  font-size: 1.16rem; font-weight:500; letter-spacing:-0.01em; color: var(--ink);
+  margin: 38px 0 10px; padding-top: 8px;
+}
+.prose h3:first-of-type { margin-top: 24px; }
+.prose .sublabel { font-family:var(--mono); font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--signature); }
+.prose p { color: var(--sub); line-height: 1.7; margin: 0 0 16px; text-wrap:pretty; }
+.prose p strong, .prose li strong { color: var(--ink); font-weight: 500; }
+.prose a:not(.btn) { color: var(--ink); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--signature) 60%, transparent); text-underline-offset: 3px; transition: color .2s var(--ease); }
+.prose a:not(.btn):hover { color: var(--signature); }
+.prose ul { margin: 0 0 18px; padding-left: 0; list-style: none; }
+.prose ul li { position: relative; padding-left: 22px; color: var(--sub); line-height: 1.7; margin-bottom: 8px; }
+.prose ul li::before { content:""; position:absolute; left:4px; top:11px; width:6px; height:6px; border-radius:50%; background: var(--signature); }
+.prose hr { border:none; border-top:1px solid var(--line); margin: clamp(40px,6vw,64px) 0; }
+
+/* data tables */
+.prose table { width:100%; border-collapse: collapse; margin: 8px 0 24px; font-size: 0.95rem; }
+.prose table th, .prose table td { text-align:left; vertical-align: top; padding: 12px 16px; border-bottom: 1px solid var(--line); }
+.prose table th { width: 38%; color: var(--sub); font-weight: 400; font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.04em; }
+.prose table td { color: var(--ink); }
+.prose table tr:hover td, .prose table tr:hover th { background: color-mix(in srgb, var(--surface) 60%, transparent); }
+/* multi-column data grids (thead headers, no fixed first-col width) */
+.prose table.grid th { width: auto; }
+.prose table.grid thead th { color: var(--ink); font-weight: 500; font-family: var(--mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; }
+
+/* long multi-section legal docs: clear section dividers */
+.prose.doc-sections h2 { margin-top: 0; }
+.prose.doc-sections h2:not(:first-child) { margin-top: 50px; padding-top: 34px; border-top: 1px solid var(--line); }
+.prose.doc-sections > hr { display: none; }
+
+/* note / callout */
+.callout { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 22px 24px; margin: 0 0 22px; }
+.callout p { margin: 0; }
+
+/* contact CTA block at end of doc */
+.doc-cta { background: var(--surface); border:1px solid var(--line-2); border-radius: var(--r-lg); padding: clamp(28px,4vw,40px); margin-top: 40px; }
+.doc-cta h3 { margin: 0 0 8px; font-size: 1.3rem; font-weight: 600; letter-spacing:-0.02em; color: var(--ink); padding: 0; }
+.doc-cta p { margin: 0 0 18px; }

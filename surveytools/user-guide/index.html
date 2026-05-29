@@ -1,69 +1,117 @@
-<!DOCTYPE html>
-<html lang="en-GB">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>User Guide – SurveyTools</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8" />
+<title>User Guide — SurveyTools · EXSports Oy</title>
+<meta name="description" content="User guide for the SurveyTools mobile application by EXSports Oy." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#0A1212" />
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/brand/favicon-64.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png" />
+<link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css" />
+<link rel="stylesheet" href="/legal.css" />
+<style>
+  .modules{ display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin: 10px 0 8px; }
+  @media (max-width:640px){ .modules{ grid-template-columns:1fr; } }
+  .module{ display:block; padding:22px 24px; background:var(--surface); border:1px solid var(--line); border-radius:var(--r);
+    transition:border-color .4s var(--ease), transform .4s var(--ease), background .4s var(--ease); }
+  .module:hover{ border-color:color-mix(in srgb,var(--signature) 50%,var(--line)); transform:translateY(-3px); background:var(--surface-2); }
+  .module .mt{ font-size:1.08rem; font-weight:500; letter-spacing:-0.01em; color:var(--ink); display:flex; align-items:center; gap:9px; }
+  .module .mt .arrow{ color:var(--sub); transition:transform .35s var(--ease), color .35s var(--ease); }
+  .module:hover .mt .arrow{ transform:translateX(4px); color:var(--signature); }
+  .module .md{ color:var(--sub); font-size:0.92rem; margin-top:6px; }
+  /* override prose link underline inside module cards */
+  .prose a.module{ text-decoration:none; }
+</style>
 </head>
-<body>
-  <div class="container">
-    <div class="header">
-      <div class="brand">
-        <div class="logo">SurveyTools</div>
-        <div class="tagline">User Guide (UK English)</div>
-      </div>
-      <div class="nav">
-        <a href="../index.html">Main</a>
-      </div>
-    </div>
+<body class="theme-survey">
 
-    <div class="card">
-      <h1>Overview</h1>
-      <p>
-        SurveyTools is a set of calculators used in survey/measurement workflows (e.g. interpolation,
-        wedge, shore tank corrections, and unit conversions). Each module follows the same basic
-        pattern: enter values, tap <strong>Calculate</strong>, review the result.
-      </p>
+<header class="nav" id="nav">
+  <div class="wrap nav__inner">
+    <a class="nav__brand" href="/index.html"><img src="/assets/brand/wordmark-ink.png" alt="exs" /><span class="mono-tag">EXSports Oy</span></a>
+    <nav class="nav__links">
+      <a href="/index.html" class="hide-sm">Home</a>
+      <a href="/legal/imprint.html" class="hide-sm">Imprint</a>
+      <a href="mailto:info@exsports.fi" class="cta">Contact</a>
+    </nav>
+  </div>
+</header>
 
-      <h2>How to use the app (general)</h2>
-      <ul>
-        <li><strong>Enter values</strong> using the numeric keypad. Select your preferred decimal separator in settings (dot or comma).</li>
-        <li><strong>Calculate</strong> to run the selected module. If inputs are missing or invalid, the calculator will not produce a meaningful result.</li>
-        <li><strong>Clear</strong> resets input fields (some screens may keep shared values to speed up repeated calculations).</li>
-        <li><strong>Settings</strong> may include appearance and input options that affect the UI but not the math.</li>
-      </ul>
+<section class="doc-head stage">
+  <div class="wrap doc-head__inner">
+    <a class="backlink" href="/surveytools/index.html"><span>←</span> SurveyTools</a>
+    <p class="eyebrow">SurveyTools · Guide</p>
+    <h1>User Guide</h1>
+    <div class="meta"><span>UK English</span><span>EXSports Oy</span></div>
+  </div>
+</section>
 
-      <h2>Modules</h2>
-      <div class="grid">
-        <a class="tile" href="modules/interpolation.html">
-          <div class="title">Interpolation</div>
-          <div class="desc">Linear, one-way, and two-way interpolation for table lookups.</div>
-        </a>
-        <a class="tile" href="modules/wedge.html">
-          <div class="title">Wedge calculator</div>
-          <div class="desc">Estimate wedge volume when a tank is trimmed and product does not cover all walls.</div>
-        </a>
-<!--    <a class="tile" href="modules/shore-tank.html">
-          <div class="title">Shore tank</div>
-          <div class="desc">Shell correction factor (CTSh) and floating roof correction (FRC).</div>
-        </a> -->
-        <a class="tile" href="modules/unit-conversions.html">
-          <div class="title">Unit conversions</div>
-          <div class="desc">Density and volume conversions used in survey workflows.</div>
-        </a>
-        <a class="tile" href="modules/ctl-vcf.html">
-          <div class="title">CTL / VCF (high-level)</div>
-          <div class="desc">What CTL/VCF is used for in the app (no paid-standard text).</div>
-        </a>
-      </div>
+<div class="wrap"><div class="prose doc-sections">
 
-      <hr />
-      <div class="footer">
-        &copy; 2026 EXSports Oy. This documentation may be updated as the app evolves.
-      </div>
+  <h2>Overview</h2>
+  <p>SurveyTools is a set of calculators used in survey/measurement workflows (e.g. interpolation, wedge, shore tank corrections, and unit conversions). Each module follows the same basic pattern: enter values, tap <strong>Calculate</strong>, review the result.</p>
+
+  <h2>How to use the app (general)</h2>
+  <ul>
+    <li><strong>Enter values</strong> using the numeric keypad. Select your preferred decimal separator in settings (dot or comma).</li>
+    <li><strong>Calculate</strong> to run the selected module. If inputs are missing or invalid, the calculator will not produce a meaningful result.</li>
+    <li><strong>Clear</strong> resets input fields (some screens may keep shared values to speed up repeated calculations).</li>
+    <li><strong>Settings</strong> may include appearance and input options that affect the UI but not the math.</li>
+  </ul>
+
+  <h2>Modules</h2>
+  <div class="modules">
+    <a class="module" href="/surveytools/user-guide/modules/interpolation.html">
+      <div class="mt">Interpolation <span class="arrow">→</span></div>
+      <div class="md">Linear, one-way, and two-way interpolation for table lookups.</div>
+    </a>
+    <a class="module" href="/surveytools/user-guide/modules/wedge.html">
+      <div class="mt">Wedge calculator <span class="arrow">→</span></div>
+      <div class="md">Estimate wedge volume when a tank is trimmed and product does not cover all walls.</div>
+    </a>
+    <a class="module" href="/surveytools/user-guide/modules/unit-conversions.html">
+      <div class="mt">Unit conversions <span class="arrow">→</span></div>
+      <div class="md">Density and volume conversions used in survey workflows.</div>
+    </a>
+    <a class="module" href="/surveytools/user-guide/modules/ctl-vcf.html">
+      <div class="mt">CTL / VCF (high-level) <span class="arrow">→</span></div>
+      <div class="md">What CTL/VCF is used for in the app (no paid-standard text).</div>
+    </a>
+  </div>
+
+  <hr>
+  <p class="muted" style="font-size:0.9rem;">© 2026 EXSports Oy. This documentation may be updated as the app evolves.</p>
+
+  <div class="doc-cta">
+    <h3>Stuck on a calculation?</h3>
+    <p>Tell us which module and what you expected — we'll help.</p>
+    <a class="btn btn--primary" href="mailto:info@exsports.fi">info@exsports.fi <span class="arrow">→</span></a>
+  </div>
+
+</div></div>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <a class="footer__brand" href="/index.html"><img src="/assets/brand/wordmark-ink.png" alt="exs" /></a>
+    <div class="footer__meta">
+      <span>© 2026 EXSPORTS OY</span><span class="dot">·</span>
+      <a href="/index.html">Home</a><span class="dot">·</span>
+      <a href="/legal/imprint.html">Imprint</a><span class="dot">·</span>
+      <a href="mailto:info@exsports.fi">Contact</a>
     </div>
   </div>
+</footer>
+
+<script>
+  document.body.classList.add('js');
+  const nav=document.getElementById('nav');
+  const onScroll=()=>nav.classList.toggle('is-stuck',window.scrollY>8);
+  onScroll(); addEventListener('scroll',onScroll,{passive:true});
+</script>
 </body>
 </html>
-

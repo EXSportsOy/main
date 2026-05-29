@@ -1,333 +1,171 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SurveyTools – EXSports Oy</title>
+<meta charset="utf-8" />
+<title>SurveyTools — EXSports Oy</title>
+<meta name="description" content="SurveyTools — survey and measurement calculators as an educational and recreational aid. Not a certified instrument. By EXSports Oy." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#0A1212" />
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/brand/favicon-64.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png" />
+<link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css" />
+<style>
+  .stage { position: relative; overflow: clip; }
+  .glow { position:absolute; pointer-events:none; z-index:0; border-radius:50%; filter: blur(80px); }
+  .glow--top { width:min(680px,90vw); aspect-ratio:1; top:-22%; right:-8%; background: radial-gradient(circle,var(--signature),transparent 64%); opacity: calc(var(--glow)*0.85); }
 
-  <meta name="description" content="SurveyTools — Calculators for survey and measurement workflows" />
-  <meta name="theme-color" content="#0A1212" media="(prefers-color-scheme: dark)" />
-  <meta name="theme-color" content="#F4F2EC" media="(prefers-color-scheme: light)" />
+  /* app hero */
+  .ahero { position:relative; z-index:1; padding-top: clamp(40px,7vw,80px); padding-bottom: clamp(40px,7vw,72px); }
+  .ahero__row { display:flex; align-items:center; gap: clamp(20px,4vw,40px); }
+  .ahero__mark { flex:none; width: clamp(64px,10vw,104px); height: clamp(64px,10vw,104px); position:relative;
+    border:1px solid var(--line-2); border-radius: 24px; background: var(--surface); display:grid; place-items:center; }
+  .ahero__title { font-size: clamp(2.4rem,6vw,4.2rem); letter-spacing:-0.04em; }
+  .ahero__by { font-family:var(--mono); font-size:0.78rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--sub); margin:0 0 8px; }
+  .ahero__lead { margin-top: 24px; }
 
-  <link rel="icon" type="image/png" sizes="64x64" href="../assets/brand/favicon-64.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/brand/favicon-32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="../assets/brand/favicon-16.png" />
-  <link rel="apple-touch-icon" href="../assets/brand/apple-touch-icon.png" />
+  /* big crosshair mark */
+  .xmark { width: 56%; height:56%; position:relative; }
+  .xmark::before,.xmark::after{content:"";position:absolute;background:var(--signature);}
+  .xmark::before{left:50%;top:0;width:2px;height:100%;transform:translateX(-50%);}
+  .xmark::after{top:50%;left:0;height:2px;width:100%;transform:translateY(-50%);}
+  .xmark i{position:absolute;inset:18%;border:2px solid var(--signature);border-radius:50%;}
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  /* documents */
+  .docs-head { display:flex; align-items:baseline; justify-content:space-between; gap:20px; margin-bottom: 28px; }
+  .docs { display:grid; grid-template-columns: repeat(2,1fr); gap: 14px; }
+  @media (max-width:680px){ .docs{ grid-template-columns:1fr; } }
+  .doc {
+    display:flex; align-items:flex-start; gap:18px; padding: 24px 26px;
+    background: var(--surface); border:1px solid var(--line); border-radius: var(--r);
+    transition: border-color .4s var(--ease), transform .4s var(--ease), background .4s var(--ease);
+  }
+  .doc:hover{ border-color: color-mix(in srgb,var(--signature) 50%, var(--line)); transform: translateX(4px); background: var(--surface-2); }
+  .doc__idx{ font-family:var(--mono); font-size:0.72rem; letter-spacing:0.12em; color:var(--signature); padding-top:4px; flex:none; }
+  .doc__body{ flex:1; }
+  .doc__title{ font-size:1.12rem; font-weight:500; letter-spacing:-0.01em; display:flex; align-items:center; gap:10px; }
+  .doc__title .arrow{ color:var(--sub); transition: transform .35s var(--ease), color .35s var(--ease); }
+  .doc:hover .doc__title .arrow{ transform: translateX(4px); color:var(--signature); }
+  .doc__desc{ color:var(--sub); font-size:0.94rem; margin-top:6px; }
+  .doc__title .ext{ font-family:var(--mono); font-size:0.6rem; letter-spacing:0.12em; color:var(--sub); border:1px solid var(--line-2); padding:2px 7px; border-radius:999px; text-transform:uppercase; }
 
-  <style>
-    :root {
-      --bg:      #0A1212;
-      --surface: #10191A;
-      --line:    #1A2425;
-      --ink:     #DDE9E7;
-      --sub:     #86988F;
-      --primary: #8FCCB6;
-      --accent:  #5E9F8A;
-    }
-    @media (prefers-color-scheme: light) {
-      :root {
-        --bg:      #F4F2EC;
-        --surface: #ECE9E1;
-        --line:    #DDD8CD;
-        --ink:     #0A1212;
-        --sub:     #6A736D;
-      }
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'Geist', system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--ink);
-      min-height: 100dvh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: clamp(32px, 6vw, 64px) clamp(16px, 5vw, 32px);
-    }
-
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      box-shadow: 0 4px 40px rgba(0,0,0,0.35);
-      max-width: 460px;
-      width: 100%;
-      padding: clamp(28px, 5vw, 44px) clamp(20px, 5vw, 36px);
-    }
-
-    /* Brand header */
-    .brand-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 28px;
-    }
-    .brand-mark {
-      width: 36px;
-      height: 36px;
-      flex-shrink: 0;
-    }
-    .brand-mark img { width: 100%; height: 100%; display: block; }
-    .brand-name {
-      font-size: 18px;
-      font-weight: 600;
-      letter-spacing: -0.3px;
-      color: var(--ink);
-    }
-    .brand-sub {
-      font-family: 'Geist Mono', monospace;
-      font-size: 10px;
-      color: var(--sub);
-      letter-spacing: 1.2px;
-      text-transform: uppercase;
-    }
-
-    /* Divider */
-    .divider {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--line) 30%, var(--line) 70%, transparent);
-      margin-bottom: 24px;
-    }
-
-    /* Section label */
-    .section-label {
-      font-family: 'Geist Mono', monospace;
-      font-size: 10px;
-      color: var(--sub);
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 14px;
-    }
-
-    /* Link buttons */
-    .links {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .link-btn {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      background: var(--bg);
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      padding: 14px 16px;
-      text-decoration: none;
-      color: var(--ink);
-      transition: border-color 160ms, box-shadow 160ms, transform 160ms;
-    }
-
-    .link-btn:hover {
-      border-color: var(--accent);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-      transform: translateY(-1px);
-    }
-
-    .link-btn:focus-visible {
-      outline: 2px solid var(--primary);
-      outline-offset: 2px;
-    }
-
-    .link-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
-      background: rgba(143,204,182,0.10);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .link-icon svg { display: block; }
-
-    .link-text { flex: 1; min-width: 0; }
-    .link-name {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--ink);
-      line-height: 1.2;
-    }
-    .link-desc {
-      font-size: 11px;
-      color: var(--sub);
-      margin-top: 2px;
-      line-height: 1.4;
-    }
-
-    .link-arrow {
-      font-family: 'Geist Mono', monospace;
-      font-size: 13px;
-      color: var(--sub);
-      flex-shrink: 0;
-      transition: color 160ms, transform 160ms;
-    }
-    .link-btn:hover .link-arrow {
-      color: var(--primary);
-      transform: translateX(3px);
-    }
-
-    footer {
-      margin-top: 28px;
-      font-family: 'Geist Mono', monospace;
-      font-size: 11px;
-      color: var(--sub);
-      text-align: center;
-      letter-spacing: 0.5px;
-      opacity: 0.7;
-    }
-    footer a { color: var(--sub); text-decoration: none; transition: color 150ms; }
-    footer a:hover { color: var(--primary); }
-
-    @media (prefers-reduced-motion: reduce) {
-      .link-btn, .link-arrow { transition: none; }
-      .link-btn:hover { transform: none; }
-    }
-  </style>
+  .backlink{ display:inline-flex; align-items:center; gap:8px; font-family:var(--mono); font-size:0.74rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--sub); margin-bottom: 26px; transition:color .25s var(--ease); }
+  .backlink:hover{ color:var(--ink); }
+</style>
 </head>
-<body>
+<body class="theme-survey">
 
-  <div class="card">
+<header class="nav" id="nav">
+  <div class="wrap nav__inner">
+    <a class="nav__brand" href="/index.html"><img src="/assets/brand/wordmark-ink.png" alt="exs" /><span class="mono-tag">EXSports Oy</span></a>
+    <nav class="nav__links">
+      <a href="/index.html" class="hide-sm">Home</a>
+      <a href="/legal/imprint.html" class="hide-sm">Imprint</a>
+      <a href="mailto:info@exsports.fi" class="cta">Contact</a>
+    </nav>
+  </div>
+</header>
 
-    <div class="brand-header">
-      <div class="brand-mark" aria-hidden="true">
-        <!-- SurveyTools app icon: water drop + calculator + test tube -->
-        <svg width="36" height="36" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <path d="M44,14 C34,24 17,40 17,57 A27,27,0,0,0,71,57 C71,40 54,24 44,14Z" fill="var(--primary)"/>
-          <rect x="15" y="33" width="46" height="50" rx="4" fill="var(--primary)"/>
-          <rect x="20" y="38" width="36" height="10" rx="2" style="fill:var(--bg)"/>
-          <rect x="20" y="53" width="11" height="10" rx="2" style="fill:var(--bg)"/>
-          <rect x="34" y="53" width="11" height="10" rx="2" style="fill:var(--bg)"/>
-          <rect x="48" y="53" width="11" height="10" rx="2" style="fill:var(--bg)"/>
-          <rect x="20" y="66" width="11" height="10" rx="2" style="fill:var(--bg)"/>
-          <rect x="34" y="66" width="11" height="10" rx="2" style="fill:var(--bg)"/>
-          <rect x="48" y="66" width="11" height="10" rx="2" style="fill:var(--bg)"/>
-          <rect x="63" y="19" width="15" height="6" rx="3" fill="var(--primary)"/>
-          <path d="M65,25 L76,25 L76,70 Q76,81 70.5,81 Q65,81 65,70Z" fill="var(--primary)"/>
-        </svg>
-      </div>
-      <div>
-        <div class="brand-name">SurveyTools</div>
-        <div class="brand-sub">by EXSports Oy</div>
+<section class="stage">
+  <div class="glow glow--top"></div>
+  <div class="wrap ahero">
+    <a class="backlink reveal" href="/index.html"><span>←</span> All apps</a>
+    <div class="ahero__row">
+      <div class="ahero__mark reveal"><div class="xmark"><i></i></div></div>
+      <div class="reveal" data-d="1">
+        <p class="ahero__by">SurveyTools · by EXSports Oy</p>
+        <h1 class="ahero__title">SurveyTools</h1>
       </div>
     </div>
+    <p class="lead ahero__lead reveal" data-d="2">A handy set of calculators for survey &amp; measurement workflows — an educational and recreational aid for learning, practice and quick estimates.</p>
+  </div>
+</section>
 
-    <div class="divider" aria-hidden="true"></div>
+<section class="section--tight">
+  <div class="wrap">
+    <div class="docs-head">
+      <div>
+        <p class="eyebrow reveal">Documents</p>
+        <h2 class="h2 reveal" data-d="1" style="margin-top:12px; font-size:clamp(1.5rem,3vw,2.2rem);">Guides &amp; legal</h2>
+      </div>
+      <span class="count reveal" data-d="1" style="font-family:var(--mono);font-size:0.76rem;letter-spacing:0.14em;color:var(--sub);">06 docs</span>
+    </div>
 
-    <div class="section-label">Documents</div>
-
-    <div class="links">
-
-      <a class="link-btn" href="user-guide/index.html">
-        <div class="link-icon" aria-hidden="true">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/>
-            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
-            <line x1="9" y1="7" x2="15" y2="7"/>
-            <line x1="9" y1="11" x2="15" y2="11"/>
-          </svg>
+    <div class="docs">
+      <a class="doc reveal" href="/surveytools/user-guide/index.html">
+        <span class="doc__idx">01</span>
+        <div class="doc__body">
+          <div class="doc__title">User Guide <span class="arrow">→</span></div>
+          <div class="doc__desc">How to use the calculators and what each one does.</div>
         </div>
-        <div class="link-text">
-          <div class="link-name">User Guide</div>
-          <div class="link-desc">How to use the calculators and what they do</div>
-        </div>
-        <span class="link-arrow" aria-hidden="true">→</span>
       </a>
-
-      <a class="link-btn" href="legal/privacy_policy.html">
-        <div class="link-icon" aria-hidden="true">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-          </svg>
+      <a class="doc reveal" data-d="1" href="/surveytools/legal/privacy_policy.html">
+        <span class="doc__idx">02</span>
+        <div class="doc__body">
+          <div class="doc__title">Privacy Policy <span class="arrow">→</span></div>
+          <div class="doc__desc">How we collect, use and protect your data.</div>
         </div>
-        <div class="link-text">
-          <div class="link-name">Privacy Policy</div>
-          <div class="link-desc">How we collect, use and protect your data</div>
-        </div>
-        <span class="link-arrow" aria-hidden="true">→</span>
       </a>
-
-      <a class="link-btn" href="legal/disclaimer.html">
-        <div class="link-icon" aria-hidden="true">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/>
-            <line x1="12" y1="8" x2="12" y2="12"/>
-            <line x1="12" y1="16" x2="12.01" y2="16"/>
-          </svg>
+      <a class="doc reveal" data-d="1" href="/surveytools/legal/disclaimer.html">
+        <span class="doc__idx">03</span>
+        <div class="doc__body">
+          <div class="doc__title">Disclaimer <span class="arrow">→</span></div>
+          <div class="doc__desc">Limitation of liability and terms of use.</div>
         </div>
-        <div class="link-text">
-          <div class="link-name">Disclaimer</div>
-          <div class="link-desc">Limitation of liability and terms of use</div>
-        </div>
-        <span class="link-arrow" aria-hidden="true">→</span>
       </a>
-
-      <a class="link-btn" href="legal/report-bug.html">
-        <div class="link-icon" aria-hidden="true">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M8 6l2-2h4l2 2"/>
-            <rect x="4" y="6" width="16" height="14" rx="2"/>
-            <line x1="12" y1="11" x2="12" y2="17"/>
-            <line x1="9" y1="14" x2="15" y2="14"/>
-          </svg>
+      <a class="doc reveal" data-d="2" href="/surveytools/legal/report-bug.html">
+        <span class="doc__idx">04</span>
+        <div class="doc__body">
+          <div class="doc__title">Report a Bug <span class="arrow">→</span></div>
+          <div class="doc__desc">Tell us what went wrong in the app.</div>
         </div>
-        <div class="link-text">
-          <div class="link-name">Report a Bug</div>
-          <div class="link-desc">Tell us what went wrong in the app</div>
-        </div>
-        <span class="link-arrow" aria-hidden="true">→</span>
       </a>
-
-      <a class="link-btn" href="../legal/imprint.html">
-        <div class="link-icon" aria-hidden="true">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="4" width="18" height="16" rx="2"/>
-            <line x1="3" y1="9" x2="21" y2="9"/>
-            <line x1="8" y1="14" x2="16" y2="14"/>
-            <line x1="8" y1="17" x2="13" y2="17"/>
-          </svg>
+      <a class="doc reveal" data-d="2" href="/legal/imprint.html">
+        <span class="doc__idx">05</span>
+        <div class="doc__body">
+          <div class="doc__title">Imprint / Impressum <span class="ext">EN · DE · FI</span> <span class="arrow">→</span></div>
+          <div class="doc__desc">Company information &amp; legal notice — shared across EXS.</div>
         </div>
-        <div class="link-text">
-          <div class="link-name">Imprint / Impressum</div>
-          <div class="link-desc">Company information &amp; legal notice (EN · DE · FI)</div>
-        </div>
-        <span class="link-arrow" aria-hidden="true">→</span>
       </a>
-
-      <a class="link-btn" href="legal/delete.html">
-        <div class="link-icon" aria-hidden="true">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="3 6 5 6 21 6"/>
-            <path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/>
-            <path d="M10 11v6"/>
-            <path d="M14 11v6"/>
-            <path d="M9 6V4h6v2"/>
-          </svg>
+      <a class="doc reveal" data-d="3" href="/surveytools/legal/delete.html">
+        <span class="doc__idx">06</span>
+        <div class="doc__body">
+          <div class="doc__title">Data Deletion Request <span class="arrow">→</span></div>
+          <div class="doc__desc">Request removal of your personal data.</div>
         </div>
-        <div class="link-text">
-          <div class="link-name">Data Deletion Request</div>
-          <div class="link-desc">Request removal of your personal data</div>
-        </div>
-        <span class="link-arrow" aria-hidden="true">→</span>
       </a>
-
     </div>
   </div>
+</section>
 
-  <footer>
-    &copy; 2026 EXSPORTS OY &nbsp;&middot;&nbsp;
-    <a href="../index.html">← Home</a> &nbsp;&middot;&nbsp;
-    <a href="../legal/imprint.html">Imprint</a> &nbsp;&middot;&nbsp;
-    <a href="mailto:info@exsports.fi">Contact</a>
-  </footer>
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <a class="footer__brand" href="/index.html"><img src="/assets/brand/wordmark-ink.png" alt="exs" /></a>
+    <div class="footer__meta">
+      <span>© 2026 EXSPORTS OY</span><span class="dot">·</span>
+      <a href="/index.html">Home</a><span class="dot">·</span>
+      <a href="/legal/imprint.html">Imprint</a><span class="dot">·</span>
+      <a href="mailto:info@exsports.fi">Contact</a>
+    </div>
+  </div>
+</footer>
 
+<script>
+  document.body.classList.add('js');
+  const nav=document.getElementById('nav');
+  const onScroll=()=>nav.classList.toggle('is-stuck',window.scrollY>8);
+  onScroll(); addEventListener('scroll',onScroll,{passive:true});
+  const reveals=[...document.querySelectorAll('.reveal')]; const show=el=>el.classList.add('in');
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){show(e.target);io.unobserve(e.target);}}),{threshold:0.12,rootMargin:'0px 0px -6% 0px'});
+    reveals.forEach(el=>io.observe(el));
+    requestAnimationFrame(()=>{const vh=innerHeight;reveals.forEach(el=>{if(el.getBoundingClientRect().top<vh*0.92)show(el);});});
+  } else reveals.forEach(show);
+  setTimeout(()=>reveals.forEach(show),1600);
+</script>
 </body>
 </html>

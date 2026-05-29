@@ -1,72 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Data Deletion Request – Heda</title>
-  <link rel="stylesheet" href="../user-guide/shared.css" />
-  <link rel="stylesheet" href="legal.css" />
+<meta charset="utf-8" />
+<title>Data Deletion Request — Heda · EXSports Oy</title>
+<meta name="description" content="Request removal of your personal data from Heda." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#0E1310" />
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/brand/favicon-64.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png" />
+<link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css" />
+<link rel="stylesheet" href="/legal.css" />
+<style>body.theme-heda{ --signature:#C9DDA6; }</style>
 </head>
-<body>
+<body class="theme-sage theme-heda">
+<header class="nav" id="nav">
+  <div class="wrap nav__inner">
+    <a class="nav__brand" href="/index.html"><img src="/assets/brand/wordmark-ink.png" alt="exs" /><span class="mono-tag">EXSports Oy</span></a>
+    <nav class="nav__links">
+      <a href="/index.html" class="hide-sm">Home</a>
+      <a href="/legal/imprint.html" class="hide-sm">Imprint</a>
+      <a href="mailto:info@exsports.fi" class="cta">Contact</a>
+    </nav>
+  </div>
+</header>
+<section class="doc-head stage">
+  <div class="wrap doc-head__inner">
+    <a class="backlink" href="/heda/index.html"><span>←</span> Heda</a>
+    <p class="eyebrow">Heda · Privacy</p>
+    <h1>Data Deletion Request</h1>
 
-  <!-- ── Site header ── -->
-  <header class="site-header">
-    <div class="site-header-inner">
-      <a class="brand-lockup" href="../index.html">
-        <svg width="26" height="26" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-          <circle cx="32" cy="32" r="29" stroke="currentColor" stroke-width="1" opacity="0.18" fill="none"/>
-          <circle cx="32" cy="32" r="23" stroke="currentColor" stroke-width="1" opacity="0.30" fill="none"/>
-          <circle cx="32" cy="32" r="17.5" stroke="currentColor" stroke-width="1" opacity="0.50" fill="none"/>
-          <ellipse cx="32" cy="30" rx="9" ry="11" fill="currentColor"/>
-          <path d="M27 41 Q32 44 37 41 L39 47 Q32 49 25 47 Z" fill="currentColor"/>
-        </svg>
-        <div class="header-meta">
-          <span class="wordmark">heda</span>
-          <span class="header-subtitle">Data Deletion</span>
-        </div>
-      </a>
-      <nav class="header-nav">
-        <a href="../index.html">← Documents</a>
-      </nav>
+  </div>
+</section>
+<div class="wrap"><div class="prose">
+<p style="font-size:1.15rem;color:var(--ink);line-height:1.6;margin-bottom:28px;">Most of Heda lives on your device, so deletion is largely in your hands — and you can always ask us to remove the rest.</p>
+
+<h3>1. Delete your diary (on device)</h3>
+<p>To remove all locally stored data, clear Heda's storage in your device settings or uninstall the app. This permanently removes your migraine entries and preferences held on the device.</p>
+<h3>2. Revoke Health Connect access</h3>
+<p>Open Google Health Connect on your device to review or revoke the data types Heda can read. Health Connect data is managed there, separately from the app.</p>
+<h3>3. Delete your account data</h3>
+<p>To erase the account data we process (your Google email, held via <strong>Supabase</strong> for authentication and premium verification), email <a href="mailto:info@exsports.fi?subject=Data%20deletion%20request%20(Heda)">info@exsports.fi</a> from the address linked to your account. Under the GDPR we will erase it within 30 days, except where we must retain purchase records for legal/accounting reasons.</p>
+<h3>What to include</h3>
+<ul>
+<li>The Google email linked to your Heda account.</li>
+<li>A brief description of what you want removed.</li>
+</ul>
+<div class="doc-cta">
+  <h3>Request account deletion</h3>
+  <p>Email us and we will confirm within 30 days.</p>
+  <a class="btn btn--primary" href="mailto:info@exsports.fi">info@exsports.fi <span class="arrow">→</span></a>
+</div>
+</div></div>
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <a class="footer__brand" href="/index.html"><img src="/assets/brand/wordmark-ink.png" alt="exs" /></a>
+    <div class="footer__meta">
+      <span>© 2026 EXSPORTS OY</span><span class="dot">·</span>
+      <a href="/index.html">Home</a><span class="dot">·</span>
+      <a href="/legal/imprint.html">Imprint</a><span class="dot">·</span>
+      <a href="mailto:info@exsports.fi">Contact</a>
     </div>
-  </header>
-
-  <main class="action-page">
-    <div class="action-card">
-
-      <h1>Data Deletion Request</h1>
-
-      <p>You can request deletion of any personal data associated with your use of the Heda application. We will process your request within a reasonable time.</p>
-
-      <div class="info-box">
-        <strong>What we can delete upon request:</strong><br/>
-        • Crash reports collected via GlitchTip<br/>
-        • Your Supabase account and authentication data (or delete directly in-app via Settings → Privacy &amp; Data → Delete account)<br/>
-        • Support correspondence tied to your email address<br/><br/>
-        <strong>What is deleted automatically:</strong><br/>
-        • Diary &amp; health data — stored only on your device; deleted when you uninstall the app, clear app data, or use Settings → Privacy &amp; Data → Delete local data<br/>
-        • Health Connect data — managed by Google Health Connect on your device; revoke permissions in Android settings<br/><br/>
-        <strong>Note:</strong><br/>
-        • No usage analytics are collected by Heda.
-      </div>
-
-      <p>To submit a deletion request, send us an email using the button below. Please include a brief description of what you would like deleted.</p>
-
-      <a class="btn" href="mailto:info@exsports.fi?subject=Data%20Deletion%20Request%20%E2%80%93%20Heda&body=Hello%2C%0A%0AI%20would%20like%20to%20request%20deletion%20of%20my%20data%20associated%20with%20the%20Heda%20application.%0A%0APlease%20delete%3A%20%5Bdescribe%20what%20you%20want%20deleted%5D%0A%0AThank%20you.">
-        ✉️ &nbsp; Send Deletion Request — info@exsports.fi
-      </a>
-
-      <p class="note">
-        We will respond to your request within 30 days.
-      </p>
-
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    &copy; 2026 EXSports Oy &nbsp;·&nbsp;
-    <a href="../index.html">← Documents</a>
-  </footer>
-
+  </div>
+</footer>
+<script>
+  document.body.classList.add('js');
+  const nav=document.getElementById('nav');
+  const onScroll=()=>nav.classList.toggle('is-stuck',window.scrollY>8);
+  onScroll(); addEventListener('scroll',onScroll,{passive:true});
+</script>
 </body>
 </html>
