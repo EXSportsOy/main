@@ -4,18 +4,304 @@
     <loc>https://www.exsports.fi/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.exsports.fi/en/index.html" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://www.exsports.fi/fi/index.html" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.exsports.fi/sv/index.html" />
+    <xhtml:link rel="alternate" hreflang="no" href="https://www.exsports.fi/no/index.html" />
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.exsports.fi/da/index.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.exsports.fi/de/index.html" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.exsports.fi/nl/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.exsports.fi/fr/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exsports.fi/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.exsports.fi/it/index.html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://www.exsports.fi/pl/index.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.exsports.fi/pt/index.html" />
+    <xhtml:link rel="alternate" hreflang="et" href="https://www.exsports.fi/et/index.html" />
+    <xhtml:link rel="alternate" hreflang="lv" href="https://www.exsports.fi/lv/index.html" />
+    <xhtml:link rel="alternate" hreflang="lt" href="https://www.exsports.fi/lt/index.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exsports.fi/en/index.html" />
   </url>
   <url>
     <loc>https://www.exsports.fi/en/index.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.exsports.fi/en/index.html" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://www.exsports.fi/fi/index.html" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.exsports.fi/sv/index.html" />
+    <xhtml:link rel="alternate" hreflang="no" href="https://www.exsports.fi/no/index.html" />
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.exsports.fi/da/index.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.exsports.fi/de/index.html" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.exsports.fi/nl/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.exsports.fi/fr/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exsports.fi/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.exsports.fi/it/index.html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://www.exsports.fi/pl/index.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.exsports.fi/pt/index.html" />
+    <xhtml:link rel="alternate" hreflang="et" href="https://www.exsports.fi/et/index.html" />
+    <xhtml:link rel="alternate" hreflang="lv" href="https://www.exsports.fi/lv/index.html" />
+    <xhtml:link rel="alternate" hreflang="lt" href="https://www.exsports.fi/lt/index.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exsports.fi/en/index.html" />
   </url>
   <url>
     <loc>https://www.exsports.fi/fi/index.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.exsports.fi/en/index.html" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://www.exsports.fi/fi/index.html" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.exsports.fi/sv/index.html" />
+    <xhtml:link rel="alternate" hreflang="no" href="https://www.exsports.fi/no/index.html" />
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.exsports.fi/da/index.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.exsports.fi/de/index.html" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.exsports.fi/nl/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.exsports.fi/fr/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exsports.fi/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.exsports.fi/it/index.html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://www.exsports.fi/pl/index.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.exsports.fi/pt/index.html" />
+    <xhtml:link rel="alternate" hreflang="et" href="https://www.exsports.fi/et/index.html" />
+    <xhtml:link rel="alternate" hreflang="lv" href="https://www.exsports.fi/lv/index.html" />
+    <xhtml:link rel="alternate" hreflang="lt" href="https://www.exsports.fi/lt/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exsports.fi/en/index.html" />
+  </url>
+  <url>
+    <loc>https://www.exsports.fi/sv/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exsports.fi/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.exsports.fi/fi/index.html" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.exsports.fi/sv/index.html" />
+    <xhtml:link rel="alternate" hreflang="no" href="https://www.exsports.fi/no/index.html" />
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.exsports.fi/da/index.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.exsports.fi/de/index.html" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.exsports.fi/nl/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.exsports.fi/fr/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exsports.fi/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.exsports.fi/it/index.html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://www.exsports.fi/pl/index.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.exsports.fi/pt/index.html" />
+    <xhtml:link rel="alternate" hreflang="et" href="https://www.exsports.fi/et/index.html" />
+    <xhtml:link rel="alternate" hreflang="lv" href="https://www.exsports.fi/lv/index.html" />
+    <xhtml:link rel="alternate" hreflang="lt" href="https://www.exsports.fi/lt/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exsports.fi/en/index.html" />
+  </url>
+  <url>
+    <loc>https://www.exsports.fi/no/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exsports.fi/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.exsports.fi/fi/index.html" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.exsports.fi/sv/index.html" />
+    <xhtml:link rel="alternate" hreflang="no" href="https://www.exsports.fi/no/index.html" />
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.exsports.fi/da/index.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.exsports.fi/de/index.html" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.exsports.fi/nl/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.exsports.fi/fr/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exsports.fi/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.exsports.fi/it/index.html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://www.exsports.fi/pl/index.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.exsports.fi/pt/index.html" />
+    <xhtml:link rel="alternate" hreflang="et" href="https://www.exsports.fi/et/index.html" />
+    <xhtml:link rel="alternate" hreflang="lv" href="https://www.exsports.fi/lv/index.html" />
+    <xhtml:link rel="alternate" hreflang="lt" href="https://www.exsports.fi/lt/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exsports.fi/en/index.html" />
+  </url>
+  <url>
+    <loc>https://www.exsports.fi/da/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exsports.fi/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.exsports.fi/fi/index.html" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.exsports.fi/sv/index.html" />
+    <xhtml:link rel="alternate" hreflang="no" href="https://www.exsports.fi/no/index.html" />
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.exsports.fi/da/index.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.exsports.fi/de/index.html" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.exsports.fi/nl/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.exsports.fi/fr/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exsports.fi/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.exsports.fi/it/index.html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://www.exsports.fi/pl/index.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.exsports.fi/pt/index.html" />
+    <xhtml:link rel="alternate" hreflang="et" href="https://www.exsports.fi/et/index.html" />
+    <xhtml:link rel="alternate" hreflang="lv" href="https://www.exsports.fi/lv/index.html" />
+    <xhtml:link rel="alternate" hreflang="lt" href="https://www.exsports.fi/lt/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exsports.fi/en/index.html" />
+  </url>
+  <url>
+    <loc>https://www.exsports.fi/de/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exsports.fi/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.exsports.fi/fi/index.html" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.exsports.fi/sv/index.html" />
+    <xhtml:link rel="alternate" hreflang="no" href="https://www.exsports.fi/no/index.html" />
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.exsports.fi/da/index.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.exsports.fi/de/index.html" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.exsports.fi/nl/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.exsports.fi/fr/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exsports.fi/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.exsports.fi/it/index.html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://www.exsports.fi/pl/index.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.exsports.fi/pt/index.html" />
+    <xhtml:link rel="alternate" hreflang="et" href="https://www.exsports.fi/et/index.html" />
+    <xhtml:link rel="alternate" hreflang="lv" href="https://www.exsports.fi/lv/index.html" />
+    <xhtml:link rel="alternate" hreflang="lt" href="https://www.exsports.fi/lt/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exsports.fi/en/index.html" />
+  </url>
+  <url>
+    <loc>https://www.exsports.fi/nl/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exsports.fi/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.exsports.fi/fi/index.html" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.exsports.fi/sv/index.html" />
+    <xhtml:link rel="alternate" hreflang="no" href="https://www.exsports.fi/no/index.html" />
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.exsports.fi/da/index.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.exsports.fi/de/index.html" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.exsports.fi/nl/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.exsports.fi/fr/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exsports.fi/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.exsports.fi/it/index.html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://www.exsports.fi/pl/index.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.exsports.fi/pt/index.html" />
+    <xhtml:link rel="alternate" hreflang="et" href="https://www.exsports.fi/et/index.html" />
+    <xhtml:link rel="alternate" hreflang="lv" href="https://www.exsports.fi/lv/index.html" />
+    <xhtml:link rel="alternate" hreflang="lt" href="https://www.exsports.fi/lt/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exsports.fi/en/index.html" />
+  </url>
+  <url>
+    <loc>https://www.exsports.fi/fr/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exsports.fi/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.exsports.fi/fi/index.html" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.exsports.fi/sv/index.html" />
+    <xhtml:link rel="alternate" hreflang="no" href="https://www.exsports.fi/no/index.html" />
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.exsports.fi/da/index.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.exsports.fi/de/index.html" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.exsports.fi/nl/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.exsports.fi/fr/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exsports.fi/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.exsports.fi/it/index.html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://www.exsports.fi/pl/index.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.exsports.fi/pt/index.html" />
+    <xhtml:link rel="alternate" hreflang="et" href="https://www.exsports.fi/et/index.html" />
+    <xhtml:link rel="alternate" hreflang="lv" href="https://www.exsports.fi/lv/index.html" />
+    <xhtml:link rel="alternate" hreflang="lt" href="https://www.exsports.fi/lt/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exsports.fi/en/index.html" />
+  </url>
+  <url>
+    <loc>https://www.exsports.fi/es/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exsports.fi/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.exsports.fi/fi/index.html" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.exsports.fi/sv/index.html" />
+    <xhtml:link rel="alternate" hreflang="no" href="https://www.exsports.fi/no/index.html" />
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.exsports.fi/da/index.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.exsports.fi/de/index.html" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.exsports.fi/nl/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.exsports.fi/fr/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exsports.fi/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.exsports.fi/it/index.html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://www.exsports.fi/pl/index.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.exsports.fi/pt/index.html" />
+    <xhtml:link rel="alternate" hreflang="et" href="https://www.exsports.fi/et/index.html" />
+    <xhtml:link rel="alternate" hreflang="lv" href="https://www.exsports.fi/lv/index.html" />
+    <xhtml:link rel="alternate" hreflang="lt" href="https://www.exsports.fi/lt/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exsports.fi/en/index.html" />
+  </url>
+  <url>
+    <loc>https://www.exsports.fi/it/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exsports.fi/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.exsports.fi/fi/index.html" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.exsports.fi/sv/index.html" />
+    <xhtml:link rel="alternate" hreflang="no" href="https://www.exsports.fi/no/index.html" />
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.exsports.fi/da/index.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.exsports.fi/de/index.html" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.exsports.fi/nl/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.exsports.fi/fr/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exsports.fi/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.exsports.fi/it/index.html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://www.exsports.fi/pl/index.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.exsports.fi/pt/index.html" />
+    <xhtml:link rel="alternate" hreflang="et" href="https://www.exsports.fi/et/index.html" />
+    <xhtml:link rel="alternate" hreflang="lv" href="https://www.exsports.fi/lv/index.html" />
+    <xhtml:link rel="alternate" hreflang="lt" href="https://www.exsports.fi/lt/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exsports.fi/en/index.html" />
+  </url>
+  <url>
+    <loc>https://www.exsports.fi/pl/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exsports.fi/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.exsports.fi/fi/index.html" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.exsports.fi/sv/index.html" />
+    <xhtml:link rel="alternate" hreflang="no" href="https://www.exsports.fi/no/index.html" />
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.exsports.fi/da/index.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.exsports.fi/de/index.html" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.exsports.fi/nl/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.exsports.fi/fr/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exsports.fi/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.exsports.fi/it/index.html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://www.exsports.fi/pl/index.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.exsports.fi/pt/index.html" />
+    <xhtml:link rel="alternate" hreflang="et" href="https://www.exsports.fi/et/index.html" />
+    <xhtml:link rel="alternate" hreflang="lv" href="https://www.exsports.fi/lv/index.html" />
+    <xhtml:link rel="alternate" hreflang="lt" href="https://www.exsports.fi/lt/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exsports.fi/en/index.html" />
+  </url>
+  <url>
+    <loc>https://www.exsports.fi/pt/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exsports.fi/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.exsports.fi/fi/index.html" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.exsports.fi/sv/index.html" />
+    <xhtml:link rel="alternate" hreflang="no" href="https://www.exsports.fi/no/index.html" />
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.exsports.fi/da/index.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.exsports.fi/de/index.html" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.exsports.fi/nl/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.exsports.fi/fr/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exsports.fi/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.exsports.fi/it/index.html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://www.exsports.fi/pl/index.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.exsports.fi/pt/index.html" />
+    <xhtml:link rel="alternate" hreflang="et" href="https://www.exsports.fi/et/index.html" />
+    <xhtml:link rel="alternate" hreflang="lv" href="https://www.exsports.fi/lv/index.html" />
+    <xhtml:link rel="alternate" hreflang="lt" href="https://www.exsports.fi/lt/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exsports.fi/en/index.html" />
+  </url>
+  <url>
+    <loc>https://www.exsports.fi/et/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exsports.fi/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.exsports.fi/fi/index.html" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.exsports.fi/sv/index.html" />
+    <xhtml:link rel="alternate" hreflang="no" href="https://www.exsports.fi/no/index.html" />
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.exsports.fi/da/index.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.exsports.fi/de/index.html" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.exsports.fi/nl/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.exsports.fi/fr/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exsports.fi/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.exsports.fi/it/index.html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://www.exsports.fi/pl/index.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.exsports.fi/pt/index.html" />
+    <xhtml:link rel="alternate" hreflang="et" href="https://www.exsports.fi/et/index.html" />
+    <xhtml:link rel="alternate" hreflang="lv" href="https://www.exsports.fi/lv/index.html" />
+    <xhtml:link rel="alternate" hreflang="lt" href="https://www.exsports.fi/lt/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exsports.fi/en/index.html" />
+  </url>
+  <url>
+    <loc>https://www.exsports.fi/lv/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exsports.fi/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.exsports.fi/fi/index.html" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.exsports.fi/sv/index.html" />
+    <xhtml:link rel="alternate" hreflang="no" href="https://www.exsports.fi/no/index.html" />
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.exsports.fi/da/index.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.exsports.fi/de/index.html" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.exsports.fi/nl/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.exsports.fi/fr/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exsports.fi/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.exsports.fi/it/index.html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://www.exsports.fi/pl/index.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.exsports.fi/pt/index.html" />
+    <xhtml:link rel="alternate" hreflang="et" href="https://www.exsports.fi/et/index.html" />
+    <xhtml:link rel="alternate" hreflang="lv" href="https://www.exsports.fi/lv/index.html" />
+    <xhtml:link rel="alternate" hreflang="lt" href="https://www.exsports.fi/lt/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exsports.fi/en/index.html" />
+  </url>
+  <url>
+    <loc>https://www.exsports.fi/lt/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exsports.fi/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.exsports.fi/fi/index.html" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.exsports.fi/sv/index.html" />
+    <xhtml:link rel="alternate" hreflang="no" href="https://www.exsports.fi/no/index.html" />
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.exsports.fi/da/index.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.exsports.fi/de/index.html" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.exsports.fi/nl/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.exsports.fi/fr/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exsports.fi/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.exsports.fi/it/index.html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://www.exsports.fi/pl/index.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.exsports.fi/pt/index.html" />
+    <xhtml:link rel="alternate" hreflang="et" href="https://www.exsports.fi/et/index.html" />
+    <xhtml:link rel="alternate" hreflang="lv" href="https://www.exsports.fi/lv/index.html" />
+    <xhtml:link rel="alternate" hreflang="lt" href="https://www.exsports.fi/lt/index.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exsports.fi/en/index.html" />
   </url>
   <url>
