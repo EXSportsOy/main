@@ -7,13 +7,16 @@
 
   function remember(code) { try { localStorage.setItem('exs-lang', code); } catch (e) {} }
 
+  // The page each language links to within its <lang>/ folder.
+  // Defaults to index.html (section landings); legal pickers set data-file.
   var grid = document.querySelector('[data-i18n-picker]');
   if (grid) {
     var base = grid.getAttribute('data-base') || '.';
+    var gridFile = grid.getAttribute('data-file') || 'index.html';
     langs.forEach(function (l) {
       var a = document.createElement('a');
       a.className = 'lang-option';
-      a.href = base + '/' + l.code + '/index.html';
+      a.href = base + '/' + l.code + '/' + gridFile;
       a.addEventListener('click', function () { remember(l.code); });
       a.innerHTML =
         '<span class="lang-name">' + l.en + '</span>' +
@@ -36,7 +39,10 @@
     });
     sel.addEventListener('change', function () {
       remember(sel.value);
-      window.location.href = '../' + sel.value + '/index.html';
+      // Navigate to the sibling-language copy of the CURRENT page, keeping its
+      // filename (index.html for landings, e.g. privacy_policy.html for legal).
+      var here = window.location.pathname.split('/').pop() || 'index.html';
+      window.location.href = '../' + sel.value + '/' + here;
     });
     sw.appendChild(sel);
   }
