@@ -1,0 +1,11 @@
+/* assets/i18n/i18n.css */
+.lang-page { max-width: 760px; margin: 0 auto; padding: clamp(40px,8vw,96px) 20px; }
+.lang-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px,1fr)); gap: 12px; margin-top: 32px; }
+.lang-option { display: flex; flex-direction: column; gap: 4px; padding: 16px 18px;
+  border: 1px solid var(--line, #2a3330); border-radius: 14px; background: var(--surface, #121a17);
+  color: var(--ink, #e8efe9); text-decoration: none; transition: border-color .25s, transform .25s; }
+.lang-option:hover { border-color: var(--signature, #8fb96a); transform: translateY(-2px); }
+.lang-option .lang-name { font-weight: 600; }
+.lang-option .lang-native { font-size: .85rem; color: var(--sub, #9fb0a6); }
+.lang-switch { font: inherit; padding: 6px 10px; border-radius: 999px;
+  border: 1px solid var(--line-2, #2a3330); background: transparent; color: var(--ink, #e8efe9); cursor: pointer; }
