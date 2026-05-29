@@ -610,6 +610,183 @@
   </url>
   <url>
     <loc>https://www.exsports.fi/shodia/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exsports.fi/shodia/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.exsports.fi/shodia/fi/index.html" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.exsports.fi/shodia/sv/index.html" />
+    <xhtml:link rel="alternate" hreflang="no" href="https://www.exsports.fi/shodia/no/index.html" />
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.exsports.fi/shodia/da/index.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.exsports.fi/shodia/de/index.html" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.exsports.fi/shodia/nl/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.exsports.fi/shodia/fr/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exsports.fi/shodia/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.exsports.fi/shodia/it/index.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.exsports.fi/shodia/pt/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exsports.fi/shodia/en/index.html" />
+  </url>
+  <url>
+    <loc>https://www.exsports.fi/shodia/en/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exsports.fi/shodia/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.exsports.fi/shodia/fi/index.html" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.exsports.fi/shodia/sv/index.html" />
+    <xhtml:link rel="alternate" hreflang="no" href="https://www.exsports.fi/shodia/no/index.html" />
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.exsports.fi/shodia/da/index.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.exsports.fi/shodia/de/index.html" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.exsports.fi/shodia/nl/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.exsports.fi/shodia/fr/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exsports.fi/shodia/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.exsports.fi/shodia/it/index.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.exsports.fi/shodia/pt/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exsports.fi/shodia/en/index.html" />
+  </url>
+  <url>
+    <loc>https://www.exsports.fi/shodia/fi/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exsports.fi/shodia/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.exsports.fi/shodia/fi/index.html" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.exsports.fi/shodia/sv/index.html" />
+    <xhtml:link rel="alternate" hreflang="no" href="https://www.exsports.fi/shodia/no/index.html" />
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.exsports.fi/shodia/da/index.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.exsports.fi/shodia/de/index.html" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.exsports.fi/shodia/nl/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.exsports.fi/shodia/fr/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exsports.fi/shodia/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.exsports.fi/shodia/it/index.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.exsports.fi/shodia/pt/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exsports.fi/shodia/en/index.html" />
+  </url>
+  <url>
+    <loc>https://www.exsports.fi/shodia/sv/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exsports.fi/shodia/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.exsports.fi/shodia/fi/index.html" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.exsports.fi/shodia/sv/index.html" />
+    <xhtml:link rel="alternate" hreflang="no" href="https://www.exsports.fi/shodia/no/index.html" />
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.exsports.fi/shodia/da/index.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.exsports.fi/shodia/de/index.html" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.exsports.fi/shodia/nl/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.exsports.fi/shodia/fr/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exsports.fi/shodia/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.exsports.fi/shodia/it/index.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.exsports.fi/shodia/pt/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exsports.fi/shodia/en/index.html" />
+  </url>
+  <url>
+    <loc>https://www.exsports.fi/shodia/no/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exsports.fi/shodia/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.exsports.fi/shodia/fi/index.html" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.exsports.fi/shodia/sv/index.html" />
+    <xhtml:link rel="alternate" hreflang="no" href="https://www.exsports.fi/shodia/no/index.html" />
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.exsports.fi/shodia/da/index.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.exsports.fi/shodia/de/index.html" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.exsports.fi/shodia/nl/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.exsports.fi/shodia/fr/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exsports.fi/shodia/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.exsports.fi/shodia/it/index.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.exsports.fi/shodia/pt/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exsports.fi/shodia/en/index.html" />
+  </url>
+  <url>
+    <loc>https://www.exsports.fi/shodia/da/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exsports.fi/shodia/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.exsports.fi/shodia/fi/index.html" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.exsports.fi/shodia/sv/index.html" />
+    <xhtml:link rel="alternate" hreflang="no" href="https://www.exsports.fi/shodia/no/index.html" />
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.exsports.fi/shodia/da/index.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.exsports.fi/shodia/de/index.html" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.exsports.fi/shodia/nl/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.exsports.fi/shodia/fr/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exsports.fi/shodia/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.exsports.fi/shodia/it/index.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.exsports.fi/shodia/pt/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exsports.fi/shodia/en/index.html" />
+  </url>
+  <url>
+    <loc>https://www.exsports.fi/shodia/de/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exsports.fi/shodia/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.exsports.fi/shodia/fi/index.html" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.exsports.fi/shodia/sv/index.html" />
+    <xhtml:link rel="alternate" hreflang="no" href="https://www.exsports.fi/shodia/no/index.html" />
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.exsports.fi/shodia/da/index.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.exsports.fi/shodia/de/index.html" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.exsports.fi/shodia/nl/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.exsports.fi/shodia/fr/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exsports.fi/shodia/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.exsports.fi/shodia/it/index.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.exsports.fi/shodia/pt/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exsports.fi/shodia/en/index.html" />
+  </url>
+  <url>
+    <loc>https://www.exsports.fi/shodia/nl/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exsports.fi/shodia/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.exsports.fi/shodia/fi/index.html" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.exsports.fi/shodia/sv/index.html" />
+    <xhtml:link rel="alternate" hreflang="no" href="https://www.exsports.fi/shodia/no/index.html" />
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.exsports.fi/shodia/da/index.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.exsports.fi/shodia/de/index.html" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.exsports.fi/shodia/nl/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.exsports.fi/shodia/fr/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exsports.fi/shodia/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.exsports.fi/shodia/it/index.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.exsports.fi/shodia/pt/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exsports.fi/shodia/en/index.html" />
+  </url>
+  <url>
+    <loc>https://www.exsports.fi/shodia/fr/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exsports.fi/shodia/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.exsports.fi/shodia/fi/index.html" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.exsports.fi/shodia/sv/index.html" />
+    <xhtml:link rel="alternate" hreflang="no" href="https://www.exsports.fi/shodia/no/index.html" />
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.exsports.fi/shodia/da/index.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.exsports.fi/shodia/de/index.html" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.exsports.fi/shodia/nl/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.exsports.fi/shodia/fr/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exsports.fi/shodia/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.exsports.fi/shodia/it/index.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.exsports.fi/shodia/pt/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exsports.fi/shodia/en/index.html" />
+  </url>
+  <url>
+    <loc>https://www.exsports.fi/shodia/es/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exsports.fi/shodia/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.exsports.fi/shodia/fi/index.html" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.exsports.fi/shodia/sv/index.html" />
+    <xhtml:link rel="alternate" hreflang="no" href="https://www.exsports.fi/shodia/no/index.html" />
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.exsports.fi/shodia/da/index.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.exsports.fi/shodia/de/index.html" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.exsports.fi/shodia/nl/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.exsports.fi/shodia/fr/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exsports.fi/shodia/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.exsports.fi/shodia/it/index.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.exsports.fi/shodia/pt/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exsports.fi/shodia/en/index.html" />
+  </url>
+  <url>
+    <loc>https://www.exsports.fi/shodia/it/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exsports.fi/shodia/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.exsports.fi/shodia/fi/index.html" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.exsports.fi/shodia/sv/index.html" />
+    <xhtml:link rel="alternate" hreflang="no" href="https://www.exsports.fi/shodia/no/index.html" />
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.exsports.fi/shodia/da/index.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.exsports.fi/shodia/de/index.html" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.exsports.fi/shodia/nl/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.exsports.fi/shodia/fr/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exsports.fi/shodia/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.exsports.fi/shodia/it/index.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.exsports.fi/shodia/pt/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exsports.fi/shodia/en/index.html" />
+  </url>
+  <url>
+    <loc>https://www.exsports.fi/shodia/pt/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exsports.fi/shodia/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.exsports.fi/shodia/fi/index.html" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.exsports.fi/shodia/sv/index.html" />
+    <xhtml:link rel="alternate" hreflang="no" href="https://www.exsports.fi/shodia/no/index.html" />
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.exsports.fi/shodia/da/index.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.exsports.fi/shodia/de/index.html" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.exsports.fi/shodia/nl/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.exsports.fi/shodia/fr/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exsports.fi/shodia/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.exsports.fi/shodia/it/index.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.exsports.fi/shodia/pt/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exsports.fi/shodia/en/index.html" />
   </url>
   <url>
     <loc>https://www.exsports.fi/heda/</loc>
