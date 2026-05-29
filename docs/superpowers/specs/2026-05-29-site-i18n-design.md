@@ -18,9 +18,11 @@ changes. Unify the whole site on the pattern `heda/` already uses.
   adopt one convention. `heda/` already conforms and only swaps in shared scripts.
 - **Translations:** machine translations drafted into each page (owner reviews
   before/after publish).
-- **Language set (initial registry, 12):** EN, FI, SV, NO, DA, DE, NL, FR, ES, IT,
-  PL, PT — matches heda; covers Nordics + most common European languages. More
-  (e.g. Icelandic, Czech) are a one-line registry add later.
+- **Language set (initial registry, 15):** EN, FI, SV, NO, DA, DE, NL, FR, ES, IT,
+  PL, PT + Baltics ET, LV, LT — heda's 12 plus the three Baltic languages (Shodia is
+  marketed in Estonia, Latvia, and Lithuania). Covers Nordics, Baltics, and the most
+  common European languages. More (e.g. Icelandic, Czech) are a one-line registry add
+  later.
 
 ---
 
@@ -83,6 +85,9 @@ window.EXS_LANGS = [
   { code: 'it', en: 'Italian',    native: 'Italiano' },
   { code: 'pl', en: 'Polish',     native: 'Polski' },
   { code: 'pt', en: 'Portuguese', native: 'Português' },
+  { code: 'et', en: 'Estonian',   native: 'Eesti' },
+  { code: 'lv', en: 'Latvian',    native: 'Latviešu' },
+  { code: 'lt', en: 'Lithuanian', native: 'Lietuvių' },
 ];
 // alias map for browser subtags that fold into a registry code
 window.EXS_LANG_ALIASES = { nb: 'no', nn: 'no' };
@@ -130,7 +135,7 @@ No framework, no build step; deploys as static files on GitHub Pages.
   `switcher.js`; convert the **root landing** to picker + `en/` + **`fi/`** only,
   end-to-end (hreflang, noscript, switcher, sitemap). Validates the approach on two
   languages before scaling.
-- **Increment 1:** root landing → remaining 10 languages.
+- **Increment 1:** root landing → remaining 13 languages.
 - **Increment 2:** `surveytools/` landing → full pattern.
 - **Increment 3:** `shodia/` landing → full pattern.
 - **Increment 4:** `legal/` pages (privacy_policy, disclaimer, delete, report-bug)
