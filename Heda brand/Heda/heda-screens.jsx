@@ -590,6 +590,21 @@ function ScreenSettings({ b }) {
             <Toggle b={b} on={r.on}/>
           </div>
         ))}
+
+        <div style={{ fontFamily: b.mono, fontSize: 10, letterSpacing: 1.2, color: b.textDim, margin: '24px 0 10px' }}>LEGAL</div>
+        <div style={{
+          padding: '14px 16px', borderRadius: 12, border: `1px solid ${b.line}`,
+          background: b.bgCard, fontSize: 13, color: b.text, lineHeight: 1.55,
+        }}>
+          <div style={{ fontWeight: 500, marginBottom: 6 }}>EXSports Oy</div>
+          <div style={{ color: b.textMute }}>Joel Paananen — CEO</div>
+          <div style={{ color: b.textMute }}>Korkeavuorenkatu 25, 48100 Kotka, Finland</div>
+          <div style={{ color: b.textMute, marginBottom: 10 }}>info@exsports.fi</div>
+          <a href="https://www.exsports.fi/legal/imprint.html"
+             style={{ color: b.accent, textDecoration: 'none', fontSize: 13 }}>
+            Full imprint →
+          </a>
+        </div>
         <div style={{ height: 30 }}/>
       </div>
     </ScreenShell>
