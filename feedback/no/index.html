@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8" />
+<title data-i18n="meta_title">Feedback — EXSports Oy</title>
+<meta name="description" data-i18n-attr="content" data-i18n="meta_desc" content="Share feedback about the EXSports website or our apps." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#0A1212" />
+<meta name="robots" content="index,follow" />
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/brand/favicon-64.png" />
+<link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<link rel="stylesheet" href="/feedback/feedback.css" />
+</head>
+<body class="theme-pine" data-lang="no">
+<main class="fb-page" id="feedback">
+
+  <div class="fb-top">
+    <a class="nav__brand" href="/index.html?pick=1"><img src="/assets/brand/wordmark-ink.png" alt="EXSports Oy" /></a>
+    <span data-i18n-switcher data-current="no"></span>
+  </div>
+
+  <!-- Machine-translation notice (hidden on English; shown on translations) -->
+  <div class="fb-mt-notice" data-mt-notice hidden role="note">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+    <span data-i18n-html="mt_notice">This site is machine-translated and may contain errors. The authoritative version is <a href="/feedback/en/">English</a>.</span>
+  </div>
+
+  <div class="fb-head">
+    <p class="eyebrow" data-i18n="eyebrow">Feedback</p>
+    <h1 class="fb-title" data-i18n="title">We'd love your feedback</h1>
+    <p class="fb-lead" data-i18n="lead">Tell us what you think about our website or one of our apps. Every message is read.</p>
+  </div>
+
+  <!-- STEP 1: website vs program -->
+  <section class="fb-view is-active" id="view-choose" aria-label="Choose feedback type">
+    <div class="fb-cards">
+      <button class="fb-card" type="button" data-goto="view-website">
+        <svg class="fb-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+        <span class="fb-card__title" data-i18n="choose_website_title">Website feedback</span>
+        <span class="fb-card__desc" data-i18n="choose_website_desc">Design, content, usability or translations.</span>
+      </button>
+      <button class="fb-card" type="button" data-goto="view-app">
+        <svg class="fb-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="3"></rect><line x1="11" y1="18" x2="13" y2="18"></line></svg>
+        <span class="fb-card__title" data-i18n="choose_program_title">App feedback</span>
+        <span class="fb-card__desc" data-i18n="choose_program_desc">Quick feedback or a detailed bug report.</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- STEP 2 (app): which app -->
+  <section class="fb-view" id="view-app" aria-label="Choose app">
+    <button class="fb-back" type="button" data-back="view-choose"><span aria-hidden="true">←</span> <span data-i18n="back">Back</span></button>
+    <p class="fb-lead" style="margin-bottom:14px" data-i18n="app_pick">Which app is your feedback about?</p>
+    <div class="fb-cards fb-cards--3">
+      <button class="fb-card" type="button" data-goto="view-app-kind" data-app="surveytools">
+        <span class="fb-card__title">SurveyTools</span>
+      </button>
+      <button class="fb-card" type="button" data-goto="view-app-kind" data-app="heda">
+        <span class="fb-card__title">Heda</span>
+      </button>
+      <button class="fb-card" type="button" data-goto="view-app-kind" data-app="shodia">
+        <span class="fb-card__title">Shodia</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- STEP 3 (app): quick vs bug -->
+  <section class="fb-view" id="view-app-kind" aria-label="Choose app feedback type">
+    <button class="fb-back" type="button" data-back="view-app"><span aria-hidden="true">←</span> <span data-i18n="back">Back</span></button>
+    <p class="fb-lead" style="margin-bottom:14px"><span data-i18n="app_selected">Selected app:</span> <strong data-app-label>SurveyTools</strong></p>
+    <div class="fb-cards">
+      <button class="fb-card" type="button" data-goto="view-app-general">
+        <svg class="fb-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        <span class="fb-card__title" data-i18n="general_title">Quick feedback</span>
+        <span class="fb-card__desc" data-i18n="general_desc">Tell us briefly what you think.</span>
+      </button>
+      <button class="fb-card" type="button" data-goto="view-app-bug">
+        <svg class="fb-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="6" width="8" height="14" rx="4"></rect><path d="M19 7l-3 2M5 7l3 2M12 2v4M3 13h3M18 13h3M5 19l3-2M19 19l-3-2"></path></svg>
+        <span class="fb-card__title" data-i18n="bug_title">Bug report</span>
+        <span class="fb-card__desc" data-i18n="bug_desc">Report a problem in detail.</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- FORM: website feedback -->
+  <section class="fb-view" id="view-website" aria-label="Website feedback">
+    <button class="fb-back" type="button" data-back="view-choose"><span aria-hidden="true">←</span> <span data-i18n="back">Back</span></button>
+    <form class="fb-form" data-category="website" data-app="website" novalidate>
+      <div class="fb-field">
+        <label data-i18n="rating_website">How satisfied are you with the website? <span class="fb-opt" data-i18n="optional">(optional)</span></label>
+        <div class="fb-rating" data-rating role="group" aria-label="Rating, 1 to 5"></div>
+      </div>
+      <div class="fb-field">
+        <label for="w-message" data-i18n="your_feedback">Your feedback</label>
+        <textarea class="fb-textarea" id="w-message" name="message" required maxlength="5000" data-i18n-ph="ph_website" placeholder="What works well, or what could be better?"></textarea>
+        <p class="fb-error-msg" data-error-for="message"></p>
+      </div>
+      <div class="fb-field" data-email-field>
+        <label for="w-email"><span data-i18n="email">Email</span> <span class="fb-opt" data-i18n="email_opt">(optional, if you'd like a reply)</span></label>
+        <input class="fb-input" id="w-email" name="email" type="email" autocomplete="email" placeholder="name@example.com" />
+        <p class="fb-error-msg" data-error-for="email"></p>
+      </div>
+      <input type="text" class="fb-hp" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      <div class="fb-actions"><button class="fb-btn fb-btn--primary" type="submit" data-i18n="submit">Send feedback</button></div>
+      <p class="fb-status fb-status--error" data-form-error hidden></p>
+    </form>
+  </section>
+
+  <!-- FORM: app quick feedback -->
+  <section class="fb-view" id="view-app-general" aria-label="Quick app feedback">
+    <button class="fb-back" type="button" data-back="view-app-kind"><span aria-hidden="true">←</span> <span data-i18n="back">Back</span></button>
+    <form class="fb-form" data-category="program_general" novalidate>
+      <div class="fb-field">
+        <label data-i18n="rating_overall">Overall rating <span class="fb-opt" data-i18n="optional">(optional)</span></label>
+        <div class="fb-rating" data-rating role="group" aria-label="Rating, 1 to 5"></div>
+      </div>
+      <div class="fb-field">
+        <label for="g-message"><span data-i18n="your_feedback_app">Your feedback about</span> <strong data-app-label>SurveyTools</strong></label>
+        <textarea class="fb-textarea" id="g-message" name="message" required maxlength="5000" data-i18n-ph="ph_app" placeholder="What do you like, or what would you wish for?"></textarea>
+        <p class="fb-error-msg" data-error-for="message"></p>
+      </div>
+      <div class="fb-field" data-email-field>
+        <label for="g-email"><span data-i18n="email">Email</span> <span class="fb-opt" data-i18n="email_opt2">(optional)</span></label>
+        <input class="fb-input" id="g-email" name="email" type="email" autocomplete="email" placeholder="name@example.com" />
+        <p class="fb-error-msg" data-error-for="email"></p>
+      </div>
+      <input type="text" class="fb-hp" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      <div class="fb-actions"><button class="fb-btn fb-btn--primary" type="submit" data-i18n="submit">Send feedback</button></div>
+      <p class="fb-status fb-status--error" data-form-error hidden></p>
+    </form>
+  </section>
+
+  <!-- FORM: bug report -->
+  <section class="fb-view" id="view-app-bug" aria-label="Bug report">
+    <button class="fb-back" type="button" data-back="view-app-kind"><span aria-hidden="true">←</span> <span data-i18n="back">Back</span></button>
+    <form class="fb-form" data-category="program_bug" novalidate>
+      <div class="fb-field">
+        <label for="b-title"><span data-i18n="bug_summary">Summary</span> — <strong data-app-label>SurveyTools</strong></label>
+        <input class="fb-input" id="b-title" name="bug_title" required maxlength="200" data-i18n-ph="ph_bug_title" placeholder="Short description of the problem" />
+        <p class="fb-error-msg" data-error-for="bug_title"></p>
+      </div>
+      <div class="fb-field">
+        <label for="b-severity" data-i18n="severity">Severity</label>
+        <select class="fb-select" id="b-severity" name="severity">
+          <option value="low" data-i18n="sev_low">Low — cosmetic or minor</option>
+          <option value="medium" selected data-i18n="sev_medium">Medium — disrupts use</option>
+          <option value="high" data-i18n="sev_high">High — blocks an important function</option>
+          <option value="critical" data-i18n="sev_critical">Critical — crash or data loss</option>
+        </select>
+      </div>
+      <div class="fb-field">
+        <label for="b-steps" data-i18n="steps">Steps to reproduce</label>
+        <textarea class="fb-textarea" id="b-steps" name="steps" required maxlength="5000" data-i18n-ph="ph_steps" placeholder="1. Open…&#10;2. Tap…&#10;3. It happens…"></textarea>
+        <p class="fb-error-msg" data-error-for="steps"></p>
+      </div>
+      <div class="fb-field">
+        <label for="b-expected"><span data-i18n="expected">Expected result</span> <span class="fb-opt" data-i18n="optional">(optional)</span></label>
+        <textarea class="fb-textarea" id="b-expected" name="expected" maxlength="2000" data-i18n-ph="ph_expected" placeholder="What should have happened?"></textarea>
+      </div>
+      <div class="fb-field">
+        <label for="b-actual"><span data-i18n="actual">What happened</span> <span class="fb-opt" data-i18n="optional">(optional)</span></label>
+        <textarea class="fb-textarea" id="b-actual" name="actual" maxlength="2000" data-i18n-ph="ph_actual" placeholder="What happened instead?"></textarea>
+      </div>
+      <div class="fb-field">
+        <label for="b-env"><span data-i18n="environment">Environment</span> <span class="fb-opt" data-i18n="optional">(optional)</span></label>
+        <input class="fb-input" id="b-env" name="environment" maxlength="300" data-i18n-ph="ph_env" placeholder="e.g. app version, operating system, device" />
+        <p class="fb-hint" data-i18n="env_hint">Your browser details are attached automatically.</p>
+      </div>
+      <div class="fb-field" data-email-field>
+        <label for="b-email"><span data-i18n="email">Email</span> <span class="fb-opt" data-i18n="email_opt3">(optional, for follow-up questions)</span></label>
+        <input class="fb-input" id="b-email" name="email" type="email" autocomplete="email" placeholder="name@example.com" />
+        <p class="fb-error-msg" data-error-for="email"></p>
+      </div>
+      <input type="text" class="fb-hp" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      <div class="fb-actions"><button class="fb-btn fb-btn--primary" type="submit" data-i18n="submit_bug">Send bug report</button></div>
+      <p class="fb-status fb-status--error" data-form-error hidden></p>
+    </form>
+  </section>
+
+  <!-- SUCCESS -->
+  <section class="fb-view" id="view-done" aria-live="polite">
+    <div class="fb-done">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+      <h2 data-i18n="success_title">Thank you!</h2>
+      <p data-i18n="success_body">Your feedback has been received. We read everything.</p>
+      <button class="fb-btn fb-btn--primary" type="button" data-back="view-choose" data-i18n="success_again">Send more feedback</button>
+    </div>
+  </section>
+
+  <div class="fb-footer">&copy; 2026 EXSports Oy &nbsp;|&nbsp; <a href="/index.html" data-i18n="home">← Home</a></div>
+
+</main>
+
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+<script src="/feedback/feedback-i18n.js"></script>
+<script src="/feedback/feedback-config.js"></script>
+<script type="module" src="/feedback/feedback.js"></script>
+</body>
+</html>
