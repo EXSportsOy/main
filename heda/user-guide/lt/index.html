@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="lt">
+<head>
+<meta charset="utf-8" />
+<title>Naudotojo vadovas — Heda · EXSports Oy</title>
+<meta name="description" content="Kaip naudotis Heda — ramus galvos skausmo ir migrenos dienoraštis Android įrenginiams. Sukurta EXSports Oy." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#0E1310" />
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/brand/favicon-64.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png" />
+<link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css" />
+<link rel="stylesheet" href="/legal.css" />
+<style>
+  body.theme-heda{ --signature:#C9DDA6; }
+  .toc{ background:var(--surface); border:1px solid var(--line); border-radius:var(--r); padding:24px 26px; margin: 4px 0 36px; }
+  .toc .toc-label{ font-family:var(--mono); font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--signature); margin:0 0 14px; }
+  .toc ol{ list-style:none; margin:0; padding:0; columns:2; column-gap:36px; }
+  @media (max-width:560px){ .toc ol{ columns:1; } }
+  .toc li{ margin:0 0 9px; padding:0; }
+  .toc li::before{ display:none; }
+  .toc a{ color:var(--sub); text-decoration:none; font-size:0.95rem; border:none; }
+  .toc a:hover{ color:var(--ink); }
+  .toc .counter{ font-family:var(--mono); font-size:0.74rem; color:var(--signature); margin-right:9px; }
+  .areas{ display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin: 4px 0 8px; }
+  @media (max-width:560px){ .areas{ grid-template-columns:1fr; } }
+  .area{ background:var(--surface); border:1px solid var(--line); border-radius:var(--r); padding:20px 22px; }
+  .area h4{ margin:0 0 6px; font-size:1.02rem; font-weight:500; color:var(--ink); }
+  .area p{ margin:0; font-size:0.92rem; }
+  .metric-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin: 6px 0 18px; }
+  @media (max-width:560px){ .metric-grid{ grid-template-columns:1fr; } }
+  .metric{ border:1px solid var(--line); border-radius:var(--r-sm); padding:16px 18px; }
+  .metric b{ color:var(--ink); font-weight:500; display:block; margin-bottom:4px; }
+  .metric span{ color:var(--sub); font-size:0.9rem; }
+  .prose h2[id], .prose h3[id]{ scroll-margin-top: 90px; }
+</style>
+</head>
+<body class="theme-sage theme-heda">
+
+<header class="nav" id="nav">
+  <div class="wrap nav__inner">
+    <a class="nav__brand" href="/index.html"><img src="/assets/brand/wordmark-ink.png" alt="exs" /><span class="mono-tag">EXSports Oy</span></a>
+    <nav class="nav__links">
+      <a href="/index.html" class="hide-sm">Pradžia</a>
+      <a href="/legal/imprint.html" class="hide-sm">Imprint</a>
+      <a href="mailto:info@exsports.fi" class="cta">Kontaktai</a>
+    </nav>
+  </div>
+</header>
+
+<section class="doc-head stage">
+  <div class="wrap doc-head__inner">
+    <a class="backlink" href="/heda/index.html"><span>←</span> Heda</a>
+    <p class="eyebrow">Heda · Vadovas</p>
+    <h1>Kaip naudotis Heda</h1>
+    <div class="meta"><span>Lietuvių kalba</span><span>Paskutinį kartą atnaujinta <b>2026 m. balandį</b></span></div>
+    <p class="lead" style="margin-top:20px;">Ramus galvos skausmo ir migrenos dienoraštis. Registruokite priepuolius, simptomus ir pastabas — visi duomenys saugomi privačiai jūsų įrenginyje.</p>
+  </div>
+</section>
+
+<div class="wrap"><div class="prose doc-sections">
+
+  <nav class="toc" aria-label="Turinys">
+    <p class="toc-label">Turinys</p>
+    <ol>
+      <li><a href="#overview"><span class="counter">01</span>Apžvalga</a></li>
+      <li><a href="#getting-started"><span class="counter">02</span>Pradžia</a></li>
+      <li><a href="#calendar"><span class="counter">03</span>Kalendorius</a></li>
+      <li><a href="#logging"><span class="counter">04</span>Įvykio registravimas</a></li>
+      <li><a href="#editing"><span class="counter">05</span>Redagavimas ir trynimas</a></li>
+      <li><a href="#analysis"><span class="counter">06</span>Analizė</a></li>
+      <li><a href="#reports"><span class="counter">07</span>Ataskaitos</a></li>
+      <li><a href="#settings"><span class="counter">08</span>Nustatymai</a></li>
+      <li><a href="#privacy"><span class="counter">09</span>Privatumas ir duomenys</a></li>
+      <li><a href="#health-connect"><span class="counter">10</span>Health Connect</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="overview">Apžvalga</h2>
+  <p>Heda yra pirmiausia neprisijungus veikiantis galvos skausmo ir migrenos dienoraštis Android įrenginiams. Visi sveikatos duomenys užšifruojami ir saugomi tik jūsų įrenginyje. Niekas neįkeliama į jokį serverį — jūsų duomenys priklauso tik jums.</p>
+  <p>Programėlę sudaro keturios pagrindinės sritys, pasiekiamos iš apatinės naršymo juostos:</p>
+  <div class="areas">
+    <div class="area"><h4>Kalendorius</h4><p>Naršykite ir tvarkykite galvos skausmo įvykius pagal datą. Iš čia pridėkite naujus įvykius.</p></div>
+    <div class="area"><h4>Analizė</h4><p>Statistika ir tendencijų grafikai visiems naudotojams. Koreliacijos (premium) aptinka jūsų Health Connect duomenų ir galvos skausmo įvykių sąsajas.</p></div>
+    <div class="area"><h4>Ataskaitos</h4><p>Mėnesio ir dienos suvestinės su grafikais. Eksportuokite duomenis kaip CSV arba PDF.</p></div>
+    <div class="area"><h4>Nustatymai</h4><p>Tema, kalba, Health Connect, pranešimai, privatumas ir išplėstinės parinktys.</p></div>
+  </div>
+
+  <h2 id="getting-started">Pradžia</h2>
+  <h3>Prisijungimas</h3>
+  <p>Heda reikalauja Google paskyros jūsų duomenims apsaugoti. Prisijungus sukuriamas užšifruotas, prie įrenginio susietas raktas, susietas su jūsų paskyra — jokie duomenys debesyje nesaugomi.</p>
+  <ul>
+    <li>Atsisiuntę iš Google Play, atidarykite Heda.</li>
+    <li>Bakstelėkite <strong>Prisijungti su Google</strong> ir pasirinkite savo Google paskyrą.</li>
+    <li>Dabar jūsų paskyra susieta su šiuo įdiegimu. Iš naujo įdiegus programėlę, reikia naudoti tą pačią Google paskyrą.</li>
+  </ul>
+  <div class="callout"><p><strong>Pirmiausia privatumas.</strong> Heda neįkelia jokių sveikatos duomenų į išorinius serverius. Jūsų Google paskyra naudojama tik tapatybei nustatyti — kad šifravimo raktai būtų susieti su vienu naudotoju šiame įrenginyje.</p></div>
+  <h3>Pirmojo paleidimo sutikimas</h3>
+  <p>Pirmą kartą paleidus, Heda klausia, ar norite dalytis anoniminėmis strigčių ataskaitomis. Taip nesiunčiami jokie sveikatos duomenys. Savo pasirinkimą vėliau galite pakeisti skiltyje <strong>Nustatymai → Privatumas ir duomenys</strong>.</p>
+  <ul>
+    <li><strong>Anoniminės strigčių ataskaitos</strong> — automatiškai praneša apie strigtis, kad klaidos būtų greitai ištaisytos (GlitchTip). Naudojimo analitika nerenkama.</li>
+  </ul>
+
+  <h2 id="calendar">Kalendorius</h2>
+  <p>Kalendorius yra jūsų kasdienis rodinys. Jis vienu žvilgsniu rodo esamą mėnesį, o spalvoti taškeliai nurodo galvos skausmo intensyvumą kiekvieną dieną.</p>
+  <h3>Mėnesio rodinys</h3>
+  <p>Viršuje esanti mėnesio juosta rodo esamą mėnesį ISO savaičių tinklelyje (savaitės eina nuo pirmadienio iki sekmadienio). Kiekviena diena, kurioje užregistruotas bent vienas įvykis, rodo mažą intensyvumo taškelį:</p>
+  <ul>
+    <li><strong>Mėlyna</strong> — intensyvumas 1–3 (lengvas)</li>
+    <li><strong>Raudona</strong> — intensyvumas 4–5 (stiprus)</li>
+  </ul>
+  <p>Naudokite mygtukus <strong>‹</strong> ir <strong>›</strong>, kad pereitumėte tarp mėnesių. Bakstelėkite bet kurią datą, kad ją pasirinktumėte ir žemiau pamatytumėte tos dienos įvykius. Esama data paryškinama. Bakstelėjus žymą <strong>Šiandien</strong> arba šiandienos datą, grįžtama prie esamos dienos.</p>
+  <h3>Įvykių kortelės</h3>
+  <p>Pasirinktos datos įvykiai rodomi kaip kortelės po mėnesio juosta. Kiekvienoje kortelėje rodoma:</p>
+  <ul>
+    <li><strong>Galvos skausmo tipas</strong> (Galvos skausmas arba Migrena)</li>
+    <li><strong>Laiko intervalas</strong> — pradžios ir pabaigos laikas bei trukmė</li>
+    <li><strong>Intensyvumo juosta</strong> (1–5 skalė)</li>
+    <li>Auros ir skausmą malšinančių vaistų indikatoriai, jei užregistruoti</li>
+  </ul>
+  <p>Bakstelėkite kortelę, kad atidarytumėte ją <strong>redagavimo režimu</strong>, kuriame galima keisti visus laukus.</p>
+  <h3>Greitas pridėjimas</h3>
+  <p>Norėdami greitai registruoti, bakstelėkite <strong>Greitas pridėjimas</strong> Kalendoriaus ekrano apačioje. Iškyla lapas su svarbiausiais laukais:</p>
+  <ul>
+    <li><strong>Tipas</strong> — Galvos skausmas arba Migrena</li>
+    <li><strong>Intensyvumas</strong> — slankiklis 1–5</li>
+    <li><strong>Aura</strong> — žymimasis langelis</li>
+    <li><strong>Skausmą malšinantys vaistai</strong> — žymimasis langelis</li>
+  </ul>
+  <p>Bakstelėkite <strong>Išsaugoti</strong>, kad iškart užregistruotumėte naudodami esamą laiką, arba bakstelėkite <strong>Pridėti išsamią informaciją…</strong>, kad atidarytumėte visą įvykio formą, iš anksto užpildytą šiomis reikšmėmis.</p>
+
+  <h2 id="logging">Įvykio registravimas</h2>
+  <p>Norėdami užregistruoti naują įvykį su visa išsamia informacija, Kalendoriuje bakstelėkite mygtuką <strong>+ Pridėti įvykį</strong>. Jei pirmiausia bakstelėjote konkrečią datą, ši data bus iš anksto parinkta formoje.</p>
+  <h3>Tipas ir intensyvumas</h3>
+  <p>Naudodami viršuje esantį parinkiklį pasirinkite <strong>Galvos skausmas</strong> arba <strong>Migrena</strong>. Tada slankikliu nustatykite intensyvumą skalėje nuo 1 (lengvas) iki 5 (sekinantis).</p>
+  <h3>Data ir laikas</h3>
+  <p>Įvykio laiką valdo trys laukai:</p>
+  <ul>
+    <li><strong>Data</strong> — bakstelėkite, kad atidarytumėte datos parinkiklį. Numatytoji reikšmė — šiandien.</li>
+    <li><strong>Pradžios laikas</strong> — kada prasidėjo priepuolis. Bakstelėkite, kad atidarytumėte 24 valandų laiko parinkiklį.</li>
+    <li><strong>Pabaigos laikas</strong> — kada priepuolis baigėsi. Numatytoji reikšmė — 2 valandos po pradžios laiko. Jei pradžios laiką perkelsite už pabaigos laiko, pabaigos laikas automatiškai pasislenka, kad išliktų 2 valandų tarpas.</li>
+  </ul>
+  <h3>Skausmo sritis</h3>
+  <p><strong>3D galvos modelis</strong> leidžia tiksliai pažymėti, kur jaučiamas skausmas. Jis palaiko du gestus:</p>
+  <ul>
+    <li><strong>Vienas pirštas</strong> — pažymėkite skausmo sritis braukdami per galvos paviršių.</li>
+    <li><strong>Du pirštai</strong> — pasukite galvą, kad pasiektumėte pakaušio, šonų ar kaklo sritis.</li>
+  </ul>
+  <p>Palaikomos aštuonios anatominės sritys: Kakta, Aplink akį — kairė, Aplink akį — dešinė, Smilkinys — kairysis, Smilkinys — dešinysis, Pakaušis — kairysis, Pakaušis — dešinysis ir Kaklas.</p>
+  <p>Įjunkite jungiklį <strong>Žymėti spalva pagal intensyvumą</strong>, kad pažymėtos sritys būtų nuspalvintos intensyvumo spalva (šviesiai raudona lengvam, sodriai raudona stipriam). Pagal numatytuosius nustatymus tai išjungta.</p>
+  <div class="callout"><p><strong>Patarimas.</strong> Pažymėtas sritis galite pašalinti braukdami per jas dar kartą — gestas perjungia tarp pridėjimo ir trynimo.</p></div>
+  <h3>Galimi veiksniai</h3>
+  <p>Užfiksuokite galimus veiksnius, kurie galėjo prisidėti prie šio priepuolio. Jie suskirstyti į septynias kategorijas:</p>
+  <table class="grid">
+    <thead><tr><th>Kategorija</th><th>Veiksniai</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Stresas ir nuotaika</strong></td><td>Stresas, Įtampos atoslūgis, Nerimas</td></tr>
+      <tr><td><strong>Miegas</strong></td><td>Per mažai miego, Per daug miego, Nereguliarus miegas</td></tr>
+      <tr><td><strong>Maistas ir gėrimai</strong></td><td>Praleistas valgis, Ilgas badavimas, Dehidratacija, Alkoholis, Kofeinas, Kofeino nutraukimas, Šokoladas, Brandintas sūris, Maisto priedai, Apdorota mėsa</td></tr>
+      <tr><td><strong>Hormoniniai</strong></td><td>Menstruacijos, Ovuliacija, Hormoninė kontracepcija</td></tr>
+      <tr><td><strong>Aplinka</strong></td><td>Oro pokytis, Ekstremali temperatūra, Drėgmė</td></tr>
+      <tr><td><strong>Jutiminiai</strong></td><td>Ryški šviesa, Stiprus kvapas, Garsus triukšmas, Ekrano mirgėjimas</td></tr>
+      <tr><td><strong>Fiziniai</strong></td><td>Intensyvus fizinis krūvis, Kaklo įtampa, Kelionė, Per dažnas vaistų vartojimas</td></tr>
+    </tbody>
+  </table>
+  <h3>Aura ir skausmą malšinantys vaistai</h3>
+  <ul>
+    <li><strong>Aura</strong> — pažymėkite, jei prieš šį įvykį buvo aura (regėjimo sutrikimai, dilgčiojimas, kalbos pokyčiai ir kt.).</li>
+    <li><strong>Skausmą malšinantys vaistai</strong> — pažymėkite, jei priepuolio metu vartojote ūminius vaistus (pvz., triptaną, NVNU arba paracetamolį).</li>
+  </ul>
+  <h3>Pastabos</h3>
+  <p>Laisvo teksto pastabų lauke užfiksuojama viskas, ko neapima struktūrizuoti laukai — kontekstas, pastebėjimai, kas padėjo, ar bet kokia kita detalė, kurią norite prisiminti. Baigę bakstelėkite <strong>Išsaugoti</strong>. Įvykis Kalendoriuje pasirodo iškart.</p>
+
+  <h2 id="editing">Įvykių redagavimas ir trynimas</h2>
+  <h3>Įvykio redagavimas</h3>
+  <ul>
+    <li>Kalendoriuje pereikite prie datos.</li>
+    <li>Bakstelėkite įvykio kortelę, kurią norite pakeisti.</li>
+    <li>Įvykio forma atsiveria redagavimo režimu — visi laukai redaguojami.</li>
+    <li>Atlikite pakeitimus, tada bakstelėkite <strong>Atnaujinti</strong>, kad išsaugotumėte.</li>
+  </ul>
+  <h3>Įvykio trynimas</h3>
+  <ul>
+    <li>Atidarykite įvykį redagavimo režimu (Kalendoriuje bakstelėkite jo kortelę).</li>
+    <li>Slinkite į apačią ir bakstelėkite <strong>Ištrinti įrašą</strong>.</li>
+    <li>Pasirodo patvirtinimo dialogas. Bakstelėkite <strong>Ištrinti</strong>, kad visam laikui pašalintumėte įvykį.</li>
+  </ul>
+  <div class="callout"><p><strong>Negrįžtamas veiksmas.</strong> Trynimo atšaukti negalima. Įvykis iškart pašalinamas iš jūsų įrenginyje esančios užšifruotos duomenų bazės.</p></div>
+
+  <h2 id="analysis">Analizė</h2>
+  <p>Analizės ekrane viršuje yra dvi kortelės: <strong>Statistika</strong> ir <strong>Koreliacijos</strong>. Statistika prieinama visiems naudotojams. Koreliacijos yra premium funkcija, kuriai taip pat reikia Health Connect ryšio.</p>
+
+  <h3 id="statistics">Statistika</h3>
+  <p>Statistikos kortelėje pateikiama jūsų galvos skausmo dažnio ir sunkumo apžvalga per pasirinktą laikotarpį.</p>
+  <p><strong>Laikotarpio parinkiklis.</strong> Pasirinkite vieną iš penkių laikotarpių: 7 dienos, 30 dienų, 90 dienų, 1 metai ir Visas laikas.</p>
+  <p><strong>Suvestinės kortelė.</strong> Pagrindinėje kortelėje rodomi šie pasirinkto laikotarpio rodikliai. Tendencijų rodyklės (↑ / ↓) lygina kiekvieną skaičių su atitinkamu ankstesniu laikotarpiu:</p>
+  <div class="metric-grid">
+    <div class="metric"><b>Iš viso įvykių</b><span>Visų galvos skausmo ir migrenos įvykių skaičius per laikotarpį.</span></div>
+    <div class="metric"><b>Vidutinis intensyvumas</b><span>Vidutinis intensyvumas (1–5) per visus laikotarpio įvykius.</span></div>
+    <div class="metric"><b>Įvykiai su aura</b><span>Kiek įvykių lydėjo aura.</span></div>
+    <div class="metric"><b>Įvykiai su skausmą malšinančiais vaistais</b><span>Kiek įvykių pareikalavo ūminių vaistų.</span></div>
+  </div>
+  <p><strong>Grafikai.</strong></p>
+  <ul>
+    <li><strong>Tendencijų grafikas</strong> — įvykių skaičius per laiko intervalą (kasdien 7/30/90 dienų atveju, kassavaitinis 1 metams, kasmėnesinis Visam laikui).</li>
+    <li><strong>Savaitės dienų šiluminis žemėlapis</strong> — rodo, kuriomis savaitės dienomis galvos skausmai pasitaiko dažniausiai.</li>
+  </ul>
+  <p><strong>Pasiskirstymas pagal tipą ir veiksnius.</strong> Sudėtinė juosta rodo pasiskirstymą tarp įvykių tipų (Galvos skausmas / Stiprus galvos skausmas / Migrena / Stipri migrena) su skaičiais ir procentais. Žemiau horizontalus stulpelinis grafikas išvardija dažniausius jūsų veiksnius per pasirinktą laikotarpį.</p>
+
+  <h3 id="correlations">Koreliacijos</h3>
+  <p>Koreliacijų kortelė analizuoja jūsų Health Connect duomenis ir ieško devynių įrodymais pagrįstų modelių, kurie dažnai pasireiškia prieš galvos skausmo ir migrenos priepuolius. Ji apžvelgia paskutines 90 dienų.</p>
+  <div class="callout"><p><strong>Premium funkcija.</strong> Koreliacijų kortelei reikia Heda Premium. Taip pat reikia Health Connect leidimų miego, širdies susitraukimų dažnio, ŠSDV, žingsnių ir mankštos duomenims. Nustatymo žingsnius rasite skiltyje <a href="#health-connect">Health Connect</a>.</p></div>
+  <p><strong>Jūsų pradinis lygis.</strong> Pradinio lygio kortelė viršuje rodo jūsų 14 dienų medianines reikšmes kiekvienam sveikatos rodikliui. „—“ rodoma bet kuriam rodikliui, kuriam nepakanka duomenų.</p>
+  <ul>
+    <li><strong>Miegas</strong> — medianinė bendra naktinio miego trukmė</li>
+    <li><strong>ŠSDV</strong> — medianinis širdies susitraukimų dažnio variabilumas (ms)</li>
+    <li><strong>Ramybės širdies susitraukimų dažnis</strong> — medianinis ramybės širdies susitraukimų dažnis (k./min.)</li>
+    <li><strong>Žingsniai</strong> — medianinis dienos žingsnių skaičius</li>
+    <li><strong>Mankšta</strong> — medianinės dienos aktyvios minutės</li>
+    <li><strong>Gilus miegas</strong> — medianinė naktinė gilaus miego trukmė</li>
+    <li><strong>REM miegas</strong> — medianinė naktinė REM miego trukmė</li>
+    <li><strong>Budrumas miegant</strong> — medianinis budrumo laikas miego seansų metu</li>
+  </ul>
+  <p><strong>Aptikti modeliai.</strong> Heda tikrina devynis įrodymais pagrįstus modelius kiekvienam galvos skausmo įvykiui. Kiekvienas radinys rodo išmatuotą reikšmę ir slenkstį, kurį ji peržengė — pavyzdžiui: <em>„Prieš šį įvykį miegojo 5 val. 30 min. (slenkstis: 7 val.)“</em>.</p>
+  <ul>
+    <li><strong>Trumpas miegas</strong> — bendra miego trukmė praėjusią naktį buvo trumpesnė nei 7 valandos (konfigūruojama skiltyje Nustatymai → Išplėstiniai).</li>
+    <li><strong>Nereguliarus miego grafikas</strong> — miego laikas svyravo daugiau nei 120 minučių (std. nuokrypis) per ankstesnes 7 dienas.</li>
+    <li><strong>Mažas žingsnių skaičius</strong> — mažiau nei 3 000 žingsnių dieną prieš įvykį (konfigūruojama).</li>
+    <li><strong>ŠSDV kritimas</strong> — ŠSDV nukrito žemiau 30 ms arba žemiau 80 % jūsų 14 dienų asmeninio pradinio lygio.</li>
+    <li><strong>Padidėjęs ramybės širdies susitraukimų dažnis</strong> — ramybės širdies susitraukimų dažnis buvo aukštesnis nei jūsų 14 dienų mediana dieną prieš įvykį.</li>
+    <li><strong>Mankštos šuolis</strong> — aktyvios minutės buvo neįprastai didelės, palyginti su jūsų 14 dienų mediana, ankstesnę dieną.</li>
+    <li><strong>Mažai gilaus miego</strong> — gilus miegas buvo gerokai mažesnis nei jūsų 14 dienų mediana praėjusią naktį.</li>
+    <li><strong>Mažai REM miego</strong> — REM miegas buvo gerokai mažesnis nei jūsų 14 dienų mediana praėjusią naktį.</li>
+    <li><strong>Fragmentuotas miegas</strong> — budrumo laikas miego seansų metu buvo neįprastai didelis, palyginti su bendru miegu ir jūsų pradiniu lygiu.</li>
+  </ul>
+  <p><strong>Rekomendacijos.</strong> Remdamasi aptiktais modeliais, Heda sukuria asmenines rekomendacijas, reitinguotas pagal prioritetą (Aukštas / Vidutinis / Žemas). Pavyzdžiai apima miego trukmės ar reguliarumo gerinimą, dienos aktyvumo didinimą arba streso ir atsigavimo valdymą.</p>
+  <div class="callout"><p><strong>Ne medicininis patarimas.</strong> Aptikti modeliai yra koreliacijos, o ne diagnozės. Dėl medicininių patarimų apie galvos skausmus visada kreipkitės į sveikatos priežiūros specialistą.</p></div>
+
+  <h2 id="reports">Ataskaitos</h2>
+  <p>Ataskaitų kortelė leidžia peržiūrėti struktūrizuotas duomenų suvestines ir eksportuoti jas dalijimuisi su sveikatos priežiūros specialistu.</p>
+  <h3>Mėnesio ataskaita</h3>
+  <p>Mėnesio ataskaita rodo kalendoriaus rodinį kiekvienam pasirinktam mėnesiui, o kiekviena diena pažymima spalva pagal būseną:</p>
+  <ul>
+    <li><strong>Nėra įvykių</strong> — priepuolis neužregistruotas</li>
+    <li><strong>Galvos skausmas</strong> — bent vienas galvos skausmo įvykis</li>
+    <li><strong>Migrena</strong> — bent vienas migrenos įvykis</li>
+  </ul>
+  <p>Skritulinė diagrama rodo dienų proporciją kiekvienoje kategorijoje. Mėnesių žymomis pasirinkite vieną ar daugiau mėnesių. Bakstelėkite <strong>Pasirinkti visus</strong> arba <strong>Išvalyti</strong>, kad greitai pasirinktumėte ar atšauktumėte visų mėnesių pasirinkimą.</p>
+  <h3>Dienos ataskaita</h3>
+  <p>Dienos ataskaita sutelkta į atskirus įvykius per pasirinktą laikotarpį. Pasirinkite iš 7 dienų, 30 dienų, 90 dienų arba Viso laiko. Suvestinės eilutė viršuje rodo bendrą įvykių skaičių, vidutinį intensyvumą ir datų intervalą. Žemiau kiekvienas įvykis išvardytas su jo tipu, laiku ir intensyvumu.</p>
+  <h3>Duomenų eksportavimas</h3>
+  <ul>
+    <li><strong>Eksportuoti kaip CSV</strong> — išsaugo kableliais atskirtą failą su visais esamo laikotarpio įvykiais. Stulpeliai: Data, Laikas, Tipas, Intensyvumas, Aura, Skausmą malšinantys vaistai, Veiksniai, Pastabos. Android sistemos failų parinkiklis leidžia pasirinkti išsaugojimo vietą.</li>
+    <li><strong>Eksportuoti kaip PDF</strong> — sukuria suformatuotą PDF dokumentą su suvestine ir įvykių lentele, tinkamą spausdinti ar siųsti gydytojui.</li>
+    <li><strong>Eksportuoti Health Connect duomenis kaip CSV</strong> — pasirinktinai eksportuokite saugomus miego, širdies susitraukimų dažnio, ŠSDV, žingsnių skaičiaus ir mankštos duomenis kartu su galvos skausmo įvykiais.</li>
+  </ul>
+  <div class="callout"><p><strong>Failo vieta.</strong> Heda naudoja Android Storage Access Framework, todėl jūs pasirenkate, kur išsaugomas eksportuotas failas. Jokie failai neįkeliami į jokį serverį.</p></div>
+
+  <h2 id="settings">Nustatymai</h2>
+  <p>Nustatymus pasiekite iš apatinės naršymo juostos. Pakeitimai įsigalioja iškart.</p>
+  <h3>Tema</h3>
+  <ul>
+    <li><strong>Šviesi</strong> — šilta popieriaus atspalvio šviesi tema.</li>
+    <li><strong>Tamsi</strong> — gilios miško spalvos tamsi tema (numatytoji).</li>
+    <li><strong>Sistemos</strong> — automatiškai seka jūsų įrenginio tamsaus / šviesaus režimo nustatymą.</li>
+  </ul>
+  <h3>Kalba</h3>
+  <p>Pasirinkite iš 30+ kalbų, sugrupuotų pagal regioną (Šiaurės, germanų, romanų, slavų, baltų ir kt.). Pasirinkta kalba taikoma visam programėlės tekstui. Pasirinkite <strong>Sistemos</strong>, kad sektumėte savo įrenginio kalbos nustatymą.</p>
+  <h3>Health Connect</h3>
+  <p>Nukreipia į Health Connect nustatymų ekraną, kuriame galite suteikti ar atšaukti leidimus miego, širdies susitraukimų dažnio, ŠSDV, žingsnių ir mankštos duomenims. Išsamiau žr. skiltyje <a href="#health-connect">Health Connect</a>.</p>
+  <h3>Privatumas ir duomenys</h3>
+  <p>Atveria Privatumo ir duomenų ekraną, kuriame galite tvarkyti paskyrą, peržiūrėti, kokie duomenys saugomi, pasinaudoti BDAR teisėmis ir ištrinti duomenis. Išsamiau žr. skiltyje <a href="#privacy">Privatumas ir duomenys</a>.</p>
+  <h3>Automatinis Health Connect sinchronizavimas</h3>
+  <p>Įjungus, Heda kartą per dieną fone gauna naujausius sveikatos duomenis iš Health Connect, net kai programėlė uždaryta. Pagal numatytuosius nustatymus tai <strong>išjungta</strong>. Įjungimui reikia suteiktų Health Connect leidimų.</p>
+  <h3>Kasdienės sveikatos rekomendacijos</h3>
+  <p>Įjungus, Heda siunčia kasdienį pranešimą, jei aptinkama aukšto prioriteto koreliacija. Bakstelėjus pranešimą, atveriamas Analizės ekranas. Pagal numatytuosius nustatymus tai <strong>išjungta</strong> ir reikalauja įrenginio pranešimų leidimo.</p>
+  <h3>Išplėstiniai</h3>
+  <p>Išplėskite skiltį Išplėstiniai, kad tiksliai sureguliuotumėte koreliacijų variklio naudojamus slenksčius. Numatytosios reikšmės atitinka nusistovėjusias klinikines migrenos prevencijos gaires:</p>
+  <table class="grid">
+    <thead><tr><th>Nustatymas</th><th>Numatytoji</th><th>Aprašymas</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Minimalus miegas</strong></td><td>7 val. 0 min.</td><td>Trumpesnis nei ši trukmė miegas pažymimas kaip galimas veiksnys.</td></tr>
+      <tr><td><strong>Maks. miego variabilumas</strong></td><td>60 min.</td><td>Aukštesnis nei šis miego laiko standartinis nuokrypis suaktyvina nereguliaraus miego modelį.</td></tr>
+      <tr><td><strong>Minimalūs žingsniai</strong></td><td>3 000</td><td>Mažesnis nei šis žingsnių skaičius pažymimas kaip mažas aktyvumas.</td></tr>
+      <tr><td><strong>Minimalus ŠSDV</strong></td><td>30 ms</td><td>Žemesnis nei šis absoliutus slenkstis ŠSDV pažymimas.</td></tr>
+      <tr><td><strong>ŠSDV pradinio lygio dalis</strong></td><td>0,80</td><td>Žemesnis nei ši jūsų 14 dienų pradinio lygio dalis ŠSDV taip pat pažymimas.</td></tr>
+    </tbody>
+  </table>
+  <p>Bakstelėkite <strong>Atstatyti į numatytuosius</strong>, kad visus slenksčius atkurtumėte į pradines reikšmes.</p>
+
+  <h2 id="privacy">Privatumas ir duomenys</h2>
+  <p>Atidarykite <strong>Nustatymai → Privatumas ir duomenys</strong>, kad tvarkytumėte visus duomenų ir paskyros nustatymus.</p>
+  <h3>Jūsų paskyra</h3>
+  <p>Ekrano viršuje rodoma šiuo metu prisijungusi Google paskyra. Bakstelėkite <strong>Atsijungti</strong>, kad atsijungtumėte nuo programėlės. Jūsų duomenys lieka įrenginyje; bet kada galite vėl prisijungti.</p>
+  <h3>Kokie duomenys saugomi</h3>
+  <p>Visi duomenys saugomi vietoje jūsų įrenginyje dviejose užšifruotose duomenų bazėse:</p>
+  <table class="grid">
+    <thead><tr><th>Duomenų tipas</th><th>Turinys</th><th>Šifravimas</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Galvos skausmo įvykiai</strong></td><td>Laiko žymos, skausmo sritys, intensyvumas, aura, skausmą malšinantys vaistai, veiksniai, pastabos</td><td>AES-256 (SQLCipher)</td></tr>
+      <tr><td><strong>Health Connect talpykla</strong></td><td>Miegas, miego fazės, ŠSDV, širdies susitraukimų dažnis, žingsniai ir mankšta</td><td>AES-256 (SQLCipher)</td></tr>
+      <tr><td><strong>Autentifikavimo prieigos raktas</strong></td><td>Supabase naudotojo ID, el. paštas, prisijungimo laiko žyma, paskyros susiejimas</td><td>AES-256-GCM (Tink)</td></tr>
+      <tr><td><strong>Programėlės nustatymai</strong></td><td>Tik temos ir kalbos nuostata — jokių sveikatos duomenų</td><td>Neužšifruota</td></tr>
+    </tbody>
+  </table>
+  <p>Šifravimo raktai saugomi Android Keystore, palaikomi aparatinės įrangos, kur įmanoma, ir niekada nepalieka įrenginio.</p>
+  <h3>Biometrinis užraktas</h3>
+  <p>Įjunkite biometrinį užraktą, kad programėlei atidaryti reikėtų piršto atspaudo, veido atrakinimo arba PIN kodo. Reikalingas įrenginio Nustatymuose sukonfigūruotas ekrano užraktas.</p>
+  <h3>Diagnostika</h3>
+  <p>Pasirinktinai dalykitės anoniminėmis strigčių ataskaitomis (GlitchTip). <strong>Jokie sveikatos duomenys niekada neįtraukiami.</strong> Naudojimo analitika nerenkama. Tai galima pakeisti bet kada.</p>
+  <h3>Jūsų BDAR teisės</h3>
+  <p>Heda laikosi ES BDAR 9 straipsnio (specialių kategorijų asmens duomenys). Jūsų teisės:</p>
+  <ul>
+    <li><strong>Teisė susipažinti (15 str.)</strong> — visi jūsų duomenys matomi Kalendoriuje ir Statistikoje.</li>
+    <li><strong>Teisė ištaisyti (16 str.)</strong> — redaguokite bet kurį įvykį bakstelėdami jį Kalendoriuje.</li>
+    <li><strong>Teisė ištrinti (17 str.)</strong> — ištrinkite visus duomenis per Pavojaus zoną (žr. žemiau).</li>
+    <li><strong>Teisė apriboti (18 str.)</strong> — atsijunkite, kad sustabdytumėte visą tvarkymą.</li>
+    <li><strong>Teisė į duomenų perkeliamumą (20 str.)</strong> — eksportuokite visus įvykius kaip CSV iš Ataskaitų ekrano.</li>
+    <li><strong>Teisė nesutikti (21 str.)</strong> — atsijunkite; tvarkymas nedelsiant sustoja.</li>
+  </ul>
+  <h3>Pavojaus zona</h3>
+  <p><strong>Šie veiksmai yra negrįžtami ir jų atšaukti negalima.</strong></p>
+  <ul>
+    <li><strong>Ištrinti vietinius duomenis (palikti paskyrą)</strong> — visam laikui ištrina visus galvos skausmo įrašus, sveikatos duomenis, nustatymus ir šifravimo raktus iš šio įrenginio. Jūsų Google paskyros sąsaja išsaugoma, todėl galite vėl prisijungti bet kuriame įrenginyje.</li>
+    <li><strong>Ištrinti paskyrą ir visus duomenis</strong> — visam laikui ištrina viską, kas išvardyta aukščiau, taip pat jūsų Supabase paskyrą. Atkurti neįmanoma. Reikalingas dviejų žingsnių patvirtinimas.</li>
+  </ul>
+
+  <h2 id="health-connect">Health Connect</h2>
+  <p>Health Connect yra Google vieninga sveikatos duomenų platforma Android įrenginiams. Heda nuskaito iš jos penkis sveikatos duomenų tipus, kad veiktų Koreliacijų funkcija Analizės ekrane:</p>
+  <div class="metric-grid">
+    <div class="metric"><b>Miego seansai</b><span>Naktinio miego trukmė ir miego fazės (REM, gilus, lengvas ir budrumo laikas) iš jūsų nešiojamo įrenginio ar miego stebėjimo programėlės.</span></div>
+    <div class="metric"><b>Širdies susitraukimų dažnio variabilumas (ŠSDV)</b><span>Kasdieniai RMSSD matavimai, nurodantys atsigavimo būseną ir autonominės nervų sistemos pusiausvyrą.</span></div>
+    <div class="metric"><b>Širdies susitraukimų dažnis</b><span>Nuolatiniai širdies susitraukimų dažnio mėginiai, naudojami jūsų dienos vidurkiui ir ramybės širdies susitraukimų dažniui nustatyti.</span></div>
+    <div class="metric"><b>Žingsnių skaičius</b><span>Dienos žingsnių skaičius iš jūsų telefono ar nešiojamo įrenginio.</span></div>
+    <div class="metric"><b>Mankštos seansai</b><span>Mankštos seansų trukmės, naudojamos jūsų dienos aktyvumo lygiui apskaičiuoti.</span></div>
+  </div>
+  <div class="callout"><p><strong>Tik skaitymas.</strong> Heda tik nuskaito duomenis iš Health Connect — niekada į ją nerašo. Prašomi tik konkretūs įrašų tipai, reikalingi koreliacijų analizei.</p></div>
+  <h3>Health Connect nustatymas</h3>
+  <ul>
+    <li>Heda eikite į <strong>Nustatymai → Health Connect</strong>.</li>
+    <li>Jei Health Connect programėlė neįdiegta, bakstelėkite <strong>Įdiegti Health Connect</strong>, kad ją gautumėte iš Google Play. (Android 9 ir naujesnė. Android 14+ Health Connect yra integruota.)</li>
+    <li>Bakstelėkite <strong>Prijungti Health Connect</strong>.</li>
+    <li>Health Connect leidimų ekrane suteikite Heda prieigą prie <strong>Miego</strong>, <strong>Širdies susitraukimų dažnio variabilumo</strong>, <strong>Širdies susitraukimų dažnio</strong>, <strong>Žingsnių</strong> ir <strong>Mankštos</strong>.</li>
+    <li>Grįžkite į Heda. Bus rodomi jūsų naujausi sveikatos duomenys.</li>
+  </ul>
+  <h3>Sinchronizavimas fone</h3>
+  <p>Pagal numatytuosius nustatymus sveikatos duomenys gaunami tik atidarius Health Connect ekraną arba bakstelėjus <strong>Atnaujinti</strong>. Įjunkite <strong>Automatinis Health Connect sinchronizavimas</strong> Nustatymuose, kad duomenys būtų gaunami kartą per dieną fone.</p>
+  <h3>Prieigos atšaukimas</h3>
+  <p>Heda Health Connect leidimus galite atšaukti bet kada Health Connect programėlėje (<strong>Tvarkyti programėles ir įrenginius → Heda → Leidimai</strong>) arba skiltyje <strong>Nustatymai → Health Connect</strong> Heda viduje. Anksčiau įrašyti duomenys lieka jūsų įrenginyje, kol jų neištrinsite per <strong>Privatumas ir duomenys → Ištrinti vietinius duomenis</strong>.</p>
+  <div class="callout"><p><strong>Duomenys lieka įrenginyje.</strong> Health Connect duomenys įrašomi į užšifruotą įrenginyje esančią duomenų bazę ir niekada nesiunčiami į jokį serverį.</p></div>
+
+  <hr>
+  <p class="muted" style="font-size:0.9rem;">© 2026 EXSports Oy. Ši dokumentacija atnaujinama programėlei tobulėjant. Paskutinį kartą atnaujinta 2026 m. balandį.</p>
+
+  <div class="doc-cta">
+    <h3>Klausimai apie Heda?</h3>
+    <p>Papasakokite, ką bandote sekti, ir mes padėsime.</p>
+    <a class="btn btn--primary" href="mailto:info@exsports.fi">info@exsports.fi <span class="arrow">→</span></a>
+  </div>
+
+</div></div>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <a class="footer__brand" href="/index.html"><img src="/assets/brand/wordmark-ink.png" alt="exs" /></a>
+    <div class="footer__meta">
+      <span>© 2026 EXSPORTS OY</span><span class="dot">·</span>
+      <a href="/index.html">Pradžia</a><span class="dot">·</span>
+      <a href="/legal/imprint.html">Imprint</a><span class="dot">·</span>
+      <a href="mailto:info@exsports.fi">Kontaktai</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.body.classList.add('js');
+  const nav=document.getElementById('nav');
+  const onScroll=()=>nav.classList.toggle('is-stuck',window.scrollY>8);
+  onScroll(); addEventListener('scroll',onScroll,{passive:true});
+</script>
+</body>
+</html>

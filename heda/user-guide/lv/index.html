@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="lv">
+<head>
+<meta charset="utf-8" />
+<title>Lietotāja ceļvedis — Heda · EXSports Oy</title>
+<meta name="description" content="Kā lietot Heda — klusu galvassāpju un migrēnas dienasgrāmatu Android ierīcēm. Izstrādātājs EXSports Oy." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#0E1310" />
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/brand/favicon-64.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png" />
+<link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css" />
+<link rel="stylesheet" href="/legal.css" />
+<style>
+  body.theme-heda{ --signature:#C9DDA6; }
+  .toc{ background:var(--surface); border:1px solid var(--line); border-radius:var(--r); padding:24px 26px; margin: 4px 0 36px; }
+  .toc .toc-label{ font-family:var(--mono); font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--signature); margin:0 0 14px; }
+  .toc ol{ list-style:none; margin:0; padding:0; columns:2; column-gap:36px; }
+  @media (max-width:560px){ .toc ol{ columns:1; } }
+  .toc li{ margin:0 0 9px; padding:0; }
+  .toc li::before{ display:none; }
+  .toc a{ color:var(--sub); text-decoration:none; font-size:0.95rem; border:none; }
+  .toc a:hover{ color:var(--ink); }
+  .toc .counter{ font-family:var(--mono); font-size:0.74rem; color:var(--signature); margin-right:9px; }
+  .areas{ display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin: 4px 0 8px; }
+  @media (max-width:560px){ .areas{ grid-template-columns:1fr; } }
+  .area{ background:var(--surface); border:1px solid var(--line); border-radius:var(--r); padding:20px 22px; }
+  .area h4{ margin:0 0 6px; font-size:1.02rem; font-weight:500; color:var(--ink); }
+  .area p{ margin:0; font-size:0.92rem; }
+  .metric-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin: 6px 0 18px; }
+  @media (max-width:560px){ .metric-grid{ grid-template-columns:1fr; } }
+  .metric{ border:1px solid var(--line); border-radius:var(--r-sm); padding:16px 18px; }
+  .metric b{ color:var(--ink); font-weight:500; display:block; margin-bottom:4px; }
+  .metric span{ color:var(--sub); font-size:0.9rem; }
+  .prose h2[id], .prose h3[id]{ scroll-margin-top: 90px; }
+</style>
+</head>
+<body class="theme-sage theme-heda">
+
+<header class="nav" id="nav">
+  <div class="wrap nav__inner">
+    <a class="nav__brand" href="/index.html"><img src="/assets/brand/wordmark-ink.png" alt="exs" /><span class="mono-tag">EXSports Oy</span></a>
+    <nav class="nav__links">
+      <a href="/index.html" class="hide-sm">Sākums</a>
+      <a href="/legal/imprint.html" class="hide-sm">Impresums</a>
+      <a href="mailto:info@exsports.fi" class="cta">Kontakti</a>
+    </nav>
+  </div>
+</header>
+
+<section class="doc-head stage">
+  <div class="wrap doc-head__inner">
+    <a class="backlink" href="/heda/index.html"><span>←</span> Heda</a>
+    <p class="eyebrow">Heda · Ceļvedis</p>
+    <h1>Kā lietot Heda</h1>
+    <div class="meta"><span>Latviešu valodā</span><span>Pēdējoreiz pārskatīts <b>2026. gada aprīlī</b></span></div>
+    <p class="lead" style="margin-top:20px;">Klusa galvassāpju un migrēnas dienasgrāmata. Reģistrē savas lēkmes, simptomus un piezīmes — viss tiek glabāts privāti tavā ierīcē.</p>
+  </div>
+</section>
+
+<div class="wrap"><div class="prose doc-sections">
+
+  <nav class="toc" aria-label="Saturs">
+    <p class="toc-label">Saturs</p>
+    <ol>
+      <li><a href="#overview"><span class="counter">01</span>Pārskats</a></li>
+      <li><a href="#getting-started"><span class="counter">02</span>Darba sākšana</a></li>
+      <li><a href="#calendar"><span class="counter">03</span>Kalendārs</a></li>
+      <li><a href="#logging"><span class="counter">04</span>Notikuma reģistrēšana</a></li>
+      <li><a href="#editing"><span class="counter">05</span>Rediģēšana un dzēšana</a></li>
+      <li><a href="#analysis"><span class="counter">06</span>Analīze</a></li>
+      <li><a href="#reports"><span class="counter">07</span>Atskaites</a></li>
+      <li><a href="#settings"><span class="counter">08</span>Iestatījumi</a></li>
+      <li><a href="#privacy"><span class="counter">09</span>Privātums un dati</a></li>
+      <li><a href="#health-connect"><span class="counter">10</span>Health Connect</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="overview">Pārskats</h2>
+  <p>Heda ir bezsaistē strādājoša galvassāpju un migrēnas dienasgrāmata Android ierīcēm. Visi veselības dati ir šifrēti un tiek glabāti tikai tavā ierīcē. Nekas netiek augšupielādēts nevienā serverī — tavi dati pieder tikai tev.</p>
+  <p>Lietotnei ir četras galvenās sadaļas, kas pieejamas apakšējā navigācijas joslā:</p>
+  <div class="areas">
+    <div class="area"><h4>Kalendārs</h4><p>Pārlūko un pārvaldi savus galvassāpju notikumus pēc datuma. Pievieno jaunus notikumus no šejienes.</p></div>
+    <div class="area"><h4>Analīze</h4><p>Statistika un tendenču diagrammas visiem lietotājiem. Korelācijas (premium) konstatē sakarības starp taviem Health Connect datiem un galvassāpju notikumiem.</p></div>
+    <div class="area"><h4>Atskaites</h4><p>Ikmēneša un ikdienas kopsavilkumi ar diagrammām. Eksportē savus datus kā CSV vai PDF.</p></div>
+    <div class="area"><h4>Iestatījumi</h4><p>Motīvs, valoda, Health Connect, paziņojumi, privātums un papildu opcijas.</p></div>
+  </div>
+
+  <h2 id="getting-started">Darba sākšana</h2>
+  <h3>Pierakstīšanās</h3>
+  <p>Heda nepieciešams Google konts, lai aizsargātu tavus datus. Pierakstīšanās izveido šifrētu, ierīcei piesaistītu atslēgu, kas saistīta ar tavu kontu — mākonī netiek glabāti nekādi dati.</p>
+  <ul>
+    <li>Atver Heda pēc tās instalēšanas no Google Play.</li>
+    <li>Pieskaries <strong>Pierakstīties ar Google</strong> un izvēlies savu Google kontu.</li>
+    <li>Tavs konts tagad ir piesaistīts šai instalācijai. Ja lietotni instalēsi atkārtoti, jāizmanto tas pats Google konts.</li>
+  </ul>
+  <div class="callout"><p><strong>Privātums vispirms.</strong> Heda neaugšupielādē nekādus veselības datus ārējos serveros. Tavs Google konts tiek izmantots tikai identitātei — lai piesaistītu šifrēšanas atslēgas vienam lietotājam šajā ierīcē.</p></div>
+  <h3>Pirmās palaišanas piekrišana</h3>
+  <p>Pirmajā palaišanas reizē Heda jautā, vai vēlies kopīgot anonīmas avāriju atskaites. Tas nenosūta nekādus veselības datus. Savu izvēli vēlāk vari mainīt sadaļā <strong>Iestatījumi → Privātums un dati</strong>.</p>
+  <ul>
+    <li><strong>Anonīmas avāriju atskaites</strong> — automātiski ziņo par avārijām, lai kļūdas varētu ātri novērst (GlitchTip). Lietošanas analītika netiek vākta.</li>
+  </ul>
+
+  <h2 id="calendar">Kalendārs</h2>
+  <p>Kalendārs ir tavs ikdienas skats. Tas vienā mirklī parāda pašreizējo mēnesi ar krāsainiem punktiem, kas norāda galvassāpju intensitāti katrā dienā.</p>
+  <h3>Mēneša skats</h3>
+  <p>Mēneša josla augšpusē rāda pašreizējo mēnesi ISO nedēļu režģī (nedēļas iet no pirmdienas līdz svētdienai). Katrā dienā, kurā ir vismaz viens reģistrēts notikums, tiek rādīts neliels intensitātes punkts:</p>
+  <ul>
+    <li><strong>Zils</strong> — intensitāte 1–3 (viegla)</li>
+    <li><strong>Sarkans</strong> — intensitāte 4–5 (smaga)</li>
+  </ul>
+  <p>Izmanto pogas <strong>‹</strong> un <strong>›</strong>, lai pārvietotos starp mēnešiem. Pieskaries jebkuram datumam, lai to atlasītu un apskatītu tās dienas notikumus zemāk. Pašreizējais datums ir izcelts. Pieskaroties uzrakstam <strong>Šodien</strong> vai šodienas datumam, skats ritina atpakaļ uz pašreizējo dienu.</p>
+  <h3>Notikumu kartītes</h3>
+  <p>Atlasītā datuma notikumi tiek rādīti kā kartītes zem mēneša joslas. Katra kartīte parāda:</p>
+  <ul>
+    <li><strong>Galvassāpju veidu</strong> (Galvassāpes vai Migrēna)</li>
+    <li><strong>Laika diapazonu</strong> — sākuma un beigu laiks un ilgums</li>
+    <li><strong>Intensitātes joslu</strong> (skala 1–5)</li>
+    <li>Auras un akūto medikamentu indikatorus, ja tie ir reģistrēti</li>
+  </ul>
+  <p>Pieskaries kartītei, lai to atvērtu <strong>rediģēšanas režīmā</strong>, kur var mainīt visus laukus.</p>
+  <h3>Ātrā pievienošana</h3>
+  <p>Ātrai reģistrēšanai pieskaries <strong>Ātrā pievienošana</strong> Kalendāra ekrāna apakšā. Augšup izslīd panelis ar svarīgākajiem laukiem:</p>
+  <ul>
+    <li><strong>Veids</strong> — Galvassāpes vai Migrēna</li>
+    <li><strong>Intensitāte</strong> — slīdnis 1–5</li>
+    <li><strong>Aura</strong> — izvēles rūtiņa</li>
+    <li><strong>Akūtie medikamenti</strong> — izvēles rūtiņa</li>
+  </ul>
+  <p>Pieskaries <strong>Saglabāt</strong>, lai reģistrētu uzreiz, izmantojot pašreizējo laiku, vai pieskaries <strong>Pievienot detaļas…</strong>, lai atvērtu pilno notikuma formu, kas iepriekš aizpildīta ar šīm vērtībām.</p>
+
+  <h2 id="logging">Notikuma reģistrēšana</h2>
+  <p>Lai reģistrētu jaunu notikumu ar pilnām detaļām, pieskaries pogai <strong>+ Pievienot notikumu</strong> Kalendārā. Ja vispirms pieskāries konkrētam datumam, tas formā tiks atlasīts iepriekš.</p>
+  <h3>Veids un intensitāte</h3>
+  <p>Izvēlies starp <strong>Galvassāpes</strong> un <strong>Migrēna</strong>, izmantojot atlasītāju augšpusē. Pēc tam ar slīdni iestati intensitāti skalā no 1 (viegla) līdz 5 (darbnespēju izraisoša).</p>
+  <h3>Datums un laiks</h3>
+  <p>Notikuma laiku kontrolē trīs lauki:</p>
+  <ul>
+    <li><strong>Datums</strong> — pieskaries, lai atvērtu datuma atlasītāju. Pēc noklusējuma — šodiena.</li>
+    <li><strong>Sākuma laiks</strong> — kad lēkme sākās. Pieskaries, lai atvērtu 24 stundu laika atlasītāju.</li>
+    <li><strong>Beigu laiks</strong> — kad lēkme beidzās. Pēc noklusējuma — 2 stundas pēc sākuma laika. Ja pārvieto sākuma laiku aiz beigu laika, beigu laiks automātiski pārvietojas uz priekšu, lai saglabātu 2 stundu starpību.</li>
+  </ul>
+  <h3>Sāpju zona</h3>
+  <p><strong>3D galvas modelis</strong> ļauj precīzi atzīmēt, kur atrodas sāpes. Tas atbalsta divus žestus:</p>
+  <ul>
+    <li><strong>Viens pirksts</strong> — krāso sāpju zonas, velkot pa galvas virsmu.</li>
+    <li><strong>Divi pirksti</strong> — pagriez galvu, lai sasniegtu zonas aizmugurē, sānos vai kaklā.</li>
+  </ul>
+  <p>Tiek atbalstītas astoņas anatomiskās zonas: Frontālā, Ap aci — kreisā, Ap aci — labā, Deniņi — kreisie, Deniņi — labie, Pakauša — kreisā, Pakauša — labā un Kakls.</p>
+  <p>Ieslēdz pārslēgu <strong>Krāsu kodējums pēc intensitātes</strong>, lai iekrāsotās zonas tonētu ar intensitātes krāsu (gaiši sarkana vieglām, tumši sarkana smagām). Pēc noklusējuma tas ir izslēgts.</p>
+  <div class="callout"><p><strong>Padoms.</strong> Iekrāsotās zonas vari noņemt, vēlreiz pārvelkot pār tām — žests pārslēdzas starp pievienošanu un dzēšanu.</p></div>
+  <h3>Iespējamie izraisītāji</h3>
+  <p>Reģistrē iespējamos izraisītājus, kas varēja veicināt šo lēkmi. Tie ir sagrupēti septiņās kategorijās:</p>
+  <table class="grid">
+    <thead><tr><th>Kategorija</th><th>Izraisītāji</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Stress un garastāvoklis</strong></td><td>Stress, Stresa atslābums, Trauksme</td></tr>
+      <tr><td><strong>Miegs</strong></td><td>Pārāk maz miega, Pārāk daudz miega, Neregulārs miegs</td></tr>
+      <tr><td><strong>Ēdiens un dzēriens</strong></td><td>Izlaista ēdienreize, Ilgs gavēnis, Dehidratācija, Alkohols, Kofeīns, Kofeīna trūkums, Šokolāde, Nogatavināts siers, Pārtikas piedevas, Apstrādāta gaļa</td></tr>
+      <tr><td><strong>Hormonālie</strong></td><td>Menstruācijas, Ovulācija, Hormonālā kontracepcija</td></tr>
+      <tr><td><strong>Vide</strong></td><td>Laikapstākļu maiņa, Ekstrēma temperatūra, Mitrums</td></tr>
+      <tr><td><strong>Sensorie</strong></td><td>Spilgta gaisma, Spēcīga smaka, Skaļš troksnis, Ekrāna mirgošana</td></tr>
+      <tr><td><strong>Fiziskie</strong></td><td>Intensīvs fiziskais slodze, Kakla sasprindzinājums, Ceļojums, Medikamentu pārmērīga lietošana</td></tr>
+    </tbody>
+  </table>
+  <h3>Aura un akūtie medikamenti</h3>
+  <ul>
+    <li><strong>Aura</strong> — atzīmē, ja pirms šī notikuma bija aura (redzes traucējumi, tirpšana, runas izmaiņas u. c.).</li>
+    <li><strong>Akūtie medikamenti</strong> — atzīmē, ja šīs lēkmes laikā lietoji akūtus medikamentus (piemēram, triptānu, NPL vai paracetamolu).</li>
+  </ul>
+  <h3>Piezīmes</h3>
+  <p>Brīvā teksta piezīmju lauks uztver visu, ko nepārklāj strukturētie lauki — kontekstu, novērojumus, kas palīdzēja, vai jebkuru citu detaļu, ko vēlies atcerēties. Kad pabeidz, pieskaries <strong>Saglabāt</strong>. Notikums uzreiz parādās Kalendārā.</p>
+
+  <h2 id="editing">Notikumu rediģēšana un dzēšana</h2>
+  <h3>Notikuma rediģēšana</h3>
+  <ul>
+    <li>Dodies uz datumu Kalendārā.</li>
+    <li>Pieskaries notikuma kartītei, kuru vēlies mainīt.</li>
+    <li>Notikuma forma atveras rediģēšanas režīmā — visi lauki ir rediģējami.</li>
+    <li>Veic izmaiņas un pēc tam pieskaries <strong>Atjaunināt</strong>, lai saglabātu.</li>
+  </ul>
+  <h3>Notikuma dzēšana</h3>
+  <ul>
+    <li>Atver notikumu rediģēšanas režīmā (pieskaries tā kartītei Kalendārā).</li>
+    <li>Ritini līdz apakšai un pieskaries <strong>Dzēst ierakstu</strong>.</li>
+    <li>Parādās apstiprinājuma dialoglodziņš. Pieskaries <strong>Dzēst</strong>, lai notikumu neatgriezeniski noņemtu.</li>
+  </ul>
+  <div class="callout"><p><strong>Neatgriezeniska darbība.</strong> Dzēšanu nevar atsaukt. Notikums tiek uzreiz noņemts no šifrētās datubāzes tavā ierīcē.</p></div>
+
+  <h2 id="analysis">Analīze</h2>
+  <p>Analīzes ekrānam augšpusē ir divas cilnes: <strong>Statistika</strong> un <strong>Korelācijas</strong>. Statistika ir pieejama visiem lietotājiem. Korelācijas ir premium funkcija, kurai nepieciešams arī Health Connect savienojums.</p>
+
+  <h3 id="statistics">Statistika</h3>
+  <p>Statistikas cilne sniedz pārskatu par tavu galvassāpju biežumu un smagumu atlasītā laika periodā.</p>
+  <p><strong>Perioda atlasītājs.</strong> Izvēlies starp pieciem laika periodiem: 7 dienas, 30 dienas, 90 dienas, 1 gads un Viss laiks.</p>
+  <p><strong>Kopsavilkuma kartīte.</strong> Galvenā kartīte rāda šādus rādītājus atlasītajam periodam. Tendenču bultiņas (↑ / ↓) salīdzina katru skaitli ar līdzvērtīgo iepriekšējo periodu:</p>
+  <div class="metric-grid">
+    <div class="metric"><b>Notikumi kopā</b><span>Visu galvassāpju un migrēnas notikumu skaits periodā.</span></div>
+    <div class="metric"><b>Vidējā intensitāte</b><span>Vidējā intensitāte (1–5) visiem notikumiem periodā.</span></div>
+    <div class="metric"><b>Notikumi ar auru</b><span>Cik daudz notikumus pavadīja aura.</span></div>
+    <div class="metric"><b>Notikumi ar akūtiem medikamentiem</b><span>Cik daudz notikumu prasīja akūtus medikamentus.</span></div>
+  </div>
+  <p><strong>Diagrammas.</strong></p>
+  <ul>
+    <li><strong>Tendenču diagramma</strong> — notikumu skaits laika intervālā (ikdienas 7/30/90 dienām, iknedēļas 1 gadam, ikmēneša visam laikam).</li>
+    <li><strong>Nedēļas dienu siltuma karte</strong> — rāda, kurās nedēļas dienās tavas galvassāpes notiek visbiežāk.</li>
+  </ul>
+  <p><strong>Veidu sadalījums un izraisītāji.</strong> Sakrauta josla rāda sadalījumu starp notikumu veidiem (Galvassāpes / Smagas galvassāpes / Migrēna / Smaga migrēna) ar skaitļiem un procentiem. Zem tās horizontāla joslu diagramma uzskaita biežākos izraisītājus atlasītajā periodā.</p>
+
+  <h3 id="correlations">Korelācijas</h3>
+  <p>Korelāciju cilne analizē tavus Health Connect datus un meklē deviņas uz pierādījumiem balstītas sakarības, kas bieži ir pirms galvassāpju un migrēnas lēkmēm. Tā skatās atpakaļ uz pēdējām 90 dienām.</p>
+  <div class="callout"><p><strong>Premium funkcija.</strong> Korelāciju cilnei nepieciešams Heda Premium. Tai nepieciešamas arī Health Connect atļaujas miega, sirdsdarbības frekvences, HRV, soļu un fizisko aktivitāšu datiem. Iestatīšanas soļus skati sadaļā <a href="#health-connect">Health Connect</a>.</p></div>
+  <p><strong>Tava bāzes līnija.</strong> Bāzes līnijas kartīte augšpusē rāda tavas 14 dienu mediānas vērtības katram veselības rādītājam. "—" tiek rādīts jebkuram rādītājam bez pietiekamiem datiem.</p>
+  <ul>
+    <li><strong>Miegs</strong> — mediānais nakts kopējais miega ilgums</li>
+    <li><strong>HRV</strong> — mediānā sirdsdarbības frekvences mainība (ms)</li>
+    <li><strong>Miera sirdsdarbības frekvence</strong> — mediānā miera sirdsdarbības frekvence (sitieni minūtē)</li>
+    <li><strong>Soļi</strong> — mediānais dienas soļu skaits</li>
+    <li><strong>Fiziskās aktivitātes</strong> — mediānās dienas aktīvās minūtes</li>
+    <li><strong>Dziļais miegs</strong> — mediānais nakts dziļā miega ilgums</li>
+    <li><strong>REM miegs</strong> — mediānais nakts REM miega ilgums</li>
+    <li><strong>Nomods miega laikā</strong> — mediānais nomoda laiks miega sesiju laikā</li>
+  </ul>
+  <p><strong>Konstatētās sakarības.</strong> Heda pārbauda deviņas uz pierādījumiem balstītas sakarības katram galvassāpju notikumam. Katrs atklājums rāda izmērīto vērtību un pārsniegto slieksni — piemēram: <em>"Pirms šī notikuma gulēts 5 h 30 min (slieksnis: 7 h)"</em>.</p>
+  <ul>
+    <li><strong>Īss miegs</strong> — kopējais miegs iepriekšējā naktī bija mazāks par 7 stundām (konfigurējams sadaļā Iestatījumi → Papildu).</li>
+    <li><strong>Neregulārs miega grafiks</strong> — miega laiks iepriekšējo 7 dienu laikā svārstījās vairāk nekā par 120 minūtēm (standartnovirze).</li>
+    <li><strong>Mazs soļu skaits</strong> — mazāk nekā 3 000 soļu dienā pirms notikuma (konfigurējams).</li>
+    <li><strong>HRV kritums</strong> — HRV nokritās zem 30 ms vai zem 80 % no tavas 14 dienu personīgās bāzes līnijas.</li>
+    <li><strong>Paaugstināta miera sirdsdarbības frekvence</strong> — miera sirdsdarbības frekvence dienā pirms notikuma bija virs tavas 14 dienu mediānas.</li>
+    <li><strong>Fizisko aktivitāšu pīķis</strong> — aktīvās minūtes dienā iepriekš bija neparasti augstas salīdzinājumā ar tavu 14 dienu mediānu.</li>
+    <li><strong>Mazs dziļā miega daudzums</strong> — dziļais miegs naktī iepriekš bija krietni zem tavas 14 dienu mediānas.</li>
+    <li><strong>Mazs REM miega daudzums</strong> — REM miegs naktī iepriekš bija krietni zem tavas 14 dienu mediānas.</li>
+    <li><strong>Fragmentēts miegs</strong> — nomoda laiks miega sesiju laikā bija neparasti augsts attiecībā pret kopējo miegu un tavu bāzes līniju.</li>
+  </ul>
+  <p><strong>Ieteikumi.</strong> Pamatojoties uz konstatētajām sakarībām, Heda ģenerē personalizētus ieteikumus, kas sarindoti pēc prioritātes (Augsta / Vidēja / Zema). Piemēri ietver miega ilguma vai regularitātes uzlabošanu, ikdienas aktivitātes palielināšanu vai stresa un atjaunošanās pārvaldību.</p>
+  <div class="callout"><p><strong>Nav medicīnisks padoms.</strong> Konstatētās sakarības ir korelācijas, nevis diagnozes. Vienmēr konsultējies ar veselības aprūpes speciālistu par medicīniskām vadlīnijām saistībā ar tavām galvassāpēm.</p></div>
+
+  <h2 id="reports">Atskaites</h2>
+  <p>Atskaišu cilne ļauj apskatīt strukturētus tavu datu kopsavilkumus un eksportēt tos, lai kopīgotu ar veselības aprūpes speciālistu.</p>
+  <h3>Ikmēneša atskaite</h3>
+  <p>Ikmēneša atskaite rāda kalendāra skatu katram atlasītajam mēnesim, kur katra diena ir krāsu kodēta pēc statusa:</p>
+  <ul>
+    <li><strong>Nav notikumu</strong> — nav reģistrēta lēkme</li>
+    <li><strong>Galvassāpes</strong> — vismaz viens galvassāpju notikums</li>
+    <li><strong>Migrēna</strong> — vismaz viens migrēnas notikums</li>
+  </ul>
+  <p>Sektoru diagramma rāda dienu īpatsvaru katrā kategorijā. Atlasi vienu vai vairākus mēnešus, izmantojot mēnešu žetonus. Pieskaries <strong>Atlasīt visu</strong> vai <strong>Notīrīt</strong>, lai ātri atlasītu vai noņemtu atlasi visiem mēnešiem.</p>
+  <h3>Ikdienas atskaite</h3>
+  <p>Ikdienas atskaite koncentrējas uz atsevišķiem notikumiem atlasītajā periodā. Izvēlies no 7 dienām, 30 dienām, 90 dienām vai Visa laika. Kopsavilkuma rinda augšpusē rāda notikumu kopskaitu, vidējo intensitāti un datumu diapazonu. Zem tās katrs notikums ir uzskaitīts ar tā veidu, laiku un intensitāti.</p>
+  <h3>Datu eksportēšana</h3>
+  <ul>
+    <li><strong>Eksportēt kā CSV</strong> — saglabā ar komatiem atdalītu failu ar visiem pašreizējā perioda notikumiem. Kolonnas: Datums, Laiks, Veids, Intensitāte, Aura, Akūtie medikamenti, Izraisītāji, Piezīmes. Android sistēmas failu atlasītājs ļauj izvēlēties saglabāšanas vietu.</li>
+    <li><strong>Eksportēt kā PDF</strong> — ģenerē formatētu PDF dokumentu ar kopsavilkumu un notikumu tabulu, kas piemērots drukāšanai vai nosūtīšanai ārstam.</li>
+    <li><strong>Eksportēt Health Connect datus kā CSV</strong> — pēc izvēles eksportē kešatmiņā saglabātos miega, sirdsdarbības frekvences, HRV, soļu skaita un fizisko aktivitāšu datus kopā ar taviem galvassāpju notikumiem.</li>
+  </ul>
+  <div class="callout"><p><strong>Faila atrašanās vieta.</strong> Heda izmanto Android krātuves piekļuves ietvaru (Storage Access Framework), tāpēc tu izvēlies, kur eksportētais fails tiek saglabāts. Neviens fails netiek augšupielādēts nevienā serverī.</p></div>
+
+  <h2 id="settings">Iestatījumi</h2>
+  <p>Piekļūsti iestatījumiem no apakšējās navigācijas joslas. Izmaiņas stājas spēkā uzreiz.</p>
+  <h3>Motīvs</h3>
+  <ul>
+    <li><strong>Gaišs</strong> — silts papīra toņa gaišais režīms.</li>
+    <li><strong>Tumšs</strong> — dziļš meža tumšais režīms (noklusējums).</li>
+    <li><strong>Sistēma</strong> — automātiski seko tavas ierīces tumšā/gaišā režīma iestatījumam.</li>
+  </ul>
+  <h3>Valoda</h3>
+  <p>Izvēlies no vairāk nekā 30 valodām, kas sagrupētas pēc reģiona (Ziemeļvalstu, ģermāņu, romāņu, slāvu, baltu un citas). Atlasītā valoda attiecas uz visu tekstu lietotnē. Izvēlies <strong>Sistēma</strong>, lai sekotu tavas ierīces valodas iestatījumam.</p>
+  <h3>Health Connect</h3>
+  <p>Saites uz Health Connect iestatījumu ekrānu, kur vari piešķirt vai atsaukt atļaujas miega, sirdsdarbības frekvences, HRV, soļu un fizisko aktivitāšu datiem. Sīkāku informāciju skati sadaļā <a href="#health-connect">Health Connect</a>.</p>
+  <h3>Privātums un dati</h3>
+  <p>Atver Privātuma un datu ekrānu, kur vari pārvaldīt savu kontu, pārskatīt, kādi dati tiek glabāti, izmantot savas GDPR tiesības un dzēst savus datus. Sīkāku informāciju skati sadaļā <a href="#privacy">Privātums un dati</a>.</p>
+  <h3>Automātiska Health Connect sinhronizācija</h3>
+  <p>Kad tā ir ieslēgta, Heda fonā reizi dienā iegūst tavus jaunākos veselības datus no Health Connect pat tad, kad lietotne ir aizvērta. Pēc noklusējuma tā ir <strong>izslēgta</strong>. Tās ieslēgšanai nepieciešams piešķirt Health Connect atļaujas.</p>
+  <h3>Ikdienas veselības ieteikumi</h3>
+  <p>Kad tie ir ieslēgti, Heda nosūta ikdienas paziņojumu, ja tiek konstatēta augstas prioritātes korelācija. Pieskaroties paziņojumam, atveras Analīzes ekrāns. Pēc noklusējuma tie ir <strong>izslēgti</strong> un prasa ierīces paziņojumu atļauju.</p>
+  <h3>Papildu</h3>
+  <p>Izvērs sadaļu Papildu, lai precīzi noregulētu sliekšņus, ko izmanto korelāciju dzinis. Noklusējuma vērtības atbilst nostiprinātām klīniskām vadlīnijām migrēnas profilaksei:</p>
+  <table class="grid">
+    <thead><tr><th>Iestatījums</th><th>Noklusējums</th><th>Apraksts</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Minimālais miegs</strong></td><td>7 h 0 min</td><td>Miegs, kas īsāks par šo ilgumu, tiek atzīmēts kā iespējams izraisītājs.</td></tr>
+      <tr><td><strong>Maks. miega mainība</strong></td><td>60 min</td><td>Miega laika standartnovirze virs šīs vērtības izraisa neregulāra miega sakarību.</td></tr>
+      <tr><td><strong>Minimālais soļu skaits</strong></td><td>3 000</td><td>Soļu skaits zem šī tiek atzīmēts kā zema aktivitāte.</td></tr>
+      <tr><td><strong>Minimālais HRV</strong></td><td>30 ms</td><td>HRV zem šī absolūtā sliekšņa tiek atzīmēts.</td></tr>
+      <tr><td><strong>HRV bāzes līnijas daļa</strong></td><td>0,80</td><td>HRV zem šīs tavas 14 dienu bāzes līnijas daļas arī tiek atzīmēts.</td></tr>
+    </tbody>
+  </table>
+  <p>Pieskaries <strong>Atjaunot noklusējumus</strong>, lai visus sliekšņus atjaunotu uz to sākotnējām vērtībām.</p>
+
+  <h2 id="privacy">Privātums un dati</h2>
+  <p>Atver <strong>Iestatījumi → Privātums un dati</strong>, lai pārvaldītu visus datu un konta iestatījumus.</p>
+  <h3>Tavs konts</h3>
+  <p>Ekrāna augšdaļā ir redzams pašlaik pierakstītais Google konts. Pieskaries <strong>Izrakstīties</strong>, lai izrakstītos no lietotnes. Tavi dati paliek ierīcē; vari atkal pierakstīties jebkurā laikā.</p>
+  <h3>Kādi dati tiek glabāti</h3>
+  <p>Visi dati tiek glabāti lokāli tavā ierīcē divās šifrētās datubāzēs:</p>
+  <table class="grid">
+    <thead><tr><th>Datu veids</th><th>Saturs</th><th>Šifrēšana</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Galvassāpju notikumi</strong></td><td>Laika zīmogi, sāpju zonas, intensitāte, aura, akūtie medikamenti, izraisītāji, piezīmes</td><td>AES-256 (SQLCipher)</td></tr>
+      <tr><td><strong>Health Connect kešatmiņa</strong></td><td>Miegs, miega stadijas, HRV, sirdsdarbības frekvence, soļi un fiziskās aktivitātes</td><td>AES-256 (SQLCipher)</td></tr>
+      <tr><td><strong>Autentifikācijas marķieris</strong></td><td>Supabase lietotāja ID, e-pasts, pierakstīšanās laika zīmogs, konta piesaiste</td><td>AES-256-GCM (Tink)</td></tr>
+      <tr><td><strong>Lietotnes iestatījumi</strong></td><td>Tikai motīva un valodas preference — nekādu veselības datu</td><td>Nešifrēts</td></tr>
+    </tbody>
+  </table>
+  <p>Šifrēšanas atslēgas tiek glabātas Android Keystore, kas, kur pieejams, ir aparatūras nodrošināts, un nekad neatstāj ierīci.</p>
+  <h3>Biometriskā bloķēšana</h3>
+  <p>Ieslēdz biometrisko bloķēšanu, lai lietotnes atvēršanai būtu nepieciešams pirkstu nospiedums, sejas atbloķēšana vai PIN. Nepieciešams, lai ierīces Iestatījumos būtu konfigurēta ekrāna bloķēšana.</p>
+  <h3>Diagnostika</h3>
+  <p>Pēc izvēles kopīgo anonīmas avāriju atskaites (GlitchTip). <strong>Veselības dati nekad netiek iekļauti.</strong> Lietošanas analītika netiek vākta. To var mainīt jebkurā laikā.</p>
+  <h3>Tavas GDPR tiesības</h3>
+  <p>Heda atbilst ES GDPR 9. pantam (īpašas personas datu kategorijas). Tavas tiesības:</p>
+  <ul>
+    <li><strong>Tiesības piekļūt (15. pants)</strong> — visi tavi dati ir redzami Kalendārā un Statistikā.</li>
+    <li><strong>Tiesības labot (16. pants)</strong> — rediģē jebkuru notikumu, pieskaroties tam Kalendārā.</li>
+    <li><strong>Tiesības dzēst (17. pants)</strong> — dzēs visus datus, izmantojot Bīstamo zonu (skatīt zemāk).</li>
+    <li><strong>Tiesības ierobežot (18. pants)</strong> — izraksties, lai apturētu visu apstrādi.</li>
+    <li><strong>Tiesības uz datu pārnesamību (20. pants)</strong> — eksportē visus notikumus kā CSV no Atskaišu ekrāna.</li>
+    <li><strong>Tiesības iebilst (21. pants)</strong> — izraksties; apstrāde tiek apturēta uzreiz.</li>
+  </ul>
+  <h3>Bīstamā zona</h3>
+  <p><strong>Šīs darbības ir neatgriezeniskas, un tās nevar atsaukt.</strong></p>
+  <ul>
+    <li><strong>Dzēst lokālos datus (saglabāt kontu)</strong> — neatgriezeniski dzēš visus galvassāpju ierakstus, veselības datus, iestatījumus un šifrēšanas atslēgas no šīs ierīces. Tava Google konta saite tiek saglabāta, tāpēc vari atkal pierakstīties jebkurā ierīcē.</li>
+    <li><strong>Dzēst kontu un visus datus</strong> — neatgriezeniski dzēš visu iepriekšminēto, kā arī tavu Supabase kontu. Atjaunošana nav iespējama. Nepieciešams divpakāpju apstiprinājums.</li>
+  </ul>
+
+  <h2 id="health-connect">Health Connect</h2>
+  <p>Health Connect ir Google vienotā veselības datu platforma Android ierīcēm. Heda no tās nolasa piecus veselības datu veidus, lai nodrošinātu Korelāciju funkciju Analīzes ekrānā:</p>
+  <div class="metric-grid">
+    <div class="metric"><b>Miega sesijas</b><span>Nakts miega ilgums un miega stadijas (REM, dziļais, vieglais un nomoda laiks) no tava valkājamā vai miega izsekošanas lietotnes.</span></div>
+    <div class="metric"><b>Sirdsdarbības frekvences mainība (HRV)</b><span>Ikdienas RMSSD mērījumi, kas norāda atjaunošanās stāvokli un autonomās nervu sistēmas līdzsvaru.</span></div>
+    <div class="metric"><b>Sirdsdarbības frekvence</b><span>Nepārtraukti sirdsdarbības frekvences paraugi, ko izmanto, lai iegūtu tavu dienas vidējo un miera sirdsdarbības frekvenci.</span></div>
+    <div class="metric"><b>Soļu skaits</b><span>Ikdienas soļu skaits no tava tālruņa vai valkājamās ierīces.</span></div>
+    <div class="metric"><b>Fizisko aktivitāšu sesijas</b><span>Fizisko aktivitāšu sesiju ilgumi, ko izmanto, lai aprēķinātu tavu ikdienas aktivitātes līmeni.</span></div>
+  </div>
+  <div class="callout"><p><strong>Tikai lasīšana.</strong> Heda tikai nolasa datus no Health Connect — tā nekad tajā neraksta. Tiek pieprasīti tikai konkrētie ierakstu veidi, kas nepieciešami korelāciju analīzei.</p></div>
+  <h3>Health Connect iestatīšana</h3>
+  <ul>
+    <li>Dodies uz <strong>Iestatījumi → Health Connect</strong> Heda lietotnē.</li>
+    <li>Ja Health Connect lietotne nav instalēta, pieskaries <strong>Instalēt Health Connect</strong>, lai to iegūtu no Google Play. (Android 9 un jaunāks. Android 14+ Health Connect ir iebūvēts.)</li>
+    <li>Pieskaries <strong>Savienot Health Connect</strong>.</li>
+    <li>Health Connect atļauju ekrānā piešķir Heda piekļuvi datiem <strong>Miegs</strong>, <strong>Sirdsdarbības frekvences mainība</strong>, <strong>Sirdsdarbības frekvence</strong>, <strong>Soļi</strong> un <strong>Fiziskās aktivitātes</strong>.</li>
+    <li>Atgriezies Heda. Tavi jaunākie veselības dati tiks parādīti.</li>
+  </ul>
+  <h3>Fona sinhronizācija</h3>
+  <p>Pēc noklusējuma veselības dati tiek iegūti tikai tad, kad atver Health Connect ekrānu vai pieskaries <strong>Atsvaidzināt</strong>. Iestatījumos ieslēdz <strong>Automātiska Health Connect sinhronizācija</strong>, lai datus fonā iegūtu reizi dienā.</p>
+  <h3>Piekļuves atsaukšana</h3>
+  <p>Heda Health Connect atļaujas vari atsaukt jebkurā laikā Health Connect lietotnē (<strong>Pārvaldīt lietotnes un ierīces → Heda → Atļaujas</strong>) vai sadaļā <strong>Iestatījumi → Health Connect</strong> Heda iekšienē. Iepriekš kešatmiņā saglabātie dati paliek tavā ierīcē, līdz tos izdzēs sadaļā <strong>Privātums un dati → Dzēst lokālos datus</strong>.</p>
+  <div class="callout"><p><strong>Dati paliek ierīcē.</strong> Health Connect dati tiek kešoti šifrētā ierīcē esošā datubāzē un nekad netiek nosūtīti nevienā serverī.</p></div>
+
+  <hr>
+  <p class="muted" style="font-size:0.9rem;">© 2026 EXSports Oy. Šī dokumentācija tiek atjaunināta, lietotnei attīstoties. Pēdējoreiz pārskatīts 2026. gada aprīlī.</p>
+
+  <div class="doc-cta">
+    <h3>Jautājumi par Heda?</h3>
+    <p>Pastāsti mums, ko tu mēģini izsekot, un mēs palīdzēsim.</p>
+    <a class="btn btn--primary" href="mailto:info@exsports.fi">info@exsports.fi <span class="arrow">→</span></a>
+  </div>
+
+</div></div>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <a class="footer__brand" href="/index.html"><img src="/assets/brand/wordmark-ink.png" alt="exs" /></a>
+    <div class="footer__meta">
+      <span>© 2026 EXSPORTS OY</span><span class="dot">·</span>
+      <a href="/index.html">Sākums</a><span class="dot">·</span>
+      <a href="/legal/imprint.html">Impresums</a><span class="dot">·</span>
+      <a href="mailto:info@exsports.fi">Kontakti</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.body.classList.add('js');
+  const nav=document.getElementById('nav');
+  const onScroll=()=>nav.classList.toggle('is-stuck',window.scrollY>8);
+  onScroll(); addEventListener('scroll',onScroll,{passive:true});
+</script>
+</body>
+</html>
