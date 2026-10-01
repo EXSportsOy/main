@@ -15,14 +15,33 @@
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/styles.css" />
 <link rel="stylesheet" href="/legal.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<link rel="canonical" href="https://www.exsports.fi/shodia/legal/privacy_policy.html" />
+<link rel="alternate" hreflang="en" href="https://www.exsports.fi/shodia/legal/privacy_policy.html" />
+<link rel="alternate" hreflang="fi" href="https://www.exsports.fi/shodia/legal/fi/privacy_policy.html" />
+<link rel="alternate" hreflang="sv" href="https://www.exsports.fi/shodia/legal/sv/privacy_policy.html" />
+<link rel="alternate" hreflang="no" href="https://www.exsports.fi/shodia/legal/no/privacy_policy.html" />
+<link rel="alternate" hreflang="da" href="https://www.exsports.fi/shodia/legal/da/privacy_policy.html" />
+<link rel="alternate" hreflang="et" href="https://www.exsports.fi/shodia/legal/et/privacy_policy.html" />
+<link rel="alternate" hreflang="lv" href="https://www.exsports.fi/shodia/legal/lv/privacy_policy.html" />
+<link rel="alternate" hreflang="lt" href="https://www.exsports.fi/shodia/legal/lt/privacy_policy.html" />
+<link rel="alternate" hreflang="de" href="https://www.exsports.fi/shodia/legal/de/privacy_policy.html" />
+<link rel="alternate" hreflang="fr" href="https://www.exsports.fi/shodia/legal/fr/privacy_policy.html" />
+<link rel="alternate" hreflang="es" href="https://www.exsports.fi/shodia/legal/es/privacy_policy.html" />
+<link rel="alternate" hreflang="it" href="https://www.exsports.fi/shodia/legal/it/privacy_policy.html" />
+<link rel="alternate" hreflang="nl" href="https://www.exsports.fi/shodia/legal/nl/privacy_policy.html" />
+<link rel="alternate" hreflang="pl" href="https://www.exsports.fi/shodia/legal/pl/privacy_policy.html" />
+<link rel="alternate" hreflang="pt" href="https://www.exsports.fi/shodia/legal/pt/privacy_policy.html" />
+<link rel="alternate" hreflang="x-default" href="https://www.exsports.fi/shodia/legal/privacy_policy.html" />
 </head>
 <body class="theme-sage">
 
 <header class="nav" id="nav">
   <div class="wrap nav__inner">
-    <a class="nav__brand" href="/index.html"><img src="/assets/brand/wordmark-ink.png" alt="exs" /><span class="mono-tag">EXSports Oy</span></a>
+    <a class="nav__brand" href="/en/index.html"><img src="/assets/brand/wordmark-ink.png" alt="exs" /><span class="mono-tag">EXSports Oy</span></a>
     <nav class="nav__links">
-      <a href="/index.html" class="hide-sm">Home</a>
+      <span data-i18n-switcher data-current="en" data-base="/shodia/legal" data-file="privacy_policy.html" data-root-lang="en"></span>
+      <a href="/en/index.html" class="hide-sm">Home</a>
       <a href="/legal/imprint.html" class="hide-sm">Imprint</a>
       <a href="mailto:info@exsports.fi" class="cta">Contact</a>
     </nav>
@@ -30,16 +49,16 @@
 </header>
 <section class="doc-head stage">
   <div class="wrap doc-head__inner">
-    <a class="backlink" href="/shodia/index.html"><span>←</span> Shodia</a>
+    <a class="backlink" href="/shodia/en/index.html"><span>←</span> Shodia</a>
     <p class="eyebrow">Shodia · Legal</p>
     <h1>Privacy Policy</h1>
-    <div class="meta"><span>EXSports Oy</span><span>Last updated <b>2026-05-26</b></span></div>
+    <div class="meta"><span>EXSports Oy</span><span>Last updated <b>2026-10-01</b></span></div>
   </div>
 </section>
 <div class="wrap"><div class="prose">
 <p style="font-size:1.15rem;color:var(--ink);line-height:1.6;margin-bottom:28px;">Shodia keeps your training diary encrypted on your device. There are no accounts and no servers collecting your sessions.</p>
 
-<div class="callout"><p><strong>Nothing leaves your phone unless you export it.</strong> Shodia has no cloud, no analytics and no tracking by design.</p></div>
+<div class="callout"><p><strong>Your diary data leaves your phone only if you export it.</strong> Shodia has no cloud, no analytics and no tracking by design.</p></div>
 <h3>What we collect</h3>
 <p>EXSports Oy collects <strong>no</strong> personal data through Shodia. The app does not require an account, and your sessions, firearms, scores and notes are stored only on your device.</p>
 <h3>On-device, encrypted</h3>
@@ -58,10 +77,10 @@
 </div></div>
 <footer class="footer">
   <div class="wrap footer__inner">
-    <a class="footer__brand" href="/index.html"><img src="/assets/brand/wordmark-ink.png" alt="exs" /></a>
+    <a class="footer__brand" href="/en/index.html"><img src="/assets/brand/wordmark-ink.png" alt="exs" /></a>
     <div class="footer__meta">
       <span>© 2026 EXSPORTS OY</span><span class="dot">·</span>
-      <a href="/index.html">Home</a><span class="dot">·</span>
+      <a href="/en/index.html">Home</a><span class="dot">·</span>
       <a href="/legal/imprint.html">Imprint</a><span class="dot">·</span>
       <a href="mailto:info@exsports.fi">Contact</a>
     </div>
@@ -73,5 +92,7 @@
   const onScroll=()=>nav.classList.toggle('is-stuck',window.scrollY>8);
   onScroll(); addEventListener('scroll',onScroll,{passive:true});
 </script>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
 </body>
 </html>

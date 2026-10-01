@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Correções de tanques em terra — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Correções de tanques em terra — SurveyTools · Guia do utilizador · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/pt/modules/shore-tank.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/pt/index.html">SurveyTools</a><div class="tagline">Guia do utilizador</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="pt" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/shore-tank.html"></span><a href="/surveytools/user-guide/pt/index.html">Guia do utilizador</a><a href="/pt/index.html">Início</a></nav></header>
+<main class="card">
+<h1>Correções de tanques em terra</h1>
+<p>Este módulo ajuda nas correções habituais de tanques em terra durante a medição de volume. Inclui estas calculadoras:</p>
+<ul>
+<li><strong>CTSh</strong>: fator de correção do costado devido à sua dilatação térmica.</li>
+<li><strong>FRC</strong>: correção do teto flutuante pelo volume que desloca.</li>
+</ul>
+<h2>CTSh — fator de correção do costado</h2>
+<p>CTSh é um fator multiplicativo que ajusta o volume do tanque aos efeitos da temperatura no costado. Introduza temperaturas e um coeficiente do material para obter CTSh.</p>
+<h3>Utilização</h3>
+<ul>
+<li>Introduza as temperaturas do produto no topo, no meio e no fundo, ou os valores exigidos pelo seu procedimento.</li>
+<li>Se o tanque <em>não tiver isolamento</em>, indique também a temperatura ambiente.</li>
+<li>Introduza a temperatura de referência/calibração do tanque e o coeficiente de dilatação linear.</li>
+<li>Calcule CTSh.</li>
+</ul>
+<h2>FRC — correção do teto flutuante</h2>
+<p>FRC estima o volume deslocado pelo teto flutuante com base no peso do teto, na densidade e na temperatura. O resultado é uma quantidade a aplicar segundo o seu procedimento de elaboração de relatórios.</p>
+<h3>Utilização</h3>
+<ul>
+<li>Introduza o peso do teto flutuante.</li>
+<li>Introduza a densidade no vácuo a 15 °C e a temperatura observada.</li>
+<li>Calcule FRC.</li>
+</ul>
+<h2>Notas</h2>
+<ul>
+<li>Todos os dados devem ser numéricos. Campos vazios ou inválidos impedem um resultado significativo.</li>
+<li>FRC depende de CTL/VCF; utilize-o como auxiliar de cálculo, não como ferramenta de certificação.</li>
+</ul>
+<p>Referência de implementação para manutenção: <code>shared/src/commonMain/kotlin/fi/exsports/surveytools/ShoreTankCalculations.kt</code></p>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Informações legais</a><a href="mailto:info@exsports.fi">Contacto</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

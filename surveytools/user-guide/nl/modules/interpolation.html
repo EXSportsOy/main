@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Interpolatie — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Interpolatie — SurveyTools · Gebruikershandleiding · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/nl/modules/interpolation.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/nl/index.html">SurveyTools</a><div class="tagline">Gebruikershandleiding</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="nl" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/interpolation.html"></span><a href="/surveytools/user-guide/nl/index.html">Gebruikershandleiding</a><a href="/nl/index.html">Home</a></nav></header>
+<main class="card">
+<h1>Interpolatie</h1>
+<p>Met interpolatie schat je een waarde tussen twee bekende tabelwaarden. In SurveyTools is dit vooral bedoeld voor werkprocessen op basis van tabellen, bijvoorbeeld ullage- en trimtabellen.</p>
+<h2>Gebruikelijk werkproces</h2>
+<ol>
+<li>Zoek de twee omliggende tabelpunten of rijen/kolommen.</li>
+<li>Voer de bekende waarden in en de meetwaarde waarvoor je wilt interpoleren.</li>
+<li>Bereken en kopieer het geïnterpoleerde resultaat naar je werkblad of rapport.</li>
+</ol>
+<h2>Beschikbare methoden</h2>
+<h3>Lineaire interpolatie</h3>
+<p>Gebruik dit bij twee bekende punten, <code>(x1, y1)</code> en <code>(x2, y2)</code>, als je <code>y</code> bij <code>x</code> nodig hebt.</p>
+<h3>Eenweginterpolatie (tabelinterval)</h3>
+<p>Gebruik dit als de tabel een bekend vast interval heeft, bijvoorbeeld ullage in mm. Voer de meetwaarde (<code>ullage</code>), het interval en de twee aangrenzende tabelwaarden (<code>y1</code>, <code>y2</code>) in.</p>
+<h3>Tweeweginterpolatie (ullage + trim)</h3>
+<p>Gebruik dit als de tabel afhangt van twee variabelen, doorgaans ullage en trim. De app interpoleert eerst langs ullage voor elke trimkolom en daarna tussen de twee tussenresultaten langs de trimas.</p>
+<h2>Opmerkingen en beperkingen</h2>
+<ul>
+<li>Bij intervallen van nul of negatieve intervallen is interpolatie ongeldig.</li>
+<li>Bij gelijke x-waarden (<code>x1 == x2</code>) is geen unieke interpolatie mogelijk.</li>
+<li>Controleer altijd of de waarden bij de juiste tank/tabel horen en de juiste eenheden hebben.</li>
+</ul>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Juridische informatie</a><a href="mailto:info@exsports.fi">Contact</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

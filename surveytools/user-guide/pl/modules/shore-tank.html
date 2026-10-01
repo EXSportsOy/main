@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Korekty zbiorników lądowych — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Korekty zbiorników lądowych — SurveyTools · Instrukcja obsługi · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/pl/modules/shore-tank.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/pl/index.html">SurveyTools</a><div class="tagline">Instrukcja obsługi</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="pl" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/shore-tank.html"></span><a href="/surveytools/user-guide/pl/index.html">Instrukcja obsługi</a><a href="/pl/index.html">Strona główna</a></nav></header>
+<main class="card">
+<h1>Korekty zbiorników lądowych</h1>
+<p>Moduł pomaga stosować typowe korekty zbiorników lądowych przy pomiarach objętości. Dostępne są następujące kalkulatory:</p>
+<ul>
+<li><strong>CTSh</strong>: współczynnik korekty rozszerzalności cieplnej płaszcza zbiornika.</li>
+<li><strong>FRC</strong>: korekta objętości wypartej przez dach pływający.</li>
+</ul>
+<h2>CTSh — współczynnik korekty płaszcza</h2>
+<p>CTSh to mnożnik korygujący objętość zbiornika ze względu na wpływ temperatury na płaszcz. Podaj temperatury i współczynnik materiału, aby uzyskać CTSh.</p>
+<h3>Sposób użycia</h3>
+<ul>
+<li>Wprowadź temperatury produktu w górnej, środkowej i dolnej części albo wartości wymagane przez procedurę.</li>
+<li>Jeśli zbiornik jest <em>nieizolowany</em>, podaj również temperaturę otoczenia.</li>
+<li>Wprowadź temperaturę odniesienia/kalibracji zbiornika i współczynnik rozszerzalności liniowej.</li>
+<li>Oblicz CTSh.</li>
+</ul>
+<h2>FRC — korekta dachu pływającego</h2>
+<p>FRC szacuje objętość wypartej cieczy na podstawie ciężaru dachu, gęstości i temperatury. Wynik jest wielkością stosowaną zgodnie z przyjętą procedurą raportowania.</p>
+<h3>Sposób użycia</h3>
+<ul>
+<li>Wprowadź ciężar dachu pływającego.</li>
+<li>Wprowadź gęstość w próżni w 15 °C i zaobserwowaną temperaturę.</li>
+<li>Oblicz FRC.</li>
+</ul>
+<h2>Uwagi</h2>
+<ul>
+<li>Wszystkie dane muszą być liczbowe. Puste lub nieprawidłowe pola uniemożliwiają uzyskanie miarodajnego wyniku.</li>
+<li>FRC zależy od CTL/VCF. Traktuj go jako pomoc obliczeniową, nie narzędzie certyfikacyjne.</li>
+</ul>
+<p>Odnośnik do implementacji dla opiekunów kodu: <code>shared/src/commonMain/kotlin/fi/exsports/surveytools/ShoreTankCalculations.kt</code></p>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Informacje prawne</a><a href="mailto:info@exsports.fi">Kontakt</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

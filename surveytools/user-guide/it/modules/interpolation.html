@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Interpolazione — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Interpolazione — SurveyTools · Guida utente · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/it/modules/interpolation.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/it/index.html">SurveyTools</a><div class="tagline">Guida utente</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="it" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/interpolation.html"></span><a href="/surveytools/user-guide/it/index.html">Guida utente</a><a href="/it/index.html">Home</a></nav></header>
+<main class="card">
+<h1>Interpolazione</h1>
+<p>L’interpolazione stima un valore compreso tra due valori noti di una tabella. In SurveyTools è pensata soprattutto per procedure basate su tabelle, ad esempio tabelle di vuoto (ullage) e assetto.</p>
+<h2>Procedura tipica</h2>
+<ol>
+<li>Individua i due punti della tabella che racchiudono il valore, oppure le due righe/colonne corrispondenti.</li>
+<li>Inserisci i valori noti e il valore misurato per cui desideri interpolare.</li>
+<li>Calcola e copia il risultato interpolato nel foglio di lavoro o nel rapporto.</li>
+</ol>
+<h2>Metodi disponibili</h2>
+<h3>Interpolazione lineare</h3>
+<p>Usala quando conosci due punti, <code>(x1, y1)</code> e <code>(x2, y2)</code>, e devi trovare <code>y</code> in corrispondenza di <code>x</code>.</p>
+<h3>Interpolazione a una variabile (intervallo della tabella)</h3>
+<p>Usala quando la tabella ha un intervallo fisso noto, ad esempio il vuoto in mm. Inserisci il valore misurato (<code>ullage</code>), l’intervallo e i due valori adiacenti (<code>y1</code>, <code>y2</code>).</p>
+<h3>Interpolazione a due variabili (vuoto + assetto)</h3>
+<p>Usala quando la tabella dipende da due variabili, in genere vuoto e assetto. L’app interpola prima lungo il vuoto per ogni colonna di assetto, poi tra i due risultati intermedi lungo l’asse dell’assetto.</p>
+<h2>Note e limiti</h2>
+<ul>
+<li>Con intervalli nulli o negativi l’interpolazione non è valida.</li>
+<li>Se i valori di x sono identici (<code>x1 == x2</code>), non è possibile un’interpolazione univoca.</li>
+<li>Verifica sempre che i valori appartengano al serbatoio/alla tabella corretti e usino le unità appropriate.</li>
+</ul>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Informazioni legali</a><a href="mailto:info@exsports.fi">Contatti</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

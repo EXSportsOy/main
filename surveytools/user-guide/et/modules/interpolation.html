@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="et">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Interpoleerimine — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Interpoleerimine — SurveyTools · Kasutusjuhend · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/et/modules/interpolation.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/et/index.html">SurveyTools</a><div class="tagline">Kasutusjuhend</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="et" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/interpolation.html"></span><a href="/surveytools/user-guide/et/index.html">Kasutusjuhend</a><a href="/et/index.html">Avaleht</a></nav></header>
+<main class="card">
+<h1>Interpoleerimine</h1>
+<p>Interpoleerimine hindab kahe teadaoleva tabeliväärtuse vahele jäävat väärtust. SurveyToolsis on see mõeldud eeskätt tabelipõhisteks töövoogudeks, näiteks ullage- ja trimmitabelite kasutamiseks.</p>
+<h2>Tüüpiline töövoog</h2>
+<ol>
+<li>Leia kaks ümbritsevat tabelipunkti või vastavad read/veerud.</li>
+<li>Sisesta teadaolevad väärtused ja mõõdetud väärtus, mille jaoks soovid interpoleerida.</li>
+<li>Arvuta ja kopeeri tulemus töölehele või aruandesse.</li>
+</ol>
+<h2>Saadaolevad meetodid</h2>
+<h3>Lineaarne interpoleerimine</h3>
+<p>Kasuta seda, kui tead punkte <code>(x1, y1)</code> ja <code>(x2, y2)</code> ning vajad väärtust <code>y</code> kohal <code>x</code>.</p>
+<h3>Ühesuunaline interpoleerimine (tabeli samm)</h3>
+<p>Kasuta seda, kui tabelis on teadaolev püsisamm, näiteks ullage millimeetrites. Sisesta mõõdetud väärtus (<code>ullage</code>), samm ja kaks naaberväärtust tabelist (<code>y1</code>, <code>y2</code>).</p>
+<h3>Kahesuunaline interpoleerimine (ullage + trimm)</h3>
+<p>Kasuta seda, kui tabel sõltub kahest muutujast, tavaliselt ullage'ist ja trimmist. Rakendus interpoleerib esmalt ullage'i suunas iga trimmiveeru jaoks ning seejärel kahe vahetulemuse vahel trimmitelje suunas.</p>
+<h2>Märkused ja piirangud</h2>
+<ul>
+<li>Kui sammud on nullid või negatiivsed, on interpoleerimine kehtetu.</li>
+<li>Kui x-väärtused on võrdsed (<code>x1 == x2</code>), pole ühene interpoleerimine võimalik.</li>
+<li>Veendu alati, et väärtused kuuluvad õige mahuti/tabeli juurde ja ühikud on õiged.</li>
+</ul>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Juriidiline teave</a><a href="mailto:info@exsports.fi">Kontakt</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

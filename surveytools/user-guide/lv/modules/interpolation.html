@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="lv">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Interpolācija — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Interpolācija — SurveyTools · Lietotāja rokasgrāmata · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/lv/modules/interpolation.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/lv/index.html">SurveyTools</a><div class="tagline">Lietotāja rokasgrāmata</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="lv" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/interpolation.html"></span><a href="/surveytools/user-guide/lv/index.html">Lietotāja rokasgrāmata</a><a href="/lv/index.html">Sākums</a></nav></header>
+<main class="card">
+<h1>Interpolācija</h1>
+<p>Interpolācija ļauj novērtēt vērtību starp divām zināmām tabulas vērtībām. SurveyTools tā galvenokārt paredzēta tabulās balstītām darbplūsmām, piemēram, brīvās telpas augstuma (ullage) un diferences tabulām.</p>
+<h2>Tipiska darbplūsma</h2>
+<ol>
+<li>Atrodiet divus aptverošos tabulas punktus vai attiecīgās rindas/kolonnas.</li>
+<li>Ievadiet zināmās vērtības un izmērīto vērtību, kurai vēlaties veikt interpolāciju.</li>
+<li>Aprēķiniet un pārkopējiet interpolēto rezultātu darblapā vai pārskatā.</li>
+</ol>
+<h2>Pieejamās metodes</h2>
+<h3>Lineārā interpolācija</h3>
+<p>Izmantojiet, ja zināmi divi punkti <code>(x1, y1)</code> un <code>(x2, y2)</code> un jāatrod <code>y</code> pie <code>x</code>.</p>
+<h3>Vienvirziena interpolācija (tabulas intervāls)</h3>
+<p>Izmantojiet, ja tabulai ir zināms fiksēts solis, piemēram, brīvās telpas augstums mm. Norādiet izmērīto vērtību (<code>ullage</code>), intervālu un divas blakus esošās tabulas vērtības (<code>y1</code>, <code>y2</code>).</p>
+<h3>Divvirzienu interpolācija (ullage + diference)</h3>
+<p>Izmantojiet, ja tabula ir atkarīga no diviem mainīgajiem, parasti brīvās telpas augstuma un diferences. Lietotne vispirms interpolē pēc brīvās telpas augstuma katrā diferences kolonnā un pēc tam starp abiem starprezultātiem pa diferences asi.</p>
+<h2>Piezīmes un ierobežojumi</h2>
+<ul>
+<li>Ja intervāli ir nulle vai negatīvi, interpolācija nav derīga.</li>
+<li>Ja x vērtības ir vienādas (<code>x1 == x2</code>), viennozīmīga interpolācija nav iespējama.</li>
+<li>Vienmēr pārliecinieties, ka vērtības attiecas uz pareizo tvertni/tabulu un mērvienībām.</li>
+</ul>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Juridiskā informācija</a><a href="mailto:info@exsports.fi">Kontakti</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

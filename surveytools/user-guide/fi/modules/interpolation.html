@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Interpolointi — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Interpolointi — SurveyTools · Käyttöopas · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/fi/modules/interpolation.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/fi/index.html">SurveyTools</a><div class="tagline">Käyttöopas</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="fi" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/interpolation.html"></span><a href="/surveytools/user-guide/fi/index.html">Käyttöopas</a><a href="/fi/index.html">Etusivu</a></nav></header>
+<main class="card">
+<h1>Interpolointi</h1>
+<p>Interpoloinnilla arvioidaan kahden tunnetun taulukkoarvon väliin jäävä arvo. SurveyToolsin interpolointi on tarkoitettu ensisijaisesti taulukoihin perustuviin työnkulkuihin, esimerkiksi ullage- ja trimmitaulukoiden käyttöön.</p>
+<h2>Tyypillinen työnkulku</h2>
+<ol>
+<li>Etsi kaksi ympäröivää taulukkopistettä tai kaksi ympäröivää riviä tai saraketta.</li>
+<li>Syötä tunnetut arvot ja mitattu arvo, jonka kohdalle haluat interpoloida.</li>
+<li>Laske ja kopioi interpoloitu tulos laskentataulukkoon tai raporttiin.</li>
+</ol>
+<h2>Käytettävissä olevat menetelmät</h2>
+<h3>Lineaarinen interpolointi</h3>
+<p>Käytä tätä, kun tunnet pisteet <code>(x1, y1)</code> ja <code>(x2, y2)</code> ja tarvitset arvon <code>y</code> kohdassa <code>x</code>.</p>
+<h3>Yksisuuntainen interpolointi (taulukon askelväli)</h3>
+<p>Käytä tätä, kun taulukossa on tunnettu vakioaskel, esimerkiksi ullage millimetreinä. Anna mitattu arvo (<code>ullage</code>), askelväli ja kaksi vierekkäistä taulukkoarvoa (<code>y1</code>, <code>y2</code>).</p>
+<h3>Kaksisuuntainen interpolointi (ullage + trimmi)</h3>
+<p>Käytä tätä, kun taulukko riippuu kahdesta muuttujasta, tavallisesti ullagesta ja trimmistä. Sovellus interpoloi ensin ullagen suunnassa kullekin trimmisarakkeelle ja sitten näiden kahden välituloksen välillä trimmin suunnassa.</p>
+<h2>Huomautukset ja rajoitukset</h2>
+<ul>
+<li>Jos askelvälit ovat nollia tai negatiivisia, interpolointi ei ole kelvollinen.</li>
+<li>Jos x-arvot ovat samat (<code>x1 == x2</code>), yksikäsitteinen interpolointi ei ole mahdollinen.</li>
+<li>Varmista aina, että arvot kuuluvat oikeaan säiliöön tai taulukkoon ja että yksiköt ovat oikein.</li>
+</ul>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Lakitiedot</a><a href="mailto:info@exsports.fi">Ota yhteyttä</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

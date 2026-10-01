@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kiilalaskuri — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Kiilalaskuri — SurveyTools · Käyttöopas · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/fi/modules/wedge.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/fi/index.html">SurveyTools</a><div class="tagline">Käyttöopas</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="fi" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/wedge.html"></span><a href="/surveytools/user-guide/fi/index.html">Käyttöopas</a><a href="/fi/index.html">Etusivu</a></nav></header>
+<main class="card">
+<h1>Kiilalaskuri</h1>
+<p>Kiilalaskuria käytetään, kun alus on trimmissä ja säiliön neste muodostaa kiilan eli sivulta katsottuna kolmion. Näin voi käydä pienillä nestemäärillä, kun neste ei kosketa säiliön kaikkia neljää seinää.</p>
+<h2>Tarvittavat lähtötiedot</h2>
+<ul>
+<li><strong>Peräsyväys</strong> ja <strong>keulasyväys</strong> trimmin määrittämiseen.</li>
+<li><strong>LBP</strong> eli perpendikkelipituus.</li>
+<li><strong>Säiliön pituus</strong>.</li>
+<li><strong>Vertailukorkeus</strong> ja <strong>etäisyys perälaipiosta mittauspisteeseen</strong>.</li>
+<li><strong>Mitattu nesteen korkeus (sounding)</strong>.</li>
+<li><strong>Taulukkotilavuus</strong> kyseiselle tilanteelle säiliötaulukosta.</li>
+</ul>
+<h2>Laskennan kulku yleisellä tasolla</h2>
+<ol>
+<li>Laskee aluksen trimmin: peräsyväys miinus keulasyväys.</li>
+<li>Muuntaa trimmin trimmikertoimeksi jakamalla sen LBP:llä.</li>
+<li>Laskee korjatun nestekorkeuden trimmigeometrian ja mittauspisteen sijainnin perusteella.</li>
+<li>Tarkistaa, onko kyseessä kiilatilanne, ja ilmoittaa, ellei ole.</li>
+<li>Arvioi kiilatilavuuden taulukkotilavuuden ja korjatun nestekorkeuden avulla.</li>
+</ol>
+<h2>Käytännön huomautukset</h2>
+<ul>
+<li>Jos <strong>LBP = 0</strong>, laskenta ei ole kelvollinen.</li>
+<li>Jos <strong>trimmiä ei ole</strong> eli trimmikerroin on nolla, kiilavaikutus on nolla.</li>
+<li>Varmista, että taulukkoarvo käyttää samaa vertailutasoa ja samoja yksiköitä kuin lähtötiedot.</li>
+</ul>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Lakitiedot</a><a href="mailto:info@exsports.fi">Ota yhteyttä</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kilkalkylator — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Kilkalkylator — SurveyTools · Användarguide · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/sv/modules/wedge.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/sv/index.html">SurveyTools</a><div class="tagline">Användarguide</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="sv" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/wedge.html"></span><a href="/surveytools/user-guide/sv/index.html">Användarguide</a><a href="/sv/index.html">Hem</a></nav></header>
+<main class="card">
+<h1>Kilkalkylator</h1>
+<p>Kilkalkylatorn används när ett fartyg har trim och vätskan i tanken bildar en kil, alltså en triangel sedd från sidan. Detta kan inträffa vid små volymer då vätskan inte når tankens alla fyra väggar.</p>
+<h2>Indata som behövs</h2>
+<ul>
+<li><strong>Akterdjupgående</strong> och <strong>fördjupgående</strong> för att beräkna trim.</li>
+<li><strong>LBP</strong>, längden mellan perpendiklarna.</li>
+<li><strong>Tanklängd</strong>.</li>
+<li><strong>Referenshöjd</strong> och <strong>avstånd från akterskottet till mätpunkten</strong>.</li>
+<li><strong>Uppmätt pejling (sounding)</strong>.</li>
+<li><strong>Tabellvolym</strong> för det aktuella tillståndet, från tanktabellen.</li>
+</ul>
+<h2>Vad kalkylatorn gör i stora drag</h2>
+<ol>
+<li>Beräknar fartygets trim: akterdjupgående minus fördjupgående.</li>
+<li>Dividerar trim med LBP för att få trimfaktorn.</li>
+<li>Beräknar korrigerad pejling utifrån trimgeometrin och mätpunktens läge.</li>
+<li>Kontrollerar om det är ett kilfall och visar om så inte är fallet.</li>
+<li>Uppskattar kilvolymen med tabellvolymen och den korrigerade pejlingen.</li>
+</ol>
+<h2>Praktiska anmärkningar</h2>
+<ul>
+<li>Beräkningen är ogiltig om <strong>LBP = 0</strong>.</li>
+<li>Utan <strong>trim</strong>, när trimfaktorn är noll, är kileffekten noll.</li>
+<li>Kontrollera att tabellvärdet har samma referens och enheter som indata.</li>
+</ul>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Företagsuppgifter</a><a href="mailto:info@exsports.fi">Kontakt</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

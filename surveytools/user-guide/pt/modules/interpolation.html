@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Interpolação — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Interpolação — SurveyTools · Guia do utilizador · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/pt/modules/interpolation.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/pt/index.html">SurveyTools</a><div class="tagline">Guia do utilizador</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="pt" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/interpolation.html"></span><a href="/surveytools/user-guide/pt/index.html">Guia do utilizador</a><a href="/pt/index.html">Início</a></nav></header>
+<main class="card">
+<h1>Interpolação</h1>
+<p>A interpolação permite estimar um valor entre dois valores conhecidos de uma tabela. No SurveyTools destina-se sobretudo a processos baseados em tabelas, como tabelas de vazio (ullage) e caimento.</p>
+<h2>Procedimento habitual</h2>
+<ol>
+<li>Identifique os dois pontos da tabela que delimitam o valor, ou as duas linhas/colunas correspondentes.</li>
+<li>Introduza os valores conhecidos e o valor medido para o qual pretende interpolar.</li>
+<li>Calcule e copie o resultado interpolado para a folha de cálculo ou relatório.</li>
+</ol>
+<h2>Métodos disponíveis</h2>
+<h3>Interpolação linear</h3>
+<p>Utilize-a quando conhece dois pontos, <code>(x1, y1)</code> e <code>(x2, y2)</code>, e precisa de <code>y</code> para <code>x</code>.</p>
+<h3>Interpolação de uma variável (intervalo da tabela)</h3>
+<p>Utilize-a quando a tabela tem um intervalo fixo conhecido, por exemplo vazio em mm. Indique o valor medido (<code>ullage</code>), o intervalo e os dois valores vizinhos (<code>y1</code>, <code>y2</code>).</p>
+<h3>Interpolação de duas variáveis (vazio + caimento)</h3>
+<p>Utilize-a quando a tabela depende de duas variáveis, normalmente vazio e caimento. A aplicação interpola primeiro segundo o vazio para cada coluna de caimento e depois entre os dois resultados intermédios segundo o eixo do caimento.</p>
+<h2>Notas e limitações</h2>
+<ul>
+<li>Se os intervalos forem nulos ou negativos, a interpolação é inválida.</li>
+<li>Se os valores de x forem iguais (<code>x1 == x2</code>), não é possível obter uma interpolação única.</li>
+<li>Confirme sempre que os valores pertencem ao tanque/à tabela corretos e usam as unidades adequadas.</li>
+</ul>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Informações legais</a><a href="mailto:info@exsports.fi">Contacto</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

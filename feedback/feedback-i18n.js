@@ -6,6 +6,9 @@
    ============================================================ */
 window.FEEDBACK_I18N = {
   en: {
+    choose_type_label: "Choose feedback type",
+    choose_app_feedback_label: "Choose app feedback type",
+    rating_label: "Rating, 1 to 5",
     meta_title: "Feedback — EXSports Oy",
     meta_desc: "Share feedback about the EXSports website or our apps.",
     eyebrow: "Feedback",
@@ -63,6 +66,9 @@ window.FEEDBACK_I18N = {
   },
 
   fi: {
+    choose_type_label: "Valitse palautteen tyyppi",
+    choose_app_feedback_label: "Valitse sovelluspalautteen tyyppi",
+    rating_label: "Arvosana 1–5",
     meta_title: "Palaute — EXSports Oy",
     meta_desc: "Anna palautetta EXSports-sivustosta tai sovelluksistamme.",
     eyebrow: "Palaute",
@@ -120,6 +126,9 @@ window.FEEDBACK_I18N = {
   },
 
   sv: {
+    choose_type_label: "Välj typ av feedback",
+    choose_app_feedback_label: "Välj typ av appfeedback",
+    rating_label: "Betyg, 1 till 5",
     meta_title: "Feedback — EXSports Oy",
     meta_desc: "Ge feedback om EXSports webbplats eller våra appar.",
     eyebrow: "Feedback",
@@ -177,6 +186,9 @@ window.FEEDBACK_I18N = {
   },
 
   no: {
+    choose_type_label: "Velg type tilbakemelding",
+    choose_app_feedback_label: "Velg type tilbakemelding om appen",
+    rating_label: "Vurdering, 1 til 5",
     meta_title: "Tilbakemelding — EXSports Oy",
     meta_desc: "Gi tilbakemelding om EXSports-nettstedet eller appene våre.",
     eyebrow: "Tilbakemelding",
@@ -234,6 +246,9 @@ window.FEEDBACK_I18N = {
   },
 
   da: {
+    choose_type_label: "Vælg feedbacktype",
+    choose_app_feedback_label: "Vælg type appfeedback",
+    rating_label: "Bedømmelse, 1 til 5",
     meta_title: "Feedback — EXSports Oy",
     meta_desc: "Giv feedback om EXSports-webstedet eller vores apps.",
     eyebrow: "Feedback",
@@ -291,6 +306,9 @@ window.FEEDBACK_I18N = {
   },
 
   de: {
+    choose_type_label: "Feedbackart auswählen",
+    choose_app_feedback_label: "Art des App-Feedbacks auswählen",
+    rating_label: "Bewertung, 1 bis 5",
     meta_title: "Feedback — EXSports Oy",
     meta_desc: "Geben Sie Feedback zur EXSports-Website oder zu unseren Apps.",
     eyebrow: "Feedback",
@@ -348,6 +366,9 @@ window.FEEDBACK_I18N = {
   },
 
   nl: {
+    choose_type_label: "Kies het type feedback",
+    choose_app_feedback_label: "Kies het type appfeedback",
+    rating_label: "Beoordeling, 1 tot 5",
     meta_title: "Feedback — EXSports Oy",
     meta_desc: "Geef feedback over de EXSports-website of onze apps.",
     eyebrow: "Feedback",
@@ -405,6 +426,9 @@ window.FEEDBACK_I18N = {
   },
 
   fr: {
+    choose_type_label: "Choisir le type de commentaire",
+    choose_app_feedback_label: "Choisir le type de commentaire sur l’application",
+    rating_label: "Note de 1 à 5",
     meta_title: "Commentaires — EXSports Oy",
     meta_desc: "Donnez votre avis sur le site EXSports ou nos applications.",
     eyebrow: "Commentaires",
@@ -462,6 +486,9 @@ window.FEEDBACK_I18N = {
   },
 
   es: {
+    choose_type_label: "Elige el tipo de comentario",
+    choose_app_feedback_label: "Elige el tipo de comentario sobre la aplicación",
+    rating_label: "Valoración del 1 al 5",
     meta_title: "Comentarios — EXSports Oy",
     meta_desc: "Comparte tu opinión sobre el sitio de EXSports o nuestras apps.",
     eyebrow: "Comentarios",
@@ -519,6 +546,9 @@ window.FEEDBACK_I18N = {
   },
 
   it: {
+    choose_type_label: "Scegli il tipo di feedback",
+    choose_app_feedback_label: "Scegli il tipo di feedback sull’app",
+    rating_label: "Valutazione da 1 a 5",
     meta_title: "Feedback — EXSports Oy",
     meta_desc: "Lascia un feedback sul sito EXSports o sulle nostre app.",
     eyebrow: "Feedback",
@@ -576,6 +606,9 @@ window.FEEDBACK_I18N = {
   },
 
   pl: {
+    choose_type_label: "Wybierz rodzaj opinii",
+    choose_app_feedback_label: "Wybierz rodzaj opinii o aplikacji",
+    rating_label: "Ocena od 1 do 5",
     meta_title: "Opinie — EXSports Oy",
     meta_desc: "Podziel się opinią o stronie EXSports lub naszych aplikacjach.",
     eyebrow: "Opinie",
@@ -633,6 +666,9 @@ window.FEEDBACK_I18N = {
   },
 
   pt: {
+    choose_type_label: "Escolha o tipo de feedback",
+    choose_app_feedback_label: "Escolha o tipo de feedback sobre a aplicação",
+    rating_label: "Avaliação de 1 a 5",
     meta_title: "Feedback — EXSports Oy",
     meta_desc: "Dê a sua opinião sobre o site da EXSports ou as nossas aplicações.",
     eyebrow: "Feedback",
@@ -690,6 +726,9 @@ window.FEEDBACK_I18N = {
   },
 
   et: {
+    choose_type_label: "Vali tagasiside liik",
+    choose_app_feedback_label: "Vali rakenduse tagasiside liik",
+    rating_label: "Hinnang 1–5",
     meta_title: "Tagasiside — EXSports Oy",
     meta_desc: "Anna tagasisidet EXSportsi veebisaidi või meie rakenduste kohta.",
     eyebrow: "Tagasiside",
@@ -747,6 +786,9 @@ window.FEEDBACK_I18N = {
   },
 
   lv: {
+    choose_type_label: "Izvēlieties atsauksmes veidu",
+    choose_app_feedback_label: "Izvēlieties lietotnes atsauksmes veidu",
+    rating_label: "Vērtējums no 1 līdz 5",
     meta_title: "Atsauksmes — EXSports Oy",
     meta_desc: "Sniedziet atsauksmes par EXSports vietni vai mūsu lietotnēm.",
     eyebrow: "Atsauksmes",
@@ -804,6 +846,9 @@ window.FEEDBACK_I18N = {
   },
 
   lt: {
+    choose_type_label: "Pasirinkite atsiliepimo tipą",
+    choose_app_feedback_label: "Pasirinkite atsiliepimo apie programėlę tipą",
+    rating_label: "Įvertinimas nuo 1 iki 5",
     meta_title: "Atsiliepimai — EXSports Oy",
     meta_desc: "Pateikite atsiliepimą apie EXSports svetainę ar mūsų programėles.",
     eyebrow: "Atsiliepimai",

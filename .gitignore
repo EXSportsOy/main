@@ -8,3 +8,4 @@
 /tests/feedback/node_modules/
 /tests/feedback/test-results/
 /tests/feedback/playwright-report/
+/tests/i18n/__pycache__/

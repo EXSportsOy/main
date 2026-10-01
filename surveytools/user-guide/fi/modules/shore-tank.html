@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Maasäiliökorjaukset — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Maasäiliökorjaukset — SurveyTools · Käyttöopas · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/fi/modules/shore-tank.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/fi/index.html">SurveyTools</a><div class="tagline">Käyttöopas</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="fi" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/shore-tank.html"></span><a href="/surveytools/user-guide/fi/index.html">Käyttöopas</a><a href="/fi/index.html">Etusivu</a></nav></header>
+<main class="card">
+<h1>Maasäiliökorjaukset</h1>
+<p>Tämä moduuli auttaa tilavuusmittauksessa käytettävissä tavallisissa maasäiliökorjauksissa. Käytettävissä ovat seuraavat laskurit:</p>
+<ul>
+<li><strong>CTSh</strong>: vaipan korjauskerroin (säiliön vaipan lämpölaajeneminen).</li>
+<li><strong>FRC</strong>: kelluvan katon korjaus (katon syrjäyttämän tilavuuden vaikutus).</li>
+</ul>
+<h2>CTSh — vaipan korjauskerroin</h2>
+<p>CTSh on kerroin, jolla säiliön tilavuus korjataan vaipan lämpötilan vaikutusten mukaan. Anna lämpötilat ja materiaalikerroin, niin laskuri palauttaa CTSh:n.</p>
+<h3>Käyttö</h3>
+<ul>
+<li>Syötä tuotteen ylä-, keski- ja alaosan lämpötilat tai työnkulun edellyttämät arvot.</li>
+<li>Jos säiliö on <em>eristämätön</em>, anna myös ympäristön lämpötila.</li>
+<li>Syötä säiliön vertailu- tai kalibrointilämpötila ja lineaarinen lämpölaajenemiskerroin.</li>
+<li>Laske CTSh.</li>
+</ul>
+<h2>FRC — kelluvan katon korjaus</h2>
+<p>FRC arvioi kelluvan katon syrjäyttämän tilavuuden katon painon, tiheyden ja lämpötilan perusteella. Tulos esitetään määränä, jota sovelletaan oman raportointikäytännön mukaisesti.</p>
+<h3>Käyttö</h3>
+<ul>
+<li>Syötä kelluvan katon paino.</li>
+<li>Syötä tiheys tyhjiössä 15 °C:ssa ja havaittu lämpötila.</li>
+<li>Laske FRC.</li>
+</ul>
+<h2>Huomautukset</h2>
+<ul>
+<li>Kaikkien syötteiden on oltava numeroita. Tyhjät tai virheelliset kentät estävät mielekkään tuloksen.</li>
+<li>FRC riippuu CTL/VCF-laskennasta. Käytä sitä laskennan apuna, älä sertifiointityökaluna.</li>
+</ul>
+<p>Toteutusviite ylläpitäjille: <code>shared/src/commonMain/kotlin/fi/exsports/surveytools/ShoreTankCalculations.kt</code></p>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Lakitiedot</a><a href="mailto:info@exsports.fi">Ota yhteyttä</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

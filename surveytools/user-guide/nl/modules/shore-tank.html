@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Landtankcorrecties — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Landtankcorrecties — SurveyTools · Gebruikershandleiding · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/nl/modules/shore-tank.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/nl/index.html">SurveyTools</a><div class="tagline">Gebruikershandleiding</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="nl" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/shore-tank.html"></span><a href="/surveytools/user-guide/nl/index.html">Gebruikershandleiding</a><a href="/nl/index.html">Home</a></nav></header>
+<main class="card">
+<h1>Landtankcorrecties</h1>
+<p>Deze module helpt bij gangbare landtankcorrecties tijdens volumemetingen. De volgende calculators zijn beschikbaar:</p>
+<ul>
+<li><strong>CTSh</strong>: correctiefactor voor thermische uitzetting van de tankwand.</li>
+<li><strong>FRC</strong>: correctie voor het volume dat een drijvend dak verplaatst.</li>
+</ul>
+<h2>CTSh — tankwandcorrectiefactor</h2>
+<p>CTSh is een vermenigvuldigingsfactor die het tankvolume corrigeert voor temperatuureffecten op de wand. Voer temperaturen en een materiaalcoëfficiënt in om CTSh te berekenen.</p>
+<h3>Gebruik</h3>
+<ul>
+<li>Voer de producttemperaturen boven, midden en onder in, of de waarden die je werkproces vereist.</li>
+<li>Voer bij een <em>ongeïsoleerde</em> tank ook de omgevingstemperatuur in.</li>
+<li>Voer de referentie-/kalibratietemperatuur van de tank en de lineaire uitzettingscoëfficiënt in.</li>
+<li>Bereken CTSh.</li>
+</ul>
+<h2>FRC — correctie voor het drijvende dak</h2>
+<p>FRC schat het volume dat het drijvende dak verplaatst op basis van dakgewicht, dichtheid en temperatuur. Het resultaat is een hoeveelheid die je volgens je rapportageprocedure toepast.</p>
+<h3>Gebruik</h3>
+<ul>
+<li>Voer het gewicht van het drijvende dak in.</li>
+<li>Voer de dichtheid in vacuüm bij 15 °C en de waargenomen temperatuur in.</li>
+<li>Bereken FRC.</li>
+</ul>
+<h2>Opmerkingen</h2>
+<ul>
+<li>Alle invoer moet numeriek zijn. Lege of ongeldige velden verhinderen een zinvol resultaat.</li>
+<li>FRC hangt af van CTL/VCF. Gebruik het als rekenhulp, niet als certificeringsinstrument.</li>
+</ul>
+<p>Implementatiereferentie voor beheerders: <code>shared/src/commonMain/kotlin/fi/exsports/surveytools/ShoreTankCalculations.kt</code></p>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Juridische informatie</a><a href="mailto:info@exsports.fi">Contact</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

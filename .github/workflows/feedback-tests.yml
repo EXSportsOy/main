@@ -4,6 +4,7 @@ on:
   push:
     branches: [main]
     paths:
+      - '**/*.html'
       - 'feedback/**'
       - 'tests/feedback/**'
       - 'assets/i18n/**'
@@ -11,6 +12,7 @@ on:
       - '.github/workflows/feedback-tests.yml'
   pull_request:
     paths:
+      - '**/*.html'
       - 'feedback/**'
       - 'tests/feedback/**'
       - 'assets/i18n/**'

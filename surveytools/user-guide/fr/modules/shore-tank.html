@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Corrections des réservoirs terrestres — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Corrections des réservoirs terrestres — SurveyTools · Guide d’utilisation · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/fr/modules/shore-tank.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/fr/index.html">SurveyTools</a><div class="tagline">Guide d’utilisation</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="fr" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/shore-tank.html"></span><a href="/surveytools/user-guide/fr/index.html">Guide d’utilisation</a><a href="/fr/index.html">Accueil</a></nav></header>
+<main class="card">
+<h1>Corrections des réservoirs terrestres</h1>
+<p>Ce module facilite les corrections courantes des réservoirs terrestres lors des mesures de volume. Il comprend les calculateurs suivants :</p>
+<ul>
+<li><strong>CTSh</strong> : facteur de correction de la robe, lié à sa dilatation thermique.</li>
+<li><strong>FRC</strong> : correction du toit flottant, liée au volume qu’il déplace.</li>
+</ul>
+<h2>CTSh — facteur de correction de la robe</h2>
+<p>CTSh est un facteur multiplicatif qui corrige le volume du réservoir en fonction des effets thermiques sur sa robe. Saisissez les températures et un coefficient du matériau pour obtenir CTSh.</p>
+<h3>Utilisation</h3>
+<ul>
+<li>Saisissez les températures du produit en haut, au milieu et en bas, ou les valeurs requises par votre procédure.</li>
+<li>Si le réservoir est <em>non isolé</em>, indiquez aussi la température ambiante.</li>
+<li>Saisissez la température de référence/d’étalonnage du réservoir et le coefficient de dilatation linéaire.</li>
+<li>Calculez CTSh.</li>
+</ul>
+<h2>FRC — correction du toit flottant</h2>
+<p>FRC estime le volume déplacé par le toit flottant à partir de son poids, de la masse volumique et de la température. Le résultat est une quantité à appliquer selon votre procédure de rapport.</p>
+<h3>Utilisation</h3>
+<ul>
+<li>Saisissez le poids du toit flottant.</li>
+<li>Saisissez la masse volumique dans le vide à 15 °C et la température observée.</li>
+<li>Calculez FRC.</li>
+</ul>
+<h2>Remarques</h2>
+<ul>
+<li>Toutes les données doivent être numériques. Les champs vides ou invalides empêchent un résultat pertinent.</li>
+<li>FRC dépend de CTL/VCF : utilisez-le comme aide au calcul, pas comme outil de certification.</li>
+</ul>
+<p>Référence d’implémentation pour la maintenance : <code>shared/src/commonMain/kotlin/fi/exsports/surveytools/ShoreTankCalculations.kt</code></p>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Mentions légales</a><a href="mailto:info@exsports.fi">Contact</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

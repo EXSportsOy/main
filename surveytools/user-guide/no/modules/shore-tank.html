@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Landtankkorreksjoner — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Landtankkorreksjoner — SurveyTools · Brukerveiledning · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/no/modules/shore-tank.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/no/index.html">SurveyTools</a><div class="tagline">Brukerveiledning</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="no" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/shore-tank.html"></span><a href="/surveytools/user-guide/no/index.html">Brukerveiledning</a><a href="/no/index.html">Hjem</a></nav></header>
+<main class="card">
+<h1>Landtankkorreksjoner</h1>
+<p>Modulen hjelper med vanlige landtankkorreksjoner ved volummåling. Følgende kalkulatorer er tilgjengelige:</p>
+<ul>
+<li><strong>CTSh</strong>: korreksjonsfaktor for tankmantelens varmeutvidelse.</li>
+<li><strong>FRC</strong>: flytetakskorreksjon for volumet taket fortrenger.</li>
+</ul>
+<h2>CTSh — korreksjonsfaktor for tankmantelen</h2>
+<p>CTSh er en multiplikativ faktor som korrigerer tankvolumet for temperaturvirkninger i mantelen. Oppgi temperaturer og en materialkoeffisient for å få CTSh.</p>
+<h3>Slik gjør du</h3>
+<ul>
+<li>Oppgi produktets øvre, midtre og nedre temperatur, eller verdiene arbeidsflyten krever.</li>
+<li>Hvis tanken er <em>uisolert</em>, oppgi også omgivelsestemperaturen.</li>
+<li>Oppgi tankens referanse-/kalibreringstemperatur og den lineære utvidelseskoeffisienten.</li>
+<li>Beregn CTSh.</li>
+</ul>
+<h2>FRC — flytetakskorreksjon</h2>
+<p>FRC anslår volumet flytetaket fortrenger ut fra takets vekt, tetthet og temperatur. Resultatet vises som en mengde som brukes i henhold til rapporteringsrutinen.</p>
+<h3>Slik gjør du</h3>
+<ul>
+<li>Oppgi flytetakets vekt.</li>
+<li>Oppgi tetthet i vakuum ved 15 °C og observert temperatur.</li>
+<li>Beregn FRC.</li>
+</ul>
+<h2>Merknader</h2>
+<ul>
+<li>Alle inndata må være numeriske. Tomme eller ugyldige felt hindrer et meningsfullt resultat.</li>
+<li>FRC avhenger av CTL/VCF. Bruk funksjonen som beregningshjelp, ikke som sertifiseringsverktøy.</li>
+</ul>
+<p>Implementeringsreferanse for vedlikeholdere: <code>shared/src/commonMain/kotlin/fi/exsports/surveytools/ShoreTankCalculations.kt</code></p>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Juridisk informasjon</a><a href="mailto:info@exsports.fi">Kontakt</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

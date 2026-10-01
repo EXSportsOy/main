@@ -20,7 +20,7 @@
 <main class="fb-page" id="feedback">
 
   <div class="fb-top">
-    <a class="nav__brand" href="/index.html?pick=1"><img src="/assets/brand/wordmark-ink.png" alt="EXSports Oy" /></a>
+    <a class="nav__brand" href="/en/index.html"><img src="/assets/brand/wordmark-ink.png" alt="EXSports Oy" /></a>
     <span data-i18n-switcher data-current="en"></span>
   </div>
 
@@ -37,7 +37,7 @@
   </div>
 
   <!-- STEP 1: website vs program -->
-  <section class="fb-view is-active" id="view-choose" aria-label="Choose feedback type">
+  <section class="fb-view is-active" id="view-choose" aria-label="Choose feedback type" data-i18n="choose_type_label" data-i18n-attr="aria-label">
     <div class="fb-cards">
       <button class="fb-card" type="button" data-goto="view-website">
         <svg class="fb-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
@@ -53,7 +53,7 @@
   </section>
 
   <!-- STEP 2 (app): which app -->
-  <section class="fb-view" id="view-app" aria-label="Choose app">
+  <section class="fb-view" id="view-app" aria-label="Which app is your feedback about?" data-i18n="app_pick" data-i18n-attr="aria-label">
     <button class="fb-back" type="button" data-back="view-choose"><span aria-hidden="true">←</span> <span data-i18n="back">Back</span></button>
     <p class="fb-lead" style="margin-bottom:14px" data-i18n="app_pick">Which app is your feedback about?</p>
     <div class="fb-cards fb-cards--3">
@@ -70,7 +70,7 @@
   </section>
 
   <!-- STEP 3 (app): quick vs bug -->
-  <section class="fb-view" id="view-app-kind" aria-label="Choose app feedback type">
+  <section class="fb-view" id="view-app-kind" aria-label="Choose app feedback type" data-i18n="choose_app_feedback_label" data-i18n-attr="aria-label">
     <button class="fb-back" type="button" data-back="view-app"><span aria-hidden="true">←</span> <span data-i18n="back">Back</span></button>
     <p class="fb-lead" style="margin-bottom:14px"><span data-i18n="app_selected">Selected app:</span> <strong data-app-label>SurveyTools</strong></p>
     <div class="fb-cards">
@@ -88,12 +88,12 @@
   </section>
 
   <!-- FORM: website feedback -->
-  <section class="fb-view" id="view-website" aria-label="Website feedback">
+  <section class="fb-view" id="view-website" aria-label="Website feedback" data-i18n="choose_website_title" data-i18n-attr="aria-label">
     <button class="fb-back" type="button" data-back="view-choose"><span aria-hidden="true">←</span> <span data-i18n="back">Back</span></button>
     <form class="fb-form" data-category="website" data-app="website" novalidate>
       <div class="fb-field">
-        <label data-i18n="rating_website">How satisfied are you with the website? <span class="fb-opt" data-i18n="optional">(optional)</span></label>
-        <div class="fb-rating" data-rating role="group" aria-label="Rating, 1 to 5"></div>
+        <label data-i18n="rating_website">How satisfied are you with the website?</label>
+        <div class="fb-rating" data-rating role="group" aria-label="Rating, 1 to 5" data-i18n="rating_label" data-i18n-attr="aria-label"></div>
       </div>
       <div class="fb-field">
         <label for="w-message" data-i18n="your_feedback">Your feedback</label>
@@ -112,12 +112,12 @@
   </section>
 
   <!-- FORM: app quick feedback -->
-  <section class="fb-view" id="view-app-general" aria-label="Quick app feedback">
+  <section class="fb-view" id="view-app-general" aria-label="Quick feedback" data-i18n="general_title" data-i18n-attr="aria-label">
     <button class="fb-back" type="button" data-back="view-app-kind"><span aria-hidden="true">←</span> <span data-i18n="back">Back</span></button>
     <form class="fb-form" data-category="program_general" novalidate>
       <div class="fb-field">
-        <label data-i18n="rating_overall">Overall rating <span class="fb-opt" data-i18n="optional">(optional)</span></label>
-        <div class="fb-rating" data-rating role="group" aria-label="Rating, 1 to 5"></div>
+        <label data-i18n="rating_overall">Overall rating</label>
+        <div class="fb-rating" data-rating role="group" aria-label="Rating, 1 to 5" data-i18n="rating_label" data-i18n-attr="aria-label"></div>
       </div>
       <div class="fb-field">
         <label for="g-message"><span data-i18n="your_feedback_app">Your feedback about</span> <strong data-app-label>SurveyTools</strong></label>
@@ -136,7 +136,7 @@
   </section>
 
   <!-- FORM: bug report -->
-  <section class="fb-view" id="view-app-bug" aria-label="Bug report">
+  <section class="fb-view" id="view-app-bug" aria-label="Bug report" data-i18n="bug_title" data-i18n-attr="aria-label">
     <button class="fb-back" type="button" data-back="view-app-kind"><span aria-hidden="true">←</span> <span data-i18n="back">Back</span></button>
     <form class="fb-form" data-category="program_bug" novalidate>
       <div class="fb-field">
@@ -155,7 +155,9 @@
       </div>
       <div class="fb-field">
         <label for="b-steps" data-i18n="steps">Steps to reproduce</label>
-        <textarea class="fb-textarea" id="b-steps" name="steps" required maxlength="5000" data-i18n-ph="ph_steps" placeholder="1. Open…&#10;2. Tap…&#10;3. It happens…"></textarea>
+        <textarea class="fb-textarea" id="b-steps" name="steps" required maxlength="5000" data-i18n-ph="ph_steps" placeholder="1. Open…
+2. Tap…
+3. It happens…"></textarea>
         <p class="fb-error-msg" data-error-for="steps"></p>
       </div>
       <div class="fb-field">
@@ -192,7 +194,7 @@
     </div>
   </section>
 
-  <div class="fb-footer">&copy; 2026 EXSports Oy &nbsp;|&nbsp; <a href="/index.html" data-i18n="home">← Home</a></div>
+  <div class="fb-footer">&copy; 2026 EXSports Oy &nbsp;|&nbsp; <a href="/en/index.html" data-i18n="home">← Home</a></div>
 
 </main>
 

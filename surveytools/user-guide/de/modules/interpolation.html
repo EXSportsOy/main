@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Interpolation — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Interpolation — SurveyTools · Benutzerhandbuch · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/de/modules/interpolation.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/de/index.html">SurveyTools</a><div class="tagline">Benutzerhandbuch</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="de" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/interpolation.html"></span><a href="/surveytools/user-guide/de/index.html">Benutzerhandbuch</a><a href="/de/index.html">Startseite</a></nav></header>
+<main class="card">
+<h1>Interpolation</h1>
+<p>Interpolation schätzt einen Wert zwischen zwei bekannten Tabellenwerten. In SurveyTools ist sie vor allem für tabellenbasierte Arbeitsabläufe gedacht, etwa Ullage- und Trimmtabellen.</p>
+<h2>Typischer Ablauf</h2>
+<ol>
+<li>Ermitteln Sie die beiden umgebenden Tabellenpunkte oder Zeilen/Spalten.</li>
+<li>Geben Sie die bekannten Werte und den Messwert ein, für den Sie interpolieren möchten.</li>
+<li>Berechnen Sie das Ergebnis und kopieren Sie es in Ihr Arbeitsblatt oder Ihren Bericht.</li>
+</ol>
+<h2>Verfügbare Methoden</h2>
+<h3>Lineare Interpolation</h3>
+<p>Verwenden Sie diese Methode bei zwei bekannten Punkten <code>(x1, y1)</code> und <code>(x2, y2)</code>, wenn Sie <code>y</code> an der Stelle <code>x</code> benötigen.</p>
+<h3>Eindimensionale Interpolation (Tabellenintervall)</h3>
+<p>Verwenden Sie diese Methode bei einem bekannten, festen Tabellenintervall, etwa Ullage in mm. Geben Sie den Messwert (<code>ullage</code>), das Intervall und die beiden benachbarten Tabellenwerte (<code>y1</code>, <code>y2</code>) an.</p>
+<h3>Zweidimensionale Interpolation (Ullage + Trimm)</h3>
+<p>Verwenden Sie diese Methode, wenn die Tabelle von zwei Variablen abhängt, meist Ullage und Trimm. Die App interpoliert zuerst entlang der Ullage für jede Trimmspalte und anschließend zwischen den beiden Zwischenergebnissen entlang der Trimmachse.</p>
+<h2>Hinweise und Grenzen</h2>
+<ul>
+<li>Bei Intervallen von null oder negativen Intervallen ist die Interpolation ungültig.</li>
+<li>Bei identischen x-Werten (<code>x1 == x2</code>) ist keine eindeutige Interpolation möglich.</li>
+<li>Prüfen Sie stets, ob die Werte zum richtigen Tank beziehungsweise zur richtigen Tabelle gehören und die Einheiten stimmen.</li>
+</ul>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Impressum</a><a href="mailto:info@exsports.fi">Kontakt</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

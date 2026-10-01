@@ -41,6 +41,20 @@ function setApp(app) {
 /* ---------- View navigation ---------- */
 function showView(id) {
   root.querySelectorAll(".fb-view").forEach((v) => v.classList.toggle("is-active", v.id === id));
+  // Keep manually selected app/view in the URL too, so changing language uses
+  // the same context as opening a direct bug-report link.
+  if (id !== "view-done") {
+    const url = new URL(location.href);
+    url.searchParams.delete("app");
+    url.hash = "";
+    if (id === "view-website") url.searchParams.set("app", "website");
+    else if (["view-app-kind", "view-app-general", "view-app-bug"].includes(id)) {
+      url.searchParams.set("app", currentApp);
+      if (id === "view-app-general") url.hash = "general";
+      if (id === "view-app-bug") url.hash = "bug";
+    } else if (id === "view-app") url.hash = "app";
+    history.replaceState(null, "", url);
+  }
   const active = document.getElementById(id);
   if (active && id !== "view-done") {
     const f = active.querySelector("input, textarea, button, select");

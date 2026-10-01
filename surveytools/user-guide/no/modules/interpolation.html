@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Interpolasjon — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Interpolasjon — SurveyTools · Brukerveiledning · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/no/modules/interpolation.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/no/index.html">SurveyTools</a><div class="tagline">Brukerveiledning</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="no" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/interpolation.html"></span><a href="/surveytools/user-guide/no/index.html">Brukerveiledning</a><a href="/no/index.html">Hjem</a></nav></header>
+<main class="card">
+<h1>Interpolasjon</h1>
+<p>Interpolasjon anslår en verdi mellom to kjente tabellverdier. I SurveyTools er den først og fremst beregnet på tabellbaserte arbeidsflyter, for eksempel ullage- og trimtabeller.</p>
+<h2>Typisk arbeidsflyt</h2>
+<ol>
+<li>Finn de to omkringliggende tabellpunktene eller radene/kolonnene.</li>
+<li>Legg inn kjente verdier og måleverdien du ønsker å interpolere for.</li>
+<li>Beregn og kopier resultatet til regnearket eller rapporten.</li>
+</ol>
+<h2>Tilgjengelige metoder</h2>
+<h3>Lineær interpolasjon</h3>
+<p>Bruk dette når du kjenner punktene <code>(x1, y1)</code> og <code>(x2, y2)</code> og trenger <code>y</code> ved <code>x</code>.</p>
+<h3>Enveis interpolasjon (tabellintervall)</h3>
+<p>Bruk dette når tabellen har et kjent, fast intervall, for eksempel ullage i mm. Oppgi måleverdien (<code>ullage</code>), intervallet og de to naboverdiene i tabellen (<code>y1</code>, <code>y2</code>).</p>
+<h3>Toveis interpolasjon (ullage + trim)</h3>
+<p>Bruk dette når tabellen avhenger av to variabler, vanligvis ullage og trim. Appen interpolerer først langs ullage for hver trimkolonne, og deretter mellom de to mellomresultatene langs trimaksen.</p>
+<h2>Merknader og begrensninger</h2>
+<ul>
+<li>Interpolasjonen er ugyldig når intervallene er null eller negative.</li>
+<li>Når x-verdiene er like (<code>x1 == x2</code>), er entydig interpolasjon ikke mulig.</li>
+<li>Kontroller alltid at verdiene tilhører riktig tank/tabell og bruker riktige enheter.</li>
+</ul>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Juridisk informasjon</a><a href="mailto:info@exsports.fi">Kontakt</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

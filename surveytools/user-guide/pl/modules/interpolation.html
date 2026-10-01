@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Interpolacja — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Interpolacja — SurveyTools · Instrukcja obsługi · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/pl/modules/interpolation.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/pl/index.html">SurveyTools</a><div class="tagline">Instrukcja obsługi</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="pl" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/interpolation.html"></span><a href="/surveytools/user-guide/pl/index.html">Instrukcja obsługi</a><a href="/pl/index.html">Strona główna</a></nav></header>
+<main class="card">
+<h1>Interpolacja</h1>
+<p>Interpolacja pozwala oszacować wartość między dwiema znanymi wartościami tabeli. W SurveyTools służy przede wszystkim do pracy z tabelami, na przykład tabelami ulażu i przegłębienia.</p>
+<h2>Typowy sposób pracy</h2>
+<ol>
+<li>Znajdź dwa otaczające punkty tabeli lub odpowiednie wiersze/kolumny.</li>
+<li>Wprowadź znane wartości i wartość pomiaru, dla której chcesz interpolować.</li>
+<li>Oblicz i skopiuj wynik do arkusza roboczego lub raportu.</li>
+</ol>
+<h2>Dostępne metody</h2>
+<h3>Interpolacja liniowa</h3>
+<p>Użyj jej, gdy znasz punkty <code>(x1, y1)</code> i <code>(x2, y2)</code> i potrzebujesz <code>y</code> dla <code>x</code>.</p>
+<h3>Interpolacja jednej zmiennej (odstęp w tabeli)</h3>
+<p>Użyj jej, gdy tabela ma znany stały odstęp, na przykład ulaż w mm. Podaj wartość pomiaru (<code>ullage</code>), odstęp i dwie sąsiednie wartości tabeli (<code>y1</code>, <code>y2</code>).</p>
+<h3>Interpolacja dwóch zmiennych (ulaż + przegłębienie)</h3>
+<p>Użyj jej, gdy tabela zależy od dwóch zmiennych, zwykle ulażu i przegłębienia. Aplikacja najpierw interpoluje wzdłuż ulażu dla każdej kolumny przegłębienia, a następnie między dwoma wynikami pośrednimi wzdłuż osi przegłębienia.</p>
+<h2>Uwagi i ograniczenia</h2>
+<ul>
+<li>Przy zerowych lub ujemnych odstępach interpolacja jest nieprawidłowa.</li>
+<li>Jeśli wartości x są identyczne (<code>x1 == x2</code>), jednoznaczna interpolacja nie jest możliwa.</li>
+<li>Zawsze sprawdzaj, czy wartości dotyczą właściwego zbiornika/tabeli i mają właściwe jednostki.</li>
+</ul>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Informacje prawne</a><a href="mailto:info@exsports.fi">Kontakt</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

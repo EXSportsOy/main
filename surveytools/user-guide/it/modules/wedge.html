@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Calcolatore del cuneo — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Calcolatore del cuneo — SurveyTools · Guida utente · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/it/modules/wedge.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/it/index.html">SurveyTools</a><div class="tagline">Guida utente</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="it" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/wedge.html"></span><a href="/surveytools/user-guide/it/index.html">Guida utente</a><a href="/it/index.html">Home</a></nav></header>
+<main class="card">
+<h1>Calcolatore del cuneo</h1>
+<p>Il calcolatore si usa quando la nave ha un assetto longitudinale e il prodotto nel serbatoio forma un cuneo, cioè un triangolo visto di lato. Può accadere con volumi ridotti, quando il liquido non tocca tutte e quattro le pareti del serbatoio.</p>
+<h2>Dati necessari</h2>
+<ul>
+<li><strong>Pescaggio a poppa</strong> e <strong>pescaggio a prua</strong> per ricavare l’assetto.</li>
+<li><strong>LBP</strong>, lunghezza tra le perpendicolari.</li>
+<li><strong>Lunghezza del serbatoio</strong>.</li>
+<li><strong>Altezza di riferimento</strong> e <strong>distanza dalla paratia di poppa al punto di misura</strong>.</li>
+<li><strong>Sondaggio osservato</strong>.</li>
+<li><strong>Volume tabellare</strong> per la condizione pertinente, dalla tabella del serbatoio.</li>
+</ul>
+<h2>Funzionamento generale</h2>
+<ol>
+<li>Calcola l’assetto della nave: pescaggio a poppa meno pescaggio a prua.</li>
+<li>Divide l’assetto per LBP per ottenere il fattore di assetto.</li>
+<li>Calcola un sondaggio corretto in base alla geometria dell’assetto e alla posizione del punto di misura.</li>
+<li>Verifica se si tratta di un caso di cuneo e segnala se non lo è.</li>
+<li>Stima il volume a cuneo usando il volume tabellare e il sondaggio corretto.</li>
+</ol>
+<h2>Note pratiche</h2>
+<ul>
+<li>Se <strong>LBP = 0</strong>, il calcolo non è valido.</li>
+<li>Senza <strong>differenza di pescaggio</strong>, con fattore di assetto nullo, l’effetto del cuneo è nullo.</li>
+<li>Verifica che il valore tabellare usi lo stesso riferimento e le stesse unità dei dati inseriti.</li>
+</ul>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Informazioni legali</a><a href="mailto:info@exsports.fi">Contatti</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

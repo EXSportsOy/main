@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Landtankkorrekturen — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Landtankkorrekturen — SurveyTools · Benutzerhandbuch · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/de/modules/shore-tank.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/de/index.html">SurveyTools</a><div class="tagline">Benutzerhandbuch</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="de" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/shore-tank.html"></span><a href="/surveytools/user-guide/de/index.html">Benutzerhandbuch</a><a href="/de/index.html">Startseite</a></nav></header>
+<main class="card">
+<h1>Landtankkorrekturen</h1>
+<p>Dieses Modul unterstützt übliche Landtankkorrekturen bei der Volumenmessung. Folgende Rechner sind verfügbar:</p>
+<ul>
+<li><strong>CTSh</strong>: Mantelkorrekturfaktor für die Wärmeausdehnung des Tankmantels.</li>
+<li><strong>FRC</strong>: Schwimmdachkorrektur für die Verdrängungswirkung des Dachs.</li>
+</ul>
+<h2>CTSh — Mantelkorrekturfaktor</h2>
+<p>CTSh ist ein multiplikativer Faktor, der das Tankvolumen hinsichtlich der Temperatureinflüsse auf den Mantel korrigiert. Geben Sie Temperaturen und einen Materialkoeffizienten ein, um CTSh zu erhalten.</p>
+<h3>Verwendung</h3>
+<ul>
+<li>Geben Sie die obere, mittlere und untere Produkttemperatur oder die für Ihren Ablauf erforderlichen Werte ein.</li>
+<li>Bei einem <em>nicht isolierten</em> Tank geben Sie auch die Umgebungstemperatur an.</li>
+<li>Geben Sie die Referenz-/Kalibriertemperatur des Tanks und den linearen Ausdehnungskoeffizienten ein.</li>
+<li>Berechnen Sie CTSh.</li>
+</ul>
+<h2>FRC — Schwimmdachkorrektur</h2>
+<p>FRC schätzt das vom Schwimmdach verdrängte Volumen anhand des Dachgewichts, der Dichte und der Temperatur. Das Ergebnis wird als Betrag angezeigt, den Sie gemäß Ihrem Berichtsverfahren anwenden.</p>
+<h3>Verwendung</h3>
+<ul>
+<li>Geben Sie das Schwimmdachgewicht ein.</li>
+<li>Geben Sie die Dichte bei 15 °C im Vakuum und die beobachtete Temperatur ein.</li>
+<li>Berechnen Sie FRC.</li>
+</ul>
+<h2>Hinweise</h2>
+<ul>
+<li>Alle Eingaben müssen numerisch sein. Leere oder ungültige Felder verhindern ein sinnvolles Ergebnis.</li>
+<li>FRC hängt von CTL/VCF ab. Verwenden Sie es als Rechenhilfe, nicht als Zertifizierungswerkzeug.</li>
+</ul>
+<p>Implementierungsreferenz für die Wartung: <code>shared/src/commonMain/kotlin/fi/exsports/surveytools/ShoreTankCalculations.kt</code></p>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Impressum</a><a href="mailto:info@exsports.fi">Kontakt</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

@@ -15,14 +15,33 @@
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/styles.css" />
 <link rel="stylesheet" href="/legal.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<link rel="canonical" href="https://www.exsports.fi/shodia/user-guide/index.html" />
+<link rel="alternate" hreflang="en" href="https://www.exsports.fi/shodia/user-guide/index.html" />
+<link rel="alternate" hreflang="fi" href="https://www.exsports.fi/shodia/user-guide/fi/index.html" />
+<link rel="alternate" hreflang="sv" href="https://www.exsports.fi/shodia/user-guide/sv/index.html" />
+<link rel="alternate" hreflang="no" href="https://www.exsports.fi/shodia/user-guide/no/index.html" />
+<link rel="alternate" hreflang="da" href="https://www.exsports.fi/shodia/user-guide/da/index.html" />
+<link rel="alternate" hreflang="et" href="https://www.exsports.fi/shodia/user-guide/et/index.html" />
+<link rel="alternate" hreflang="lv" href="https://www.exsports.fi/shodia/user-guide/lv/index.html" />
+<link rel="alternate" hreflang="lt" href="https://www.exsports.fi/shodia/user-guide/lt/index.html" />
+<link rel="alternate" hreflang="de" href="https://www.exsports.fi/shodia/user-guide/de/index.html" />
+<link rel="alternate" hreflang="fr" href="https://www.exsports.fi/shodia/user-guide/fr/index.html" />
+<link rel="alternate" hreflang="es" href="https://www.exsports.fi/shodia/user-guide/es/index.html" />
+<link rel="alternate" hreflang="it" href="https://www.exsports.fi/shodia/user-guide/it/index.html" />
+<link rel="alternate" hreflang="nl" href="https://www.exsports.fi/shodia/user-guide/nl/index.html" />
+<link rel="alternate" hreflang="pl" href="https://www.exsports.fi/shodia/user-guide/pl/index.html" />
+<link rel="alternate" hreflang="pt" href="https://www.exsports.fi/shodia/user-guide/pt/index.html" />
+<link rel="alternate" hreflang="x-default" href="https://www.exsports.fi/shodia/user-guide/index.html" />
 </head>
 <body class="theme-sage">
 
 <header class="nav" id="nav">
   <div class="wrap nav__inner">
-    <a class="nav__brand" href="/index.html"><img src="/assets/brand/wordmark-ink.png" alt="exs" /><span class="mono-tag">EXSports Oy</span></a>
+    <a class="nav__brand" href="/en/index.html"><img src="/assets/brand/wordmark-ink.png" alt="exs" /><span class="mono-tag">EXSports Oy</span></a>
     <nav class="nav__links">
-      <a href="/index.html" class="hide-sm">Home</a>
+      <span data-i18n-switcher data-current="en" data-base="/shodia/user-guide" data-file="index.html" data-root-lang="en"></span>
+      <a href="/en/index.html" class="hide-sm">Home</a>
       <a href="/legal/imprint.html" class="hide-sm">Imprint</a>
       <a href="mailto:info@exsports.fi" class="cta">Contact</a>
     </nav>
@@ -30,7 +49,7 @@
 </header>
 <section class="doc-head stage">
   <div class="wrap doc-head__inner">
-    <a class="backlink" href="/shodia/index.html"><span>←</span> Shodia</a>
+    <a class="backlink" href="/shodia/en/index.html"><span>←</span> Shodia</a>
     <p class="eyebrow">Shodia · Guide</p>
     <h1>User Guide</h1>
 
@@ -41,11 +60,11 @@
 
 <h3>Logging a session</h3>
 <p>Add a new session and record the essentials: firearm, ammunition, distance, hit locations and scores. Sessions are timestamped and stored locally.</p>
-<h3>Tracking requirements</h3>
-<p>Set the requirement that applies to you — for example Finland <strong>5 visits within 12 months</strong> for a firearms licence — and Shodia keeps a running count, so you always know where you stand. See the <a href="/shodia/legal/disclaimer.html">Disclaimer</a> for the limits of this feature.</p>
+<h3>Tracking your target</h3>
+<p>Set your own visit target and Shodia keeps a running count, so you always know your progress. Confirm the licensing requirements that apply to you with the relevant authority. See the <a href="/shodia/legal/disclaimer.html">Disclaimer</a> for the limits of this feature.</p>
 <h3>Exporting records</h3>
 <ul>
-<li><strong>PDF</strong> — country-specific templates for authorities and instructors.</li>
+<li><strong>PDF</strong> — country-specific templates for a training summary you can share with authorities or instructors. Confirm with the recipient whether the summary is acceptable for your purpose.</li>
 <li><strong>CSV</strong> — your full history for personal analysis, with no lock-in.</li>
 </ul>
 <p>Exports are generated on demand and shared only where you send them.</p>
@@ -61,10 +80,10 @@
 </div></div>
 <footer class="footer">
   <div class="wrap footer__inner">
-    <a class="footer__brand" href="/index.html"><img src="/assets/brand/wordmark-ink.png" alt="exs" /></a>
+    <a class="footer__brand" href="/en/index.html"><img src="/assets/brand/wordmark-ink.png" alt="exs" /></a>
     <div class="footer__meta">
       <span>© 2026 EXSPORTS OY</span><span class="dot">·</span>
-      <a href="/index.html">Home</a><span class="dot">·</span>
+      <a href="/en/index.html">Home</a><span class="dot">·</span>
       <a href="/legal/imprint.html">Imprint</a><span class="dot">·</span>
       <a href="mailto:info@exsports.fi">Contact</a>
     </div>
@@ -76,5 +95,7 @@
   const onScroll=()=>nav.classList.toggle('is-stuck',window.scrollY>8);
   onScroll(); addEventListener('scroll',onScroll,{passive:true});
 </script>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
 </body>
 </html>

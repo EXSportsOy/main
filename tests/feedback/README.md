@@ -14,6 +14,8 @@ npm test
 
 Playwright starts a loopback-only static server automatically. Chromium loads the real application scripts and the Supabase SDK from esm.sh, so these tests require network access. They cover English and Finnish website feedback, app selection, bug-report deep links and fields, required fields, email validation, the honeypot, and recovery after a failed submission. Every browser submission is intercepted and answered by the test. Other write requests and unexpected Supabase calls are blocked. Script and stylesheet failures and uncaught JavaScript errors fail the test.
 
+The browser suite also checks that language changes preserve the selected app and feedback view, direct localized links override a different remembered language, and translated guide/legal pages switch to the equivalent document (including the original English URLs).
+
 ## Check the published site and production API
 
 In PowerShell:

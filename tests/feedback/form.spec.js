@@ -156,3 +156,58 @@ test('honeypot blocks automated submissions', async ({ page, backend }) => {
   await expect(page.locator('#view-done')).toBeVisible();
   expect(backend.requests).toHaveLength(0);
 });
+
+test('changing language keeps the selected app and bug-report view', async ({ page, backend }) => {
+  await open(page, 'fi', '?app=heda#bug');
+  await expect(page.locator('#view-app-bug')).toBeVisible();
+  await expect(page.locator('#view-app-bug')).toHaveAttribute('aria-label', 'Bugiraportti');
+  await page.getByRole('combobox', { name: 'Kieli', exact: true }).selectOption('de');
+  await expect(page).toHaveURL(/\/feedback\/de\/index\.html\?app=heda#bug$/);
+  await expect(page.locator('#view-app-bug')).toBeVisible();
+  await expect(page.locator('#view-app-bug [data-app-label]')).toHaveText('Heda');
+  await expect(page.locator('#view-app-bug')).toHaveAttribute('aria-label', 'Fehlerbericht');
+  expect(backend.requests).toHaveLength(0);
+});
+
+test('changing language also preserves an app selected through the form', async ({ page, backend }) => {
+  await open(page);
+  await page.locator('[data-goto="view-app"]').click();
+  await page.locator('[data-app="shodia"][data-goto]').click();
+  await page.locator('[data-goto="view-app-general"]').click();
+  await page.getByRole('combobox', { name: 'Language', exact: true }).selectOption('fi');
+  await expect(page).toHaveURL(/\/feedback\/fi\/index\.html\?app=shodia#general$/);
+  await expect(page.locator('#view-app-general')).toBeVisible();
+  await expect(page.locator('#view-app-general [data-app-label]')).toHaveText('Shodia');
+  expect(backend.requests).toHaveLength(0);
+});
+
+test('direct Finnish homepage links stay Finnish despite a remembered English choice', async ({ page, backend }) => {
+  await page.addInitScript(() => localStorage.setItem('exs-lang', 'en'));
+  await page.goto('/fi/index.html');
+  await page.locator('a.app--survey').click();
+  await expect(page).toHaveURL(/\/surveytools\/fi\/index\.html$/);
+  await page.locator('a[href="/legal/fi/privacy_policy.html"]').click();
+  await expect(page).toHaveURL(/\/legal\/fi\/privacy_policy\.html$/);
+  expect(backend.requests).toHaveLength(0);
+});
+
+test('a translated calculation guide switches language without losing the module', async ({ page }) => {
+  await page.goto('/surveytools/user-guide/fi/modules/wedge.html');
+  await page.getByRole('combobox', { name: 'Kieli', exact: true }).selectOption('de');
+  await expect(page).toHaveURL(/\/surveytools\/user-guide\/de\/modules\/wedge\.html$/);
+  await expect(page.locator('html')).toHaveAttribute('lang', 'de');
+  await page.getByRole('combobox', { name: 'Sprache', exact: true }).selectOption('en');
+  await expect(page).toHaveURL(/\/surveytools\/user-guide\/modules\/wedge\.html$/);
+  await expect(page.locator('html')).toHaveAttribute('lang', /^en(?:-GB)?$/);
+});
+
+test('Shodia privacy switches between a translated page and the original English URL', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/shodia/legal/fi/privacy_policy.html');
+  await page.getByRole('combobox', { name: 'Kieli', exact: true }).selectOption('en');
+  await expect(page).toHaveURL(/\/shodia\/legal\/privacy_policy\.html$/);
+  await page.getByRole('combobox', { name: 'Language', exact: true }).selectOption('pt');
+  await expect(page).toHaveURL(/\/shodia\/legal\/pt\/privacy_policy\.html$/);
+  await expect(page.locator('html')).toHaveAttribute('lang', 'pt');
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+});

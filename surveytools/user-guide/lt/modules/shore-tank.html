@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="lt">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sausumos talpyklų pataisos — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Sausumos talpyklų pataisos — SurveyTools · Naudotojo vadovas · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/lt/modules/shore-tank.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/lt/index.html">SurveyTools</a><div class="tagline">Naudotojo vadovas</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="lt" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/shore-tank.html"></span><a href="/surveytools/user-guide/lt/index.html">Naudotojo vadovas</a><a href="/lt/index.html">Pradžia</a></nav></header>
+<main class="card">
+<h1>Sausumos talpyklų pataisos</h1>
+<p>Šis modulis padeda taikyti įprastas sausumos talpyklų pataisas matuojant tūrį. Jame yra šie skaičiuotuvai:</p>
+<ul>
+<li><strong>CTSh</strong>: talpyklos korpuso šiluminio plėtimosi pataisos koeficientas.</li>
+<li><strong>FRC</strong>: plūduriuojančio stogo išstumto tūrio pataisa.</li>
+</ul>
+<h2>CTSh – korpuso pataisos koeficientas</h2>
+<p>CTSh yra daugiklis, koreguojantis talpyklos tūrį pagal temperatūros poveikį korpusui. Įveskite temperatūras ir medžiagos koeficientą, kad gautumėte CTSh.</p>
+<h3>Naudojimas</h3>
+<ul>
+<li>Įveskite produkto temperatūrą viršuje, viduryje ir apačioje arba darbo eigai reikalingas reikšmes.</li>
+<li>Jei talpykla <em>neizoliuota</em>, taip pat nurodykite aplinkos temperatūrą.</li>
+<li>Įveskite talpyklos atskaitos / kalibravimo temperatūrą ir tiesinio plėtimosi koeficientą.</li>
+<li>Apskaičiuokite CTSh.</li>
+</ul>
+<h2>FRC – plūduriuojančio stogo pataisa</h2>
+<p>FRC įvertina plūduriuojančio stogo išstumtą tūrį pagal stogo svorį, tankį ir temperatūrą. Rezultatas pateikiamas kaip dydis, taikomas pagal jūsų ataskaitų rengimo tvarką.</p>
+<h3>Naudojimas</h3>
+<ul>
+<li>Įveskite plūduriuojančio stogo svorį.</li>
+<li>Įveskite tankį vakuume esant 15 °C ir išmatuotą temperatūrą.</li>
+<li>Apskaičiuokite FRC.</li>
+</ul>
+<h2>Pastabos</h2>
+<ul>
+<li>Visi įvesties duomenys turi būti skaitiniai. Tušti ar netinkami laukai neleidžia gauti prasmingo rezultato.</li>
+<li>FRC priklauso nuo CTL/VCF. Naudokite jį kaip skaičiavimo pagalbinę priemonę, o ne sertifikavimo įrankį.</li>
+</ul>
+<p>Įgyvendinimo nuoroda prižiūrėtojams: <code>shared/src/commonMain/kotlin/fi/exsports/surveytools/ShoreTankCalculations.kt</code></p>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Teisinė informacija</a><a href="mailto:info@exsports.fi">Kontaktai</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

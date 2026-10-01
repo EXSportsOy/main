@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Interpolation — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Interpolation — SurveyTools · Användarguide · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/sv/modules/interpolation.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/sv/index.html">SurveyTools</a><div class="tagline">Användarguide</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="sv" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/interpolation.html"></span><a href="/surveytools/user-guide/sv/index.html">Användarguide</a><a href="/sv/index.html">Hem</a></nav></header>
+<main class="card">
+<h1>Interpolation</h1>
+<p>Interpolation uppskattar ett värde mellan två kända tabellvärden. I SurveyTools är den främst avsedd för tabellbaserade arbetsflöden, exempelvis ullage- och trimtabeller.</p>
+<h2>Typiskt arbetsflöde</h2>
+<ol>
+<li>Identifiera de två omgivande tabellpunkterna eller raderna/kolumnerna.</li>
+<li>Ange de kända värdena och det uppmätta värde som du vill interpolera för.</li>
+<li>Beräkna och kopiera det interpolerade resultatet till arbetsbladet eller rapporten.</li>
+</ol>
+<h2>Tillgängliga metoder</h2>
+<h3>Linjär interpolation</h3>
+<p>Använd när du har två kända punkter, <code>(x1, y1)</code> och <code>(x2, y2)</code>, och behöver <code>y</code> vid <code>x</code>.</p>
+<h3>Envägsinterpolation (tabellintervall)</h3>
+<p>Använd när tabellen har ett känt fast intervall, exempelvis ullage i mm. Ange mätvärdet (<code>ullage</code>), intervallet och de två intilliggande tabellvärdena (<code>y1</code>, <code>y2</code>).</p>
+<h3>Tvåvägsinterpolation (ullage + trim)</h3>
+<p>Använd när tabellen beror på två variabler, vanligen ullage och trim. Appen interpolerar först längs ullage för varje trimkolumn och därefter mellan de två mellanresultaten längs trimaxeln.</p>
+<h2>Anmärkningar och begränsningar</h2>
+<ul>
+<li>Interpolation är ogiltig om intervallen är noll eller negativa.</li>
+<li>Om x-värdena är identiska (<code>x1 == x2</code>) går det inte att få en entydig interpolation.</li>
+<li>Kontrollera alltid att värdena hör till rätt tank/tabell och har rätt enheter.</li>
+</ul>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Företagsuppgifter</a><a href="mailto:info@exsports.fi">Kontakt</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

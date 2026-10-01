@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kilekalkulator — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Kilekalkulator — SurveyTools · Brukerveiledning · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/no/modules/wedge.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/no/index.html">SurveyTools</a><div class="tagline">Brukerveiledning</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="no" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/wedge.html"></span><a href="/surveytools/user-guide/no/index.html">Brukerveiledning</a><a href="/no/index.html">Hjem</a></nav></header>
+<main class="card">
+<h1>Kilekalkulator</h1>
+<p>Kilekalkulatoren brukes når fartøyet har trim og væsken i tanken danner en kile, en trekant sett fra siden. Det kan skje ved små volum der væsken ikke berører alle fire tankveggene.</p>
+<h2>Nødvendige inndata</h2>
+<ul>
+<li><strong>Akterdypgang</strong> og <strong>fordypgang</strong> for å beregne trim.</li>
+<li><strong>LBP</strong>, lengden mellom perpendikulærene.</li>
+<li><strong>Tanklengde</strong>.</li>
+<li><strong>Referansehøyde</strong> og <strong>avstand fra akterskott til målepunkt</strong>.</li>
+<li><strong>Målt peiling (sounding)</strong>.</li>
+<li><strong>Tabellvolum</strong> for den aktuelle tilstanden, fra tanktabellen.</li>
+</ul>
+<h2>Hva kalkulatoren gjør på overordnet nivå</h2>
+<ol>
+<li>Beregner fartøyets trim: akterdypgang minus fordypgang.</li>
+<li>Deler trim på LBP for å finne trimfaktoren.</li>
+<li>Beregner korrigert peiling ut fra trimgeometri og målepunktets plassering.</li>
+<li>Kontrollerer om det er et kiletilfelle, og viser om det ikke er det.</li>
+<li>Anslår kilevolum ved hjelp av tabellvolum og korrigert peiling.</li>
+</ol>
+<h2>Praktiske merknader</h2>
+<ul>
+<li>Beregningen er ugyldig hvis <strong>LBP = 0</strong>.</li>
+<li>Uten <strong>trim</strong>, når trimfaktoren er null, er kileeffekten null.</li>
+<li>Kontroller at tabellverdien bruker samme referanse og enheter som inndataene.</li>
+</ul>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Juridisk informasjon</a><a href="mailto:info@exsports.fi">Kontakt</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

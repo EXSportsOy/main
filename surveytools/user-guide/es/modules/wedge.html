@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Calculadora de cuña — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Calculadora de cuña — SurveyTools · Guía de usuario · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/es/modules/wedge.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/es/index.html">SurveyTools</a><div class="tagline">Guía de usuario</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="es" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/wedge.html"></span><a href="/surveytools/user-guide/es/index.html">Guía de usuario</a><a href="/es/index.html">Inicio</a></nav></header>
+<main class="card">
+<h1>Calculadora de cuña</h1>
+<p>La calculadora de cuña se usa cuando un buque tiene asiento y el producto del tanque forma una cuña, un triángulo visto de lado. Puede ocurrir con volúmenes pequeños cuando el líquido no toca las cuatro paredes del tanque.</p>
+<h2>Datos necesarios</h2>
+<ul>
+<li><strong>Calado de popa</strong> y <strong>calado de proa</strong> para obtener el asiento.</li>
+<li><strong>LBP</strong>, eslora entre perpendiculares.</li>
+<li><strong>Longitud del tanque</strong>.</li>
+<li><strong>Altura de referencia</strong> y <strong>distancia del mamparo de popa al punto de medición</strong>.</li>
+<li><strong>Sonda observada</strong>.</li>
+<li><strong>Volumen de tabla</strong> para la condición correspondiente, obtenido de la tabla del tanque.</li>
+</ul>
+<h2>Funcionamiento general del cálculo</h2>
+<ol>
+<li>Calcula el asiento del buque: calado de popa menos calado de proa.</li>
+<li>Divide el asiento entre LBP para obtener el factor de asiento.</li>
+<li>Calcula una sonda corregida según la geometría del asiento y la posición del punto de medición.</li>
+<li>Comprueba si se trata de un caso de cuña e indica cuando no lo es.</li>
+<li>Estima el volumen en cuña con el volumen de tabla y la sonda corregida.</li>
+</ol>
+<h2>Notas prácticas</h2>
+<ul>
+<li>Si <strong>LBP = 0</strong>, el cálculo no es válido.</li>
+<li>Sin <strong>asiento</strong>, cuando el factor de asiento es cero, el efecto de cuña es cero.</li>
+<li>Asegúrate de que el valor de tabla use la misma referencia y las mismas unidades que los datos introducidos.</li>
+</ul>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Información legal</a><a href="mailto:info@exsports.fi">Contacto</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

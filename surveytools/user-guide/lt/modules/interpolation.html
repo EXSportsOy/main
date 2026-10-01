@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="lt">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Interpoliacija — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Interpoliacija — SurveyTools · Naudotojo vadovas · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/lt/modules/interpolation.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/lt/index.html">SurveyTools</a><div class="tagline">Naudotojo vadovas</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="lt" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/interpolation.html"></span><a href="/surveytools/user-guide/lt/index.html">Naudotojo vadovas</a><a href="/lt/index.html">Pradžia</a></nav></header>
+<main class="card">
+<h1>Interpoliacija</h1>
+<p>Interpoliacija leidžia įvertinti reikšmę tarp dviejų žinomų lentelės reikšmių. SurveyTools ji pirmiausia skirta lentelėmis pagrįstiems darbams, pavyzdžiui, laisvosios erdvės aukščio (ullage) ir diferento lentelėms.</p>
+<h2>Įprasta darbo eiga</h2>
+<ol>
+<li>Raskite du reikšmę ribojančius lentelės taškus arba atitinkamas eilutes / stulpelius.</li>
+<li>Įveskite žinomas reikšmes ir išmatuotą reikšmę, kuriai norite interpoliuoti.</li>
+<li>Apskaičiuokite ir nukopijuokite interpoliuotą rezultatą į darbalapį ar ataskaitą.</li>
+</ol>
+<h2>Galimi metodai</h2>
+<h3>Tiesinė interpoliacija</h3>
+<p>Naudokite, kai žinote taškus <code>(x1, y1)</code> ir <code>(x2, y2)</code> ir reikia rasti <code>y</code>, kai argumentas yra <code>x</code>.</p>
+<h3>Vienos krypties interpoliacija (lentelės intervalas)</h3>
+<p>Naudokite, kai lentelės intervalas žinomas ir pastovus, pavyzdžiui, laisvosios erdvės aukštis mm. Nurodykite išmatuotą reikšmę (<code>ullage</code>), intervalą ir dvi gretimas lentelės reikšmes (<code>y1</code>, <code>y2</code>).</p>
+<h3>Dviejų krypčių interpoliacija (ullage + diferentas)</h3>
+<p>Naudokite, kai lentelė priklauso nuo dviejų kintamųjų, paprastai laisvosios erdvės aukščio ir diferento. Programėlė pirmiausia interpoliuoja pagal laisvosios erdvės aukštį kiekviename diferento stulpelyje, o tada tarp dviejų tarpinių rezultatų pagal diferento ašį.</p>
+<h2>Pastabos ir apribojimai</h2>
+<ul>
+<li>Kai intervalai lygūs nuliui arba neigiami, interpoliacija negalioja.</li>
+<li>Jei x reikšmės vienodos (<code>x1 == x2</code>), vienareikšmė interpoliacija neįmanoma.</li>
+<li>Visada patikrinkite, ar reikšmės priklauso tinkamai talpyklai / lentelei ir ar vienetai teisingi.</li>
+</ul>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Teisinė informacija</a><a href="mailto:info@exsports.fi">Kontaktai</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

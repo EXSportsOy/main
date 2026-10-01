@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Interpolation — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Interpolation — SurveyTools · Guide d’utilisation · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/fr/modules/interpolation.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/fr/index.html">SurveyTools</a><div class="tagline">Guide d’utilisation</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="fr" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/interpolation.html"></span><a href="/surveytools/user-guide/fr/index.html">Guide d’utilisation</a><a href="/fr/index.html">Accueil</a></nav></header>
+<main class="card">
+<h1>Interpolation</h1>
+<p>L’interpolation estime une valeur située entre deux valeurs connues d’un tableau. Dans SurveyTools, elle est principalement destinée aux opérations fondées sur des tables, par exemple les tables de creux et d’assiette.</p>
+<h2>Procédure type</h2>
+<ol>
+<li>Repérez les deux points du tableau qui encadrent la valeur, ou les deux lignes/colonnes correspondantes.</li>
+<li>Saisissez les valeurs connues et la valeur mesurée pour laquelle vous souhaitez interpoler.</li>
+<li>Effectuez le calcul et copiez le résultat dans votre feuille de calcul ou votre rapport.</li>
+</ol>
+<h2>Méthodes disponibles</h2>
+<h3>Interpolation linéaire</h3>
+<p>Utilisez cette méthode lorsque vous connaissez <code>(x1, y1)</code> et <code>(x2, y2)</code> et cherchez <code>y</code> pour <code>x</code>.</p>
+<h3>Interpolation à une variable (intervalle du tableau)</h3>
+<p>Utilisez cette méthode si le tableau présente un intervalle fixe connu, par exemple le creux en mm. Indiquez la mesure (<code>ullage</code>), l’intervalle et les deux valeurs voisines (<code>y1</code>, <code>y2</code>).</p>
+<h3>Interpolation à deux variables (creux + assiette)</h3>
+<p>Utilisez cette méthode si le tableau dépend de deux variables, généralement le creux et l’assiette. L’application interpole d’abord selon le creux pour chaque colonne d’assiette, puis entre ces deux résultats intermédiaires selon l’axe de l’assiette.</p>
+<h2>Remarques et limites</h2>
+<ul>
+<li>L’interpolation est invalide si les intervalles sont nuls ou négatifs.</li>
+<li>Si les valeurs de x sont identiques (<code>x1 == x2</code>), aucune interpolation unique n’est possible.</li>
+<li>Vérifiez toujours que les valeurs correspondent au bon réservoir/tableau et aux bonnes unités.</li>
+</ul>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Mentions légales</a><a href="mailto:info@exsports.fi">Contact</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

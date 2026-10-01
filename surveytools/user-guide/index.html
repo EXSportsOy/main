@@ -28,14 +28,16 @@
   /* override prose link underline inside module cards */
   .prose a.module{ text-decoration:none; }
 </style>
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
 </head>
 <body class="theme-survey">
 
 <header class="nav" id="nav">
   <div class="wrap nav__inner">
-    <a class="nav__brand" href="/index.html"><img src="/assets/brand/wordmark-ink.png" alt="exs" /><span class="mono-tag">EXSports Oy</span></a>
+    <a class="nav__brand" href="/en/index.html"><img src="/assets/brand/wordmark-ink.png" alt="exs" /><span class="mono-tag">EXSports Oy</span></a>
     <nav class="nav__links">
-      <a href="/index.html" class="hide-sm">Home</a>
+      <span data-i18n-switcher data-current="en" data-base="/surveytools/user-guide" data-root-lang="en" data-file="index.html"></span>
+      <a href="/en/index.html" class="hide-sm">Home</a>
       <a href="/legal/imprint.html" class="hide-sm">Imprint</a>
       <a href="mailto:info@exsports.fi" class="cta">Contact</a>
     </nav>
@@ -44,7 +46,7 @@
 
 <section class="doc-head stage">
   <div class="wrap doc-head__inner">
-    <a class="backlink" href="/surveytools/index.html"><span>←</span> SurveyTools</a>
+    <a class="backlink" href="/surveytools/en/index.html"><span>←</span> SurveyTools</a>
     <p class="eyebrow">SurveyTools · Guide</p>
     <h1>User Guide</h1>
     <div class="meta"><span>UK English</span><span>EXSports Oy</span></div>
@@ -74,6 +76,10 @@
       <div class="mt">Wedge calculator <span class="arrow">→</span></div>
       <div class="md">Estimate wedge volume when a tank is trimmed and product does not cover all walls.</div>
     </a>
+    <a class="module" href="/surveytools/user-guide/modules/shore-tank.html">
+      <div class="mt">Shore tank corrections <span class="arrow">→</span></div>
+      <div class="md">Tank shell thermal expansion and floating roof displacement corrections.</div>
+    </a>
     <a class="module" href="/surveytools/user-guide/modules/unit-conversions.html">
       <div class="mt">Unit conversions <span class="arrow">→</span></div>
       <div class="md">Density and volume conversions used in survey workflows.</div>
@@ -97,10 +103,10 @@
 
 <footer class="footer">
   <div class="wrap footer__inner">
-    <a class="footer__brand" href="/index.html"><img src="/assets/brand/wordmark-ink.png" alt="exs" /></a>
+    <a class="footer__brand" href="/en/index.html"><img src="/assets/brand/wordmark-ink.png" alt="exs" /></a>
     <div class="footer__meta">
       <span>© 2026 EXSPORTS OY</span><span class="dot">·</span>
-      <a href="/index.html">Home</a><span class="dot">·</span>
+      <a href="/en/index.html">Home</a><span class="dot">·</span>
       <a href="/legal/imprint.html">Imprint</a><span class="dot">·</span>
       <a href="mailto:info@exsports.fi">Contact</a>
     </div>
@@ -113,5 +119,7 @@
   const onScroll=()=>nav.classList.toggle('is-stuck',window.scrollY>8);
   onScroll(); addEventListener('scroll',onScroll,{passive:true});
 </script>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
 </body>
 </html>

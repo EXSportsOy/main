@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kalkulator klina — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Kalkulator klina — SurveyTools · Instrukcja obsługi · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/pl/modules/wedge.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/pl/index.html">SurveyTools</a><div class="tagline">Instrukcja obsługi</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="pl" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/wedge.html"></span><a href="/surveytools/user-guide/pl/index.html">Instrukcja obsługi</a><a href="/pl/index.html">Strona główna</a></nav></header>
+<main class="card">
+<h1>Kalkulator klina</h1>
+<p>Kalkulator klina stosuje się, gdy statek ma przegłębienie, a produkt w zbiorniku tworzy klin, czyli trójkąt widziany z boku. Może to wystąpić przy małych objętościach, gdy ciecz nie dotyka wszystkich czterech ścian zbiornika.</p>
+<h2>Potrzebne dane</h2>
+<ul>
+<li><strong>Zanurzenie na rufie</strong> i <strong>zanurzenie na dziobie</strong> do wyznaczenia przegłębienia.</li>
+<li><strong>LBP</strong>, długość między pionami.</li>
+<li><strong>Długość zbiornika</strong>.</li>
+<li><strong>Wysokość odniesienia</strong> i <strong>odległość od grodzi rufowej do punktu pomiarowego</strong>.</li>
+<li><strong>Zmierzony poziom cieczy (sounding)</strong>.</li>
+<li><strong>Objętość z tabeli</strong> dla danego stanu, z tabeli zbiornika.</li>
+</ul>
+<h2>Ogólna zasada działania</h2>
+<ol>
+<li>Oblicza przegłębienie statku: zanurzenie na rufie minus zanurzenie na dziobie.</li>
+<li>Dzieli przegłębienie przez LBP, uzyskując współczynnik przegłębienia.</li>
+<li>Oblicza skorygowany poziom cieczy na podstawie geometrii przegłębienia i położenia punktu pomiarowego.</li>
+<li>Sprawdza, czy występuje klin, i sygnalizuje, jeśli nie występuje.</li>
+<li>Szacuje objętość klina z objętości tabelarycznej i skorygowanego poziomu cieczy.</li>
+</ol>
+<h2>Uwagi praktyczne</h2>
+<ul>
+<li>Przy <strong>LBP = 0</strong> obliczenie jest nieprawidłowe.</li>
+<li>Bez <strong>przegłębienia</strong>, gdy jego współczynnik wynosi zero, efekt klina jest zerowy.</li>
+<li>Upewnij się, że wartość tabelaryczna ma ten sam punkt odniesienia i te same jednostki co dane wejściowe.</li>
+</ul>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Informacje prawne</a><a href="mailto:info@exsports.fi">Kontakt</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Calculateur de volume en coin — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Calculateur de volume en coin — SurveyTools · Guide d’utilisation · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/fr/modules/wedge.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/fr/index.html">SurveyTools</a><div class="tagline">Guide d’utilisation</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="fr" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/wedge.html"></span><a href="/surveytools/user-guide/fr/index.html">Guide d’utilisation</a><a href="/fr/index.html">Accueil</a></nav></header>
+<main class="card">
+<h1>Calculateur de volume en coin</h1>
+<p>Ce calculateur s’utilise lorsque le navire a une assiette et que le produit dans le réservoir forme un coin, soit un triangle vu de côté. Cela peut se produire avec de faibles volumes, lorsque le liquide ne touche pas les quatre parois du réservoir.</p>
+<h2>Données nécessaires</h2>
+<ul>
+<li><strong>Tirant d’eau arrière</strong> et <strong>tirant d’eau avant</strong> pour déterminer l’assiette.</li>
+<li><strong>LBP</strong>, longueur entre perpendiculaires.</li>
+<li><strong>Longueur du réservoir</strong>.</li>
+<li><strong>Hauteur de référence</strong> et <strong>distance entre la cloison arrière et le point de jaugeage</strong>.</li>
+<li><strong>Sondage mesuré</strong>.</li>
+<li><strong>Volume tabulé</strong> pour la condition concernée, issu de la table du réservoir.</li>
+</ul>
+<h2>Principe du calcul</h2>
+<ol>
+<li>Calcule l’assiette : tirant d’eau arrière moins tirant d’eau avant.</li>
+<li>Divise l’assiette par LBP pour obtenir le facteur d’assiette.</li>
+<li>Calcule un sondage corrigé selon la géométrie de l’assiette et la position du point de jaugeage.</li>
+<li>Vérifie s’il s’agit d’un cas de coin et indique si ce n’est pas le cas.</li>
+<li>Estime le volume en coin à partir du volume tabulé et du sondage corrigé.</li>
+</ol>
+<h2>Remarques pratiques</h2>
+<ul>
+<li>Le calcul est invalide si <strong>LBP = 0</strong>.</li>
+<li>Sans <strong>assiette</strong>, lorsque le facteur d’assiette est nul, l’effet de coin est nul.</li>
+<li>Assurez-vous que le volume tabulé utilise la même référence et les mêmes unités que les données saisies.</li>
+</ul>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Mentions légales</a><a href="mailto:info@exsports.fi">Contact</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

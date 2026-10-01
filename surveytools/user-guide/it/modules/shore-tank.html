@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Correzioni dei serbatoi a terra — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Correzioni dei serbatoi a terra — SurveyTools · Guida utente · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/it/modules/shore-tank.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/it/index.html">SurveyTools</a><div class="tagline">Guida utente</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="it" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/shore-tank.html"></span><a href="/surveytools/user-guide/it/index.html">Guida utente</a><a href="/it/index.html">Home</a></nav></header>
+<main class="card">
+<h1>Correzioni dei serbatoi a terra</h1>
+<p>Questo modulo facilita le comuni correzioni dei serbatoi a terra durante le misure di volume. Sono disponibili i seguenti calcolatori:</p>
+<ul>
+<li><strong>CTSh</strong>: fattore di correzione del mantello per la sua dilatazione termica.</li>
+<li><strong>FRC</strong>: correzione del tetto galleggiante per il volume spostato dal tetto.</li>
+</ul>
+<h2>CTSh — fattore di correzione del mantello</h2>
+<p>CTSh è un fattore moltiplicativo che corregge il volume del serbatoio per gli effetti della temperatura sul mantello. Inserisci temperature e un coefficiente del materiale per ottenere CTSh.</p>
+<h3>Utilizzo</h3>
+<ul>
+<li>Inserisci le temperature del prodotto nella parte alta, centrale e bassa, oppure i valori richiesti dalla tua procedura.</li>
+<li>Se il serbatoio <em>non è isolato</em>, indica anche la temperatura ambiente.</li>
+<li>Inserisci la temperatura di riferimento/taratura del serbatoio e il coefficiente di dilatazione lineare.</li>
+<li>Calcola CTSh.</li>
+</ul>
+<h2>FRC — correzione del tetto galleggiante</h2>
+<p>FRC stima il volume spostato dal tetto galleggiante in base al peso del tetto, alla densità e alla temperatura. Il risultato è una quantità da applicare secondo la tua procedura di rendicontazione.</p>
+<h3>Utilizzo</h3>
+<ul>
+<li>Inserisci il peso del tetto galleggiante.</li>
+<li>Inserisci la densità nel vuoto a 15 °C e la temperatura osservata.</li>
+<li>Calcola FRC.</li>
+</ul>
+<h2>Note</h2>
+<ul>
+<li>Tutti i dati devono essere numerici. Campi vuoti o non validi impediscono un risultato significativo.</li>
+<li>FRC dipende da CTL/VCF: usalo come ausilio al calcolo, non come strumento di certificazione.</li>
+</ul>
+<p>Riferimento di implementazione per la manutenzione: <code>shared/src/commonMain/kotlin/fi/exsports/surveytools/ShoreTankCalculations.kt</code></p>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Informazioni legali</a><a href="mailto:info@exsports.fi">Contatti</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

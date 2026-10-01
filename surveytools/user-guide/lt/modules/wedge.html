@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="lt">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pleišto skaičiuotuvas — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Pleišto skaičiuotuvas — SurveyTools · Naudotojo vadovas · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/lt/modules/wedge.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/lt/index.html">SurveyTools</a><div class="tagline">Naudotojo vadovas</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="lt" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/wedge.html"></span><a href="/surveytools/user-guide/lt/index.html">Naudotojo vadovas</a><a href="/lt/index.html">Pradžia</a></nav></header>
+<main class="card">
+<h1>Pleišto skaičiuotuvas</h1>
+<p>Pleišto skaičiuotuvas naudojamas, kai laivas turi diferentą, o produktas talpykloje sudaro pleištą – trikampį žiūrint iš šono. Taip gali nutikti esant mažam tūriui, kai skystis nesiekia visų keturių talpyklos sienų.</p>
+<h2>Reikalingi duomenys</h2>
+<ul>
+<li><strong>Grimzlė laivagalyje</strong> ir <strong>grimzlė laivapriekyje</strong> diferentui nustatyti.</li>
+<li><strong>LBP</strong> – ilgis tarp statmenų.</li>
+<li><strong>Talpyklos ilgis</strong>.</li>
+<li><strong>Atskaitos aukštis</strong> ir <strong>atstumas nuo laivagalio pertvaros iki matavimo taško</strong>.</li>
+<li><strong>Išmatuotas skysčio aukštis (sounding)</strong>.</li>
+<li><strong>Lentelės tūris</strong> atitinkamai būsenai iš talpyklos lentelės.</li>
+</ul>
+<h2>Bendras skaičiavimo principas</h2>
+<ol>
+<li>Apskaičiuoja laivo diferentą: grimzlė laivagalyje minus grimzlė laivapriekyje.</li>
+<li>Padalija diferentą iš LBP ir gauna diferento koeficientą.</li>
+<li>Apskaičiuoja pataisytą skysčio aukštį pagal diferento geometriją ir matavimo taško vietą.</li>
+<li>Patikrina, ar susidaro pleištas, ir nurodo, jei taip nėra.</li>
+<li>Įvertina pleišto tūrį pagal lentelės tūrį ir pataisytą skysčio aukštį.</li>
+</ol>
+<h2>Praktinės pastabos</h2>
+<ul>
+<li>Kai <strong>LBP = 0</strong>, skaičiavimas negalioja.</li>
+<li>Kai <strong>diferento nėra</strong>, jo koeficientas lygus nuliui, o pleišto poveikis yra nulinis.</li>
+<li>Įsitikinkite, kad lentelės reikšmė ir įvesties duomenys naudoja tą patį atskaitos pagrindą ir vienetus.</li>
+</ul>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Teisinė informacija</a><a href="mailto:info@exsports.fi">Kontaktai</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

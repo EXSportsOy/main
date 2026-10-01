@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Keilvolumenrechner — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Keilvolumenrechner — SurveyTools · Benutzerhandbuch · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/de/modules/wedge.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/de/index.html">SurveyTools</a><div class="tagline">Benutzerhandbuch</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="de" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/wedge.html"></span><a href="/surveytools/user-guide/de/index.html">Benutzerhandbuch</a><a href="/de/index.html">Startseite</a></nav></header>
+<main class="card">
+<h1>Keilvolumenrechner</h1>
+<p>Der Keilvolumenrechner wird verwendet, wenn ein Schiff vertrimmt ist und das Produkt im Tank einen Keil bildet, also in der Seitenansicht ein Dreieck. Das kann bei kleinen Volumen vorkommen, wenn die Flüssigkeit nicht alle vier Tankwände berührt.</p>
+<h2>Benötigte Eingaben</h2>
+<ul>
+<li><strong>Tiefgang achtern</strong> und <strong>Tiefgang vorn</strong> zur Ermittlung des Trimms.</li>
+<li><strong>LBP</strong>, die Länge zwischen den Loten.</li>
+<li><strong>Tanklänge</strong>.</li>
+<li><strong>Referenzhöhe</strong> und <strong>Abstand vom hinteren Schott zum Peilpunkt</strong>.</li>
+<li><strong>Gemessene Peilhöhe (Sounding)</strong>.</li>
+<li><strong>Tabellenvolumen</strong> für den betreffenden Zustand aus Ihrer Tanktabelle.</li>
+</ul>
+<h2>Berechnungsablauf im Überblick</h2>
+<ol>
+<li>Berechnet den Schiffstrimm: Tiefgang achtern minus Tiefgang vorn.</li>
+<li>Dividiert den Trimm durch LBP und erhält den Trimmfaktor.</li>
+<li>Berechnet eine korrigierte Peilhöhe anhand der Trimmgeometrie und der Lage des Peilpunkts.</li>
+<li>Prüft, ob ein Keilfall vorliegt, und zeigt an, wenn dies nicht der Fall ist.</li>
+<li>Schätzt das Keilvolumen anhand des Tabellenvolumens und der korrigierten Peilhöhe.</li>
+</ol>
+<h2>Praktische Hinweise</h2>
+<ul>
+<li>Bei <strong>LBP = 0</strong> ist die Berechnung ungültig.</li>
+<li>Ohne <strong>Trimm</strong>, also bei Trimmfaktor null, ist der Keileffekt null.</li>
+<li>Achten Sie darauf, dass Tabellenwert und Eingaben dieselbe Referenz und dieselben Einheiten verwenden.</li>
+</ul>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Impressum</a><a href="mailto:info@exsports.fi">Kontakt</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

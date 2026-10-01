@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Calculadora de cunha — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Calculadora de cunha — SurveyTools · Guia do utilizador · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/pt/modules/wedge.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/pt/index.html">SurveyTools</a><div class="tagline">Guia do utilizador</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="pt" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/wedge.html"></span><a href="/surveytools/user-guide/pt/index.html">Guia do utilizador</a><a href="/pt/index.html">Início</a></nav></header>
+<main class="card">
+<h1>Calculadora de cunha</h1>
+<p>A calculadora de cunha utiliza-se quando o navio tem caimento e o produto no tanque forma uma cunha, isto é, um triângulo visto de lado. Pode acontecer com pequenos volumes, quando o líquido não toca nas quatro paredes do tanque.</p>
+<h2>Dados necessários</h2>
+<ul>
+<li><strong>Calado à popa</strong> e <strong>calado à proa</strong> para obter o caimento.</li>
+<li><strong>LBP</strong>, comprimento entre perpendiculares.</li>
+<li><strong>Comprimento do tanque</strong>.</li>
+<li><strong>Altura de referência</strong> e <strong>distância da antepara de ré ao ponto de medição</strong>.</li>
+<li><strong>Sondagem observada</strong>.</li>
+<li><strong>Volume da tabela</strong> para a condição relevante, retirado da tabela do tanque.</li>
+</ul>
+<h2>Funcionamento geral</h2>
+<ol>
+<li>Calcula o caimento do navio: calado à popa menos calado à proa.</li>
+<li>Divide o caimento por LBP para obter o fator de caimento.</li>
+<li>Calcula uma sondagem corrigida com base na geometria do caimento e na posição do ponto de medição.</li>
+<li>Verifica se se trata de um caso de cunha e indica quando não é.</li>
+<li>Estima o volume em cunha usando o volume da tabela e a sondagem corrigida.</li>
+</ol>
+<h2>Notas práticas</h2>
+<ul>
+<li>Se <strong>LBP = 0</strong>, o cálculo é inválido.</li>
+<li>Sem <strong>caimento</strong>, quando o fator de caimento é zero, o efeito da cunha é zero.</li>
+<li>Certifique-se de que o valor da tabela usa a mesma referência e as mesmas unidades que os dados introduzidos.</li>
+</ul>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Informações legais</a><a href="mailto:info@exsports.fi">Contacto</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

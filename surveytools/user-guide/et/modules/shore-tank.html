@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="et">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Maismaamahutite parandused — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Maismaamahutite parandused — SurveyTools · Kasutusjuhend · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/et/modules/shore-tank.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/et/index.html">SurveyTools</a><div class="tagline">Kasutusjuhend</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="et" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/shore-tank.html"></span><a href="/surveytools/user-guide/et/index.html">Kasutusjuhend</a><a href="/et/index.html">Avaleht</a></nav></header>
+<main class="card">
+<h1>Maismaamahutite parandused</h1>
+<p>Moodul aitab mahu mõõtmisel rakendada tavalisi maismaamahutite parandusi. Saadaval on järgmised kalkulaatorid:</p>
+<ul>
+<li><strong>CTSh</strong>: mahuti kesta soojuspaisumise parandustegur.</li>
+<li><strong>FRC</strong>: ujuvkatuse väljatõrjutud mahu parandus.</li>
+</ul>
+<h2>CTSh — kesta parandustegur</h2>
+<p>CTSh on kordaja, mis parandab mahuti mahtu kesta temperatuurimõjude järgi. Sisesta temperatuurid ja materjalitegur, et saada CTSh.</p>
+<h3>Kasutamine</h3>
+<ul>
+<li>Sisesta toote ülemise, keskmise ja alumise kihi temperatuurid või töövoos nõutavad väärtused.</li>
+<li>Kui mahuti on <em>isoleerimata</em>, sisesta ka ümbritseva keskkonna temperatuur.</li>
+<li>Sisesta mahuti võrdlus-/kalibreerimistemperatuur ja lineaarne soojuspaisumistegur.</li>
+<li>Arvuta CTSh.</li>
+</ul>
+<h2>FRC — ujuvkatuse parandus</h2>
+<p>FRC hindab ujuvkatuse väljatõrjutud mahtu katuse kaalu, tiheduse ja temperatuuri põhjal. Tulemus kuvatakse kogusena, mida rakendatakse vastavalt sinu aruandlusprotseduurile.</p>
+<h3>Kasutamine</h3>
+<ul>
+<li>Sisesta ujuvkatuse kaal.</li>
+<li>Sisesta tihedus vaakumis 15 °C juures ja mõõdetud temperatuur.</li>
+<li>Arvuta FRC.</li>
+</ul>
+<h2>Märkused</h2>
+<ul>
+<li>Kõik sisendid peavad olema arvulised. Tühjad või vigased väljad takistavad sisuka tulemuse saamist.</li>
+<li>FRC sõltub CTL/VCF-ist. Kasuta seda arvutusabina, mitte sertifitseerimisvahendina.</li>
+</ul>
+<p>Teostuse viide hooldajatele: <code>shared/src/commonMain/kotlin/fi/exsports/surveytools/ShoreTankCalculations.kt</code></p>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Juriidiline teave</a><a href="mailto:info@exsports.fi">Kontakt</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

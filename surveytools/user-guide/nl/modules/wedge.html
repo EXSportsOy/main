@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Wigcalculator — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Wigcalculator — SurveyTools · Gebruikershandleiding · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/nl/modules/wedge.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/nl/index.html">SurveyTools</a><div class="tagline">Gebruikershandleiding</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="nl" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/wedge.html"></span><a href="/surveytools/user-guide/nl/index.html">Gebruikershandleiding</a><a href="/nl/index.html">Home</a></nav></header>
+<main class="card">
+<h1>Wigcalculator</h1>
+<p>De wigcalculator wordt gebruikt als een schip trim heeft en de vloeistof in een tank een wig vormt: van opzij gezien een driehoek. Dit kan bij kleine volumes voorkomen als de vloeistof niet alle vier de tankwanden raakt.</p>
+<h2>Benodigde invoer</h2>
+<ul>
+<li><strong>Diepgang achter</strong> en <strong>diepgang voor</strong> om trim te bepalen.</li>
+<li><strong>LBP</strong>, lengte tussen de loodlijnen.</li>
+<li><strong>Tanklengte</strong>.</li>
+<li><strong>Referentiehoogte</strong> en <strong>afstand van het achterschot tot het meetpunt</strong>.</li>
+<li><strong>Gemeten peiling (sounding)</strong>.</li>
+<li><strong>Tabelvolume</strong> voor de betreffende toestand uit je tanktabel.</li>
+</ul>
+<h2>Wat de calculator in grote lijnen doet</h2>
+<ol>
+<li>Berekent scheepstrim: diepgang achter min diepgang voor.</li>
+<li>Deelt trim door LBP om de trimfactor te verkrijgen.</li>
+<li>Berekent een gecorrigeerde peiling op basis van trimgeometrie en de plaats van het meetpunt.</li>
+<li>Controleert of er sprake is van een wig en geeft aan als dat niet zo is.</li>
+<li>Schat het wigvolume met het tabelvolume en de gecorrigeerde peiling.</li>
+</ol>
+<h2>Praktische opmerkingen</h2>
+<ul>
+<li>Bij <strong>LBP = 0</strong> is de berekening ongeldig.</li>
+<li>Zonder <strong>trim</strong>, dus bij trimfactor nul, is het wigeffect nul.</li>
+<li>Controleer of de tabelwaarde dezelfde referentie en eenheden gebruikt als de invoer.</li>
+</ul>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Juridische informatie</a><a href="mailto:info@exsports.fi">Contact</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

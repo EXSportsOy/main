@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="et">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kiilukalkulaator — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Kiilukalkulaator — SurveyTools · Kasutusjuhend · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/et/modules/wedge.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/et/index.html">SurveyTools</a><div class="tagline">Kasutusjuhend</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="et" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/wedge.html"></span><a href="/surveytools/user-guide/et/index.html">Kasutusjuhend</a><a href="/et/index.html">Avaleht</a></nav></header>
+<main class="card">
+<h1>Kiilukalkulaator</h1>
+<p>Kiilukalkulaatorit kasutatakse siis, kui laeval on trimm ja mahutis olev vedelik moodustab kiilu ehk külgvaates kolmnurga. See võib juhtuda väikeste koguste korral, kui vedelik ei puuduta mahuti kõiki nelja seina.</p>
+<h2>Vajalikud sisendid</h2>
+<ul>
+<li><strong>Ahtrisüvis</strong> ja <strong>vöörisüvis</strong> trimmi leidmiseks.</li>
+<li><strong>LBP</strong> ehk pikkus perpendikulaaride vahel.</li>
+<li><strong>Mahuti pikkus</strong>.</li>
+<li><strong>Võrdluskõrgus</strong> ja <strong>kaugus ahtripoolsest vaheseinast mõõtepunktini</strong>.</li>
+<li><strong>Mõõdetud vedelikukõrgus (sounding)</strong>.</li>
+<li><strong>Tabelimaht</strong> vastava olukorra jaoks mahuti tabelist.</li>
+</ul>
+<h2>Kalkulaatori töö üldpõhimõte</h2>
+<ol>
+<li>Arvutab laeva trimmi: ahtrisüvis miinus vöörisüvis.</li>
+<li>Jagab trimmi LBP-ga, et saada trimmitegur.</li>
+<li>Arvutab parandatud vedelikukõrguse trimmi geomeetria ja mõõtepunkti asukoha järgi.</li>
+<li>Kontrollib, kas tegemist on kiiluga, ja annab teada, kui see nii ei ole.</li>
+<li>Hindab kiilumahtu tabelimahu ja parandatud vedelikukõrguse põhjal.</li>
+</ol>
+<h2>Praktilised märkused</h2>
+<ul>
+<li>Kui <strong>LBP = 0</strong>, on arvutus kehtetu.</li>
+<li>Kui <strong>trimmi pole</strong> ehk trimmitegur on null, on kiiluefekt null.</li>
+<li>Veendu, et tabeliväärtus kasutab sisenditega sama võrdlusalust ja samu ühikuid.</li>
+</ul>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Juriidiline teave</a><a href="mailto:info@exsports.fi">Kontakt</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

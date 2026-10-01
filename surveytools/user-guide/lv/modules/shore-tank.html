@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="lv">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sauszemes tvertņu korekcijas — SurveyTools · EXSports Oy</title>
+<meta name="description" content="Sauszemes tvertņu korekcijas — SurveyTools · Lietotāja rokasgrāmata · EXSports Oy" />
+<link rel="canonical" href="https://www.exsports.fi/surveytools/user-guide/lv/modules/shore-tank.html" />
+<link rel="icon" href="/assets/brand/favicon-32.png" />
+<link rel="stylesheet" href="/surveytools/user-guide/styles.css" />
+<link rel="stylesheet" href="/assets/i18n/i18n.css" />
+<style>.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.tile{margin:12px 0}.footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px}</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><div class="brand"><a class="logo" href="/surveytools/lv/index.html">SurveyTools</a><div class="tagline">Lietotāja rokasgrāmata</div></div>
+<nav class="nav"><span data-i18n-switcher data-current="lv" data-base="/surveytools/user-guide" data-root-lang="en" data-file="modules/shore-tank.html"></span><a href="/surveytools/user-guide/lv/index.html">Lietotāja rokasgrāmata</a><a href="/lv/index.html">Sākums</a></nav></header>
+<main class="card">
+<h1>Sauszemes tvertņu korekcijas</h1>
+<p>Šis modulis palīdz veikt parastās sauszemes tvertņu korekcijas tilpuma mērījumos. Pieejami šādi kalkulatori:</p>
+<ul>
+<li><strong>CTSh</strong>: tvertnes korpusa termiskās izplešanās korekcijas koeficients.</li>
+<li><strong>FRC</strong>: peldošā jumta izspiestā tilpuma korekcija.</li>
+</ul>
+<h2>CTSh — korpusa korekcijas koeficients</h2>
+<p>CTSh ir reizinātājs, kas koriģē tvertnes tilpumu, ņemot vērā temperatūras ietekmi uz korpusu. Ievadiet temperatūras un materiāla koeficientu, lai iegūtu CTSh.</p>
+<h3>Lietošana</h3>
+<ul>
+<li>Ievadiet produkta augšējās, vidējās un apakšējās daļas temperatūru vai darbplūsmā nepieciešamās vērtības.</li>
+<li>Ja tvertne <em>nav izolēta</em>, ievadiet arī apkārtējās vides temperatūru.</li>
+<li>Ievadiet tvertnes atskaites/kalibrēšanas temperatūru un lineārās izplešanās koeficientu.</li>
+<li>Aprēķiniet CTSh.</li>
+</ul>
+<h2>FRC — peldošā jumta korekcija</h2>
+<p>FRC novērtē peldošā jumta izspiesto tilpumu pēc jumta svara, blīvuma un temperatūras. Rezultāts ir daudzums, ko piemēro atbilstoši jūsu pārskatu sagatavošanas kārtībai.</p>
+<h3>Lietošana</h3>
+<ul>
+<li>Ievadiet peldošā jumta svaru.</li>
+<li>Ievadiet blīvumu vakuumā pie 15 °C un novēroto temperatūru.</li>
+<li>Aprēķiniet FRC.</li>
+</ul>
+<h2>Piezīmes</h2>
+<ul>
+<li>Visiem ievaddatiem jābūt skaitliskiem. Tukši vai nederīgi lauki neļauj iegūt jēgpilnu rezultātu.</li>
+<li>FRC ir atkarīgs no CTL/VCF. Izmantojiet to kā aprēķinu palīglīdzekli, nevis sertifikācijas rīku.</li>
+</ul>
+<p>Realizācijas atsauce uzturētājiem: <code>shared/src/commonMain/kotlin/fi/exsports/surveytools/ShoreTankCalculations.kt</code></p>
+</main>
+<footer class="footer"><span>© 2026 EXSports Oy</span><a href="/legal/imprint.html">Juridiskā informācija</a><a href="mailto:info@exsports.fi">Kontakti</a></footer>
+</div>
+<script src="/assets/i18n/languages.js"></script>
+<script src="/assets/i18n/switcher.js"></script>
+</body>
+</html>

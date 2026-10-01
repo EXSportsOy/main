@@ -1,0 +1,31 @@
+name: Website language and link checks
+
+on:
+  push:
+    branches: [main]
+    paths: ['**/*.html', 'assets/i18n/**', 'feedback/feedback-i18n.js', 'tools/**', 'tests/i18n/**', 'sitemap.xml', '.github/workflows/site-checks.yml']
+  pull_request:
+    paths: ['**/*.html', 'assets/i18n/**', 'feedback/feedback-i18n.js', 'tools/**', 'tests/i18n/**', 'sitemap.xml', '.github/workflows/site-checks.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: node --test tests/i18n/*.test.*
+      - run: python tests/i18n/site_integrity.py
+      - run: node tools/render-feedback.mjs
+      - run: node tools/generate-sitemap.mjs
+      - run: git diff --exit-code -- feedback sitemap.xml
