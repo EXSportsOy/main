@@ -9,3 +9,12 @@
 /tests/feedback/test-results/
 /tests/feedback/playwright-report/
 /tests/i18n/__pycache__/
+
+# Firebase CLI, functions and migration dependencies, exported data
+/firebase/functions/node_modules/
+/firebase/migration/node_modules/
+/firebase/migration/*.json
+!/firebase/migration/package.json
+!/firebase/migration/package-lock.json
+firebase-debug*.log
+firestore-debug.log

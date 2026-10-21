@@ -1,0 +1,37 @@
+rules_version = '2';
+
+// EXS feedback — the browser may only create well-formed feedback documents.
+// Reading, updating and deleting happen in the Firebase Console or with the
+// Admin SDK, which bypass these rules.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function optStr(d, k, max) {
+      return !(k in d) || (d[k] is string && d[k].size() <= max);
+    }
+
+    function isValidFeedback(d) {
+      return d.keys().hasOnly(['category', 'app', 'lang', 'message', 'rating', 'email',
+               'bug_title', 'severity', 'steps', 'expected', 'actual', 'environment',
+               'page_url', 'user_agent', 'status', 'created_at'])
+        && d.keys().hasAll(['category', 'app', 'message', 'status', 'created_at'])
+        && d.category in ['website', 'program_general', 'program_bug']
+        && d.app in ['website', 'surveytools', 'heda', 'shodia']
+        && d.message is string && d.message.size() >= 1 && d.message.size() <= 8000
+        && (!('rating' in d) || (d.rating is int && d.rating >= 1 && d.rating <= 5))
+        && (!('severity' in d) || d.severity in ['low', 'medium', 'high', 'critical'])
+        && optStr(d, 'lang', 8) && optStr(d, 'email', 320)
+        && optStr(d, 'bug_title', 200) && optStr(d, 'steps', 8000)
+        && optStr(d, 'expected', 4000) && optStr(d, 'actual', 4000)
+        && optStr(d, 'environment', 400) && optStr(d, 'page_url', 2000)
+        && optStr(d, 'user_agent', 1000)
+        && d.status == 'new'
+        && d.created_at == request.time;
+    }
+
+    match /feedback/{id} {
+      allow create: if isValidFeedback(request.resource.data);
+      allow read, update, delete: if false;
+    }
+  }
+}

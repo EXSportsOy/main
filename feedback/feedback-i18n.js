@@ -62,7 +62,7 @@ window.FEEDBACK_I18N = {
     err_required: "This field is required.",
     err_email: "Please check the email address.",
     err_submit: "Sending failed. Check your connection and try again.",
-    err_not_configured: "The feedback system is not configured yet (Supabase keys missing)."
+    err_not_configured: "The feedback system is not configured yet."
   },
 
   fi: {
@@ -122,7 +122,7 @@ window.FEEDBACK_I18N = {
     err_required: "Tämä kenttä on pakollinen.",
     err_email: "Tarkista sähköpostiosoite.",
     err_submit: "Lähetys epäonnistui. Tarkista verkkoyhteys ja yritä uudelleen.",
-    err_not_configured: "Palautejärjestelmää ei ole vielä määritetty (Supabase-avaimet puuttuvat)."
+    err_not_configured: "Palautejärjestelmää ei ole vielä määritetty."
   },
 
   sv: {
@@ -182,7 +182,7 @@ window.FEEDBACK_I18N = {
     err_required: "Detta fält är obligatoriskt.",
     err_email: "Kontrollera e-postadressen.",
     err_submit: "Sändningen misslyckades. Kontrollera din anslutning och försök igen.",
-    err_not_configured: "Feedbacksystemet är inte konfigurerat ännu (Supabase-nycklar saknas)."
+    err_not_configured: "Feedbacksystemet är inte konfigurerat ännu."
   },
 
   no: {
@@ -242,7 +242,7 @@ window.FEEDBACK_I18N = {
     err_required: "Dette feltet er obligatorisk.",
     err_email: "Kontroller e-postadressen.",
     err_submit: "Sendingen mislyktes. Sjekk tilkoblingen og prøv igjen.",
-    err_not_configured: "Tilbakemeldingssystemet er ikke konfigurert ennå (Supabase-nøkler mangler)."
+    err_not_configured: "Tilbakemeldingssystemet er ikke konfigurert ennå."
   },
 
   da: {
@@ -302,7 +302,7 @@ window.FEEDBACK_I18N = {
     err_required: "Dette felt er påkrævet.",
     err_email: "Tjek e-mailadressen.",
     err_submit: "Afsendelsen mislykkedes. Tjek din forbindelse, og prøv igen.",
-    err_not_configured: "Feedbacksystemet er ikke konfigureret endnu (Supabase-nøgler mangler)."
+    err_not_configured: "Feedbacksystemet er ikke konfigureret endnu."
   },
 
   de: {
@@ -362,7 +362,7 @@ window.FEEDBACK_I18N = {
     err_required: "Dieses Feld ist erforderlich.",
     err_email: "Bitte überprüfen Sie die E-Mail-Adresse.",
     err_submit: "Senden fehlgeschlagen. Prüfen Sie Ihre Verbindung und versuchen Sie es erneut.",
-    err_not_configured: "Das Feedbacksystem ist noch nicht konfiguriert (Supabase-Schlüssel fehlen)."
+    err_not_configured: "Das Feedbacksystem ist noch nicht konfiguriert."
   },
 
   nl: {
@@ -422,7 +422,7 @@ window.FEEDBACK_I18N = {
     err_required: "Dit veld is verplicht.",
     err_email: "Controleer het e-mailadres.",
     err_submit: "Verzenden mislukt. Controleer je verbinding en probeer het opnieuw.",
-    err_not_configured: "Het feedbacksysteem is nog niet geconfigureerd (Supabase-sleutels ontbreken)."
+    err_not_configured: "Het feedbacksysteem is nog niet geconfigureerd."
   },
 
   fr: {
@@ -482,7 +482,7 @@ window.FEEDBACK_I18N = {
     err_required: "Ce champ est obligatoire.",
     err_email: "Veuillez vérifier l'adresse e-mail.",
     err_submit: "Échec de l'envoi. Vérifiez votre connexion et réessayez.",
-    err_not_configured: "Le système de retour n'est pas encore configuré (clés Supabase manquantes)."
+    err_not_configured: "Le système de retour n'est pas encore configuré."
   },
 
   es: {
@@ -542,7 +542,7 @@ window.FEEDBACK_I18N = {
     err_required: "Este campo es obligatorio.",
     err_email: "Comprueba la dirección de correo.",
     err_submit: "El envío falló. Comprueba tu conexión e inténtalo de nuevo.",
-    err_not_configured: "El sistema de comentarios aún no está configurado (faltan las claves de Supabase)."
+    err_not_configured: "El sistema de comentarios aún no está configurado."
   },
 
   it: {
@@ -602,7 +602,7 @@ window.FEEDBACK_I18N = {
     err_required: "Questo campo è obbligatorio.",
     err_email: "Controlla l'indirizzo email.",
     err_submit: "Invio non riuscito. Controlla la connessione e riprova.",
-    err_not_configured: "Il sistema di feedback non è ancora configurato (chiavi Supabase mancanti)."
+    err_not_configured: "Il sistema di feedback non è ancora configurato."
   },
 
   pl: {
@@ -662,7 +662,7 @@ window.FEEDBACK_I18N = {
     err_required: "To pole jest wymagane.",
     err_email: "Sprawdź adres e-mail.",
     err_submit: "Wysyłanie nie powiodło się. Sprawdź połączenie i spróbuj ponownie.",
-    err_not_configured: "System opinii nie jest jeszcze skonfigurowany (brak kluczy Supabase)."
+    err_not_configured: "System opinii nie jest jeszcze skonfigurowany."
   },
 
   pt: {
@@ -722,7 +722,7 @@ window.FEEDBACK_I18N = {
     err_required: "Este campo é obrigatório.",
     err_email: "Verifique o endereço de e-mail.",
     err_submit: "O envio falhou. Verifique a sua ligação e tente novamente.",
-    err_not_configured: "O sistema de feedback ainda não está configurado (faltam as chaves do Supabase)."
+    err_not_configured: "O sistema de feedback ainda não está configurado."
   },
 
   et: {
@@ -782,7 +782,7 @@ window.FEEDBACK_I18N = {
     err_required: "See väli on kohustuslik.",
     err_email: "Kontrolli e-posti aadressi.",
     err_submit: "Saatmine ebaõnnestus. Kontrolli ühendust ja proovi uuesti.",
-    err_not_configured: "Tagasisidesüsteem pole veel seadistatud (Supabase'i võtmed puuduvad)."
+    err_not_configured: "Tagasisidesüsteem pole veel seadistatud."
   },
 
   lv: {
@@ -842,7 +842,7 @@ window.FEEDBACK_I18N = {
     err_required: "Šis lauks ir obligāts.",
     err_email: "Pārbaudiet e-pasta adresi.",
     err_submit: "Nosūtīšana neizdevās. Pārbaudiet savienojumu un mēģiniet vēlreiz.",
-    err_not_configured: "Atsauksmju sistēma vēl nav konfigurēta (trūkst Supabase atslēgu)."
+    err_not_configured: "Atsauksmju sistēma vēl nav konfigurēta."
   },
 
   lt: {
@@ -902,6 +902,6 @@ window.FEEDBACK_I18N = {
     err_required: "Šis laukas privalomas.",
     err_email: "Patikrinkite el. pašto adresą.",
     err_submit: "Nepavyko išsiųsti. Patikrinkite ryšį ir bandykite dar kartą.",
-    err_not_configured: "Atsiliepimų sistema dar nesukonfigūruota (trūksta Supabase raktų)."
+    err_not_configured: "Atsiliepimų sistema dar nesukonfigūruota."
   }
 };

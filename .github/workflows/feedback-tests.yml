@@ -6,6 +6,7 @@ on:
     paths:
       - '**/*.html'
       - 'feedback/**'
+      - 'firebase/**'
       - 'tests/feedback/**'
       - 'assets/i18n/**'
       - 'styles.css'
@@ -14,12 +15,13 @@ on:
     paths:
       - '**/*.html'
       - 'feedback/**'
+      - 'firebase/**'
       - 'tests/feedback/**'
       - 'assets/i18n/**'
       - 'styles.css'
       - '.github/workflows/feedback-tests.yml'
   schedule:
-    # Daily regression checks detect CDN, configuration and database drift.
+    # Daily regression checks detect CDN, configuration and security rule drift.
     - cron: '17 6 * * *'
   workflow_dispatch:
   workflow_run:
@@ -49,6 +51,48 @@ jobs:
           cache-dependency-path: tests/feedback/package-lock.json
       - run: npm ci
       - run: npx playwright install --with-deps chromium
+      - run: npm test
+
+  rules:
+    if: github.event_name != 'workflow_run'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: tests/feedback
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: tests/feedback/package-lock.json
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - run: npm ci
+      - run: npm run test:rules
+
+  functions:
+    if: github.event_name != 'workflow_run'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: firebase/functions
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: firebase/functions/package-lock.json
+      - run: npm ci
       - run: npm test
 
   production:

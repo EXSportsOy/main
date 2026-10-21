@@ -1,24 +1,52 @@
 const { test: base, expect } = require('@playwright/test');
+const { readFileSync } = require('node:fs');
+const path = require('node:path');
 
-// Exercise the real browser code and CDN SDK, but never send a form to a server.
+// Exercise the real browser code and the pinned Firebase SDK, but never send a form
+// to a server. The SDK files are served from the npm package of the same version,
+// so the tests do not depend on the CDN being reachable.
+const sdkDir = path.dirname(require.resolve('firebase/package.json'));
+const sdkVersion = require('firebase/package.json').version;
+const feedbackSource = readFileSync(path.join(__dirname, '../../feedback/feedback.js'), 'utf8');
+
+// Firestore REST values → plain JavaScript values.
+function decodeValue(value) {
+  if ('stringValue' in value) return value.stringValue;
+  if ('integerValue' in value) return Number(value.integerValue);
+  if ('doubleValue' in value) return value.doubleValue;
+  if ('booleanValue' in value) return value.booleanValue;
+  if ('nullValue' in value) return null;
+  if ('mapValue' in value) return decodeFields(value.mapValue.fields || {});
+  throw new Error(`Unexpected Firestore value ${JSON.stringify(value)}`);
+}
+function decodeFields(fields) {
+  return Object.fromEntries(Object.entries(fields).map(([key, value]) => [key, decodeValue(value)]));
+}
+
 const test = base.extend({
   backend: async ({ context }, use) => {
-    const backend = { requests: [], status: 201, unexpected: [] };
+    const backend = { requests: [], status: 200, unexpected: [] };
     await context.route('**/*', async (route) => {
       const request = route.request();
       const url = new URL(request.url());
-      if (request.method() === 'POST' && url.pathname === '/rest/v1/feedback') {
-        backend.requests.push({
-          url: request.url(),
-          headers: request.headers(),
-          payload: request.postDataJSON(),
-        });
+      const sdkFile = url.pathname.match(/^\/firebasejs\/([^/]+)\/(firebase-[\w-]+\.js)$/);
+      if (url.hostname === 'www.gstatic.com' && sdkFile && sdkFile[1] === sdkVersion) {
+        await route.fulfill({ contentType: 'text/javascript', body: readFileSync(path.join(sdkDir, sdkFile[2])) });
+      } else if (url.pathname === '/feedback/feedback-config.js') {
+        // App Check talks to Google services; it is disabled for browser tests.
+        const response = await route.fetch();
+        const body = (await response.text()).replace(/APP_CHECK_SITE_KEY:\s*"[^"]*"/, 'APP_CHECK_SITE_KEY: ""');
+        await route.fulfill({ response, body });
+      } else if (request.method() === 'POST' && url.hostname === 'firestore.googleapis.com' && url.pathname.endsWith('/documents:commit')) {
+        backend.requests.push({ url: request.url(), headers: request.headers(), body: request.postDataJSON() });
         await route.fulfill({
           status: backend.status,
           contentType: 'application/json',
-          body: backend.status === 201 ? '' : JSON.stringify({ message: 'Test service unavailable' }),
+          body: JSON.stringify(backend.status === 200
+            ? { writeResults: [{ updateTime: new Date().toISOString() }], commitTime: new Date().toISOString() }
+            : { error: { code: backend.status, message: 'Test service unavailable', status: 'UNAVAILABLE' } }),
         });
-      } else if (!['GET', 'HEAD'].includes(request.method()) || url.hostname.endsWith('.supabase.co')) {
+      } else if (!['GET', 'HEAD'].includes(request.method()) || /^(firestore|firebase[\w-]*)\.googleapis\.com$/.test(url.hostname) || url.hostname === 'www.gstatic.com') {
         backend.unexpected.push(`${request.method()} ${url.origin}${url.pathname}`);
         await route.abort();
       } else {
@@ -59,20 +87,42 @@ async function open(page, language = 'en', suffix = '') {
   await expect(page.locator('#view-website [data-rating] button')).toHaveCount(5);
 }
 
-async function expectSubmission(page, backend, expected) {
+async function expectSubmission(page, backend, expected, absent = []) {
   await expect(page.locator('#view-done')).toBeVisible();
   expect(backend.requests).toHaveLength(1);
   const sent = backend.requests[0];
-  const config = await page.evaluate(() => window.FEEDBACK_CONFIG);
-  expect(sent.url).toBe(`${config.SUPABASE_URL}/rest/v1/feedback`);
-  expect(sent.headers.apikey).toBe(config.SUPABASE_ANON_KEY);
-  const rows = Array.isArray(sent.payload) ? sent.payload : [sent.payload];
-  expect(rows).toHaveLength(1);
-  expect(rows[0]).toMatchObject(expected);
-  expect(rows[0].page_url).toBe(page.url());
-  expect(rows[0].user_agent).toBeTruthy();
-  expect(rows[0]).not.toHaveProperty('company');
+  const config = await page.evaluate(() => window.FEEDBACK_CONFIG.FIREBASE);
+  const database = `projects/${config.projectId}/databases/(default)`;
+  expect(sent.url.split('?')[0]).toBe(`https://firestore.googleapis.com/v1/${database}/documents:commit`);
+  expect(sent.body.writes).toHaveLength(1);
+  const write = sent.body.writes[0];
+  // A new document with a server-generated id; it must not overwrite an existing one.
+  expect(write.update.name).toMatch(new RegExp(`^${database.replace(/[()]/g, '\\$&')}/documents/feedback/[A-Za-z0-9]{20}$`));
+  expect(write.currentDocument).toEqual({ exists: false });
+  expect(write.updateTransforms).toEqual([{ fieldPath: 'created_at', setToServerValue: 'REQUEST_TIME' }]);
+  const row = decodeFields(write.update.fields);
+  expect(row).toMatchObject({ ...expected, status: 'new' });
+  expect(row.page_url).toBe(page.url());
+  expect(row.user_agent).toBeTruthy();
+  for (const key of ['company', 'created_at', ...absent]) expect(row).not.toHaveProperty(key);
 }
+
+test('feedback.js loads the Firebase SDK version the tests use', () => {
+  const versions = [...feedbackSource.matchAll(/gstatic\.com\/firebasejs\/([^/]+)\//g)].map((m) => m[1]);
+  expect(versions.length).toBeGreaterThan(0);
+  expect(new Set(versions)).toEqual(new Set([sdkVersion]));
+});
+
+test('feedback configuration is filled in', async ({ page, backend }) => {
+  await open(page);
+  const config = await page.evaluate(() => window.FEEDBACK_CONFIG.FIREBASE);
+  expect(config.projectId).toBe('exsports-verkkosivut');
+  for (const key of ['apiKey', 'authDomain', 'projectId', 'appId']) {
+    expect(config[key], key).toBeTruthy();
+    expect(config[key], key).not.toMatch(/^YOUR-/);
+  }
+  expect(backend.requests).toHaveLength(0);
+});
 
 for (const language of ['en', 'fi']) {
   test(`${language}: website navigation, validation and submission`, async ({ page, backend }) => {
@@ -92,8 +142,8 @@ for (const language of ['en', 'fi']) {
     await form.locator('[type="submit"]').click();
     await expectSubmission(page, backend, {
       category: 'website', app: 'website', lang: language,
-      message: 'CI browser test: clear navigation.', rating: 4, email: null,
-    });
+      message: 'CI browser test: clear navigation.', rating: 4,
+    }, ['email']);
   });
 }
 
@@ -107,8 +157,8 @@ test('app selection is carried into quick feedback', async ({ page, backend }) =
   await form.locator('[type="submit"]').click();
   await expectSubmission(page, backend, {
     category: 'program_general', app: 'shodia', lang: 'en',
-    message: 'CI browser test: app selection.', rating: null, email: null,
-  });
+    message: 'CI browser test: app selection.',
+  }, ['rating', 'email', 'bug_title', 'severity', 'steps']);
 });
 
 test('bug deep link preserves app and structured details', async ({ page, backend }) => {
@@ -123,11 +173,11 @@ test('bug deep link preserves app and structured details', async ({ page, backen
   await form.locator('[name="severity"]').selectOption('high');
   await form.locator('[type="submit"]').click();
   await expectSubmission(page, backend, {
-    category: 'program_bug', app: 'heda', lang: 'en', rating: null, email: null,
+    category: 'program_bug', app: 'heda', lang: 'en',
     bug_title: 'CI browser test', steps: 'Open the report', severity: 'high',
     expected: 'Report appears', actual: 'Blank screen', environment: 'Chromium test',
     message: 'CI browser test\nSteps: Open the report\nExpected: Report appears\nActual: Blank screen',
-  });
+  }, ['rating', 'email']);
 });
 
 test('failed submission retains the message and allows retry', async ({ page, backend }) => {
@@ -141,7 +191,7 @@ test('failed submission retains the message and allows retry', async ({ page, ba
   await expect(form.locator('[name="message"]')).toHaveValue('CI browser test: retry.');
   await expect(form.locator('[type="submit"]')).toBeEnabled();
   expect(backend.requests).toHaveLength(1);
-  backend.status = 201;
+  backend.status = 200;
   await form.locator('[type="submit"]').click();
   await expect(page.locator('#view-done')).toBeVisible();
   expect(backend.requests).toHaveLength(2);

@@ -1,0 +1,9 @@
+{
+  "name": "exs-feedback-migration",
+  "private": true,
+  "type": "module",
+  "description": "One-off copy of feedback rows from Supabase to Firestore.",
+  "dependencies": {
+    "firebase-admin": "14.4.0"
+  }
+}

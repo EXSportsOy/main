@@ -1,5 +1,8 @@
-// EXS feedback section — i18n, view navigation, validation, Supabase submit.
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+// EXS feedback section — i18n, view navigation, validation, Firestore submit.
+// Keep the SDK version in sync with tests/feedback/package.json (checked by the tests).
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+import { initializeAppCheck, ReCaptchaEnterpriseProvider } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app-check.js";
+import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore-lite.js";
 
 const cfg = window.FEEDBACK_CONFIG || {};
 const root = document.getElementById("feedback");
@@ -9,10 +12,13 @@ const t = (k) => (k in dict ? dict[k] : (window.FEEDBACK_I18N?.en?.[k] ?? k));
 
 const APP_NAMES = { surveytools: "SurveyTools", heda: "Heda", shodia: "Shodia", website: "" };
 
-const configured =
-  cfg.SUPABASE_URL && cfg.SUPABASE_ANON_KEY &&
-  !cfg.SUPABASE_URL.includes("YOUR-PROJECT") && !cfg.SUPABASE_ANON_KEY.includes("YOUR-PUBLIC");
-const supabase = configured ? createClient(cfg.SUPABASE_URL, cfg.SUPABASE_ANON_KEY) : null;
+const fb = cfg.FIREBASE || {};
+const configured = [fb.apiKey, fb.projectId, fb.appId].every((v) => v && !v.startsWith("YOUR-"));
+const firebaseApp = configured ? initializeApp(fb) : null;
+if (firebaseApp && cfg.APP_CHECK_SITE_KEY) {
+  initializeAppCheck(firebaseApp, { provider: new ReCaptchaEnterpriseProvider(cfg.APP_CHECK_SITE_KEY), isTokenAutoRefreshEnabled: true });
+}
+const db = firebaseApp ? getFirestore(firebaseApp) : null;
 
 /* ---------- Apply translations ---------- */
 function applyI18n() {
@@ -150,6 +156,7 @@ if (cfg.ASK_EMAIL === false) root.querySelectorAll("[data-email-field]").forEach
 })();
 
 /* ---------- Build payload ---------- */
+// Empty optional fields are left out; the security rules accept only known fields.
 function buildPayload(form) {
   const category = form.dataset.category;
   const app = form.dataset.app || currentApp;
@@ -162,28 +169,29 @@ function buildPayload(form) {
     app: category === "website" ? "website" : app,
     lang,
     rating,
-    email: get("email") || null,
-    page_url: location.href,
-    user_agent: navigator.userAgent,
+    email: get("email"),
+    page_url: location.href.slice(0, 2000),
+    user_agent: navigator.userAgent.slice(0, 1000),
   };
 
   if (category === "program_bug") {
     row.bug_title = get("bug_title");
     row.severity = get("severity") || "medium";
     row.steps = get("steps");
-    row.expected = get("expected") || null;
-    row.actual = get("actual") || null;
-    row.environment = get("environment") || null;
+    row.expected = get("expected");
+    row.actual = get("actual");
+    row.environment = get("environment");
     row.message = [
       get("bug_title"),
       get("steps") && `Steps: ${get("steps")}`,
       get("expected") && `Expected: ${get("expected")}`,
       get("actual") && `Actual: ${get("actual")}`,
-    ].filter(Boolean).join("\n");
+    ].filter(Boolean).join("\n").slice(0, 8000); // full details stay in the fields above
   } else {
     row.message = get("message");
   }
-  return row;
+  for (const [key, value] of Object.entries(row)) if (value === null || value === "") delete row[key];
+  return { ...row, status: "new", created_at: serverTimestamp() };
 }
 
 /* ---------- Submit ---------- */
@@ -203,9 +211,8 @@ root.querySelectorAll("form").forEach((form) => {
     btn.disabled = true; btn.textContent = "…";
 
     try {
-      if (!supabase) throw new Error("not-configured");
-      const { error } = await supabase.from("feedback").insert(buildPayload(form));
-      if (error) throw error;
+      if (!db) throw new Error("not-configured");
+      await addDoc(collection(db, "feedback"), buildPayload(form));
       resetForm(form);
       showView("view-done");
     } catch (err) {
