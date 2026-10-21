@@ -3,9 +3,13 @@
   "private": true,
   "scripts": {
     "test": "playwright test --project=browser",
-    "test:production": "playwright test --project=browser --project=api"
+    "test:production": "playwright test --project=browser --project=api",
+    "test:rules": "firebase emulators:exec --only firestore --project demo-exs-feedback --config ../../firebase/firebase.json \"node --test rules.test.mjs\""
   },
   "devDependencies": {
-    "@playwright/test": "1.63.0"
+    "@firebase/rules-unit-testing": "5.0.2",
+    "@playwright/test": "1.63.0",
+    "firebase": "12.19.0",
+    "firebase-tools": "15.32.1"
   }
 }

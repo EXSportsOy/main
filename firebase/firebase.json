@@ -1,0 +1,20 @@
+{
+  "firestore": {
+    "database": "(default)",
+    "location": "europe-north1",
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "runtime": "nodejs22",
+      "ignore": ["node_modules", ".git", "*.log", "*.test.js"]
+    }
+  ],
+  "emulators": {
+    "firestore": { "host": "127.0.0.1", "port": 8080 },
+    "singleProjectMode": true
+  }
+}

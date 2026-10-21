@@ -1,11 +1,19 @@
-// Supabase settings for the feedback section.
-// NOTE: the anon key is meant to be public (visible in the browser). This is safe.
-// NEVER put the service_role key here.
-// Fill in from Supabase Dashboard → Project Settings → API.
+// Firebase settings for the feedback section.
+// NOTE: the web config is meant to be public (visible in the browser). This is safe:
+// access is limited by Firestore security rules (create only) and App Check.
+// NEVER put a service account key here.
+// Fill in from Firebase Console → Project settings → Your apps → Web app.
 
 window.FEEDBACK_CONFIG = {
-  SUPABASE_URL: "https://jaepadyeyrrwhiomxyfj.supabase.co",
-  SUPABASE_ANON_KEY: "sb_publishable_oLj_DP6MSemsDIX4fgpeSw_VBma2Ay2",
+  FIREBASE: {
+    apiKey: "YOUR-API-KEY",
+    authDomain: "exsports-verkkosivut.firebaseapp.com",
+    projectId: "exsports-verkkosivut",
+    appId: "YOUR-APP-ID",
+  },
+
+  // reCAPTCHA Enterprise site key for App Check. Leave empty to skip App Check.
+  APP_CHECK_SITE_KEY: "",
 
   // Set to false to hide the optional email field everywhere.
   ASK_EMAIL: true,

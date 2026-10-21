@@ -1,6 +1,6 @@
 # Palauteosio (`/feedback/`)
 
-Uusi monikielinen palauteosio EXSports-sivustolle. Korvaa vanhan Google Forms ‑pohjaisen "report a bug" ‑ratkaisun. Palaute tallentuu **Supabaseen** (ilmainen taso) ja uudesta palautteesta lähtee **sähköposti-ilmoitus**. Toteutus on staattista HTML/CSS/JS:ää sivuston omalla tyylillä (`/styles.css`, Geist, Pine Mist) ja käyttää sivuston i18n-kielivalitsinta.
+Monikielinen palauteosio EXSports-sivustolle. Korvaa vanhan Google Forms ‑pohjaisen "report a bug" ‑ratkaisun. Palaute tallentuu **Firebase Firestoreen** (projekti `exsports-verkkosivut`, sijainti `europe-north1`) ja uudesta palautteesta lähtee **sähköposti-ilmoitus** Cloud Functionista. Toteutus on staattista HTML/CSS/JS:ää sivuston omalla tyylillä (`/styles.css`, Geist, Pine Mist) ja käyttää sivuston i18n-kielivalitsinta.
 
 ## Rakenne
 
@@ -11,10 +11,15 @@ feedback/
                           nl, fr, es, it, pt, pl, et, lv, lt)
   feedback.css            Tyylit (rakentuu /styles.css-tokenien päälle)
   feedback-i18n.js        Kaikkien kielten tekstit yhdessä sanakirjassa
-  feedback.js             Logiikka: i18n, näkymät, validointi, Supabase-tallennus
-  feedback-config.js      Supabase-URL + julkinen anon-avain (TÄYTÄ)
-  supabase/schema.sql     Tietokantataulu + käyttöoikeudet (RLS)
-  supabase/functions/notify-feedback/index.ts   Edge Function: sähköposti-ilmoitus
+  feedback.js             Logiikka: i18n, näkymät, validointi, Firestore-tallennus
+  feedback-config.js      Firebase-web-config + App Check -avain (julkisia)
+  supabase/               Vanha toteutus; poistetaan, kun siirtymäaika päättyy
+firebase/
+  firebase.json, .firebaserc        Firebase CLI:n asetukset (aja komennot tässä kansiossa)
+  firestore.rules                   Tietoturvasäännöt: selain saa vain luoda palautteen
+  firestore.indexes.json            Indeksit (oletusindeksit riittävät)
+  functions/                        Cloud Function notifyFeedback: sähköposti-ilmoitus
+  migration/import-supabase.mjs     Kertaluonteinen siirto Supabasesta
 ```
 
 ## Käyttäjäpolku
@@ -27,50 +32,56 @@ Ei-englanninkielisillä sivuilla näkyy konekäännösilmoitus (englanti on vira
 
 ## Käyttöönotto
 
-### 1. Supabase-projekti
-Luo projekti osoitteessa [supabase.com](https://supabase.com) (ilmainen taso riittää).
+Vaatii Firebase CLI:n (`npm i -g firebase-tools`) ja kirjautumisen (`firebase login`). Projekti on Blaze-tasolla, koska Cloud Functions ja Secret Manager vaativat sen; aseta projektille budjettihälytys.
 
-### 2. Taulu + käyttöoikeudet
-**SQL Editor** → aja `supabase/schema.sql`. Luo `feedback`-taulun ja RLS-säännön, joka sallii julkisella avaimella vain **lisäyksen** (ei lukua selaimesta).
+### 1. Web-sovellus ja avaimet
+Firebase Console → **Project settings → Your apps → Web** → kopioi `apiKey`, `authDomain`, `projectId` ja `appId` tiedostoon `feedback/feedback-config.js`. Web-config on tarkoitettu julkiseksi; **älä** lisää palvelutilin avaimia. Rajaa API-avain Google Cloud Consolessa (APIs & Services → Credentials) HTTP-viittaajiin `https://www.exsports.fi/*`.
 
-### 3. Avaimet
-**Project Settings → API** → kopioi *Project URL* ja *anon public* ‑avain tiedostoon `feedback/feedback-config.js`. Anon-avain on tarkoitettu julkiseksi; **älä** käytä service_role-avainta.
+### 2. Säännöt ja indeksit
+```bash
+cd firebase
+firebase deploy --only firestore:rules,firestore:indexes
+```
 
-### 4. Sähköposti-ilmoitukset (Proton Mail SMTP)
-Funktio lähettää postin Proton Mailin SMTP submission -ominaisuudella (vaatii
-Proton for Business -tason), joten erillistä lähetyspalvelua ei tarvita.
+### 3. Sähköposti-ilmoitukset (Proton Mail SMTP)
+Funktio lähettää postin Proton Mailin SMTP submission -ominaisuudella (vaatii Proton for Business -tason).
 
 1. Proton: **Settings → IMAP/SMTP → SMTP submission → Generate token** osoitteelle `info@exsports.fi`.
-2. Julkaise funktio ja aseta secretit (Supabase CLI):
+2. Tallenna token Secret Manageriin ja julkaise funktio:
    ```bash
-   supabase functions deploy notify-feedback --no-verify-jwt
-   supabase secrets set SMTP_HOST=smtp.protonmail.ch SMTP_PORT=465 \
-     SMTP_USERNAME=info@exsports.fi SMTP_PASSWORD=<proton-smtp-token> \
-     NOTIFY_EMAIL_TO=info@exsports.fi NOTIFY_EMAIL_FROM=info@exsports.fi \
-     WEBHOOK_SECRET=satunnainen-merkkijono
+   cd firebase
+   firebase functions:secrets:set SMTP_PASSWORD
+   firebase deploy --only functions
    ```
-3. Webhook on toteutettu suoraan tietokantatriggerinä (`supabase/webhook_trigger.sql`, ajettu tuotantoon 2026-09-01), joten dashboardin *Database Webhooks* -asetusta ei tarvita. Funktio, triggeri ja kaikki secretit paitsi `SMTP_PASSWORD` ovat valmiina tuotannossa.
+   `SMTP_USERNAME`, `NOTIFY_EMAIL_TO` ja `NOTIFY_EMAIL_FROM` ovat tiedostossa `firebase/functions/.env` (kaikki `info@exsports.fi`); muuta niitä siellä (useampi vastaanottaja pilkulla eroteltuna).
+3. Testaa: lähetä palaute sivulta ja tarkista, että viesti saapuu. Virheet näkyvät Firebase Console → Functions → Logs.
 
-> **Ilman domainia / Resendiä?** Ohjaa webhook suoraan Discord- tai Slack-webhook-URLiin (Type: *HTTP Request*). Täysin ilmaista. Muotoiltua viestiä varten käytä yllä olevaa Edge Functionia.
+### 4. App Check (suositeltu)
+Firebase Console → **App Check** → rekisteröi web-sovellus **reCAPTCHA Enterprise** -tarjoajalla ja kopioi site key kenttään `APP_CHECK_SITE_KEY`. Pidä Firestore ensin valvontatilassa (*Monitor*) ja ota pakotus (*Enforce*) käyttöön, kun mittarit näyttävät oikeiden lähetysten läpäisevän tarkistuksen. Pakotuksen voi perua konsolista ilman koodimuutosta.
 
-### 5. Vanhat report-bug-sivut
-Kaikki 17 vanhaa `report-bug.html`-sivua (`legal/<kieli>/`, `heda/legal/`, `surveytools/legal/`) ohjaavat nyt automaattisesti uuteen osioon oikealla sovelluksella ja buginäkymällä esivalittuna. Google Forms ei ole enää käytössä. Sivut on merkitty `noindex`, joten hakukoneet siirtyvät uuteen osioon.
+### 5. Vanhan datan siirto
+Katso ohjeet tiedoston `firebase/migration/import-supabase.mjs` alusta. Siirto on toistettavissa: dokumentin ID on Supabasen uuid, olemassa olevat dokumentit ohitetaan, ja siirretyistä riveistä ei lähde sähköpostia (`source: "supabase-import"`). Vientitiedostoa (sisältää sähköpostiosoitteita) ei lisätä repoon.
 
-### 6. Sivukartta
+### 6. Vanhat report-bug-sivut
+Kaikki 17 vanhaa `report-bug.html`-sivua (`legal/<kieli>/`, `heda/legal/`, `surveytools/legal/`) ohjaavat automaattisesti uuteen osioon oikealla sovelluksella ja buginäkymällä esivalittuna. Sivut on merkitty `noindex`, joten hakukoneet siirtyvät uuteen osioon.
+
+### 7. Sivukartta
 `node tools/generate-sitemap.mjs` repon juuressa päivittää sivukartan, myös palautesivujen kaikki kieliversiot. Vanhat `noindex`-uudelleenohjaukset jätetään pois.
+
+## Palautteiden käsittely
+Firebase Console → **Firestore Database → feedback**. Käsittelyn tila päivitetään kenttään `status` (`new` / `in_progress` / `resolved` / `wontfix`). Konsoli ohittaa tietoturvasäännöt; selaimesta palautteita ei voi lukea eikä muokata.
 
 ## Lokalisointi
 Kaikki lomakkeen käännettävät tekstit ovat `feedback-i18n.js`-sanakirjassa. Muokkaa sanakirjaa ja aja repon juuressa `node tools/render-feedback.mjs`, jotta myös HTML-sivujen alkuperäinen sisältö, paikkamerkkitekstit ja saavutettavuusnimet päivittyvät. Selain käyttää samaa sanakirjaa. Käännösilmoitus näkyy muissa kielissä kuin englannissa. Sivujen rakenne on yhteinen, mutta sisältö ja etusivulinkit ovat kielikohtaisia.
 
-## Tietomalli (`feedback`-taulu)
-`category` (website / program_general / program_bug), `app` (website / surveytools / heda / shodia), `lang`, `message`, `rating`, `email`, bugikentät (`bug_title`, `severity`, `steps`, `expected`, `actual`, `environment`), `page_url`, `user_agent`, `status` (käsittelyn seurantaan).
+## Tietomalli (`feedback`-kokoelma)
+`category` (website / program_general / program_bug), `app` (website / surveytools / heda / shodia), `lang`, `message`, `rating`, `email`, bugikentät (`bug_title`, `severity`, `steps`, `expected`, `actual`, `environment`), `page_url`, `user_agent`, `status` (käsittelyn seurantaan) ja `created_at` (palvelimen aikaleima). Tyhjiä valinnaisia kenttiä ei tallenneta. Supabasesta siirretyissä dokumenteissa on lisäksi `source: "supabase-import"`. Kenttien sallitut arvot ja enimmäispituudet on määritelty tiedostossa `firebase/firestore.rules`.
 
-## Ilmaistason rajat
-Supabase free: 500 MB tietokantaa, Edge Functions sisältyvät. Sähköposti lähtee omasta Proton-postista (SMTP submission), ei erillistä viestirajaa palautemäärillä.
+## Kustannukset
+Palautemäärillä kaikki pysyy Firestoren ja Cloud Functionsin ilmaiskiintiöiden sisällä; funktion konttikuvan tallennus voi maksaa muutaman sentin kuukaudessa. Firestore ei tauota projektia käyttämättömyyden vuoksi. Sähköposti lähtee omasta Proton-postista.
 
-Palautetoiminnon regressiotestit (`.github/workflows/feedback-tests.yml`) ajetaan palautekoodin muutoksista, onnistuneen GitHub Pages -julkaisun jälkeen sekä päivittäin klo 06:17 UTC. Testit tarkistavat lomakkeen toiminnan, lähetyssisällöt, virheestä palautumisen sekä tuotantorajapinnan kentät ja virheellisten syötteiden hylkäämisen. Selaintestien lähetykset kaapataan; tuotantoon tehdään vain kenttien lukutarkistus ilman palauterivejä ja kaksi virheellistä lähetysyritystä. Katso ajokomennot, testauksen rajat ja virhetilanteiden ohjeet tiedostosta [tests/feedback/README.md](../tests/feedback/README.md).
-
-[Supabasen mukaan](https://supabase.com/docs/guides/platform/free-project-pausing) muutama tietokantapyyntö päivässä yleensä riittää estämään tauotuksen, mutta Free-taso ei takaa tauottomuutta. Testien tarkoitus on havaita palautetoiminnon regressioita, eikä niiden tuottaman aktiivisuuden vaikutusta tauotukseen taata. [GitHub voi poistaa julkisen repon ajastukset käytöstä](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/disable-and-enable-workflows), jos repossa ei ole toimintaa 60 päivään; ota ajastus tällöin uudelleen käyttöön Actionsista.
+## Testit
+Palautetoiminnon regressiotestit (`.github/workflows/feedback-tests.yml`) ajetaan palautekoodin muutoksista, onnistuneen GitHub Pages -julkaisun jälkeen sekä päivittäin klo 06:17 UTC. Selaintestit tarkistavat lomakkeen toiminnan ja lähetyssisällöt, sääntötestit ajetaan Firestore-emulaattorissa ja tuotantotesti varmistaa, että julkaistu config on kunnossa ja että tuotanto hylkää luvun ja virheelliset lähetykset. Katso ajokomennot ja testauksen rajat tiedostosta [tests/feedback/README.md](../tests/feedback/README.md).
 
 ## Roskapostisuoja
-Piilotettu hunajapurkkikenttä (botit täyttävät → hylätään hiljaa) + RLS rajoittaa viestin pituuden. Tarvittaessa lisää Cloudflare Turnstile (ilmainen).
+Piilotettu hunajapurkkikenttä (botit täyttävät → hylätään hiljaa), tietoturvasäännöt (vain tunnetut kentät ja pituusrajat) sekä App Check.
