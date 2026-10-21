@@ -6,10 +6,10 @@
 
 window.FEEDBACK_CONFIG = {
   FIREBASE: {
-    apiKey: "YOUR-API-KEY",
+    apiKey: "AIzaSyDI8zjHu5Q8FG6zNna6aKywNKheazbVAAE",
     authDomain: "exsports-verkkosivut.firebaseapp.com",
     projectId: "exsports-verkkosivut",
-    appId: "YOUR-APP-ID",
+    appId: "1:411688443615:web:f65cd863b29d6a4e17136a",
   },
 
   // reCAPTCHA Enterprise site key for App Check. Leave empty to skip App Check.
