@@ -1,8 +1,5 @@
 /EXS Brand v2/
 
-# Supabase CLI local cache
-/supabase/.temp/
-
 # Local test dependencies, browser downloads and reports
 /.tmp/
 /tests/feedback/node_modules/
@@ -10,11 +7,7 @@
 /tests/feedback/playwright-report/
 /tests/i18n/__pycache__/
 
-# Firebase CLI, functions and migration dependencies, exported data
+# Firebase CLI and functions dependencies
 /firebase/functions/node_modules/
-/firebase/migration/node_modules/
-/firebase/migration/*.json
-!/firebase/migration/package.json
-!/firebase/migration/package-lock.json
 firebase-debug*.log
 firestore-debug.log

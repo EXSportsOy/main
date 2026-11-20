@@ -23,8 +23,7 @@ export const notifyFeedback = onDocumentCreated(
   { document: "feedback/{id}", region: "europe-north1", secrets: [SMTP_PASSWORD], retry: false },
   async (event) => {
     const row = event.data?.data();
-    // Rows copied from Supabase were already notified once.
-    if (!row || row.source === "supabase-import") return;
+    if (!row) return;
 
     const { subject, html, replyTo } = buildEmail(row, { id: event.params.id, projectId: process.env.GCLOUD_PROJECT });
     const transport = nodemailer.createTransport({

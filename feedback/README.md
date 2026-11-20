@@ -13,13 +13,11 @@ feedback/
   feedback-i18n.js        Kaikkien kielten tekstit yhdessä sanakirjassa
   feedback.js             Logiikka: i18n, näkymät, validointi, Firestore-tallennus
   feedback-config.js      Firebase-web-config + App Check -avain (julkisia)
-  supabase/               Vanha toteutus; poistetaan, kun siirtymäaika päättyy
 firebase/
   firebase.json, .firebaserc        Firebase CLI:n asetukset (aja komennot tässä kansiossa)
   firestore.rules                   Tietoturvasäännöt: selain saa vain luoda palautteen
   firestore.indexes.json            Indeksit (oletusindeksit riittävät)
   functions/                        Cloud Function notifyFeedback: sähköposti-ilmoitus
-  migration/import-supabase.mjs     Kertaluonteinen siirto Supabasesta
 ```
 
 ## Käyttäjäpolku
@@ -59,13 +57,10 @@ Funktio lähettää postin Proton Mailin SMTP submission -ominaisuudella (vaatii
 ### 4. App Check (suositeltu)
 Firebase Console → **App Check** → rekisteröi web-sovellus **reCAPTCHA Enterprise** -tarjoajalla ja kopioi site key kenttään `APP_CHECK_SITE_KEY`. Pidä Firestore ensin valvontatilassa (*Monitor*) ja ota pakotus (*Enforce*) käyttöön, kun mittarit näyttävät oikeiden lähetysten läpäisevän tarkistuksen. Pakotuksen voi perua konsolista ilman koodimuutosta.
 
-### 5. Vanhan datan siirto
-Katso ohjeet tiedoston `firebase/migration/import-supabase.mjs` alusta. Siirto on toistettavissa: dokumentin ID on Supabasen uuid, olemassa olevat dokumentit ohitetaan, ja siirretyistä riveistä ei lähde sähköpostia (`source: "supabase-import"`). Vientitiedostoa (sisältää sähköpostiosoitteita) ei lisätä repoon.
-
-### 6. Vanhat report-bug-sivut
+### 5. Vanhat report-bug-sivut
 Kaikki 17 vanhaa `report-bug.html`-sivua (`legal/<kieli>/`, `heda/legal/`, `surveytools/legal/`) ohjaavat automaattisesti uuteen osioon oikealla sovelluksella ja buginäkymällä esivalittuna. Sivut on merkitty `noindex`, joten hakukoneet siirtyvät uuteen osioon.
 
-### 7. Sivukartta
+### 6. Sivukartta
 `node tools/generate-sitemap.mjs` repon juuressa päivittää sivukartan, myös palautesivujen kaikki kieliversiot. Vanhat `noindex`-uudelleenohjaukset jätetään pois.
 
 ## Palautteiden käsittely
@@ -75,7 +70,7 @@ Firebase Console → **Firestore Database → feedback**. Käsittelyn tila päiv
 Kaikki lomakkeen käännettävät tekstit ovat `feedback-i18n.js`-sanakirjassa. Muokkaa sanakirjaa ja aja repon juuressa `node tools/render-feedback.mjs`, jotta myös HTML-sivujen alkuperäinen sisältö, paikkamerkkitekstit ja saavutettavuusnimet päivittyvät. Selain käyttää samaa sanakirjaa. Käännösilmoitus näkyy muissa kielissä kuin englannissa. Sivujen rakenne on yhteinen, mutta sisältö ja etusivulinkit ovat kielikohtaisia.
 
 ## Tietomalli (`feedback`-kokoelma)
-`category` (website / program_general / program_bug), `app` (website / surveytools / heda / shodia), `lang`, `message`, `rating`, `email`, bugikentät (`bug_title`, `severity`, `steps`, `expected`, `actual`, `environment`), `page_url`, `user_agent`, `status` (käsittelyn seurantaan) ja `created_at` (palvelimen aikaleima). Tyhjiä valinnaisia kenttiä ei tallenneta. Supabasesta siirretyissä dokumenteissa on lisäksi `source: "supabase-import"`. Kenttien sallitut arvot ja enimmäispituudet on määritelty tiedostossa `firebase/firestore.rules`.
+`category` (website / program_general / program_bug), `app` (website / surveytools / heda / shodia), `lang`, `message`, `rating`, `email`, bugikentät (`bug_title`, `severity`, `steps`, `expected`, `actual`, `environment`), `page_url`, `user_agent`, `status` (käsittelyn seurantaan) ja `created_at` (palvelimen aikaleima). Tyhjiä valinnaisia kenttiä ei tallenneta. Kenttien sallitut arvot ja enimmäispituudet on määritelty tiedostossa `firebase/firestore.rules`.
 
 ## Kustannukset
 Palautemäärillä kaikki pysyy Firestoren ja Cloud Functionsin ilmaiskiintiöiden sisällä; funktion konttikuvan tallennus voi maksaa muutaman sentin kuukaudessa. Firestore ei tauota projektia käyttämättömyyden vuoksi. Sähköposti lähtee omasta Proton-postista.
