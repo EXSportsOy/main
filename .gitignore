@@ -18,3 +18,11 @@
 !/firebase/migration/package-lock.json
 firebase-debug*.log
 firestore-debug.log
+
+# Local tooling and internal material, never published
+.claude/
+.claude-agent/
+.idea/
+/Heda brand/
+/docs/
+/LINKS_*.md

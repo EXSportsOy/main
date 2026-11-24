@@ -1,0 +1,13 @@
+# GitHub Pages publishes the repo root. Keep backend code, tests, tooling and
+# internal notes in the repo but out of the public site.
+exclude:
+  - README.md
+  - feedback/README.md
+  - feedback/supabase
+  - legal/README.md
+  - firebase
+  - tests
+  - tools
+  - supabase
+  - "Verkkosivujen palauteosio"
+  - "EXS Brand v2"
